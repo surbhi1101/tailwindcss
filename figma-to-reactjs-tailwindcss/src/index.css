@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
+@import "tailwindcss";
+
+.font-dancing {
+    font-family: 'Dancing Script', cursive;
+}
+
+@theme {
+    --text-custom: 0.9rem;
+}
+
+.text-custom {
+    font-size: var(--text-custom);
+}
