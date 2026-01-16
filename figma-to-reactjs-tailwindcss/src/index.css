@@ -1,14 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 
-.font-dancing {
-    font-family: 'Dancing Script', cursive;
-}
-
 @theme {
-    --text-custom: 0.9rem;
+    --font-roboto: "Roboto", sans-serif;
+    --img-width-small: 80px;
+    --line-height-150: 1.5;
+    --img-height-small: 32px;
+    --img-width-medium: 160px;
+    --img-height-medium: 107px;
+    --img-width-large: 288px;
+    --img-height-large: 413px;
+    --gap-large: 80px;
+    --line-height-120: 1.2;
+    --height-800: 640px;
+    --height-hero: 958px;
+    --height-section-sm: 252px;
 }
 
-.text-custom {
-    font-size: var(--text-custom);
+.font-roboto {
+    font-family: var(--font-roboto);
+}
+
+.logo-size {
+    height: 36px;
+    width: 84px;
+}
+
+.img-small {
+    width: var(--img-width-small);
+    height: var(--img-height-small);
+}
+
+.img-medium {
+    width: var(--img-width-medium);
+    height: var(--img-height-medium);
+}
+
+.img-large {
+    width: var(--img-width-large);
+    height: var(--img-height-large);
+}
+
+.gap-large {
+    gap: var(--gap-large);
+}
+
+.leading-120 {
+    line-height: var(--line-height-120);
+}
+
+.h-640 {
+    height: var(--height-640);
+}
+
+.line-height {
+    line-height: var(--line-height-150);
+}
+
+.section-h {
+    height: var(--height-hero);
+}
+
+.card-height {
+    height: var(--height-section-sm);
 }
