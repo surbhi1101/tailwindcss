@@ -3,18 +3,13 @@
 
 @theme {
     --font-roboto: "Roboto", sans-serif;
-    --img-width-small: 80px;
     --line-height-150: 1.5;
-    --img-height-small: 32px;
     --img-width-medium: 160px;
     --img-height-medium: 107px;
-    --img-width-large: 288px;
-    --img-height-large: 413px;
-    --gap-large: 80px;
-    --line-height-120: 1.2;
-    --height-800: 640px;
-    --height-hero: 958px;
-    --height-section-sm: 252px;
+    --height-640: 640px;
+    --height-460: 460px;
+    --height-520: 520px;
+    --height-402: 402px;
 }
 
 .font-roboto {
@@ -26,41 +21,27 @@
     width: 84px;
 }
 
-.img-small {
-    width: var(--img-width-small);
-    height: var(--img-height-small);
-}
-
 .img-medium {
     width: var(--img-width-medium);
     height: var(--img-height-medium);
-}
-
-.img-large {
-    width: var(--img-width-large);
-    height: var(--img-height-large);
-}
-
-.gap-large {
-    gap: var(--gap-large);
-}
-
-.leading-120 {
-    line-height: var(--line-height-120);
 }
 
 .h-640 {
     height: var(--height-640);
 }
 
+.h-460 {
+    height: var(--height-460);
+}
+
+.h-520 {
+    height: var(--height-520);
+}
+
 .line-height {
     line-height: var(--line-height-150);
 }
 
-.section-h {
-    height: var(--height-hero);
-}
-
-.card-height {
-    height: var(--height-section-sm);
+.h-402 {
+    height: var(--height-402);
 }
