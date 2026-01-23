@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --h-138: 138px;
+  --h-797: 797px;
+  --w-166: 166px;
+  --w-291: 291px;
+  --w-491: 491px;
+  --w-648: 648px;
+  --w-100: 100%;
+  --w-151: 151px;
+  --top-47: 47px;
+  --top-380: 380px;
+  --top-863: 863px;
+  --left-65: 65px;
+  --left-396: 396px;
+  --br-5: 5px;
+  --p-10: 10px;
+  --gap-24: 24px;
+  --gap-39: 39px;
+  --fs-50: 50px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-36: 36px;
+  --leading-100: 100%;
+  --dark-olive: #3C3B0F;
+  --ls-034: 0.34px;
+  --line-height-paragraph-25: : 25px;
+  --op-50: 50%;
+  --poppins: 'Poppins', sans-serif;
+  --raleway: 'Raleway', sans-serif;
+}
+
+.hero {
+  width: var(--w-648);
+  height: var(--h-138);
+  top: var(--top-380);
+  left: var(--left-396);
+  gap: var(--gap-39);
+  font-weight: 100;
+}
+
+.header {
+  background-image: url('./assets/HomepageImg.png');
+  background-size: cover;
+  background-position: center;
+  width: var(--w-100);
+  background-repeat: no-repeat;
+}
+
+.h-797 {
+  height: var(--h-797);
+}
+
+.top-47 {
+  top: var(--top-47);
+}
+
+.left-65 {
+  left: var(--left-65);
+}
+
+.op-50 {
+  opacity: var(--op-50);
+}
+
+.content p {
+  font-family: var(--font-poppins);
+  color: var(--color-dark-olive);
+  opacity: var(--op-50);
+}
+
+.white-btn {
+  border: 1px solid white;
+  padding: var(--p-10);
+  border-radius: 5px;
+  width: var(--w-166);
+  color: white;
+}
+
+.line-height-paragraph-25 {
+  line-height: var(--line-height-paragraph-25);
+}
+
+.color-dark-olive {
+  color: var(--dark-olive);
+}
+
+.text-space {
+  width: 491px;
+  line-height: 25px;
+  letter-spacing: var(--ls-034);
+}
+
+.golden-btn {
+  width: var(--w-151);
+  padding: 8px 37px 8px 37px;
+  border-radius: var(--br-5);
+  font-size: var(--fs-16);
+  border: 1px solid #809B10;
+  color: #809B10;
+}
+
+.font-poppins {
+  font-family: var(--poppins);
+}
+
+.font-raleway {
+  font-family: var(--raleway);
+}
+
+.w-291 {
+  width: var(--w-291);
+}
+
+.w-491 {
+  width: var(--w-491);
+}
+
+.text-36 {
+  font-size: var(--fs-36);
+}
+
+.text-50 {
+  font-size: var(--fs-50);
+}
+
+.text-18 {
+  font-size: var(--fs-18px);
+}
+
+.leading-100 {
+  line-height: var(--leading-100);
+}
+
+.top-863 {
+  top: var(--top-863);
+}
+
+.text-16 {
+  font-size: var(--fs-16);
+}
