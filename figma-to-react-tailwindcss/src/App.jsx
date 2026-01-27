@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -29,12 +29,33 @@ import Youtube from "./assets/Youtube.png";
 function App() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [isMobileDropDownOpen, setIsMobileDropDownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const scrollElements = document.querySelectorAll(".animate-fadeIn-scroll");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = "fadeInScroll 1s forwards";
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    scrollElements.forEach((el) => observer.observe(el));
+  }, []);
   return (
-    <div className="container">
+    <div className="container animate-fadeIn-scroll">
       <header className="header min-h-screen relative">
         <nav className="fixed top-0 left-0 w-full justify-between flex">
           <img src={Logo} alt="Logo" />
-          <ul className="flex gap-8 items-center text-white font-poppins">
+          <ul className="hidden md:flex gap-8 items-center text-white font-poppins">
             <li>
               <a href="#">Accommodation</a>
             </li>
@@ -48,8 +69,32 @@ function App() {
               <button className="white-btn w-166">Plan Your Trip</button>
             </li>
           </ul>
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            ☰
+          </button>
+          {isMobileMenuOpen && (
+            <div className="md:hidden px-4 py-6">
+              <ul className="flex gap-8 items-center text-white font-poppins">
+                <li>
+                  <a href="#">Accommodation</a>
+                </li>
+                <li>
+                  <a href="#">Location</a>
+                </li>
+                <li>
+                  <a href="#">Experiences</a>
+                </li>
+                <li>
+                  <button className="white-btn w-166">Plan Your Trip</button>
+                </li>
+              </ul>
+            </div>
+          )}
         </nav>
-        <section className="hero absolute">
+        <section className="hero absolute animate-fadeIn-scroll">
           <div className="text-center items-center flex flex-col gap-8">
             <p className=" text-white text-50 font-light tracking-[1.14px]">
               Authentic African Safaris
@@ -59,7 +104,7 @@ function App() {
         </section>
       </header>
 
-      <section className="hero-section relative top-20">
+      <section className="hero-section relative top-20 animate-fadeIn-scroll">
         <div className="grid grid-cols-2 items-center">
           <div className="flex justify-center">
             <img src={heroSection} alt="herosection image" className="h-630" />
@@ -93,7 +138,7 @@ function App() {
 
       <img src={Path} alt="path" className="path" />
 
-      <section className="why-book-with-us">
+      <section className="why-book-with-us animate-fadeIn-scroll">
         <p className="section-title">Why book with us?</p>
         <div className="grid grid-cols-4 items-center justify-center gap-8 relative">
           <div className="flex flex-col items-center gap-4">
@@ -135,7 +180,7 @@ function App() {
         </div>
       </section>
 
-      <section className="our-accommodation">
+      <section className="our-accommodation animate-fadeIn-scroll">
         <div className="flex items-center justify-between">
           <p className="heading-title">Our Accommodation</p>
           <button className="golden-btn self-end">Explore All</button>
@@ -170,7 +215,7 @@ function App() {
         </div>
       </section>
 
-      <section className="section-wrapper">
+      <section className="section-wrapper animate-fadeIn-scroll">
         <div className="relative">
           <img src={Lion} alt="Lion" className="w-full" />
           <div className="experience">
@@ -202,7 +247,7 @@ function App() {
         </div>
       </section>
 
-      <section className="Dining">
+      <section className="Dining animate-fadeIn-scroll">
         <div className="grid grid-cols-2 gap-0 h-full">
           <img src={Dining} alt="" className="h-full w-full" />
           <div className="content bg-grey">
@@ -228,7 +273,7 @@ function App() {
         </div>
       </section>
 
-      <section className="EnquireNow">
+      <section className="EnquireNow animate-fadeIn-scroll">
         <img src={Path2} alt="path2" className="path2" />
         <div className="swiper-wrapper-custom">
           <div className="swiper-button-prev" ref={prevRef}>
@@ -349,9 +394,9 @@ function App() {
       </section>
 
       <footer>
-        <div className="footer-section">
-          <p className="text-36">Hear the latest news about Tulia </p>
-          <div className="flex grid-cols-4 gap-26 ">
+        <div className="footer-section animate-fadeIn-scroll">
+          <p className="text-36">Hear the latest news about Tulia</p>
+          <div className="flex grid-cols-4 gap-26">
             <div>
               <input
                 type="name"

@@ -190,6 +190,10 @@
   font-size: var(--fs-18);
 }
 
+.text-26 {
+  font-size: var(--fs-26);
+}
+
 .text-50 {
   font-size: var(--fs-50);
 }
@@ -209,7 +213,16 @@
 .bg-grey {
   background-color: var(--bg-lightgrey);
 }
-
+@keyframes fadeInScroll {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 nav {
   padding: 50px;
 }
@@ -223,9 +236,9 @@ nav {
 }
 
 .hero {
-  margin-top: var(--mt-80);
   position: absolute;
   inset: 0;
+  padding-top: 80px; /* navbar height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -527,7 +540,7 @@ footer hr {
 
 .text-paragraph {
   font-family: var(--poppins);
-  opacity: var(--op-50);
+  color: rgba(60, 59, 15, 0.5);
 }
 
 .font-poppins {
