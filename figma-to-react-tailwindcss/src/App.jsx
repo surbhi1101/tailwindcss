@@ -29,8 +29,6 @@ import Youtube from "./assets/Youtube.png";
 function App() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-
-  const [isMobileDropDownOpen, setIsMobileDropDownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -50,12 +48,47 @@ function App() {
 
     scrollElements.forEach((el) => observer.observe(el));
   }, []);
+
   return (
-    <div className="container animate-fadeIn-scroll">
-      <header className="header min-h-screen relative">
-        <nav className="fixed top-0 left-0 w-full justify-between flex">
-          <img src={Logo} alt="Logo" />
-          <ul className="hidden md:flex gap-8 items-center text-white font-poppins">
+    <div>
+      {/* Navbar section */}
+      <nav className="fixed top-0 left-0 z-50 h-12.5 w-full flex justify-between items-center px-4 md:px-10 lg:px-16 lg:bg-black">
+        <img
+          src={isMobileMenuOpen ? Logo : FooterImg}
+          alt="Logo"
+          className={`block md:hidden h-8 sm:h-10 w-auto object-contain
+ ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}`}
+        />
+        <img
+          src={Logo}
+          alt="Logo"
+          className="hidden md:block h-12 lg:h-20 w-auto object-contain"
+        />
+
+        <ul className="hidden md:flex gap-8 items-center text-white font-poppins">
+          <li>
+            <a href="#">Accommodation</a>
+          </li>
+          <li>
+            <a href="#">Location</a>
+          </li>
+          <li>
+            <a href="#">Experiences</a>
+          </li>
+          <li>
+            <button className="white-btn w-166">Plan Your Trip</button>
+          </li>
+        </ul>
+        <button
+          className="md:hidden text-black text-2xl"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? "x" : "☰"}
+        </button>
+      </nav>
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed top-12.5 left-0 w-full bg-white z-40 menu-icon">
+          <ul className="flex flex-col text-black font-poppins">
             <li>
               <a href="#">Accommodation</a>
             </li>
@@ -66,35 +99,14 @@ function App() {
               <a href="#">Experiences</a>
             </li>
             <li>
-              <button className="white-btn w-166">Plan Your Trip</button>
+              <button className="border">Plan Your Trip</button>
             </li>
           </ul>
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            ☰
-          </button>
-          {isMobileMenuOpen && (
-            <div className="md:hidden px-4 py-6">
-              <ul className="flex gap-8 items-center text-white font-poppins">
-                <li>
-                  <a href="#">Accommodation</a>
-                </li>
-                <li>
-                  <a href="#">Location</a>
-                </li>
-                <li>
-                  <a href="#">Experiences</a>
-                </li>
-                <li>
-                  <button className="white-btn w-166">Plan Your Trip</button>
-                </li>
-              </ul>
-            </div>
-          )}
-        </nav>
-        <section className="hero absolute animate-fadeIn-scroll">
+        </div>
+      )}
+      {/* Header section */}
+      <header className="header min-h-screen relative pt-12.5">
+        <section className="hero relative animate-fadeIn-scroll">
           <div className="text-center items-center flex flex-col gap-8">
             <p className=" text-white text-50 font-light tracking-[1.14px]">
               Authentic African Safaris
@@ -103,21 +115,21 @@ function App() {
           </div>
         </section>
       </header>
-
-      <section className="hero-section relative top-20 animate-fadeIn-scroll">
-        <div className="grid grid-cols-2 items-center">
+      {/* Our Story section */}
+      <section className="hero-section relative top-20 animate-fadeIn-scroll py-12 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           <div className="flex justify-center">
-            <img src={heroSection} alt="herosection image" className="h-630" />
+            <img src={heroSection} alt="herosection image" />
           </div>
-          <div className="flex flex-col gap-4 w-491 content">
-            <p className="title text-color">Our Story</p>
-            <p className="heading-title">Tulia Amboseli Safari Camp</p>
-            <p className="text-paragraph">
+          <div className="flex flex-col gap-4 sm:w-82.5 lg:w-122.75 content">
+            <p className="title text-color !p-2">Our Story</p>
+            <p className="heading-title !p-2">Tulia Amboseli Safari Camp</p>
+            <p className="text-paragraph !p-2 lg:p-0">
               Tulia Amboseli Safari Camp is an eco-friendly safari camp just
               outside of Kimana Gate in the southeast area of the Amboseli
               National Park in Kenya.
             </p>
-            <p className="text-paragraph">
+            <p className="text-paragraph !p-2">
               lia offers an intimacy like no other camp in the area. Each tent
               opens to Mt Kilimanjaro and offers wonderful views of both sunrise
               and sunset. The welcoming restaurant and lounge overlook a very
@@ -126,33 +138,32 @@ function App() {
               perhaps gerenuk if you are lucky, offers guests an up close,
               intimate experience.
             </p>
-            <p className="text-paragraph">
+            <p className="text-paragraph !p-2">
               Enjoy the African Sunset during our daily sundowners at the
               campfire and reminisce day's safari with other guests.
             </p>
-
-            <button className="golden-btn w-158">Our Story</button>
+            <button className="golden-btn w-40 items-center lg:w-39.5">
+              Our Story
+            </button>
           </div>
         </div>
       </section>
-
       <img src={Path} alt="path" className="path" />
 
+      {/* why-book-with-us section */}
       <section className="why-book-with-us animate-fadeIn-scroll">
         <p className="section-title">Why book with us?</p>
-        <div className="grid grid-cols-4 items-center justify-center gap-8 relative">
-          <div className="flex flex-col items-center gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-4">
+          <div className="flex flex-col items-center gap-4 text-center">
             <img src={Location} alt="Location" />
-            <p className="title text-color items-center">
-              Location, Location, Location
-            </p>
+            <p className="title text-color">Location, Location, Location</p>
             <p className="text-paragraph">
               Our portfolio features properties in Africa's most celebrated
               wildlife regions, ensuring that our guests get as close to the
               action as possible
             </p>
           </div>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 text-center">
             <img src={Heart} alt="Heart" />
             <p className="title text-color"> Our Impact</p>
             <p className="text-paragraph">
@@ -160,7 +171,7 @@ function App() {
               empowerment in the reserves and communities we call home.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 text-center">
             <img src={Compass} alt="Compass" />
             <p className="title text-color">Authentic Experiences</p>
             <p className="text-paragraph">
@@ -169,7 +180,7 @@ function App() {
               fulfil your wildest dreams.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 text-center">
             <img src={Sunset} alt="Sunset" />
             <p className="title text-color">The Spirit of Tulia</p>
             <p className="text-paragraph">
@@ -179,34 +190,50 @@ function App() {
           </div>
         </div>
       </section>
-
-      <section className="our-accommodation animate-fadeIn-scroll">
+      {/* our-accommodation section */}
+      <section className="our-accommodation animate-fadeIn-scroll !px-4 md:px-8 lg:px-0 mt-20">
         <div className="flex items-center justify-between">
-          <p className="heading-title">Our Accommodation</p>
-          <button className="golden-btn self-end">Explore All</button>
+          <p className="heading-title text-[16px] lg:text-[36px]">
+            Our Accommodation
+          </p>
+          <button className="golden-btn self-start sm:self-end mt-10">
+            Explore All
+          </button>
         </div>
-        <p className="text-paragraph w-619">
+        <p className="text-paragraph w-full lg:w-154.75">
           Spread over lush greenery, ample space for privacy and a chance to
           relax and rejuvenate, Tulia Amboseli Safari Camp offers spacious
           Tents, each with stunning views of Mt Kilimanjaro.
         </p>
-        <div className="grid grid-cols-3 gap-41">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-41">
           <div className="relative">
-            <img src={SuperbTents} alt="Superb Tents" className="w-full" />
+            <img
+              src={SuperbTents}
+              alt="Superb Tents"
+              className="w-full h-auto"
+            />
             <div className="overlay-content">
               <p className="tent-title">Superb Tents</p>
               <p className="explore-btn">Explore</p>
             </div>
           </div>
           <div className="relative">
-            <img src={SuperbFamilyTents} alt="SuperbFamilyTents" />
+            <img
+              src={SuperbFamilyTents}
+              alt="SuperbFamilyTents"
+              className="w-full h-auto"
+            />
             <div className="overlay-content">
               <p className="tent-title">Superb Family Tents</p>
               <p className="explore-btn">Explore</p>
             </div>
           </div>
           <div className="relative">
-            <img src={DeluxeTents} alt="DeluxeTents" />
+            <img
+              src={DeluxeTents}
+              alt="DeluxeTents"
+              className="w-full h-auto"
+            />
             <div className="overlay-content">
               <p className="tent-title">Deluxe Tents</p>
               <p className="explore-btn">Explore</p>
@@ -214,47 +241,15 @@ function App() {
           </div>
         </div>
       </section>
-
-      <section className="section-wrapper animate-fadeIn-scroll">
-        <div className="relative">
-          <img src={Lion} alt="Lion" className="w-full" />
-          <div className="experience">
-            <div className="flex flex-col gap-30">
-              <p className="title">Experiences</p>
-              <p className="heading-title">Breathe in the Real Africa</p>
-              <p className="w-40">
-                Nothing can prepare you for a trip to Africa - the vast
-                landscapes, the thrilling encounters with big game, the details
-                brought to life by your expert guides. It's in the cool of the
-                morning and afternoon that your senses will be most alive,
-                stimulated whether you are on foot, atop a horse, in a game
-                vehicle, hot air balloon or boat.
-              </p>
-            </div>
-            <div className="flex items-end justify-between mt-8">
-              <button className="white-btn w-291">Explore Accommodation</button>
-              <div className="flex items-center gap-10 mr-100">
-                <p>Game Drives</p>
-                <button>
-                  <img src={LeftArrow} alt="Left arrow" />
-                </button>
-                <button>
-                  <img src={RightArrow} alt="Right arrow" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="Dining animate-fadeIn-scroll">
-        <div className="grid grid-cols-2 gap-0 h-full">
+      {/* Dining section */}
+      <section className="Dining animate-fadeIn-scroll ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
           <img src={Dining} alt="" className="h-full w-full" />
           <div className="content bg-grey">
-            <div className="gap-24 flex flex-col">
+            <div className="gap-6 !py-6 flex flex-col !px-4 lg:!pl-25">
               <p className="title">Dining</p>
               <p className="heading-title">Dine in the open</p>
-              <p className="text-paragraph w-63">
+              <p className="text-paragraph lg:w-[63%] ">
                 Enjoy cereals, fresh fruit, and pastries along with a hot
                 breakfast in the morning.For lunch we offer the option of a
                 packed lunch on safari or a cooked 3-course lunch back at the
@@ -267,12 +262,54 @@ function App() {
                   restrictions.
                 </span>
               </p>
-              <button className="golden-btn w-32">Explore Dining</button>
+              <button className="golden-btn w-50">Explore Dining</button>
             </div>
           </div>
         </div>
       </section>
-
+      {/* Experiences section */}
+      <section className="section-wrapper animate-fadeIn-scroll">
+        <div className="relative h-170.75">
+          <img src={Lion} alt="Lion" className="w-full h-full" />
+          <div className="experience !px-2 lg:!px-25.25">
+            <div className="flex flex-col gap-10 px-4">
+              <p className="title">Experiences</p>
+              <p className="heading-title">Breathe in the Real Africa</p>
+              <p className="p-2 lg:w-100">
+                Nothing can prepare you for a trip to Africa - the vast
+                landscapes, the thrilling encounters with big game, the details
+                brought to life by your expert guides. It's in the cool of the
+                morning and afternoon that your senses will be most alive,
+                stimulated whether you are on foot, atop a horse, in a game
+                vehicle, hot air balloon or boat.
+              </p>
+            </div>
+            <div className="flex items-end justify-between mt-8">
+              <button className="white-btn text-![10px] lg:!w-72.75 lg:!text-xl">
+                Explore Accommodation
+              </button>
+              <div className="flex items-center gap-2 lg:mr-100 lg:gap-10 ">
+                <p>Game Drives</p>
+                <button>
+                  <img
+                    src={LeftArrow}
+                    alt="Left arrow"
+                    className="h-8 lg:h-10"
+                  />
+                </button>
+                <button>
+                  <img
+                    src={RightArrow}
+                    alt="Right arrow"
+                    className="h-8 lg:h-10"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Enquire section  */}
       <section className="EnquireNow animate-fadeIn-scroll">
         <img src={Path2} alt="path2" className="path2" />
         <div className="swiper-wrapper-custom">
@@ -298,9 +335,14 @@ function App() {
           >
             <SwiperSlide>
               <div className="slide">
-                <img src={Enquirenow} alt="Enquirenow" srcSet="" />
+                <img
+                  src={Enquirenow}
+                  alt="Enquirenow"
+                  srcSet=""
+                  className="w-screen"
+                />
                 <div className="slide-content">
-                  <p className="review">
+                  <p className="review text-[10px] sm:text-[12px] md:text-[14px] lg:text-[22px]">
                     “I visited this beautiful property in the wilderness just
                     outside the gates of Amboseli. It's a myth that one needs to
                     stay inside the park. I would stay at this property any day.
@@ -311,7 +353,14 @@ function App() {
                     food. Yes! Very very highly recommended.”
                   </p>
                   <span className="author">Ranjan P</span>
-                  <button className="white-btn w-291">Enquire Now Trip</button>
+                  <button
+                    className="
+  white-btn 
+  text-[10px] sm:text-[12px] md:text-[14px]
+  w-40 sm:w-50 md:w-60 lg:w-72.75"
+                  >
+                    Enquire Now Trip
+                  </button>
                 </div>
               </div>
             </SwiperSlide>
@@ -324,7 +373,7 @@ function App() {
                   className="w-screen"
                 />
                 <div className="slide-content">
-                  <p className="review">
+                  <p className="review text-[10px] sm:text-[12px] md:text-[14px] lg:text-[22px]">
                     “I visited this beautiful property in the wilderness just
                     outside the gates of Amboseli. It's a myth that one needs to
                     stay inside the park. I would stay at this property any day.
@@ -334,7 +383,12 @@ function App() {
                     this camp does for you. Very comfortable with excellent
                     food. Yes! Very very highly recommended.”
                     <span className="author">Ranjan P</span>
-                    <button className="white-btn w-291">
+                    <button
+                      className="
+  white-btn 
+  text-[10px] sm:text-[12px] md:text-[14px]
+  w-40 sm:w-50 md:w-60 lg:w-72.75"
+                    >
                       Enquire Now Trip
                     </button>
                   </p>
@@ -350,7 +404,7 @@ function App() {
                   className="w-screen"
                 />
                 <div className="slide-content">
-                  <p className="review">
+                  <p className="review text-[10px] sm:text-[12px] md:text-[14px] lg:text-[22px]">
                     “I visited this beautiful property in the wilderness just
                     outside the gates of Amboseli. It's a myth that one needs to
                     stay inside the park. I would stay at this property any day.
@@ -361,7 +415,14 @@ function App() {
                     food. Yes! Very very highly recommended.”
                   </p>
                   <span className="author">Ranjan P</span>
-                  <button className="white-btn w-291">Enquire Now Trip</button>
+                  <button
+                    className="
+  white-btn 
+  text-[10px] sm:text-[12px] md:text-[14px]
+  w-40 sm:w-50 md:w-60 lg:w-72.75"
+                  >
+                    Enquire Now Trip
+                  </button>
                 </div>
               </div>
             </SwiperSlide>
@@ -374,7 +435,7 @@ function App() {
                   className="w-screen"
                 />
                 <div className="slide-content">
-                  <p className="review">
+                  <p className="review text-[10px] sm:text-[12px] md:text-[14px] lg:text-[22px]">
                     “I visited this beautiful property in the wilderness just
                     outside the gates of Amboseli. It's a myth that one needs to
                     stay inside the park. I would stay at this property any day.
@@ -385,53 +446,61 @@ function App() {
                     food. Yes! Very very highly recommended.”
                   </p>
                   <span className="author">Ranjan P</span>
-                  <button className="white-btn w-291">Enquire Now Trip</button>
+                  <button
+                    className="
+  white-btn 
+  text-[10px] sm:text-[12px] md:text-[14px]
+  w-40 sm:w-50 md:w-60 lg:w-72.75"
+                  >
+                    Enquire Now Trip
+                  </button>
                 </div>
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
       </section>
-
+      {/* {Footer section} */}
       <footer>
         <div className="footer-section animate-fadeIn-scroll">
-          <p className="text-36">Hear the latest news about Tulia</p>
-          <div className="flex grid-cols-4 gap-26">
-            <div>
-              <input
-                type="name"
-                name="name"
-                id="name"
-                placeholder="Name"
-                className="footer-input w-294"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="surname"
-                id="surname"
-                placeholder="Surname"
-                className="footer-input w-294"
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email Address"
-                className="footer-input w-377"
-              />
-            </div>
-            <div>
-              <button className="footer-btn">Subscribe</button>
-            </div>
+          <p className="text-xs lg:text-3xl font-semibold mb-6">
+            Hear the latest news about Tulia
+          </p>
+          <div className="flex flex-wrap gap-4 mb-10">
+            <input
+              type="name"
+              name="name"
+              id="name"
+              placeholder="Name"
+              className="footer-input flex-1 min-w-37.5 p-2"
+            />
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              placeholder="Surname"
+              className="footer-input flex-1 min-w-37.5 p-2"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              className="footer-input flex-1 min-w-50 p-2"
+            />
+            <button className="footer-btn flex-1 min-w-30 p-2 ">
+              Subscribe
+            </button>
           </div>
-          <div className="grid grid-cols-4 footer-details">
+          <div className="grid grid-cols-1 lg:grid-cols-4 footer-details">
             <div>
-              <img src={FooterImg} alt="" srcSet="" />
-              <p className="text-paragraph w-63">
+              <img
+                src={FooterImg}
+                alt="Footer Image"
+                srcSet=""
+                className="!mt-4"
+              />
+              <p className="text-paragraph lg:w-[63%]">
                 Tulia Amboseli Safari Camp is an eco-friendly safari camp just
                 outside of Kimana Gate in the southeast area of the Amboseli
                 National Park in Kenya.
@@ -514,9 +583,21 @@ function App() {
           </div>
         </div>
         <hr />
-        <div className="flex justify-between rights-reserved">
-          <p>All rights reserved © 2025 Tulia</p>
-          <div className="flex gap-6 ml-auto">
+        <div
+          className="
+    flex 
+    flex-col 
+    sm:flex-row 
+    gap-4 
+    sm:items-center 
+    sm:justify-between 
+    !px-4
+    lg:!px-23.5
+    !py-5
+  "
+        >
+          <p className="text-sm">All rights reserved © 2025 Tulia</p>
+          <div className="flex gap-4 sm:ml-auto text-sm">
             <p>Terms and Conditions</p>
             <p>Privacy Policy</p>
           </div>
