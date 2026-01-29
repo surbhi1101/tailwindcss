@@ -41,6 +41,7 @@
   --w-1207: 1207px;
   --w-1243: 1243px;
   --top-0: 0px;
+  --left-24: 24px;
   --left-40: 40px;
   --left-101: 101px;
   --right-40: 40px;
@@ -64,13 +65,18 @@
   --fw-400: 400;
   --mt-10: 10px;
   --mt-20: 20px;
+  --bottom-24: 24px;
   --mt-50: 50px;
   --mt-100: 100px;
   --mt-110: 110px;
   --mt-120: 120px;
   --mr-100: 100px;
   --pl-100: 100px;
+  --p-4: 4px;
   --p-12: 12px;
+  --p-50: 50px;
+  --pt-50: 50px;
+  --pt-100: 100px;
   --p-all: 84px 94px 84px 94px;
   --bottom-40: 40px;
   --bottom-60: 60px;
@@ -87,19 +93,6 @@
   --ls-034: 0.34px;
   --poppins: "Poppins", sans-serif;
   --raleway: "Raleway", sans-serif;
-}
-
-.menu-icon {
-  padding: 12px;
-  margin-top: 20px;
-}
-
-.menu-icon li,
-.menu-icon li button {
-  font-size: 14px;
-  padding: 4px;
-  border-radius: var(--br-5);
-  margin-left: auto;
 }
 
 .w-377 {
@@ -151,7 +144,20 @@
 }
 
 nav {
-  padding: 50px;
+  padding: var(--p-50);
+}
+
+.menu-icon {
+  padding: var(--p-12);
+  margin-top: var(--mt-20);
+}
+
+.menu-icon li,
+.menu-icon li button {
+  font-size: var(--fs-14);
+  padding: var(--p-4);
+  border-radius: var(--br-5);
+  margin-left: auto;
 }
 
 .header {
@@ -165,7 +171,7 @@ nav {
 .hero {
   position: absolute;
   inset: 0;
-  padding-top: 80px;
+  padding-top: var(--pt-50);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,8 +225,8 @@ nav {
 
 .overlay-content {
   position: absolute;
-  bottom: 24px;
-  left: 24px;
+  bottom: var(--bottom-24);
+  left: var(--left-24);
   font-family: "Poppins", sans-serif;
   color: #000000;
 }
@@ -253,7 +259,7 @@ img {
 }
 
 .Dining .content {
-  padding-top: 100px;
+  padding-top: var(--pt-100);
   display: block;
 }
 
