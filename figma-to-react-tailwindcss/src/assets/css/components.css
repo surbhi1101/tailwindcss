@@ -11,7 +11,7 @@
   }
   .navbar {
     @apply hidden items-center text-white font-body text-[15px] leading-[22.5px] capitalize md:flex gap-8;
-    letter-spacing: var(--ls-wide);
+    letter-spacing: var(--ls-tight);
   }
   .logo {
     @apply hidden md:block h-20 w-auto object-contain;
@@ -97,7 +97,7 @@
     lg:flex-row lg:gap-143;
   }
   .title {
-    @apply font-body
+    @apply font-heading
            text-base;
     color: var(--color-title);
   }
@@ -226,7 +226,7 @@
     gap: var(--gap-24);
   }
   .Dining-grid {
-    @apply flex flex-col 
+    @apply flex flex-col;
     background-color: var(--color-bg);
     gap: var(--gap-64);
   }
@@ -292,7 +292,7 @@
     @apply mt-2 text-xs leading-[100%] tracking-[0.8px] text-center font-normal font-heading lg:text-l;
   }
   .slide-content .white-btn {
-    @apply mt-4 text-xs px-2 py-1 inline-flex items-center text-white justify-center font-body font-normal rounded-sm border lg:text-lg;
+    @apply mt-4 text-xs px-2 py-1 inline-flex items-center justify-center font-body font-normal rounded-sm border lg:text-lg;
   }
 
   .mySwiper .swiper-pagination-bullet {
@@ -359,7 +359,7 @@ tracking-[var(--ls-tight)];
   /* buttons */
 
   .white-btn {
-    @apply inline-flex justify-center items-center text-white whitespace-nowrap font-body text-base rounded-sm px-6
+    @apply inline-flex justify-center items-center whitespace-nowrap font-body text-lg rounded-sm px-6
            border;
   }
 
@@ -371,7 +371,7 @@ tracking-[var(--ls-tight)];
 
   .btn-md {
     @apply text-sm;
-    @apply lg:text-base;
+    @apply lg:text-lg;
     padding: var(--btn-md-py) var(--btn-md-px);
     letter-spacing: var(--ls-tight);
   }
