@@ -122,7 +122,8 @@
   }
 
   .main-title {
-    @apply font-heading font-light text-2xl;
+    @apply font-heading text-2xl;
+    letter-spacing: var(--ls-sm);
   }
 
   .info-block {
@@ -378,6 +379,7 @@ tracking-[var(--ls-tight)];
   .golden-btn {
     @apply inline-flex items-center justify-center h-10 rounded-sm text-accent border py-2;
     border-color: var(--color-accent);
+    @apply items-center lg:w-39.5;
   }
 
   .explore-btn {

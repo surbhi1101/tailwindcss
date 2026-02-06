@@ -143,9 +143,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <button className="golden-btn w-40 items-center lg:w-39.5">
-                Our Story
-              </button>
+              <button className="golden-btn">Our Story</button>
             </div>
           </div>
         </div>
