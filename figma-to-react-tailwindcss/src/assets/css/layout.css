@@ -1,0 +1,80 @@
+@layer layout {
+  /* header */
+  .header {
+    @apply w-full
+           bg-no-repeat
+           bg-cover
+           bg-center
+           relative;
+    height: theme(--h-797);
+    background-image: url("../images/HomepageImg.png");
+  }
+
+  .hero {
+    @apply absolute inset-0
+           flex items-center justify-center
+           pt-[theme(--pt-50)];
+  }
+  .our-story,
+  .Dining,
+  .EnquireNow,
+  .footer-details {
+    @apply mt-[theme(--mt-50)] 
+    lg:mt-[theme(--mt-100)];
+  }
+
+  /* our-story */
+  .our-story {
+    @apply flex justify-center
+
+           lg:gap-143;
+  }
+
+  /* book section */
+  .book-section {
+    @apply grid
+   grid-cols-1
+  md:grid-cols-2
+   lg:grid-cols-4;
+    gap: 32px;
+  }
+  /* accommodation */
+  .our-accommodation {
+    @apply mx-auto;
+    max-width: theme(--w-1243);
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  /* experience */
+  .experiences-wrapper {
+    @apply w-full relative
+           min-h-[80vh]
+           mt-[theme(--mt-110)];
+    max-height: 797px;
+  }
+
+  /* dining */
+  .Dining {
+    @apply mt-[theme(--mt-110)]
+           grid
+           grid-cols-1
+           lg:grid-cols-2;
+  }
+  @media (min-width: 1024px) {
+    .Dining {
+      display: flex;
+      margin-right: 160px;
+    }
+  }
+
+  /* enquire */
+  .EnquireNow {
+    @apply relative overflow-hidden;
+  }
+
+  /* footer */
+  footer {
+    background-color: theme(--color-bg);
+  }
+}

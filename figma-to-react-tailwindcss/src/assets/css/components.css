@@ -1,0 +1,392 @@
+/* header */
+@layer layout {
+  nav {
+    padding: var(--p-50);
+  }
+}
+
+@layer components {
+  .fixed-header {
+    @apply fixed top-0 left-0 z-50 items-center h-12.5 w-full flex justify-between px-4 md:px-10 lg:px-16 lg:bg-black;
+  }
+  .navbar {
+    @apply hidden items-center text-white font-body text-[15px] leading-[22.5px] capitalize md:flex gap-8;
+    letter-spacing: var(--ls-wide);
+  }
+  .logo {
+    @apply hidden md:block h-20 w-auto object-contain;
+  }
+  .menu-btn {
+    @apply md:hidden text-black text-2xl;
+  }
+  .menu-icon {
+    @apply p-3 mt-5 md:hidden fixed top-12.5 left-0 w-full bg-white z-40;
+  }
+
+  .menu-icon ul {
+    @apply flex flex-col text-black;
+  }
+
+  .menu-icon li,
+  .menu-icon li button {
+    @apply text-sm p-1 rounded-sm ml-auto;
+  }
+  .header {
+    @apply min-h-screen relative pt-12.5;
+  }
+  .header-title {
+    @apply font-heading leading-[100%];
+    letter-spacing: var(--ls-wide);
+    font-size: var(--text-50px);
+  }
+  .hero-content {
+    @apply flex flex-col items-center text-center gap-8;
+  }
+
+  .hero-section {
+    @apply relative overflow-hidden;
+  }
+
+  /* our-story */
+
+  .text-content,
+  .info-block p,
+  .our-accommodation p {
+    @apply opacity-50;
+  }
+
+  .story-content {
+    @apply flex flex-col px-4 lg:px-0;
+    gap: var(--gap-45);
+  }
+  .story-heading {
+    @apply flex flex-col;
+    gap: var(--gap-24);
+  }
+  .story-details {
+    @apply flex flex-col;
+    gap: var(--gap-30);
+  }
+  .story-text-container {
+    @apply w-full;
+  }
+
+  .footer-input {
+    @apply flex flex-col gap-2;
+  }
+
+  .footer-input input {
+    @apply border font-body text-base leading-none rounded-sm;
+    border: 2px solid #cac7c7;
+    padding-inline: var(--p-12);
+    letter-spacing: var(--ls-lg);
+  }
+  @media (min-width: 1024px) {
+    .story-text-container {
+      width: var(--w-491);
+    }
+    .footer-input {
+      display: grid;
+      gap: var(--gap-26);
+      grid-template-columns: 1fr 1fr 1.5fr 0.8fr;
+      min-height: var(--h-57);
+    }
+  }
+  .our-story {
+    @apply flex flex-col items-center relative z-10 gap-2 
+    lg:flex-row lg:gap-143;
+  }
+  .title {
+    @apply font-body
+           text-base;
+    color: var(--color-title);
+  }
+  .heading-title {
+    @apply text-base font-heading leading-none lg:text-3xl;
+    letter-spacing: var(--ls-sm);
+  }
+  .text-content {
+    @apply flex flex-col opacity-50;
+    color: var(--color-darkolive);
+    gap: var(--gap-30);
+  }
+  /* Why book with us section */
+  .why-book-with-us {
+    @apply w-full flex justify-center;
+  }
+
+  .why-book-inner {
+    @apply flex flex-col items-center text-center lg:px-56;
+    gap: var(--gap-50);
+    width: 100%;
+  }
+
+  .main-title {
+    @apply font-heading font-light text-2xl;
+  }
+
+  .info-block {
+    @apply flex flex-col items-center gap-3;
+  }
+
+  .icon-title {
+    @apply flex flex-col items-center gap-5;
+  }
+
+  .info-block p {
+    @apply px-2 font-body text-xs leading-[22px] tracking-[0.34px] text-center font-normal;
+  }
+
+  /* our-accommodation */
+  .accommodation-content {
+    @apply flex flex-col;
+    gap: var(--gap-21);
+  }
+  .accommodation-heading {
+    @apply px-2 flex items-center justify-between;
+  }
+  .our-accommodation p,
+  .info-block p {
+    color: var(--color-darkolive);
+  }
+
+  .our-accommodation p {
+    @apply font-light px-2;
+  }
+  .our-accommodation-grid {
+    @apply grid grid-cols-1 mt-20;
+    @apply lg:grid lg:grid-cols-3;
+    gap: var(--gap-41);
+  }
+  .our-accommodation-img {
+    @apply w-full h-auto;
+  }
+  .overlay-content {
+    @apply flex flex-col absolute bottom-6 left-6 font-body text-black;
+    gap: var(--gap-7);
+  }
+  .tent-title {
+    @apply font-body font-normal text-2xl leading-9 tracking-[0.54px];
+  }
+
+  .explore-link {
+    @apply font-body text-sm mt-5 underline cursor-pointer tracking-[0.32px];
+  }
+  /* experience */
+
+  .experience-actions {
+    @apply flex flex-col items-center lg:flex-row;
+  }
+  .experiences {
+    @apply flex flex-col absolute inset-0 px-4 lg:px-30 lg:py-40;
+    gap: var(--gap-45);
+  }
+  .experiences p,
+  .experiences h6,
+  .slide-content p,
+  .game-drives,
+  .slide-content,
+  .slide-content .white-btn,
+  .explore-btn,
+  .navbar,
+  .header-title,
+  .tent-title,
+  .explore-link,
+  .white-btn {
+    @apply text-white;
+  }
+  .experiences-heading {
+    @apply flex flex-col text-white;
+    gap: var(--gap-24);
+  }
+  .experiences-img {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  .experiences-content {
+    @apply flex flex-col text-white;
+    max-width: 670px;
+    gap: var(--gap-30);
+  }
+  .experiences img {
+    height: 100%;
+  }
+  .experiences-content p {
+    @apply font-body font-normal text-base leading-[var(--lh-base)] tracking-[var(--ls-tight)];
+  }
+
+  .game-drives {
+    @apply flex items-center text-white ml-auto gap-6;
+  }
+
+  /* dining */
+  .Dining-subsection {
+    @apply flex flex-col px-2;
+    color: var(--color-darkolive);
+    gap: var(--gap-24);
+  }
+  .Dining-grid {
+    @apply flex flex-col 
+    background-color: var(--color-bg);
+    gap: var(--gap-64);
+  }
+
+  @media (min-width: 1024px) {
+    .Dining-subsection {
+      padding: var(--dining-padding-top) var(--dining-padding-x)
+        var(--dining-padding-bottom) 0;
+    }
+    .Dining-grid {
+      @apply flex flex-col;
+      padding-inline: var(--dining-grid-x);
+      padding-top: var(--dining-grid-top);
+    }
+  }
+
+  /* Enquire Now */
+
+  .EnquireNow {
+    @apply relative w-full overflow-hidden;
+  }
+
+  .swiper-wrapper-custom {
+    @apply relative w-full;
+  }
+
+  .swiper-wrapper-custom .swiper-button-prev,
+  .swiper-wrapper-custom .swiper-button-next {
+    @apply absolute bottom-10;
+    z-index: 20;
+  }
+
+  .swiper-wrapper-custom .swiper-button-prev {
+    @apply left-10;
+  }
+
+  .swiper-wrapper-custom .swiper-button-next {
+    @apply right-10;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+
+  .slide {
+    @apply relative w-full;
+  }
+
+  .slide img {
+    @apply w-full object-cover;
+    height: var(--h-560);
+  }
+  .slide-content {
+    @apply flex flex-col items-center absolute inset-0 justify-center text-center gap-4 p-5;
+  }
+
+  .slide-content .review {
+    @apply text-xs font-normal leading-[100%] tracking-[0.8px] text-center max-w-4xl font-heading lg:text-l;
+  }
+
+  .slide-content .author {
+    @apply mt-2 text-xs leading-[100%] tracking-[0.8px] text-center font-normal font-heading lg:text-l;
+  }
+  .slide-content .white-btn {
+    @apply mt-4 text-xs px-2 py-1 inline-flex items-center text-white justify-center font-body font-normal rounded-sm border lg:text-lg;
+  }
+
+  .mySwiper .swiper-pagination-bullet {
+    @apply w-2 h-2 border border-white rounded-full;
+  }
+
+  .mySwiper .swiper-pagination-bullet-active {
+    @apply bg-white;
+  }
+  /* footer */
+  .footer-section {
+    padding: var(--p-all);
+  }
+
+  .news-text {
+    @apply flex flex-col;
+    gap: var(--gap-47);
+  }
+  .footer-input input,
+  .footer-btn {
+    @apply box-border;
+  }
+
+  .footer-section p {
+    @apply mt-[var(--mt-20)] font-normal;
+  }
+
+  .footer-details {
+    @apply w-full md:w-[85%] font-body text-base leading-[var(--lh-base)] tracking-tight mt-10 md:grid md:grid-cols-4 gap-25;
+  }
+
+  .footer-links {
+    @apply flex flex-col gap-1;
+    margin-left: 50px;
+  }
+
+  .footer-links a {
+    @apply opacity-40 capitalize font-normal text-sm md:text-[14px] leading-[38px] font-body tracking-[var(--ls-tight)];
+  }
+
+  .links-title {
+    @apply font-heading font-normal text-lg leading-[var(--lh-lg)]
+tracking-[var(--ls-tight)];
+  }
+
+  .socialmedia-links {
+    @apply flex gap-[15px];
+    margin-top: var(--mt-20);
+  }
+
+  .rights-reserved {
+    @apply flex flex-col md:flex-row gap-2 md:gap-4 px-4 md:px-[94px] py-5 text-[16px];
+    color: var(--color-dark);
+  }
+
+  .policy-links {
+    @apply flex gap-2 md:gap-4 ml-auto;
+  }
+
+  .news-text p {
+    @apply text-base lg:text-3xl mb-6;
+  }
+
+  /* buttons */
+
+  .white-btn {
+    @apply inline-flex justify-center items-center text-white whitespace-nowrap font-body text-base rounded-sm px-6
+           border;
+  }
+
+  .btn-sm {
+    @apply h-10
+           text-base;
+    letter-spacing: var(--ls-tight);
+  }
+
+  .btn-md {
+    @apply text-sm;
+    @apply lg:text-base;
+    padding: var(--btn-md-py) var(--btn-md-px);
+    letter-spacing: var(--ls-tight);
+  }
+  .golden-btn {
+    @apply inline-flex items-center justify-center h-10 rounded-sm text-accent border py-2;
+    border-color: var(--color-accent);
+  }
+
+  .explore-btn {
+    @apply font-body text-[15px] mt-5 underline cursor-pointer;
+  }
+
+  .footer-btn {
+    @apply border
+           rounded-sm;
+    border-color: var(--color-text-primary);
+  }
+}

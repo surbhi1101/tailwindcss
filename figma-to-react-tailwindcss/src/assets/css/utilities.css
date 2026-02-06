@@ -1,0 +1,64 @@
+@keyframes fadeInScroll {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.p-50 {
+  padding: var(--p-50);
+}
+
+.w-291 {
+  width: var(--w-291);
+}
+
+.w-491 {
+  width: var(--w-491);
+}
+
+.w-166 {
+  width: var(--w-166);
+}
+
+.gap-41 {
+  gap: var(--gap-41);
+}
+.text-36 {
+  font-size: var(--fs-36);
+}
+.text-50 {
+  font-size: var(--fs-50);
+}
+
+.text-darkolive {
+  color: var(--dark-olive);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.mr-100 {
+  margin-right: var(--mr-100);
+}
+
+.experience p {
+  color: var(--color-w);
+}
+
+.bg-grey {
+  background-color: var(--bg-lightgrey);
+}
+
+.font-poppins {
+  font-family: var(--poppins);
+}
+
+.font-raleway {
+  font-family: var(--raleway);
+}
