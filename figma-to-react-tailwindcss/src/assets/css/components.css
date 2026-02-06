@@ -228,19 +228,17 @@
   }
   .Dining-grid {
     @apply flex flex-col;
-    background-color: var(--color-bg);
     gap: var(--gap-64);
   }
 
   @media (min-width: 1024px) {
-    .Dining-subsection {
-      padding: var(--dining-padding-top) var(--dining-padding-x)
-        var(--dining-padding-bottom) 0;
+    .Dining-grid {
+      padding: 100px;
+      margin-left: 100px;
+      margin-right: 110px;
     }
     .Dining-grid {
       @apply flex flex-col;
-      padding-inline: var(--dining-grid-x);
-      padding-top: var(--dining-grid-top);
     }
   }
 
@@ -373,7 +371,7 @@ tracking-[var(--ls-tight)];
   .btn-md {
     @apply text-sm;
     @apply lg:text-lg;
-    padding: var(--btn-md-py) var(--btn-md-px);
+    /* padding: var(--btn-md-py) var(--btn-md-px); */
     letter-spacing: var(--ls-tight);
   }
   .golden-btn {
