@@ -371,8 +371,9 @@ tracking-[var(--ls-tight)];
   .btn-md {
     @apply text-sm;
     @apply lg:text-lg;
-    /* padding: var(--btn-md-py) var(--btn-md-px); */
-    letter-spacing: var(--ls-tight);
+    padding: var(--btn-md-py) var(--btn-md-px);
+
+    letter-spacing: var(--ls-md);
   }
   .golden-btn {
     @apply inline-flex items-center justify-center h-10 rounded-sm text-accent border py-2;

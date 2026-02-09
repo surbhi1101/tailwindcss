@@ -268,7 +268,7 @@ function App() {
             </p>
           </div>
           <div className="experience-actions">
-            <button className="white-btn btn-md">Explore Accommodation</button>
+            <button className="white-btn btn-sm">Explore Accommodation</button>
             <div className="game-drives">
               <p>Game Drives</p>
               <button>
