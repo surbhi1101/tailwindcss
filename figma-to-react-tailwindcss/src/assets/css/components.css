@@ -179,7 +179,7 @@
     @apply flex flex-col items-center lg:flex-row;
   }
   .experiences {
-    @apply flex flex-col absolute inset-0 px-4 lg:px-30 lg:py-40;
+    @apply flex flex-col absolute inset-0 px-4 lg:px-38 lg:py-70;
     gap: var(--gap-45);
   }
   .experiences p,

@@ -49,11 +49,12 @@
   /* experience */
   .experiences-wrapper {
     @apply w-full relative
-           min-h-[80vh]
-           mt-[theme(--mt-110)];
-    max-height: 797px;
+           bg-no-repeat
+           bg-cover
+           bg-center;
+    height: theme(--h-797);
+    background-image: url("../images/Lion.png");
   }
-
   /* dining */
   .Dining {
     @apply mt-[theme(--mt-110)]

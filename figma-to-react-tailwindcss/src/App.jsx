@@ -251,7 +251,6 @@ function App() {
       </section>
       {/* Experiences section */}
       <section className="experiences-wrapper animate-fadeIn-scroll">
-        <img src={Lion} alt="Lion" className="experiences-img" />
         <div className="experiences">
           <div className="experiences-content">
             <div className="experiences-heading">
