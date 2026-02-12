@@ -47,6 +47,7 @@ function App() {
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // entry.target.style.opacity = "1";
             entry.target.style.animation = "fadeInScroll 1s forwards";
             observer.unobserve(entry.target);
           }
@@ -177,7 +178,9 @@ function App() {
       {/* why-book-with-us section */}
       <section className="why-book-with-us animate-fadeIn-scroll">
         <div className="why-book-inner page-container flex-col-layout">
-          <h1 className="title-base title-light text-32">Why book with us?</h1>
+          <div className="title-base title-light text-32">
+            <h1>Why book with us?</h1>
+          </div>
           <div className="book-section">
             <div className="info-block flex-col-layout">
               <div className="icon-title flex-col-layout">

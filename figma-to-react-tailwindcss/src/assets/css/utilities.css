@@ -37,7 +37,7 @@
 
 /* spacing */
 .page-container {
-  @apply lg:ml-[116px] lg:mr-[115px];
+  @apply lg:ml-[117px] lg:mr-[116px];
 }
 
 /* font-family */

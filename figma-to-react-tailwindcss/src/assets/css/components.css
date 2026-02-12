@@ -95,7 +95,7 @@
   }
 
   .text-content {
-    @apply opacity-50 gap-[30px] text-[var(--color-darkolive)];
+    @apply gap-[30px];
   }
 
   /* Why book with us section */
