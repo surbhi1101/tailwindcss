@@ -86,3 +86,9 @@
 .p-responsive {
   @apply px-10 py-10 lg:px-0;
 }
+
+/* flex-direction */
+
+.flex-col-layout {
+  @apply flex flex-col;
+}

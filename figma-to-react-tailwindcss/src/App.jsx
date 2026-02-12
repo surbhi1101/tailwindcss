@@ -194,8 +194,8 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="info-block">
-              <div className="icon-title">
+            <div className="info-block flex-col-layout">
+              <div className="icon-title flex-col-layout">
                 <img src={Heart} alt="Heart" />
                 <h6 className="icon-title-text"> Our Impact</h6>
               </div>
@@ -206,8 +206,8 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="info-block">
-              <div className="icon-title">
+            <div className="info-block flex-col-layout">
+              <div className="icon-title flex-col-layout">
                 <img src={Compass} alt="Compass" />
                 <h6 className="icon-title-text">Authentic Experiences</h6>
               </div>
@@ -219,8 +219,8 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="info-block">
-              <div className="icon-title">
+            <div className="info-block flex-col-layout">
+              <div className="icon-title flex-col-layout">
                 <img src={Sunset} alt="Sunset" />
                 <h6 className="icon-title-text">The Spirit of Tulia</h6>
               </div>

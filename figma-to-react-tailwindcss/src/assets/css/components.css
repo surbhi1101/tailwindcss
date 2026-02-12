@@ -10,14 +10,6 @@
     @apply fixed left-0 z-50 items-center w-full flex justify-between top-[33px] bg-transparent transition-colors transition-shadow duration-300 ease-linear;
   }
 
-  .flex-col-layout {
-    @apply flex flex-col;
-  }
-
-  .header-sticky {
-    @apply top-0;
-  }
-
   .navbar {
     @apply hidden items-center font-body capitalize md:flex tracking-[0.34px] gap-[24px];
   }
@@ -40,7 +32,7 @@
     @apply text-sm px-16 py-6  rounded-sm ml-auto;
   }
   .header-sticky {
-    @apply bg-black/85 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)];
+    @apply top-0 bg-black/85 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)];
   }
 
   .heading-hero {
