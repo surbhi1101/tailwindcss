@@ -1,34 +1,21 @@
 @theme {
   /* ===== Fonts ===== */
   --font-body: "Poppins", sans-serif;
-  --font-heading: "Raleway", sans-serif;
-
-  /* ===== Width ===== */
-  --w-1243: 1243px;
-  --w-491: 491px;
-
-  /* ===== Heights ===== */
-  --h-40: 40px;
-  --h-42: 42px;
-  --h-57: 57px;
-  --h-560: 560px;
-  --h-797: 797px;
+  --font-heading: Raleway, sans-serif;
 
   /* ===== Colors ===== */
   --color-title: #473729;
-  --color-bg: #f1eded;
+  --light-bg: #f1eded;
   --color-darkolive: #3c3b0f;
   --color-white: #ffffff;
-  --color-text-primary: #3c3b0f;
   --color-accent: #809b10;
   --color-dark: #232828;
 
   /* ===== Typography ===== */
-  --fs-12: 12px;
-  --fs-50: 50px;
-  --text-50px: 50px;
+  --text-12: 12px;
   --text-xs: 13px;
   --text-sm: 14px;
+  --text-15: 15px;
   --text-base: 16px;
   --text-lg: 18px;
   --text-l: 22px;
@@ -37,16 +24,6 @@
   --text-3xl: 36px;
   --text-4xl: 50px;
 
-  /* =====  font-weight ===== */
-  --font-light: 300;
-  --font-normal: 400;
-
-  /* =====  line-height ===== */
-  --lh-sm: 22px;
-  --lh-base: 25px;
-  --lh-lg: 29px;
-  --lh-xl: 38px;
-
   /* =====  letter-spacing ===== */
   --ls-sm: 0.8;
   --ls-tight: 0.34px;
@@ -54,62 +31,70 @@
   --ls-md: 0.39px;
   --ls-wide: 1.14px;
 
-  /* =====  radius ===== */
-  --radius-sm: 5px;
+  /* =====  border-radius ===== */
+  --radius-5: 5px;
 
-  /* =====  top-spacing ===== */
-  --top-150: 150px;
-
-  /* =====  padding ===== */
-  --p-12: 12px;
-  --p-20: 20px;
-  --p-50: 50px;
-  --p-100: 100px;
-  --pt-50: 50px;
-  --p-24: 24px;
-  --btn-md-px: 37px;
-  --btn-md-py: 8px;
-  --dining-padding-top: 10px;
-  --dining-padding-x: 199px;
-  --dining-padding-bottom: 23px;
-  --dining-grid-top: 6.25rem;
-  --dining-grid-x: 118px;
-  --p-all: 84px 94px 84px 94px;
-
-  /* =====  margin-top ===== */
-  --mt-20: 20px;
-  --mt-50: 50px;
-  --mt-80: 80px;
-  --mt-100: 100px;
-  --mt-110: 110px;
-
-  /* =====  gap ===== */
-  --gap-7: 7px;
-  --gap-21: 21px;
-  --gap-24: 24px;
-  --gap-26: 26px;
-  --gap-30: 30px;
-  --gap-32: 32px;
-  --gap-40: 40px;
-  --gap-41: 41px;
-  --gap-45: 45px;
-  --gap-47: 47px;
-  --gap-50: 50px;
-  --gap-64: 64px;
-  --gap-143: 143px;
+  /* padding - margin - height - width - gap */
+  --spacing: 1px;
+  --spacing-5: 5px;
+  --spacing-7: 7px;
+  --spacing-8: 8px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-13: 13px;
+  --spacing-20: 20px;
+  --spacing-21: 21px;
+  --spacing-22: 22px;
+  --spacing-22-5: 22.5px;
+  --spacing-23: 23px;
+  --spacing-24: 24px;
+  --spacing-25: 25px;
+  --spacing-26: 26px;
+  --spacing-29: 29px;
+  --spacing-30: 30px;
+  --spacing-31: 31px;
+  --spacing-32: 32px;
+  --spacing-37: 37px;
+  --spacing-38: 38px;
+  --spacing-39: 39px;
+  --spacing-40: 40px;
+  --spacing-41: 41px;
+  --spacing-42: 42px;
+  --spacing-45: 45px;
+  --spacing-47: 47px;
+  --spacing-50: 50px;
+  --spacing-57: 57px;
+  --spacing-64: 64px;
+  --spacing-65: 65px;
+  --spacing-66: 66px;
+  --spacing-80: 80px;
+  --spacing-100: 100px;
+  --spacing-110: 110px;
+  --spacing-115: 115px;
+  --spacing-116: 116px;
+  --spacing-118: 118px;
+  --spacing-143: 143px;
+  --spacing-150: 150px;
+  --spacing-186: 186px;
+  --spacing-199: 199px;
+  --spacing-279: 279px;
+  --spacing-380: 380px;
+  --spacing-396: 396px;
+  --spacing-560: 560px;
+  --spacing-683: 683px;
+  --spacing-797: 797px;
 }
 @layer base {
   body {
-    font-family: theme(--font-body);
-    font-weight: theme(--font-normal);
-    color: theme(--color-text-primary);
+    @apply font-body font-normal;
+    color: theme(--color-darkolive);
   }
 
   p {
     color: var(--color-darkolive);
     font-family: theme(--font-body);
     font-size: theme(--text-base);
-    line-height: theme(--lh-base);
+    line-height: theme(--spacing-25);
     letter-spacing: theme(--ls-tight);
   }
 
@@ -119,7 +104,7 @@
   h4,
   h5,
   h6 {
+    color: var(--color-darkolive);
     font-family: theme(--font-heading);
-    font-weight: theme(--font-normal);
   }
 }

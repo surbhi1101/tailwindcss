@@ -1,83 +1,47 @@
 @layer layout {
   /* header */
   .header {
-    @apply w-full
-           bg-no-repeat
-           bg-cover
-           bg-center
-           relative;
-    height: theme(--h-797);
+    @apply min-h-screen pt-12.5 w-full bg-no-repeat bg-cover bg-center relative;
     background-image: url("../images/HomepageImg.png");
   }
 
   .hero {
-    @apply absolute inset-0
-           flex items-center justify-center
-           pt-[theme(--pt-50)];
-  }
-  .our-story,
-  .Dining,
-  .EnquireNow,
-  .footer-details {
-    @apply mt-[theme(--mt-50)] 
-    lg:mt-[theme(--mt-100)];
+    @apply absolute inset-0 flex items-center justify-center;
   }
 
   /* our-story */
   .our-story {
-    @apply flex justify-center
-
-           lg:gap-143;
+    @apply items-center justify-center grid 
+    grid-cols-1
+    lg:grid-cols-2
+      relative z-10 mt-[66px] gap-20 lg:ml-[100px] lg:mr-[186px] lg:gap-[143px];
   }
 
-  /* book section */
+  .hero-section {
+    @apply relative overflow-hidden;
+  }
+
+  /* Why book with us section */
+
+  .why-book-with-us {
+    @apply w-full flex justify-center;
+  }
   .book-section {
-    @apply grid
-   grid-cols-1
-  md:grid-cols-2
-   lg:grid-cols-4;
-    gap: 32px;
-  }
-  /* accommodation */
-  .our-accommodation {
-    @apply mx-auto;
-    max-width: theme(--w-1243);
-    margin-top: 100px;
-    margin-bottom: 100px;
+    @apply mt-[20px] md:mt-20 lg:mt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:justify-center gap-[32px];
   }
 
   /* experience */
   .experiences-wrapper {
-    @apply w-full relative
-           bg-no-repeat
-           bg-cover
-           bg-center;
-    height: theme(--h-797);
+    @apply w-full relative bg-no-repeat bg-cover bg-center h-[683px];
     background-image: url("../images/Lion.png");
   }
   /* dining */
   .Dining {
-    @apply mt-[theme(--mt-110)]
-           grid
-           grid-cols-1
-           lg:grid-cols-2;
-
-    background-color: var(--color-bg);
-  }
-  @media (min-width: 1024px) {
-    .Dining {
-      display: flex;
-      margin-right: 160px;
-    }
+    @apply lg:flex lg:mr-[116px];
   }
 
   /* enquire */
   .EnquireNow {
     @apply relative overflow-hidden;
-  }
-
-  /* footer */
-  footer {
-    background-color: theme(--color-bg);
   }
 }

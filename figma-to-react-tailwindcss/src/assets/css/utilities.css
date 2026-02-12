@@ -1,0 +1,88 @@
+.img-cover-full {
+  @apply block  w-full object-cover h-auto;
+}
+/* font-size */
+.text-15 {
+  @apply text-[15px];
+}
+.text-32 {
+  @apply text-2xl;
+}
+.text-36 {
+  @apply text-3xl;
+}
+
+.heading-xl {
+  @apply text-4xl;
+}
+
+/* line-height */
+.lh22-5 {
+  @apply leading-[22.5px];
+}
+
+/* letter-spacing */
+.title-ls-tight {
+  @apply tracking-[0.77px];
+}
+
+.title-ls-wide {
+  @apply tracking-[1.14px];
+}
+
+/* margin-top */
+.mt-150 {
+  @apply mt-[150px];
+}
+
+/* spacing */
+.page-container {
+  @apply lg:ml-[116px] lg:mr-[115px];
+}
+
+/* font-family */
+.title-body :is(h1, h2, h3, h4, h5, h6) {
+  @apply font-heading;
+}
+
+/* font-weight */
+.title-normal :is(h1, h2, h3, h4, h5, h6) {
+  @apply font-normal;
+}
+.title-light :is(h1, h2, h3, h4, h5, h6) {
+  @apply font-light;
+}
+
+/* color */
+.title-white :is(h1, h2, h3, h4, h5, h6),
+.text-white-primary {
+  @apply text-white;
+}
+
+.bg-light {
+  @apply bg-[var(--light-bg)];
+}
+
+/* opacity */
+
+.text-faded {
+  @apply opacity-40;
+}
+
+.text-muted {
+  @apply opacity-50;
+}
+
+.text-light {
+  @apply opacity-60;
+}
+
+/* button */
+.btn {
+  @apply inline-flex items-center justify-center;
+}
+
+/* padding-resp */
+.p-responsive {
+  @apply px-10 py-10 lg:px-0;
+}
