@@ -54,7 +54,7 @@
 }
 
 /* color */
-.title-white :is(h1, h2, h3, h4, h5, h6),
+.title-white :is(a, h1, h2, h3, h4, h5, h6),
 .text-white-primary {
   @apply text-white;
 }
@@ -91,4 +91,9 @@
 
 .flex-col-layout {
   @apply flex flex-col;
+}
+
+/* space */
+.g-18 {
+  @apply flex flex-col gap-[18px];
 }

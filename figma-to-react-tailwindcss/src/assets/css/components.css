@@ -136,14 +136,14 @@
     @apply grid  lg:grid-cols-3 items-start w-full mt-[80px] gap-[41px] lg:pl-[99px] lg:pr-[98px];
   }
   .overlay-content {
-    @apply absolute bottom-35 right-[54px] left-[27.67px] font-body text-black gap-[7px];
+    @apply absolute bottom-36 right-[54px] left-[27.67px] font-body text-black;
   }
   .tent-title {
     @apply font-body font-normal text-xl leading-[36px] tracking-[0.54px];
   }
 
   .explore-link {
-    @apply font-body relative text-[15px] cursor-pointer mt-[18px] decoration-0 tracking-[0.32px];
+    @apply font-body relative text-[15px] cursor-pointer decoration-0 tracking-[0.32px];
   }
   .explore-link::after {
     content: "";

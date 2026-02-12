@@ -138,7 +138,7 @@ function App() {
             alt="herosection image"
             className="img-cover-full"
           />
-          <div className="story-content flex-col-layout p-responsive ">
+          <div className="story-content flex-col-layout p-responsive">
             <div className="story-details flex-col-layout">
               <div className="story-heading flex-col-layout">
                 <h6 className="sub-title">Our Story</h6>
@@ -260,8 +260,10 @@ function App() {
               className="img-cover-full"
             />
             <div className="overlay-content flex-col-layout">
-              <h2 className="tent-title text-white-primary">Superb Tents</h2>
-              <a className="explore-link text-white-primary">Explore</a>
+              <div className="title-white g-18">
+                <h2 className="tent-title">Superb Tents</h2>
+                <a className="explore-link">Explore</a>
+              </div>
             </div>
           </div>
           <div className="relative overflow-hidden">
@@ -271,10 +273,10 @@ function App() {
               className="img-cover-full"
             />
             <div className="overlay-content flex-col-layout">
-              <h2 className="tent-title text-white-primary ">
-                Superb Family Tents
-              </h2>
-              <a className="explore-link text-white-primary ">Explore</a>
+              <div className="title-white g-18">
+                <h2 className="tent-title">Superb Family Tents</h2>
+                <a className="explore-link">Explore</a>
+              </div>
             </div>
           </div>
           <div className="relative overflow-hidden">
@@ -284,8 +286,10 @@ function App() {
               className="img-cover-full"
             />
             <div className="overlay-content flex-col-layout">
-              <h2 className="tent-title text-white-primary ">Deluxe Tents</h2>
-              <a className="explore-link text-white-primary ">Explore</a>
+              <div className="title-white g-18">
+                <h2 className="tent-title">Deluxe Tents</h2>
+                <a className="explore-link">Explore</a>
+              </div>
             </div>
           </div>
         </div>
@@ -336,7 +340,7 @@ function App() {
           <div className="Dining-subsection flex-col-layout">
             <h6 className="title">Dining</h6>
             <h1 className="heading-title title-md">Dine in the open</h1>
-            <div className="text-content flex-col-layout">
+            <div className="text-content text-muted flex-col-layout">
               <p>
                 Enjoy cereals, fresh fruit, and pastries along with a hot
                 breakfast in the morning.For lunch we offer the option of a
