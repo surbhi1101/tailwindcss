@@ -308,7 +308,7 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="experience-actions flex-col-layout">
+          <div className="experience-actions">
             <button className="btn white-btn tracking-sm">
               Explore Accommodation
             </button>
