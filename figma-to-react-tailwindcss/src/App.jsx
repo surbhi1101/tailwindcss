@@ -566,7 +566,7 @@ function App() {
           </div>
         </div>
         <hr />
-        <div className="rights-reserved flex-col-layout">
+        <div className="rights-reserved">
           <p>All rights reserved © 2025 Tulia</p>
           <div className="policy-links">
             <p>Terms and Conditions</p>

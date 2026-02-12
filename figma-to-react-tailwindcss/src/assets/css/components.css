@@ -1,3 +1,18 @@
+@keyframes fadeInScroll {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn-scroll {
+  opacity: 0;
+}
+
 /* header */
 @layer layout {
   nav {
@@ -282,8 +297,7 @@ tracking-[var(--ls-tight)];
     @apply mt-[208px];
   }
   .rights-reserved {
-    @apply md:flex-row md:gap-4 text-[16px] mt-[19px] lg:pl-[98px] lg:pr-[88px];
-    color: var(--color-dark);
+    @apply flex md:flex-row md:gap-4 text-[16px] mt-[19px] lg:pl-[98px] lg:pr-[88px];
   }
 
   .policy-links {
@@ -301,7 +315,7 @@ tracking-[var(--ls-tight)];
   }
 
   .tracking-sm {
-    @apply tracking-[0.34px];
+    @apply tracking-[0.34px] text-base;
   }
 
   .tracking-md {

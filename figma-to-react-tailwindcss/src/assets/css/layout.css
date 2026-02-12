@@ -1,7 +1,7 @@
 @layer layout {
   /* header */
   .header {
-    @apply min-h-screen pt-12.5 w-full bg-no-repeat bg-cover bg-center relative;
+    @apply min-h-screen w-full bg-no-repeat bg-cover bg-center relative;
     background-image: url("../images/HomepageImg.png");
   }
 
