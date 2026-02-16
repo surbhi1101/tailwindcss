@@ -29,7 +29,7 @@
     @apply hidden items-center font-body capitalize md:flex tracking-[0.34px] gap-[24px];
   }
   .logo {
-    @apply hidden md:block w-auto object-contain;
+    @apply hidden md:block object-contain md:w-100 lg:w-auto;
   }
   .menu-btn {
     @apply md:hidden text-white text-2xl;
@@ -102,7 +102,7 @@
     @apply absolute right-[54px] left-[27.67px] font-body text-black bottom-15 xl:bottom-36;
   }
   .tent-title {
-    @apply font-body font-normal lg:leading-[36px] text-[15px] lg:tracking-[0.54px] xl:text-xl;
+    @apply font-body font-normal lg:leading-[36px] text-[14px] lg:tracking-[0.54px] lg:text-xl;
   }
 
   .explore-link {
@@ -117,9 +117,9 @@
 
   .experiences-details {
     @apply absolute gap-10
-    md:mt-[80px] md:gap-[20px]
-    lg:mt-[200px] lg:gap-[30px]
-    xl:mt-[255px] xl:gap-[45px] xl:ml-[103px];
+    md:mt-[50px] 
+    lg:mt-[100px]  md:ml-[103px]
+    xl:mt-[255px] xl:gap-[45px];
   }
 
   .experiences-heading {
@@ -136,8 +136,7 @@
     @apply text-[10px] 
     md:text-[13px]
     lg:text-[14px]
-    xl:text-base md:leading-[25px] md:tracking-[0.34px] 
-    xl:mr-[657px];
+    xl:text-base md:leading-[25px] md:tracking-[0.34px] md:w-[50%];
   }
 
   .experience-actions {
@@ -287,7 +286,7 @@
   }
 
   .news-text p {
-    @apply text-xl xl:text-3xl mb-6;
+    @apply text-lg xl:text-3xl mb-6;
   }
 
   /* buttons */
@@ -300,14 +299,12 @@
 
   .white-btn {
     @apply text-white
-    /* py-2 px-4  */
-    px-[4px] py-[2px]
-    md:px-[6px] md:py-[8px]
+  px-[6px] py-[8px]
     lg:py-[8px] lg:px-[31px];
   }
 
   .tracking-sm {
-    @apply text-[10px] lg:text-base tracking-[0.34px];
+    @apply text-[10px] md:text-base tracking-[0.34px];
   }
 
   .tracking-md {
