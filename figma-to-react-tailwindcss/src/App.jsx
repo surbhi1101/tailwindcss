@@ -39,7 +39,7 @@ function App() {
     const handleScroll = () => {
       const header = document.getElementById("siteHeader");
 
-      if (window.scrollY > 500) {
+      if (window.scrollY > 200) {
         header.classList.add("header-sticky");
       } else {
         header.classList.remove("header-sticky");
