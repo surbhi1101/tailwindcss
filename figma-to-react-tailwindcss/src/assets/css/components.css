@@ -32,7 +32,7 @@
     @apply hidden md:block w-auto object-contain;
   }
   .menu-btn {
-    @apply md:hidden text-black text-2xl;
+    @apply md:hidden text-white text-2xl;
   }
   .menu-icon {
     @apply p-3 mt-60 md:hidden fixed top-[50px] left-0 w-full bg-white z-40;
@@ -93,36 +93,37 @@
     @apply font-light text-base tracking-[0.34px] leading-[25px] xl:mr-[622px];
   }
   .accommodation-card {
-    @apply grid  grid-cols-3 items-start w-full 
+    @apply grid 
+    grid-cols-1
+    md:grid-cols-3 items-start w-full 
     lg:mt-[80px] gap-[41px] lg:pl-[99px] lg:pr-[98px];
   }
   .overlay-content {
     @apply absolute right-[54px] left-[27.67px] font-body text-black bottom-15 xl:bottom-36;
   }
   .tent-title {
-    @apply font-body font-normal text-[10px] lg:leading-[36px] lg:text-[15px] lg:tracking-[0.54px] xl:text-xl;
+    @apply font-body font-normal lg:leading-[36px] text-[15px] lg:tracking-[0.54px] xl:text-xl;
   }
 
   .explore-link {
-    @apply font-body relative text-[10px]  xl:text-[15px] cursor-pointer decoration-0 tracking-[0.32px];
+    @apply font-body relative text-[15px] cursor-pointer decoration-0 tracking-[0.32px];
   }
   .explore-link::after {
     content: "";
-    @apply absolute left-0 top-[16px] w-[40px] xl:top-[26.39px] xl:w-[64px] h-[1px] bg-current;
+    @apply absolute left-0 top-[16px] w-[40px] top-[26.39px] xl:w-[64px] h-[1px] bg-current;
   }
 
   /* experience */
 
   .experiences-details {
-    @apply absolute
-    mt-[50px] gap-10
+    @apply absolute gap-10
     md:mt-[80px] md:gap-[20px]
     lg:mt-[200px] lg:gap-[30px]
     xl:mt-[255px] xl:gap-[45px] xl:ml-[103px];
   }
 
   .experiences-heading {
-    @apply gap-[15px]
+    @apply gap-[5px]
     md:gap-[18px] 
     lg:gap-[20px]
     xl:gap-[24px];
@@ -132,10 +133,10 @@
   }
 
   .experiences-description p {
-    @apply text-[12px] 
+    @apply text-[10px] 
     md:text-[13px]
     lg:text-[14px]
-    xl:text-base leading-[25px] tracking-[0.34px] 
+    xl:text-base md:leading-[25px] md:tracking-[0.34px] 
     xl:mr-[657px];
   }
 
@@ -178,8 +179,9 @@
 
   .slide-content {
     @apply items-center absolute justify-center text-center 
-    px-[40px] 
-    top-[50px] 
+    px-2 top-[30px]
+    md:px-[40px] 
+    md:top-[50px] 
     lg:top-[100px] lg:px-[115px]
     xl:px-[284px] xl:top-[153px] xl:bottom-[205px];
   }
@@ -190,14 +192,14 @@
   }
 
   .slide-content .review p {
-    @apply text-xs md:text-lg xl:text-[22px];
+    @apply text-[8px] md:text-lg xl:text-[22px];
   }
 
   .slide-content .author {
-    @apply text-xs mt-10 lg:mt-[20px] md:text-xs xl:text-[20px];
+    @apply text-[8px] lg:mt-[20px] md:text-xs xl:text-[20px];
   }
   .slide-content .white-btn {
-    @apply mt-10 md:text-[10px] xl:text-lg xl:mt-[33px];
+    @apply md:text-[10px] xl:text-lg xl:mt-[33px];
   }
 
   .mySwiper .swiper-pagination-bullet {
@@ -249,10 +251,10 @@
   }
 
   .footer-detail {
-    @apply mt-[25.32px] pr-[98px];
+    @apply mt-[25.32px] md:pr-[98px];
   }
   .footer-details {
-    @apply grid font-body text-base tracking-tight mt-[45px] ml-[98px]
+    @apply grid font-body text-base tracking-tight ml-[10px] mt-[45px] md:ml-[98px]
     grid-cols-2
     xl:grid-cols-[1.85fr_1.2fr_1.8fr_2fr];
   }
@@ -279,11 +281,11 @@
     @apply lg:mt-[208px];
   }
   .rights-reserved {
-    @apply flex md:flex-row md:gap-4 text-[16px] mt-[19px] xl:pl-[98px] xl:pr-[88px];
+    @apply flex flex-col md:flex-row md:gap-4 text-[16px] mt-[19px] xl:pl-[98px] xl:pr-[88px];
   }
 
   .policy-links {
-    @apply flex gap-[30px] ml-auto;
+    @apply flex gap-[30px] md:ml-auto;
   }
 
   .news-text p {
@@ -299,19 +301,19 @@
   }
 
   .white-btn {
-    @apply text-white text-[10px] 
+    @apply text-white
     /* py-2 px-4  */
-    px-[4px] py-[6px]
+    px-[4px] py-[2px]
     md:px-[6px] md:py-[8px]
     lg:py-[8px] lg:px-[31px];
   }
 
   .tracking-sm {
-    @apply lg:text-base tracking-[0.34px];
+    @apply text-[10px] lg:text-base tracking-[0.34px];
   }
 
   .tracking-md {
-    @apply lg:text-lg tracking-[0.39px];
+    @apply text-[10px] lg:text-lg tracking-[0.39px];
   }
   .golden-btn {
     @apply border-[var(--color-accent)] text-base text-accent
