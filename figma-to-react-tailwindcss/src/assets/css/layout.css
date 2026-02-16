@@ -14,10 +14,10 @@
     @apply items-center justify-center grid 
     grid-cols-1
     lg:grid-cols-2
-      relative z-10 mt-[66px] gap-20 lg:ml-[100px] lg:mr-[186px] lg:gap-[143px];
+      relative z-10 mt-[66px] gap-20 xl:ml-[100px] xl:mr-[186px] xl:gap-[143px];
   }
 
-  .hero-section {
+  .section-container {
     @apply relative overflow-hidden;
   }
 
@@ -27,21 +27,18 @@
     @apply w-full flex justify-center;
   }
   .book-section {
-    @apply mt-[20px] md:mt-20 lg:mt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:justify-center gap-[32px];
+    @apply mt-[20px] md:mt-20 xl:mt-0 
+    grid grid-cols-2 
+    xl:grid-cols-4 
+    lg:justify-center gap-[32px];
   }
 
   /* experience */
   .experiences-wrapper {
-    @apply w-full relative bg-no-repeat bg-cover bg-center h-[683px];
-    background-image: url("../images/Lion.png");
+    @apply w-full relative;
   }
   /* dining */
   .Dining {
-    @apply lg:flex lg:mr-[116px];
-  }
-
-  /* enquire */
-  .EnquireNow {
-    @apply relative overflow-hidden;
+    @apply flex xl:mr-[116px];
   }
 }

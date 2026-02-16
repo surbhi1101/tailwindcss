@@ -18,6 +18,7 @@ import SuperbFamilyTents from "./assets/images/SuperbFamilyTents.png";
 import DeluxeTents from "./assets/images/DeluxeTents.png";
 import RightArrow from "./assets/images/Right-arrow.png";
 import LeftArrow from "./assets/images/Left-arrow.png";
+import Lion from "./assets/images/Lion.png";
 import Dining from "./assets/images/Dining.png";
 import Enquirenow from "./assets/images/Enquirenow.png";
 import FooterImg from "./assets/images/FooterImg.png";
@@ -26,9 +27,13 @@ import Facebook from "./assets/images/Facebook.png";
 import Youtube from "./assets/images/Youtube.png";
 
 function App() {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const expPrevRef = useRef(null);
+  const expNextRef = useRef(null);
+
+  const enquirePrevRef = useRef(null);
+  const enquireNextRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expSwiper, setExpSwiper] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +52,6 @@ function App() {
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // entry.target.style.opacity = "1";
             entry.target.style.animation = "fadeInScroll 1s forwards";
             observer.unobserve(entry.target);
           }
@@ -78,16 +82,16 @@ function App() {
 
         <ul className="navbar text-15 lh22-5 text-white-primary">
           <li>
-            <a href="#">Accommodation</a>
+            <a href="#accommodation">Accommodation</a>
           </li>
           <li>
-            <a href="#">Location</a>
+            <a href="#location">Location</a>
           </li>
           <li>
-            <a href="#">Experiences</a>
+            <a href="#experiences">Experiences</a>
           </li>
           <li>
-            <a className="white-btn btn tracking-sm" href="#">
+            <a className="white-btn btn tracking-sm" href="#planyoutrip">
               Plan Your Trip
             </a>
           </li>
@@ -103,13 +107,13 @@ function App() {
         <div className="menu-icon">
           <ul className="flex-col-layout">
             <li>
-              <a href="#">Accommodation</a>
+              <a href="#accommodation">Accommodation</a>
             </li>
             <li>
-              <a href="#">Location</a>
+              <a href="#location">Location</a>
             </li>
             <li>
-              <a href="#">Experiences</a>
+              <a href="#experiences">Experiences</a>
             </li>
             <li>
               <button className="border tracking-sm">Plan Your Trip</button>
@@ -120,30 +124,36 @@ function App() {
       {/* Header section */}
       <header className="header">
         <section className="hero animate-fadeIn-scroll">
-          <div className="hero-content flex-col-layout">
-            <div className="heading-title title-white title-lg">
+          <div className="hero-content hero-content-spacing flex-col-layout">
+            <div className="heading-title title-white">
               <h1>Authentic African Safaris</h1>
             </div>
-            <button className="btn white-btn tracking-md">
+            <a className="btn white-btn tracking-md" href="#explore">
               Explore Accommodation
-            </button>
+            </a>
           </div>
         </section>
       </header>
-      {/* Our Story section */}
-      <section className="hero-section animate-fadeIn-scroll">
-        <div className="our-story">
-          <img
-            src={heroSection}
-            alt="herosection image"
-            className="img-cover-full"
-          />
-          <div className="story-content flex-col-layout p-responsive">
-            <div className="story-details flex-col-layout">
-              <div className="story-heading flex-col-layout">
-                <h6 className="sub-title">Our Story</h6>
-                <h1 className="title-md">Tulia Amboseli Safari Camp</h1>
-                <div className="text-content flex-col-layout text-muted">
+      <main>
+        {/* Our Story section */}
+        <section className="section-container animate-fadeIn-scroll">
+          <div className="our-story">
+            <img
+              src={heroSection}
+              alt="View of Tulia Amboseli Safari Camp near Mt Kilimanjaro"
+              className="img-cover-full"
+            />
+            <div className="g-45 flex-col-layout p-responsive">
+              <div className="g-30 flex-col-layout">
+                <div className="g-24 flex-col-layout">
+                  <div className="sub-title">
+                    <h6>Our Story</h6>
+                  </div>
+                  <div className="title-md type-heading">
+                    <h2>Tulia Amboseli Safari Camp</h2>
+                  </div>
+                </div>
+                <div className="flex-col-layout g-30 text-muted">
                   <p>
                     Tulia Amboseli Safari Camp is an eco-friendly safari camp
                     just outside of Kimana Gate in the southeast area of the
@@ -166,302 +176,457 @@ function App() {
                   </p>
                 </div>
               </div>
-            </div>
-            <div>
-              <button className="btn golden-btn tracking-md">Our Story</button>
-            </div>
-          </div>
-        </div>
-
-        <img src={Path} alt="path" />
-      </section>
-      {/* why-book-with-us section */}
-      <section className="why-book-with-us animate-fadeIn-scroll">
-        <div className="why-book-inner page-container flex-col-layout">
-          <div className="title-base title-light text-32">
-            <h1>Why book with us?</h1>
-          </div>
-          <div className="book-section">
-            <div className="info-block flex-col-layout">
-              <div className="icon-title flex-col-layout">
-                <img src={Location} alt="Location" />
-                <h6 className="icon-title-text">
-                  Location, Location, Location
-                </h6>
-              </div>
-              <div className="text-muted info-text">
-                <p>
-                  Our portfolio features properties in Africa's most celebrated
-                  wildlife regions, ensuring that our guests get as close to the
-                  action as possible
-                </p>
-              </div>
-            </div>
-            <div className="info-block flex-col-layout">
-              <div className="icon-title flex-col-layout">
-                <img src={Heart} alt="Heart" />
-                <h6 className="icon-title-text"> Our Impact</h6>
-              </div>
-              <div className="text-muted info-text">
-                <p>
-                  We're committed to supporting conservation, education and
-                  empowerment in the reserves and communities we call home.
-                </p>
-              </div>
-            </div>
-            <div className="info-block flex-col-layout">
-              <div className="icon-title flex-col-layout">
-                <img src={Compass} alt="Compass" />
-                <h6 className="icon-title-text">Authentic Experiences</h6>
-              </div>
-              <div className="text-muted info-text">
-                <p>
-                  Whether it's game viewing, climbing Kilimanjaro, diving in
-                  Zanzibar or just relaxing in a pristine hideaway, we'll help
-                  you fulfil your wildest dreams.
-                </p>
-              </div>
-            </div>
-            <div className="info-block flex-col-layout">
-              <div className="icon-title flex-col-layout">
-                <img src={Sunset} alt="Sunset" />
-                <h6 className="icon-title-text">The Spirit of Tulia</h6>
-              </div>
-              <div className="text-muted info-text">
-                <p>
-                  Each member of the Tulia team is committed and thrilled to be
-                  able to share our properties and experiences with our guests.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* our-accommodation section */}
-      <section className="our-accommodation mt-150 animate-fadeIn-scroll">
-        <div className="accommodation-content flex-col-layout p-responsive">
-          <div className="accommodation-heading">
-            <h1 className="title-md ">Our Accommodation</h1>
-            <button className="btn golden-btn tracking-md">Explore All</button>
-          </div>
-          <div className="accommodation-detail text-muted">
-            <p>
-              Spread over lush greenery, ample space for privacy and a chance to
-              relax and rejuvenate, Tulia Amboseli Safari Camp offers spacious
-              Tents, each with stunning views of Mt Kilimanjaro.
-            </p>
-          </div>
-        </div>
-        <div className="accommodation-card">
-          <div className="relative overflow-hidden">
-            <img
-              src={SuperbTents}
-              alt="Superb Tents"
-              className="img-cover-full"
-            />
-            <div className="overlay-content flex-col-layout">
-              <div className="title-white g-18">
-                <h2 className="tent-title">Superb Tents</h2>
-                <a className="explore-link">Explore</a>
-              </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden">
-            <img
-              src={SuperbFamilyTents}
-              alt="SuperbFamilyTents"
-              className="img-cover-full"
-            />
-            <div className="overlay-content flex-col-layout">
-              <div className="title-white g-18">
-                <h2 className="tent-title">Superb Family Tents</h2>
-                <a className="explore-link">Explore</a>
-              </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden">
-            <img
-              src={DeluxeTents}
-              alt="DeluxeTents"
-              className="img-cover-full"
-            />
-            <div className="overlay-content flex-col-layout">
-              <div className="title-white g-18">
-                <h2 className="tent-title">Deluxe Tents</h2>
-                <a className="explore-link">Explore</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Experiences section */}
-      <section className="experiences-wrapper mt-150 animate-fadeIn-scroll">
-        <div className="experiences p-responsive flex-col-layout">
-          <div className="experiences-content flex-col-layout">
-            <div className="experiences-heading flex-col-layout">
-              <h6 className="sub-title text-white-primary">Experiences</h6>
-              <h1 className="title-md text-white-primary">
-                Breathe in the Real Africa
-              </h1>
-            </div>
-            <div className="experiences-description">
-              <p className="text-white-primary">
-                Nothing can prepare you for a trip to Africa - the vast
-                landscapes, the thrilling encounters with big game, the details
-                brought to life by your expert guides. It's in the cool of the
-                morning and afternoon that your senses will be most alive,
-                stimulated whether you are on foot, atop a horse, in a game
-                vehicle, hot air balloon or boat.
-              </p>
-            </div>
-          </div>
-          <div className="experience-actions">
-            <button className="btn white-btn tracking-sm">
-              Explore Accommodation
-            </button>
-            <div className="game-drives">
-              <p className=" text-white-primary">Game Drives</p>
-              <div className="arrow-btn">
-                <button>
-                  <img src={LeftArrow} />
-                </button>
-                <button>
-                  <img src={RightArrow} />
+              <div>
+                <button className="btn golden-btn tracking-md">
+                  Our Story
                 </button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Dining section */}
-      <section className="Dining bg-light mt-150 animate-fadeIn-scroll ">
-        <img src={Dining} alt="Dining" className="img-cover-full" />
-        <div className="Dining-grid p-responsive flex-col-layout">
-          <div className="Dining-subsection flex-col-layout">
-            <h6 className="title">Dining</h6>
-            <h1 className="heading-title title-md">Dine in the open</h1>
-            <div className="text-content text-muted flex-col-layout">
+          <img src={Path} alt="path" />
+        </section>
+        {/* why-book-with-us section */}
+        <section className="why-book-with-us animate-fadeIn-scroll">
+          <div className="why-book-inner page-container flex-col-layout">
+            <div className="title-light text-32 type-heading">
+              <h2>Why book with us?</h2>
+            </div>
+            <div className="book-section">
+              <div className="info-block flex-col-layout">
+                <div className="icon-title flex-col-layout g-20">
+                  <img src={Location} alt="Location" />
+                  <h6 className="icon-title-text">
+                    Location, Location, Location
+                  </h6>
+                </div>
+                <div className="text-muted info-text">
+                  <p>
+                    Our portfolio features properties in Africa's most
+                    celebrated wildlife regions, ensuring that our guests get as
+                    close to the action as possible
+                  </p>
+                </div>
+              </div>
+              <div className="info-block flex-col-layout">
+                <div className="icon-title flex-col-layout g-20">
+                  <img src={Heart} alt="Heart" />
+                  <h6 className="icon-title-text"> Our Impact</h6>
+                </div>
+                <div className="text-muted info-text">
+                  <p>
+                    We're committed to supporting conservation, education and
+                    empowerment in the reserves and communities we call home.
+                  </p>
+                </div>
+              </div>
+              <div className="info-block flex-col-layout">
+                <div className="icon-title flex-col-layout g-20">
+                  <img src={Compass} alt="Compass" />
+                  <h6 className="icon-title-text">Authentic Experiences</h6>
+                </div>
+                <div className="text-muted info-text">
+                  <p>
+                    Whether it's game viewing, climbing Kilimanjaro, diving in
+                    Zanzibar or just relaxing in a pristine hideaway, we'll help
+                    you fulfil your wildest dreams.
+                  </p>
+                </div>
+              </div>
+              <div className="info-block flex-col-layout">
+                <div className="icon-title flex-col-layout g-20">
+                  <img src={Sunset} alt="Sunset" />
+                  <h6 className="icon-title-text">The Spirit of Tulia</h6>
+                </div>
+                <div className="text-muted info-text">
+                  <p>
+                    Each member of the Tulia team is committed and thrilled to
+                    be able to share our properties and experiences with our
+                    guests.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* our-accommodation section */}
+        <section className="our-accommodation section-mt animate-fadeIn-scroll">
+          <div className="accommodation-content flex-col-layout p-responsive">
+            <div className="accommodation-heading">
+              <div className="title-md type-heading">
+                <h2>Our Accommodation</h2>
+              </div>
+              <button className="btn golden-btn tracking-md">
+                Explore All
+              </button>
+            </div>
+            <div className="accommodation-detail text-muted">
               <p>
-                Enjoy cereals, fresh fruit, and pastries along with a hot
-                breakfast in the morning.For lunch we offer the option of a
-                packed lunch on safari or a cooked 3-course lunch back at the
-                camp, depending on your plans for the day.In the evening, our
-                chef will prepare a delicious 4-course meal that can be
-                accompanied by a selection of fine wines or a drink from the
-                fully stocked bar.
-                <span className="block">
-                  The highly trained chefs will cater to any dietary
-                  restrictions.
-                </span>
+                Spread over lush greenery, ample space for privacy and a chance
+                to relax and rejuvenate, Tulia Amboseli Safari Camp offers
+                spacious Tents, each with stunning views of Mt Kilimanjaro.
               </p>
             </div>
           </div>
-          <button className="btn golden-btn">Explore Dining</button>
-        </div>
-      </section>
-      <img src={Path2} alt="path2" className="path" />
-      {/* Enquire section  */}
-      <section className="EnquireNow animate-fadeIn-scroll">
-        <div className="swiper-wrapper-custom">
-          <div className="swipe-btn">
-            <div className="swiper-button-prev" ref={prevRef}>
-              <img src={LeftArrow} alt="Left arrow" />
+          <div className="accommodation-card">
+            <div className="relative overflow-hidden">
+              <img
+                src={SuperbTents}
+                alt="Superb Tents"
+                className="img-cover-full"
+              />
+              <div className="overlay-content flex-col-layout">
+                <div className="title-white g-18 flex-col-layout">
+                  <h3 className="tent-title">Superb Tents</h3>
+                  <a className="explore-link">Explore</a>
+                </div>
+              </div>
             </div>
-            <div className="swiper-button-next" ref={nextRef}>
-              <img src={RightArrow} alt="Right arrow" />
+            <div className="relative overflow-hidden">
+              <img
+                src={SuperbFamilyTents}
+                alt="SuperbFamilyTents"
+                className="img-cover-full"
+              />
+              <div className="overlay-content flex-col-layout">
+                <div className="title-white g-18 flex-col-layout">
+                  <h3 className="tent-title">Superb Family Tents</h3>
+                  <a className="explore-link">Explore</a>
+                </div>
+              </div>
+            </div>
+            <div className="relative overflow-hidden">
+              <img
+                src={DeluxeTents}
+                alt="DeluxeTents"
+                className="img-cover-full"
+              />
+              <div className="overlay-content flex-col-layout">
+                <div className="title-white g-18 flex-col-layout">
+                  <h3 className="tent-title">Deluxe Tents</h3>
+                  <a className="explore-link">Explore</a>
+                </div>
+              </div>
             </div>
           </div>
-          <Swiper
-            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-            pagination={true}
-            mousewheel={true}
-            keyboard={true}
-            onSwiper={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-              swiper.navigation.init();
-              swiper.navigation.update();
-            }}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <div className="slide">
-                <img
-                  src={Enquirenow}
-                  alt="Enquirenow"
-                  className="img-cover-full"
-                />
-                <div className="slide-content">
-                  <p className="review text-white-primary">
-                    “I visited this beautiful property in the wilderness just
-                    outside the gates of Amboseli. It's a myth that one needs to
-                    stay inside the park. I would stay at this property any day.
-                    You face Mt. Kilimanjaro and usually have elephants visit
-                    you every evening. The service is fantastic and when on
-                    safari one needs to get the full experience which is what
-                    this camp does for you. Very comfortable with excellent
-                    food. Yes! Very very highly recommended.”
+        </section>
+
+        {/* Experiences section */}
+        <section className="experiences-wrapper section-mt animate-fadeIn-scroll">
+          <div className="swiper-wrapper-custom">
+            <Swiper
+              modules={[Navigation, Mousewheel, Keyboard]}
+              mousewheel={true}
+              keyboard={true}
+              onSwiper={(swiper) => {
+                setExpSwiper(swiper);
+                swiper.params.navigation.prevEl = expPrevRef.current;
+                swiper.params.navigation.nextEl = expNextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className="experiences flex-col-layout">
+                  <img src={Lion} alt="Lion" className="img-cover-full" />
+                  <div className="experiences-details p-responsive flex-col-layout ">
+                    <div className="experiences-content flex-col-layout">
+                      <div className="experiences-heading flex-col-layout title-white">
+                        <div className="sub-title">
+                          <h6>Experiences</h6>
+                        </div>
+                        <div className="title-md type-heading">
+                          <h2>Breathe in the Real Africa</h2>
+                        </div>
+                      </div>
+                      <div className="experiences-description text-white-primary">
+                        <p>
+                          Nothing can prepare you for a trip to Africa - the
+                          vast landscapes, the thrilling encounters with big
+                          game, the details brought to life by your expert
+                          guides. It's in the cool of the morning and afternoon
+                          that your senses will be most alive, stimulated
+                          whether you are on foot, atop a horse, in a game
+                          vehicle, hot air balloon or boat.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="experience-actions">
+                      <button className="btn white-btn tracking-sm">
+                        Explore Accommodation
+                      </button>
+                      <div className="game-drives">
+                        <div className="text-white-primary">
+                          <p>Game Drives</p>
+                        </div>
+                        <div className="arrow-btn">
+                          <button onClick={() => expSwiper?.slidePrev()}>
+                            <img src={LeftArrow} alt="Previous" />
+                          </button>
+
+                          <button onClick={() => expSwiper?.slideNext()}>
+                            <img src={RightArrow} alt="Next" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="experiences flex-col-layout">
+                  <img src={Lion} alt="Lion" className="img-cover-full" />
+                  <div className="experiences-details p-responsive flex-col-layout">
+                    <div className="experiences-content flex-col-layout">
+                      <div className="experiences-heading flex-col-layout title-white">
+                        <div className="sub-title">
+                          <h6>Experiences</h6>
+                        </div>
+                        <div className="title-md type-heading">
+                          <h2>Breathe in the Real Africa</h2>
+                        </div>
+                      </div>
+                      <div className="experiences-description text-white-primary">
+                        <p>
+                          Nothing can prepare you for a trip to Africa - the
+                          vast landscapes, the thrilling encounters with big
+                          game, the details brought to life by your expert
+                          guides. It's in the cool of the morning and afternoon
+                          that your senses will be most alive, stimulated
+                          whether you are on foot, atop a horse, in a game
+                          vehicle, hot air balloon or boat.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="experience-actions">
+                      <button className="btn white-btn tracking-sm">
+                        Explore Accommodation
+                      </button>
+                      <div className="game-drives">
+                        <div className="text-white-primary">
+                          <p>Game Drives</p>
+                        </div>
+                        <div className="arrow-btn">
+                          <button onClick={() => expSwiper?.slidePrev()}>
+                            <img src={LeftArrow} alt="Previous" />
+                          </button>
+
+                          <button onClick={() => expSwiper?.slideNext()}>
+                            <img src={RightArrow} alt="Next" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="experiences flex-col-layout">
+                  <img src={Lion} alt="Lion" className="img-cover-full" />
+                  <div className="experiences-details p-responsive flex-col-layout">
+                    <div className="experiences-content flex-col-layout">
+                      <div className="experiences-heading flex-col-layout title-white">
+                        <div className="sub-title">
+                          <h6>Experiences</h6>
+                        </div>
+                        <div className="title-md type-heading">
+                          <h2>Breathe in the Real Africa</h2>
+                        </div>
+                      </div>
+                      <div className="experiences-description text-white-primary">
+                        <p>
+                          Nothing can prepare you for a trip to Africa - the
+                          vast landscapes, the thrilling encounters with big
+                          game, the details brought to life by your expert
+                          guides. It's in the cool of the morning and afternoon
+                          that your senses will be most alive, stimulated
+                          whether you are on foot, atop a horse, in a game
+                          vehicle, hot air balloon or boat.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="experience-actions">
+                      <button className="btn white-btn tracking-sm">
+                        Explore Accommodation
+                      </button>
+                      <div className="game-drives">
+                        <div className="text-white-primary">
+                          <p>Game Drives</p>
+                        </div>
+                        <div className="arrow-btn">
+                          <button onClick={() => expSwiper?.slidePrev()}>
+                            <img src={LeftArrow} alt="Previous" />
+                          </button>
+
+                          <button onClick={() => expSwiper?.slideNext()}>
+                            <img src={RightArrow} alt="Next" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </section>
+
+        {/* Dining section */}
+        <section className="Dining bg-light section-mt animate-fadeIn-scroll ">
+          <div className="dining-grid">
+            <img
+              src={Dining}
+              alt="Dine in the open"
+              className="img-cover-full"
+            />
+            <div className="dining-content p-responsive flex-col-layout">
+              <div className="dining-subsection flex-col-layout">
+                <div className="sub-title">
+                  <h6>Dining</h6>
+                </div>
+                <div className="title-md heading-title">
+                  <h2>Dine in the open</h2>
+                </div>
+                <div className="text-content text-muted flex-col-layout">
+                  <p>
+                    Enjoy cereals, fresh fruit, and pastries along with a hot
+                    breakfast in the morning.For lunch we offer the option of a
+                    packed lunch on safari or a cooked 3-course lunch back at
+                    the camp, depending on your plans for the day.In the
+                    evening, our chef will prepare a delicious 4-course meal
+                    that can be accompanied by a selection of fine wines or a
+                    drink from the fully stocked bar.
+                    <span className="block">
+                      The highly trained chefs will cater to any dietary
+                      restrictions.
+                    </span>
                   </p>
-                  <span className="author text-white-primary">Ranjan P</span>
-                  <button className="btn white-btn tracking-md">
-                    Enquire Now Trip
-                  </button>
                 </div>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide">
-                <img
-                  src={Enquirenow}
-                  alt="Enquirenow"
-                  className="img-cover-full"
-                />
-                <div className="slide-content">
-                  <p className="review text-white-primary">
-                    “I visited this beautiful property in the wilderness just
-                    outside the gates of Amboseli. It's a myth that one needs to
-                    stay inside the park. I would stay at this property any day.
-                    You face Mt. Kilimanjaro and usually have elephants visit
-                    you every evening. The service is fantastic and when on
-                    safari one needs to get the full experience which is what
-                    this camp does for you. Very comfortable with excellent
-                    food. Yes! Very very highly recommended.”
-                  </p>
-                  <span className="author text-white-primary">Ranjan P</span>
-                  <button className="btn white-btn tracking-md">
-                    Enquire Now Trip
-                  </button>
-                </div>
+              <button className="btn golden-btn">Explore Dining</button>
+            </div>
+          </div>
+        </section>
+        <img src={Path2} alt="path2" className="path" />
+
+        {/* Enquire section  */}
+        <section className="section-container animate-fadeIn-scroll">
+          <div className="swiper-wrapper-custom">
+            <div className="swipe-btn">
+              <div className="swiper-button-prev" ref={enquirePrevRef}>
+                <img src={LeftArrow} alt="Left arrow" />
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide">
-                <img
-                  src={Enquirenow}
-                  alt="Enquirenow"
-                  className="img-cover-full"
-                />
-                <div className="slide-content">
-                  <p className="review text-white-primary">
-                    “I visited this beautiful property in the wilderness just
-                    outside the gates of Amboseli. It's a myth that one needs to
-                    stay inside the park. I would stay at this property any day.
-                    You face Mt. Kilimanjaro and usually have elephants visit
-                    you every evening. The service is fantastic and when on
-                    safari one needs to get the full experience which is what
-                    this camp does for you. Very comfortable with excellent
-                    food. Yes! Very very highly recommended.”
-                  </p>
-                  <span className="author text-white-primary">Ranjan P</span>
-                  <button className="btn white-btn tracking-md">
-                    Enquire Now Trip
-                  </button>
-                </div>
+              <div className="swiper-button-next" ref={enquireNextRef}>
+                <img src={RightArrow} alt="Right arrow" />
               </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </section>
+            </div>
+            <Swiper
+              modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+              pagination={true}
+              mousewheel={true}
+              keyboard={true}
+              onSwiper={(swiper) => {
+                swiper.params.navigation.prevEl = enquirePrevRef.current;
+                swiper.params.navigation.nextEl = enquireNextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className="slide">
+                  <img
+                    src={Enquirenow}
+                    alt="Enquirenow"
+                    className="img-cover-full"
+                  />
+                  <div className="slide-content flex-col-layout">
+                    <div className="review text-white-primary type-heading ">
+                      <p>
+                        “I visited this beautiful property in the wilderness
+                        just outside the gates of Amboseli. It's a myth that one
+                        needs to stay inside the park. I would stay at this
+                        property any day. You face Mt. Kilimanjaro and usually
+                        have elephants visit you every evening. The service is
+                        fantastic and when on safari one needs to get the full
+                        experience which is what this camp does for you. Very
+                        comfortable with excellent food. Yes! Very very highly
+                        recommended.”
+                      </p>
+                      <div className="author">
+                        <span>Ranjan P</span>
+                      </div>
+                    </div>
+                    <button className="btn white-btn tracking-md">
+                      Enquire Now Trip
+                    </button>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="slide">
+                  <img
+                    src={Enquirenow}
+                    alt="Enquirenow"
+                    className="img-cover-full"
+                  />
+                  <div className="slide-content flex-col-layout">
+                    <div className="review text-white-primary type-heading ">
+                      <p>
+                        “I visited this beautiful property in the wilderness
+                        just outside the gates of Amboseli. It's a myth that one
+                        needs to stay inside the park. I would stay at this
+                        property any day. You face Mt. Kilimanjaro and usually
+                        have elephants visit you every evening. The service is
+                        fantastic and when on safari one needs to get the full
+                        experience which is what this camp does for you. Very
+                        comfortable with excellent food. Yes! Very very highly
+                        recommended.”
+                      </p>
+                      <div className="author">
+                        <span>Ranjan P</span>
+                      </div>
+                    </div>
+                    <button className="btn white-btn tracking-md">
+                      Enquire Now Trip
+                    </button>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="slide">
+                  <img
+                    src={Enquirenow}
+                    alt="Enquirenow"
+                    className="img-cover-full"
+                  />
+                  <div className="slide-content flex-col-layout">
+                    <div className="review text-white-primary type-heading ">
+                      <p>
+                        “I visited this beautiful property in the wilderness
+                        just outside the gates of Amboseli. It's a myth that one
+                        needs to stay inside the park. I would stay at this
+                        property any day. You face Mt. Kilimanjaro and usually
+                        have elephants visit you every evening. The service is
+                        fantastic and when on safari one needs to get the full
+                        experience which is what this camp does for you. Very
+                        comfortable with excellent food. Yes! Very very highly
+                        recommended.”
+                      </p>
+                      <div className="author">
+                        <span>Ranjan P</span>
+                      </div>
+                    </div>
+                    <button className="btn white-btn tracking-md">
+                      Enquire Now Trip
+                    </button>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </section>
+      </main>
       {/* footer section */}
       <footer className="bg-light">
         <div className="footer-section animate-fadeIn-scroll">
@@ -485,7 +650,7 @@ function App() {
               <button className="footer-btn">Subscribe</button>
             </div>
           </div>
-          <div className="footer-details">
+          <div className="footer-details g-20">
             <div className="footer-brand">
               <img src={FooterImg} alt="Footer Image" srcSet="" />
               <div className="footer-detail title-light text-light ">
@@ -495,7 +660,7 @@ function App() {
                   National Park in Kenya.
                 </p>
               </div>
-              <div className="socialmedia-links">
+              <div className="socialmedia-links gap-10">
                 <img src={Instagram} alt="Instagram" />
                 <img src={Facebook} alt="Facebook" />
                 <img src={Youtube} alt="Youtube" />
@@ -505,68 +670,68 @@ function App() {
               <p className="links-title">About</p>
               <ul className="title-light text-faded">
                 <li>
-                  <a href="#">Our Story</a>
+                  <a href="#ourstory">Our Story</a>
                 </li>
                 <li>
-                  <a href="#">Location</a>
+                  <a href="#location">Location</a>
                 </li>
                 <li>
-                  <a href="#">Dining</a>
+                  <a href="#dining">Dining</a>
                 </li>
                 <li>
-                  <a href="#">Rates</a>
+                  <a href="#rates">Rates</a>
                 </li>
                 <li>
-                  <a href="#">Live Availability</a>
+                  <a href="#liveavailability">Live Availability</a>
                 </li>
                 <li>
-                  <a href="#">Gallery</a>
+                  <a href="#gallery">Gallery</a>
                 </li>
                 <li>
-                  <a href="#">Contact us</a>
+                  <a href="#contactus">Contact us</a>
                 </li>
               </ul>
             </div>
-            <div className="footer-links">
+            <div className="footer-links flex-col-layout ">
               <p className="links-title">Accommodation</p>
               <ul className="title-light text-faded">
                 <li>
-                  <a href="#">Superb tents</a>
+                  <a href="#superbtents">Superb tents</a>
                 </li>
                 <li>
-                  <a href="#">Superb family tents</a>
+                  <a href="#superbfamilytents">Superb family tents</a>
                 </li>
                 <li>
-                  <a href="#">Deluxe tents</a>
+                  <a href="#deluxetents">Deluxe tents</a>
                 </li>
               </ul>
             </div>
-            <div className="footer-links">
+            <div className="footer-links flex-col-layout ">
               <p className="links-title">Experiences</p>
               <ul className="title-light text-faded">
                 <li>
-                  <a href="#">Game Drives</a>
+                  <a href="#gamedrives">Game Drives</a>
                 </li>
                 <li>
-                  <a href="#">Balloon</a>
+                  <a href="#balloon">Balloon</a>
                 </li>
                 <li>
-                  <a href="#">Safaris</a>
+                  <a href="#safaris">Safaris</a>
                 </li>
                 <li>
-                  <a href="#">Bush walks</a>
+                  <a href="#bushwalks">Bush walks</a>
                 </li>
                 <li>
-                  <a href="#">Spa</a>
+                  <a href="#spa">Spa</a>
                 </li>
                 <li>
-                  <a href="#">Bush Breakfast</a>
+                  <a href="#bushbreakfast">Bush Breakfast</a>
                 </li>
                 <li>
-                  <a href="#">Sundowners</a>
+                  <a href="#sundowners">Sundowners</a>
                 </li>
                 <li>
-                  <a href="#">Cultural Tours</a>
+                  <a href="#culturaltours">Cultural Tours</a>
                 </li>
               </ul>
             </div>
