@@ -130,12 +130,6 @@
 
 /* type-heading */
 
-.type-heading :is(a, p, h1, h2, h3, h4, h5, h6) {
+.type-heading :is(a, span, p, h1, h2, h3, h4, h5, h6) {
   @apply leading-[100%] tracking-[0.8px];
-}
-
-/* space */
-
-.hero-content-spacing {
-  @apply gap-[39px] xl:top-[380px] xl:px-[396px] xl:bottom-[279px];
 }

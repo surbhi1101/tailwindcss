@@ -124,7 +124,7 @@ function App() {
       {/* Header section */}
       <header className="header">
         <section className="hero animate-fadeIn-scroll">
-          <div className="hero-content hero-content-spacing flex-col-layout">
+          <div className="hero-content flex-col-layout">
             <div className="heading-title title-white">
               <h1>Authentic African Safaris</h1>
             </div>
@@ -540,7 +540,37 @@ function App() {
                     alt="Enquirenow"
                     className="img-cover-full"
                   />
-                  <div className="slide-content flex-col-layout">
+                  <div className="slide-content">
+                    <div className="review text-white-primary type-heading">
+                      <p>
+                        “I visited this beautiful property in the wilderness
+                        just outside the gates of Amboseli. It's a myth that one
+                        needs to stay inside the park. I would stay at this
+                        property any day. You face Mt. Kilimanjaro and usually
+                        have elephants visit you every evening. The service is
+                        fantastic and when on safari one needs to get the full
+                        experience which is what this camp does for you. Very
+                        comfortable with excellent food. Yes! Very very highly
+                        recommended.”
+                      </p>
+                      <div className="author">
+                        <span>Ranjan P</span>
+                      </div>
+                    </div>
+                    <button className="btn white-btn tracking-md">
+                      Enquire Now Trip
+                    </button>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="slide">
+                  <img
+                    src={Enquirenow}
+                    alt="Enquirenow"
+                    className="img-cover-full"
+                  />
+                  <div className="slide-content">
                     <div className="review text-white-primary type-heading ">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -570,37 +600,7 @@ function App() {
                     alt="Enquirenow"
                     className="img-cover-full"
                   />
-                  <div className="slide-content flex-col-layout">
-                    <div className="review text-white-primary type-heading ">
-                      <p>
-                        “I visited this beautiful property in the wilderness
-                        just outside the gates of Amboseli. It's a myth that one
-                        needs to stay inside the park. I would stay at this
-                        property any day. You face Mt. Kilimanjaro and usually
-                        have elephants visit you every evening. The service is
-                        fantastic and when on safari one needs to get the full
-                        experience which is what this camp does for you. Very
-                        comfortable with excellent food. Yes! Very very highly
-                        recommended.”
-                      </p>
-                      <div className="author">
-                        <span>Ranjan P</span>
-                      </div>
-                    </div>
-                    <button className="btn white-btn tracking-md">
-                      Enquire Now Trip
-                    </button>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="slide">
-                  <img
-                    src={Enquirenow}
-                    alt="Enquirenow"
-                    className="img-cover-full"
-                  />
-                  <div className="slide-content flex-col-layout">
+                  <div className="slide-content">
                     <div className="review text-white-primary type-heading ">
                       <p>
                         “I visited this beautiful property in the wilderness

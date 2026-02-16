@@ -178,17 +178,15 @@
   }
 
   .slide-content {
-    @apply items-center absolute justify-center text-center 
-    px-2 top-[30px]
-    md:px-[40px] 
-    md:top-[50px] 
-    lg:top-[100px] lg:px-[115px]
-    xl:px-[284px] xl:top-[153px] xl:bottom-[205px];
+    @apply absolute inset-0 
+         flex flex-col 
+         items-center justify-center
+         text-center
+         px-4 md:px-[40px] lg:px-[115px] xl:px-[284px];
   }
-
   .slide-content .review p,
   .slide-content .author span {
-    @apply font-normal font-heading text-center;
+    @apply font-normal font-heading;
   }
 
   .slide-content .review p {
