@@ -44,7 +44,7 @@
 
   .menu-icon li,
   .menu-icon li button {
-    @apply text-sm px-16 py-6  rounded-sm ml-auto;
+    @apply text-sm px-16 py-6 rounded-sm ml-auto;
   }
   .header-sticky {
     @apply top-0 bg-black/85 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)];
@@ -93,10 +93,7 @@
     @apply font-light text-base tracking-[0.34px] leading-[25px] xl:mr-[622px];
   }
   .accommodation-card {
-    @apply grid 
-    grid-cols-1
-    md:grid-cols-3 items-start w-full 
-    lg:mt-[80px] gap-[41px] lg:pl-[99px] lg:pr-[98px];
+    @apply grid items-start w-full lg:mt-[80px] gap-[41px] lg:pl-[99px] lg:pr-[98px];
   }
   .overlay-content {
     @apply absolute right-[54px] left-[27.67px] font-body text-black bottom-15 xl:bottom-36;
@@ -123,24 +120,20 @@
   }
 
   .experiences-heading {
-    @apply gap-[5px]
-    md:gap-[18px] 
-    lg:gap-[20px]
-    xl:gap-[24px];
+    @apply gap-[5px] md:gap-[18px] lg:gap-[20px] xl:gap-[24px];
   }
+
   .experiences-content {
     @apply gap-[5px] md:gap-[10px] lg:gap-[20px] xl:gap-[30px];
   }
 
   .experiences-description p {
-    @apply text-[10px] 
-    md:text-[13px]
-    lg:text-[14px]
+    @apply text-[10px] md:text-[13px] lg:text-[14px]
     xl:text-base md:leading-[25px] md:tracking-[0.34px] md:w-[50%];
   }
 
   .experience-actions {
-    @apply flex md:flex-row md:px-2 xl:flex-row items-center w-full;
+    @apply flex md:px-2 items-center w-full;
   }
 
   .game-drives {
@@ -211,12 +204,6 @@
   .dining-subsection {
     @apply grid gap-[24px];
   }
-  .dining-grid {
-    @apply grid
-    grid-cols-1
-    lg:grid-cols-2
-    xl:grid-cols-2;
-  }
   .dining-content {
     @apply grid gap-[64px] xl:mb-[110px] xl:ml-[114px] xl:mt-[110px] xl:mr-[109px];
   }
@@ -227,7 +214,7 @@
   /* footer */
 
   .footer-input {
-    @apply grid gap-[26px] min-h-[57px] grid-cols-2 xl:grid-cols-[1fr_1fr_1.5fr_0.8fr];
+    @apply grid gap-[26px] min-h-[57px];
   }
   .footer-input input {
     @apply border font-body text-base leading-none rounded-sm px-6 py-4 
@@ -251,9 +238,7 @@
     @apply mt-[25.32px] md:pr-[98px];
   }
   .footer-details {
-    @apply grid font-body text-base tracking-tight ml-[10px] mt-[45px] md:ml-[98px]
-    grid-cols-2
-    xl:grid-cols-[1.85fr_1.2fr_1.8fr_2fr];
+    @apply grid font-body text-base tracking-tight ml-[10px] mt-[45px] md:ml-[98px];
   }
   .footer-links li {
     @apply m-0 p-0;

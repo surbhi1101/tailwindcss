@@ -75,7 +75,7 @@ function App() {
         <img
           src={Logo}
           alt="Logo"
-          className={`block md:hidden h-40 w-auto object-contain
+          className={`block md:hidden w-auto object-contain
  ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}`}
         />
         <img src={Logo} alt="Logo" className="logo" />
@@ -137,7 +137,7 @@ function App() {
       <main>
         {/* Our Story section */}
         <section className="section-container animate-fadeIn-scroll">
-          <div className="our-story">
+          <div className="our-story grid-responsive-2">
             <img
               src={heroSection}
               alt="View of Tulia Amboseli Safari Camp near Mt Kilimanjaro"
@@ -191,7 +191,7 @@ function App() {
             <div className="title-light text-32 type-heading">
               <h2>Why book with us?</h2>
             </div>
-            <div className="book-section">
+            <div className="book-section grid-responsive-4">
               <div className="info-block flex-col-layout">
                 <div className="icon-title flex-col-layout g-20">
                   <img src={Location} alt="Location" />
@@ -267,7 +267,7 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="accommodation-card">
+          <div className="accommodation-card grid-responsive-3">
             <div className="relative overflow-hidden">
               <img
                 src={SuperbTents}
@@ -473,7 +473,7 @@ function App() {
 
         {/* Dining section */}
         <section className="Dining bg-light section-mt animate-fadeIn-scroll ">
-          <div className="dining-grid">
+          <div className="grid-responsive-2">
             <img
               src={Dining}
               alt="Dine in the open"
@@ -632,7 +632,7 @@ function App() {
         <div className="footer-section animate-fadeIn-scroll">
           <div className="news-text flex-col-layout">
             <p>Hear the latest news about Tulia</p>
-            <div className="footer-input">
+            <div className="footer-input grid-footer-input">
               <input type="text" name="name" id="name" placeholder="Name" />
               <input
                 type="text"
@@ -650,7 +650,7 @@ function App() {
               <button className="footer-btn">Subscribe</button>
             </div>
           </div>
-          <div className="footer-details g-20">
+          <div className="footer-details grid-footer-details g-20">
             <div className="footer-brand">
               <img src={FooterImg} alt="Footer Image" srcSet="" />
               <div className="footer-detail title-light text-light ">

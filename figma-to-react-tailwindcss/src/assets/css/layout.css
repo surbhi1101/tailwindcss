@@ -11,10 +11,7 @@
 
   /* our-story */
   .our-story {
-    @apply items-center justify-center grid 
-    grid-cols-1
-    lg:grid-cols-2
-      relative z-10 mt-[66px] gap-20 xl:ml-[100px] xl:mr-[186px] xl:gap-[143px];
+    @apply grid items-center justify-center relative z-10 mt-[66px] gap-20 xl:ml-[100px] xl:mr-[186px] xl:gap-[143px];
   }
 
   .section-container {
@@ -27,12 +24,7 @@
     @apply w-full flex justify-center;
   }
   .book-section {
-    @apply mt-[20px] md:mt-20 xl:mt-0 
-    grid 
-    grid-cols-1
-    md:grid-cols-2 
-    xl:grid-cols-4 
-    lg:justify-center gap-[32px];
+    @apply grid mt-[20px] md:mt-20 xl:mt-0 lg:justify-center gap-[32px];
   }
 
   /* experience */

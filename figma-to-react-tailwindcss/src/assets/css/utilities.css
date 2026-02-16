@@ -86,11 +86,6 @@
   @apply opacity-60;
 }
 
-/* button */
-.btn {
-  @apply inline-flex items-center justify-center;
-}
-
 /* padding-resp */
 .p-responsive {
   @apply px-10 py-10 xl:px-0 xl:py-0;
@@ -132,4 +127,25 @@
 
 .type-heading :is(a, span, p, h1, h2, h3, h4, h5, h6) {
   @apply leading-[100%] tracking-[0.8px];
+}
+
+/* grid-view */
+.grid-responsive-2 {
+  @apply grid grid-cols-1 lg:grid-cols-2;
+}
+
+.grid-responsive-3 {
+  @apply grid grid-cols-1 md:grid-cols-3;
+}
+
+.grid-responsive-4 {
+  @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4;
+}
+
+.grid-footer-input {
+  @apply grid grid-cols-2 xl:grid-cols-[1fr_1fr_1.5fr_0.8fr];
+}
+
+.grid-footer-details {
+  @apply grid grid-cols-2 xl:grid-cols-[1.85fr_1.2fr_1.8fr_2fr];
 }
