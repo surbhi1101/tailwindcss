@@ -19,10 +19,6 @@
   }
 
   /* Why book with us section */
-
-  .why-book-with-us {
-    @apply w-full flex justify-center;
-  }
   .book-section {
     @apply grid mt-[20px] md:mt-20 xl:mt-0 lg:justify-center gap-[32px];
   }

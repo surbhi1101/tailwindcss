@@ -186,7 +186,7 @@ function App() {
           <img src={Path} alt="path" />
         </section>
         {/* why-book-with-us section */}
-        <section className="why-book-with-us animate-fadeIn-scroll">
+        <section className="animate-fadeIn-scroll">
           <div className="why-book-inner page-container flex-col-layout">
             <div className="title-light text-32 type-heading">
               <h2>Why book with us?</h2>
@@ -353,7 +353,7 @@ function App() {
                     </div>
                     <div className="experience-actions">
                       <button className="btn white-btn tracking-sm">
-                        Explore Accommodation
+                        Explore Experiences
                       </button>
                       <div className="game-drives">
                         <div className="text-white-primary">
@@ -400,7 +400,7 @@ function App() {
                     </div>
                     <div className="experience-actions">
                       <button className="btn white-btn tracking-sm">
-                        Explore Accommodation
+                        Explore Experiences
                       </button>
                       <div className="game-drives">
                         <div className="text-white-primary">
@@ -447,7 +447,7 @@ function App() {
                     </div>
                     <div className="experience-actions">
                       <button className="btn white-btn tracking-sm">
-                        Explore Accommodation
+                        Explore Experiences
                       </button>
                       <div className="game-drives">
                         <div className="text-white-primary">
