@@ -1,3 +1,19 @@
+/* fade-in */
+@keyframes fadeInScroll {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn-scroll {
+  @apply opacity-0;
+}
+
 .img-cover-full {
   @apply block  w-full object-cover h-auto;
 }
@@ -99,7 +115,7 @@
 
 /* gap */
 
-.gap-10 {
+.g-10 {
   @apply gap-[10px];
 }
 

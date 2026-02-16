@@ -540,7 +540,7 @@ function App() {
                     alt="Enquirenow"
                     className="img-cover-full"
                   />
-                  <div className="slide-content">
+                  <div className="slide-content flex-col-layout">
                     <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -570,7 +570,7 @@ function App() {
                     alt="Enquirenow"
                     className="img-cover-full"
                   />
-                  <div className="slide-content">
+                  <div className="slide-content flex-col-layout">
                     <div className="review text-white-primary type-heading ">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -600,7 +600,7 @@ function App() {
                     alt="Enquirenow"
                     className="img-cover-full"
                   />
-                  <div className="slide-content">
+                  <div className="slide-content flex-col-layout">
                     <div className="review text-white-primary type-heading ">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -660,7 +660,7 @@ function App() {
                   National Park in Kenya.
                 </p>
               </div>
-              <div className="socialmedia-links gap-10">
+              <div className="socialmedia-links g-10">
                 <img src={Instagram} alt="Instagram" />
                 <img src={Facebook} alt="Facebook" />
                 <img src={Youtube} alt="Youtube" />
