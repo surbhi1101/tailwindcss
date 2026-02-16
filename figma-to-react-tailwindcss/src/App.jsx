@@ -75,7 +75,7 @@ function App() {
         <img
           src={Logo}
           alt="Logo"
-          className={`block md:hidden h-40 w-auto object-contain
+          className={`block md:hidden h-40 object-contain
  ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}`}
         />
         <img src={Logo} alt="Logo" className="logo" />

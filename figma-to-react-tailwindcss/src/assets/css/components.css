@@ -14,7 +14,7 @@
     @apply hidden items-center font-body capitalize md:flex tracking-[0.34px] gap-[24px];
   }
   .logo {
-    @apply hidden md:block object-contain w-auto;
+    @apply hidden md:block object-contain w-100 lg:w-auto;
   }
   .menu-btn {
     @apply md:hidden text-white text-2xl;
