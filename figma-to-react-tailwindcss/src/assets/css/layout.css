@@ -11,7 +11,8 @@
 
   /* our-story */
   .our-story {
-    @apply grid items-center justify-center relative z-10 mt-[66px] gap-20 xl:ml-[100px] xl:mr-[186px] xl:gap-[143px];
+    @apply grid items-center justify-center relative z-10 px-[20px] mt-[66px] gap-20
+     xl:px-0 xl:ml-[100px] xl:mr-[186px] xl:gap-[143px];
   }
 
   .section-container {
@@ -29,6 +30,6 @@
   }
   /* dining */
   .Dining {
-    @apply flex xl:mr-[116px];
+    @apply flex px-[20px] lg:bg-[#f1eded] lg:px-0 lg:mr-[116px];
   }
 }

@@ -20,6 +20,7 @@ import RightArrow from "./assets/images/Right-arrow.png";
 import LeftArrow from "./assets/images/Left-arrow.png";
 import Lion from "./assets/images/Lion.png";
 import Dining from "./assets/images/Dining.png";
+import ArrowIcon from "./assets/images/ArrowIcon.png";
 import Enquirenow from "./assets/images/Enquirenow.png";
 import FooterImg from "./assets/images/FooterImg.png";
 import Instagram from "./assets/images/Instagram.png";
@@ -33,8 +34,12 @@ function App() {
   const enquirePrevRef = useRef(null);
   const enquireNextRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
   const [expSwiper, setExpSwiper] = useState(null);
 
+  const toggleMenu = (menu) => {
+    setOpenMenu(openMenu === menu ? null : menu);
+  };
   useEffect(() => {
     const handleScroll = () => {
       const header = document.getElementById("siteHeader");
@@ -70,17 +75,21 @@ function App() {
 
   return (
     <div>
-      {/* Navbar section */}
       <nav className="fixed-header" id="siteHeader">
-        <img
-          src={Logo}
-          alt="Logo"
-          className={`block md:hidden h-40 object-contain
- ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}`}
-        />
-        <img src={Logo} alt="Logo" className="logo" />
+        <button
+          className="menu-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          ☰
+        </button>
 
-        <ul className="navbar text-15 lh22-5 text-white-primary">
+        <img src={Logo} alt="Logo" className="logo-size" />
+
+        <a className="btn white-btn tracking-sm plan-btn" href="#planyoutrip">
+          Plan Your Trip
+        </a>
+
+        <ul className="navbar text-white-primary">
           <li>
             <a href="#accommodation">Accommodation</a>
           </li>
@@ -90,42 +99,33 @@ function App() {
           <li>
             <a href="#experiences">Experiences</a>
           </li>
-          <li>
-            <a className="white-btn btn tracking-sm" href="#planyoutrip">
-              Plan Your Trip
-            </a>
-          </li>
+          <a className="white-btn btn tracking-sm " href="#planyoutrip">
+            Plan Your Trip
+          </a>
         </ul>
-        <button
-          className="menu-btn"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? "x" : "☰"}
-        </button>
+
+        {isMobileMenuOpen && (
+          <div className="menu-icon">
+            <ul className="flex-col-layout">
+              <li>
+                <a href="#accommodation">Accommodation</a>
+              </li>
+              <li>
+                <a href="#location">Location</a>
+              </li>
+              <li>
+                <a href="#experiences">Experiences</a>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
-      {isMobileMenuOpen && (
-        <div className="menu-icon">
-          <ul className="flex-col-layout">
-            <li>
-              <a href="#accommodation">Accommodation</a>
-            </li>
-            <li>
-              <a href="#location">Location</a>
-            </li>
-            <li>
-              <a href="#experiences">Experiences</a>
-            </li>
-            <li>
-              <button className="border tracking-sm">Plan Your Trip</button>
-            </li>
-          </ul>
-        </div>
-      )}
+
       {/* Header section */}
       <header className="header">
         <section className="hero animate-fadeIn-scroll">
           <div className="hero-content flex-col-layout">
-            <div className="heading-title title-white">
+            <div className="heading-title title-white text-dance">
               <h1>Authentic African Safaris</h1>
             </div>
             <a className="btn white-btn tracking-md" href="#explore">
@@ -143,9 +143,9 @@ function App() {
               alt="View of Tulia Amboseli Safari Camp near Mt Kilimanjaro"
               className="img-cover-full"
             />
-            <div className="g-45 flex-col-layout p-responsive">
-              <div className="g-30 flex-col-layout">
-                <div className="g-24 flex-col-layout">
+            <div className="story-content">
+              <div className="story-text">
+                <div className="story-heading">
                   <div className="sub-title">
                     <h6>Our Story</h6>
                   </div>
@@ -153,7 +153,7 @@ function App() {
                     <h2>Tulia Amboseli Safari Camp</h2>
                   </div>
                 </div>
-                <div className="flex-col-layout g-30 text-muted">
+                <div className="text-content text-muted">
                   <p>
                     Tulia Amboseli Safari Camp is an eco-friendly safari camp
                     just outside of Kimana Gate in the southeast area of the
@@ -176,8 +176,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div>
-                <button className="btn golden-btn tracking-md">
+              <div className="cta-wrapper">
+                <button className="btn golden-btn shadow tracking-md">
                   Our Story
                 </button>
               </div>
@@ -186,9 +186,9 @@ function App() {
           <img src={Path} alt="path" />
         </section>
         {/* why-book-with-us section */}
-        <section className="animate-fadeIn-scroll">
+        <section className="animate-fadeIn-scroll p-responsive">
           <div className="why-book-inner page-container flex-col-layout">
-            <div className="title-light text-32 type-heading">
+            <div className="title-light main-heading text-32 type-heading">
               <h2>Why book with us?</h2>
             </div>
             <div className="book-section grid-responsive-4">
@@ -249,15 +249,18 @@ function App() {
           </div>
         </section>
         {/* our-accommodation section */}
-        <section className="our-accommodation section-mt animate-fadeIn-scroll">
-          <div className="accommodation-content flex-col-layout p-responsive">
+        <section className="our-accommodation section-mt animate-fadeIn-scroll p-responsive">
+          <div className="accommodation-content">
             <div className="accommodation-heading">
-              <div className="title-md type-heading">
+              <div className="main-heading type-heading">
                 <h2>Our Accommodation</h2>
               </div>
-              <button className="btn golden-btn tracking-md">
-                Explore All
-              </button>
+
+              <div className="explore-action">
+                <button className="btn golden-btn tracking-md">
+                  Explore All
+                </button>
+              </div>
             </div>
             <div className="accommodation-detail text-muted">
               <p>
@@ -266,18 +269,27 @@ function App() {
                 spacious Tents, each with stunning views of Mt Kilimanjaro.
               </p>
             </div>
+            <div className="mobile-explore">
+              <button className="btn golden-btn tracking-md">
+                Explore All
+              </button>
+            </div>
           </div>
           <div className="accommodation-card grid-responsive-3">
-            <div className="relative overflow-hidden">
+            <div className="section-container">
               <img
                 src={SuperbTents}
                 alt="Superb Tents"
                 className="img-cover-full"
               />
-              <div className="overlay-content flex-col-layout">
-                <div className="title-white g-18 flex-col-layout">
-                  <h3 className="tent-title">Superb Tents</h3>
-                  <a className="explore-link">Explore</a>
+              <div className="overlay-content">
+                <div className="tent-heading title-white">
+                  <div className="tent-title">
+                    <h3>Superb Tents</h3>
+                  </div>
+                  <div className="explore-link">
+                    <a>Explore</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -287,10 +299,14 @@ function App() {
                 alt="SuperbFamilyTents"
                 className="img-cover-full"
               />
-              <div className="overlay-content flex-col-layout">
-                <div className="title-white g-18 flex-col-layout">
-                  <h3 className="tent-title">Superb Family Tents</h3>
-                  <a className="explore-link">Explore</a>
+              <div className="overlay-content">
+                <div className="tent-heading title-white">
+                  <div className="tent-title">
+                    <h3>Superb Family Tents</h3>
+                  </div>
+                  <div className="explore-link">
+                    <a href="#">Explore</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -301,9 +317,13 @@ function App() {
                 className="img-cover-full"
               />
               <div className="overlay-content flex-col-layout">
-                <div className="title-white g-18 flex-col-layout">
-                  <h3 className="tent-title">Deluxe Tents</h3>
-                  <a className="explore-link">Explore</a>
+                <div className="tent-heading title-white">
+                  <div className="tent-title">
+                    <h3>Deluxe Tents</h3>
+                  </div>
+                  <div className="explore-link">
+                    <a>Explore</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -315,7 +335,7 @@ function App() {
           <div className="swiper-wrapper-custom">
             <Swiper
               modules={[Navigation, Mousewheel, Keyboard]}
-              mousewheel={true}
+              mousewheel={false}
               keyboard={true}
               onSwiper={(swiper) => {
                 setExpSwiper(swiper);
@@ -328,7 +348,7 @@ function App() {
             >
               <SwiperSlide>
                 <div className="experiences flex-col-layout">
-                  <img src={Lion} alt="Lion" className="img-cover-full" />
+                  <img src={Lion} alt="Lion" className="media-cover " />
                   <div className="experiences-details p-responsive flex-col-layout ">
                     <div className="experiences-content flex-col-layout">
                       <div className="experiences-heading flex-col-layout title-white">
@@ -375,8 +395,8 @@ function App() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="experiences flex-col-layout">
-                  <img src={Lion} alt="Lion" className="img-cover-full" />
-                  <div className="experiences-details p-responsive flex-col-layout">
+                  <img src={Lion} alt="Lion" className="media-cover " />
+                  <div className="experiences-details p-responsive flex-col-layout ">
                     <div className="experiences-content flex-col-layout">
                       <div className="experiences-heading flex-col-layout title-white">
                         <div className="sub-title">
@@ -422,8 +442,8 @@ function App() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="experiences flex-col-layout">
-                  <img src={Lion} alt="Lion" className="img-cover-full" />
-                  <div className="experiences-details p-responsive flex-col-layout">
+                  <img src={Lion} alt="Lion" className="media-cover " />
+                  <div className="experiences-details p-responsive flex-col-layout ">
                     <div className="experiences-content flex-col-layout">
                       <div className="experiences-heading flex-col-layout title-white">
                         <div className="sub-title">
@@ -472,22 +492,22 @@ function App() {
         </section>
 
         {/* Dining section */}
-        <section className="Dining bg-light section-mt animate-fadeIn-scroll ">
+        <section className="Dining section-mt animate-fadeIn-scroll ">
           <div className="grid-responsive-2">
             <img
               src={Dining}
               alt="Dine in the open"
               className="img-cover-full"
             />
-            <div className="dining-content p-responsive flex-col-layout">
-              <div className="dining-subsection flex-col-layout">
+            <div className="dining-content p-responsive">
+              <div className="dining-subsection">
                 <div className="sub-title">
                   <h6>Dining</h6>
                 </div>
-                <div className="title-md heading-title">
+                <div className="title-md type-heading">
                   <h2>Dine in the open</h2>
                 </div>
-                <div className="text-content text-muted flex-col-layout">
+                <div className="text-muted">
                   <p>
                     Enjoy cereals, fresh fruit, and pastries along with a hot
                     breakfast in the morning.For lunch we offer the option of a
@@ -496,14 +516,18 @@ function App() {
                     evening, our chef will prepare a delicious 4-course meal
                     that can be accompanied by a selection of fine wines or a
                     drink from the fully stocked bar.
-                    <span className="block">
-                      The highly trained chefs will cater to any dietary
-                      restrictions.
-                    </span>
+                  </p>
+                  <p>
+                    The highly trained chefs will cater to any dietary
+                    restrictions.
                   </p>
                 </div>
               </div>
-              <button className="btn golden-btn">Explore Dining</button>
+              <div className="cta-wrapper">
+                <button className="btn golden-btn tracking-md">
+                  Explore Dining
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -514,23 +538,17 @@ function App() {
           <div className="swiper-wrapper-custom">
             <div className="swipe-btn">
               <div className="swiper-button-prev" ref={enquirePrevRef}>
-                <img src={LeftArrow} alt="Left arrow" />
+                <img src={LeftArrow} alt="Left arrow" className="arrow" />
               </div>
               <div className="swiper-button-next" ref={enquireNextRef}>
-                <img src={RightArrow} alt="Right arrow" />
+                <img src={RightArrow} alt="Right arrow" className="arrow" />
               </div>
             </div>
             <Swiper
-              modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+              modules={[Pagination, Mousewheel, Keyboard]}
               pagination={true}
-              mousewheel={true}
+              mousewheel={false}
               keyboard={true}
-              onSwiper={(swiper) => {
-                swiper.params.navigation.prevEl = enquirePrevRef.current;
-                swiper.params.navigation.nextEl = enquireNextRef.current;
-                swiper.navigation.init();
-                swiper.navigation.update();
-              }}
               className="mySwiper"
             >
               <SwiperSlide>
@@ -538,7 +556,7 @@ function App() {
                   <img
                     src={Enquirenow}
                     alt="Enquirenow"
-                    className="img-cover-full"
+                    className="media-cover "
                   />
                   <div className="slide-content flex-col-layout">
                     <div className="review text-white-primary type-heading">
@@ -568,7 +586,7 @@ function App() {
                   <img
                     src={Enquirenow}
                     alt="Enquirenow"
-                    className="img-cover-full"
+                    className="media-cover "
                   />
                   <div className="slide-content flex-col-layout">
                     <div className="review text-white-primary type-heading ">
@@ -598,7 +616,7 @@ function App() {
                   <img
                     src={Enquirenow}
                     alt="Enquirenow"
-                    className="img-cover-full"
+                    className="media-cover"
                   />
                   <div className="slide-content flex-col-layout">
                     <div className="review text-white-primary type-heading ">
@@ -640,19 +658,22 @@ function App() {
                 id="surname"
                 placeholder="Surname"
               />
-
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email Address"
               />
-              <button className="footer-btn">Subscribe</button>
+              <button className="footer-btn btn w-[100%] shadow">
+                Subscribe
+              </button>
             </div>
           </div>
           <div className="footer-details grid-footer-details g-20">
             <div className="footer-brand">
-              <img src={FooterImg} alt="Footer Image" srcSet="" />
+              <div className="logo-size">
+                <img src={FooterImg} alt="Footer Image" srcSet="" />
+              </div>
               <div className="footer-detail title-light text-light ">
                 <p>
                   Tulia Amboseli Safari Camp is an eco-friendly safari camp just
@@ -666,9 +687,29 @@ function App() {
                 <img src={Youtube} alt="Youtube" />
               </div>
             </div>
-            <div className="footer-links flex-col-layout ">
-              <p className="links-title">About</p>
-              <ul className="title-light text-faded">
+            <div className="footer-links">
+              <button
+                className="links-title"
+                onClick={() => toggleMenu("about")}
+              >
+                <span>About </span>
+                <img
+                  src={ArrowIcon}
+                  alt="Dropdown"
+                  className={`
+    w-25 h-15 transition-transform duration-300 md:hidden
+    ${openMenu === "about" ? "rotate-180" : ""}
+  `}
+                />
+              </button>
+
+              <hr />
+              <ul
+                className={`
+        title-light text-faded flex-col md:flex 
+      ${openMenu === "about" ? "flex" : "hidden"}
+    `}
+              >
                 <li>
                   <a href="#ourstory">Our Story</a>
                 </li>
@@ -692,9 +733,29 @@ function App() {
                 </li>
               </ul>
             </div>
-            <div className="footer-links flex-col-layout ">
-              <p className="links-title">Accommodation</p>
-              <ul className="title-light text-faded">
+            <div className="footer-links">
+              <button
+                className="links-title"
+                onClick={() => toggleMenu("accommodation")}
+              >
+                <span>Accommodation </span>
+                <img
+                  src={ArrowIcon}
+                  alt="Dropdown"
+                  className={`
+    w-25 h-15 transition-transform duration-300 md:hidden
+    ${openMenu === "accommodation" ? "rotate-180" : ""}
+  `}
+                />
+              </button>
+
+              <hr />
+              <ul
+                className={`
+      title-light text-faded flex-col md:flex
+      ${openMenu === "accommodation" ? "flex" : "hidden"}
+    `}
+              >
                 <li>
                   <a href="#superbtents">Superb tents</a>
                 </li>
@@ -706,9 +767,28 @@ function App() {
                 </li>
               </ul>
             </div>
-            <div className="footer-links flex-col-layout ">
-              <p className="links-title">Experiences</p>
-              <ul className="title-light text-faded">
+            <div className="footer-links">
+              <button
+                className="links-title "
+                onClick={() => toggleMenu("experiences")}
+              >
+                <span>Experiences </span>
+                <img
+                  src={ArrowIcon}
+                  alt="Dropdown"
+                  className={`
+    w-25 h-15 transition-transform duration-300 md:hidden
+    ${openMenu === "experiences" ? "rotate-180" : ""}
+  `}
+                />
+              </button>
+              <hr />
+              <ul
+                className={`
+       title-light text-faded flex-col md:flex
+      ${openMenu === "experiences" ? "flex" : "hidden"}
+    `}
+              >
                 <li>
                   <a href="#gamedrives">Game Drives</a>
                 </li>
@@ -737,7 +817,7 @@ function App() {
             </div>
           </div>
         </div>
-        <hr />
+        <hr className="footer-hr" />
         <div className="rights-reserved">
           <p>All rights reserved © 2025 Tulia</p>
           <div className="policy-links">
