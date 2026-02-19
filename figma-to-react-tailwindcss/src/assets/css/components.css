@@ -78,7 +78,7 @@
     @apply flex flex-col gap-[15px] lg:gap-[24px];
   }
   .text-content {
-    @apply flex flex-col gap-[10px] text-[16px] xl:text-[26px] lg:gap-[30px];
+    @apply flex flex-col gap-[10px] text-[16px] xl:text-[26px] xl:gap-[30px];
   }
 
   /* Why book with us section */
@@ -96,7 +96,7 @@
   }
 
   .icon-title-text {
-    @apply font-body font-normal text-base text-center tracking-[0.43px] leading-[100%];
+    @apply font-body font-normal text-[18px] md:text-base text-center tracking-[0.43px] leading-[100%];
   }
   .info-text p {
     @apply px-0 lg:px-[7.5px] font-normal text-xs leading-[22px] text-center;
@@ -111,10 +111,10 @@
     @apply flex flex-col gap-[21px] xl:ml-[101px] xl:mr-[98px];
   }
   .accommodation-heading {
-    @apply px-2 flex items-center justify-between;
+    @apply px-2 md:flex items-center justify-between;
   }
   .accommodation-detail {
-    @apply font-light text-base tracking-[0.34px] leading-[25px] lg:w-[50%];
+    @apply font-light text-base tracking-[0.34px] leading-[25px] md:w-[50%];
   }
   .accommodation-card {
     @apply grid items-start w-full mt-[10px] lg:mt-[80px] gap-[41px] xl:pl-[99px] xl:pr-[98px];
@@ -137,18 +137,9 @@
   }
 
   /* experience */
-  .experiences {
-    @apply relative w-full;
-    z-index: 0;
-  }
-  .experiences::before {
-    content: "";
-    @apply absolute inset-0 bg-black/40 md:bg-transparent;
-  }
+
   .experiences-details {
-    @apply absolute justify-center items-center inset-0 flex flex-col 
-    gap-[20px] lg:ml-[103px]
-     xl:gap-[45px];
+    @apply absolute gap-[20px] xl:ml-[103px] xl:gap-[45px];
     z-index: 10;
   }
 
@@ -201,33 +192,25 @@
     @apply hidden;
   }
 
-  .slide {
-    @apply relative w-full;
-    z-index: 0;
-  }
-  .slide::before {
-    content: "";
-    @apply absolute inset-0 bg-black/40 md:bg-transparent;
-    z-index: 0;
-  }
   .media-cover {
     @apply block w-full object-cover h-[50vh] md:h-auto;
   }
   .slide-content {
-    @apply absolute inset-0 items-center justify-center text-center px-[45px] md:px-[40px] lg:px-[115px] xl:px-[284px];
+    @apply px-[45px] md:px-[40px] lg:px-[115px] xl:px-[284px];
     z-index: 10;
   }
+
   .slide-content .review p,
   .slide-content .author span {
     @apply font-normal font-heading;
   }
 
   .slide-content .review p {
-    @apply text-[15px] md:text-lg xl:text-[22px];
+    @apply text-[12px] md:text-lg xl:text-[22px];
   }
 
   .slide-content .author {
-    @apply text-[14px] mt-[4px] lg:mt-[20px] md:text-xs xl:text-[20px];
+    @apply text-[10px] mt-[4px] lg:mt-[20px] md:text-xs xl:text-[20px];
   }
   .slide-content .white-btn {
     @apply md:text-[10px] xl:text-lg mt-[10px] xl:mt-[33px];
@@ -236,7 +219,7 @@
     @apply h-25 w-25 lg:h-full lg:w-full;
   }
   .mySwiper .swiper-pagination-bullet {
-    @apply w-2 h-2 !border !border-white rounded-full;
+    @apply w-2 h-2 border border-white rounded-full;
   }
 
   .mySwiper .swiper-pagination-bullet-active {
@@ -245,11 +228,11 @@
 
   /* dining */
   .dining-content {
-    @apply grid gap-[30px] xl:gap-[64px] xl:mb-[110px] xl:ml-[114px] xl:mt-[110px] xl:mr-[109px];
+    @apply grid gap-[30px] md:px-[20px] md:py-[40px] lg:px-0 lg:py-0 md:gap-0 xl:gap-[64px] xl:ml-[114px] xl:mt-[110px] xl:mb-[110px] xl:mr-[109px];
   }
 
   .dining-subsection {
-    @apply grid gap-[15px] md:gap-0 lg:gap-[24px];
+    @apply grid gap-[15px] md:gap-0 xl:gap-[24px];
   }
   .path {
     @apply w-screen lg:mt-[90px];
@@ -261,9 +244,7 @@
     @apply grid gap-[26px] min-h-[57px] mt-[30px] md:mt-0;
   }
   .footer-input input {
-    @apply border font-body text-base leading-none rounded-sm px-12 py-8  focus:border-accent focus:outline-none
-    md:pt-[10px] md:pb-[12px] md:pr-[12px]
-    xl:pt-[16px] xl:pb-[17px] xl:pr-[22px];
+    @apply border font-body text-base leading-none rounded-sm px-12 py-8  focus:border-accent focus:outline-none md:pt-[10px] md:pb-[12px] md:pr-[12px] xl:pt-[16px] xl:pb-[17px] xl:pr-[22px];
     border: 2px solid #cac7c7;
   }
   .footer-section {
@@ -274,8 +255,8 @@
     @apply xl:gap-[47px] px-[20px] xl:pr-[94px] xl:pl-[100px] xl:pb-[87px];
   }
   .footer-input input,
-  .footer-btn {
-    @apply border rounded-[5px];
+  .footer-input button {
+    @apply border rounded-[5px] w-[100%];
   }
 
   .footer-brand {
@@ -335,8 +316,7 @@
   /* buttons */
 
   .btn {
-    @apply inline-flex items-center justify-center font-body cursor-pointer
-         w-fit border rounded-[5px] relative overflow-hidden whitespace-nowrap;
+    @apply inline-flex items-center justify-center font-body cursor-pointer w-fit border rounded-[5px] relative overflow-hidden whitespace-nowrap;
   }
 
   .btn::before {
@@ -366,8 +346,7 @@
   }
 
   .golden-btn {
-    @apply border-accent text-[13px] text-accent w-[100%]
-         md:w-auto py-[11px] px-[22px] md:text-[16px] md:py-[8px] md:px-[37px];
+    @apply border-accent text-[13px] text-accent w-[100%] md:w-auto py-[11px] px-[22px] md:text-[16px] md:py-[8px] md:px-[37px];
   }
 
   .golden-btn::before {

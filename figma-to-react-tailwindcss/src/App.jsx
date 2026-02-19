@@ -347,7 +347,55 @@ function App() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div className="experiences flex-col-layout">
+                <div className="experiences overlay-section">
+                  <img src={Lion} alt="Lion" className="media-cover " />
+                  <div className="experiences-details p-responsive absolute-center-col">
+                    <div className="experiences-content flex-col-layout">
+                      <div className="experiences-heading flex-col-layout title-white">
+                        <div className="sub-title">
+                          <h6>Experiences</h6>
+                        </div>
+                        <div className="title-md type-heading">
+                          <h2>Breathe in the Real Africa</h2>
+                        </div>
+                      </div>
+                      <div className="experiences-description text-white-primary">
+                        <p>
+                          Nothing can prepare you for a trip to Africa - the
+                          vast landscapes, the thrilling encounters with big
+                          game, the details brought to life by your expert
+                          guides. It's in the cool of the morning and afternoon
+                          that your senses will be most alive, stimulated
+                          whether you are on foot, atop a horse, in a game
+                          vehicle, hot air balloon or boat.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="experience-actions">
+                      <button className="btn white-btn tracking-sm">
+                        Explore Experiences
+                      </button>
+
+                      <div className="game-drives">
+                        <div className="text-white-primary">
+                          <p>Game Drives</p>
+                        </div>
+                        <div className="arrow-btn">
+                          <button onClick={() => expSwiper?.slidePrev()}>
+                            <img src={LeftArrow} alt="Previous" />
+                          </button>
+
+                          <button onClick={() => expSwiper?.slideNext()}>
+                            <img src={RightArrow} alt="Next" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="experiences overlay-section">
                   <img src={Lion} alt="Lion" className="media-cover " />
                   <div className="experiences-details p-responsive flex-col-layout ">
                     <div className="experiences-content flex-col-layout">
@@ -395,7 +443,7 @@ function App() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="experiences flex-col-layout">
+                <div className="experiences overlay-section">
                   <img src={Lion} alt="Lion" className="media-cover " />
                   <div className="experiences-details p-responsive flex-col-layout ">
                     <div className="experiences-content flex-col-layout">
@@ -423,53 +471,7 @@ function App() {
                       <button className="btn white-btn tracking-sm">
                         Explore Experiences
                       </button>
-                      <div className="game-drives">
-                        <div className="text-white-primary">
-                          <p>Game Drives</p>
-                        </div>
-                        <div className="arrow-btn">
-                          <button onClick={() => expSwiper?.slidePrev()}>
-                            <img src={LeftArrow} alt="Previous" />
-                          </button>
 
-                          <button onClick={() => expSwiper?.slideNext()}>
-                            <img src={RightArrow} alt="Next" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="experiences flex-col-layout">
-                  <img src={Lion} alt="Lion" className="media-cover " />
-                  <div className="experiences-details p-responsive flex-col-layout ">
-                    <div className="experiences-content flex-col-layout">
-                      <div className="experiences-heading flex-col-layout title-white">
-                        <div className="sub-title">
-                          <h6>Experiences</h6>
-                        </div>
-                        <div className="title-md type-heading">
-                          <h2>Breathe in the Real Africa</h2>
-                        </div>
-                      </div>
-                      <div className="experiences-description text-white-primary">
-                        <p>
-                          Nothing can prepare you for a trip to Africa - the
-                          vast landscapes, the thrilling encounters with big
-                          game, the details brought to life by your expert
-                          guides. It's in the cool of the morning and afternoon
-                          that your senses will be most alive, stimulated
-                          whether you are on foot, atop a horse, in a game
-                          vehicle, hot air balloon or boat.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="experience-actions">
-                      <button className="btn white-btn tracking-sm">
-                        Explore Experiences
-                      </button>
                       <div className="game-drives">
                         <div className="text-white-primary">
                           <p>Game Drives</p>
@@ -553,13 +555,13 @@ function App() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div className="slide">
+                <div className="slide overlay-section">
                   <img
                     src={Enquirenow}
                     alt="Enquirenow"
                     className="media-cover "
                   />
-                  <div className="slide-content flex-col-layout">
+                  <div className="slide-content absolute-center flex-col-layout">
                     <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -583,14 +585,14 @@ function App() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="slide">
+                <div className="slide overlay-section">
                   <img
                     src={Enquirenow}
                     alt="Enquirenow"
                     className="media-cover "
                   />
-                  <div className="slide-content flex-col-layout">
-                    <div className="review text-white-primary type-heading ">
+                  <div className="slide-content absolute-center  flex-col-layout">
+                    <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
                         just outside the gates of Amboseli. It's a myth that one
@@ -613,14 +615,14 @@ function App() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="slide">
+                <div className="slide overlay-section">
                   <img
                     src={Enquirenow}
                     alt="Enquirenow"
                     className="media-cover"
                   />
-                  <div className="slide-content flex-col-layout">
-                    <div className="review text-white-primary type-heading ">
+                  <div className="slide-content absolute-center flex-col-layout">
+                    <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
                         just outside the gates of Amboseli. It's a myth that one
@@ -665,9 +667,7 @@ function App() {
                 id="email"
                 placeholder="Email Address"
               />
-              <button className="footer-btn btn w-[100%] shadow">
-                Subscribe
-              </button>
+              <button className="footer-btn btn shadow">Subscribe</button>
             </div>
           </div>
           <div className="footer-details grid-footer-details g-20">

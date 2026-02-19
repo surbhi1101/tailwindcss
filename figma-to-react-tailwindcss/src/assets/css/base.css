@@ -96,7 +96,7 @@
     font-size: theme(--text-base);
     line-height: theme(--spacing-25);
     letter-spacing: theme(--ls-tight);
-    @apply text-xs lg:text-base;
+    @apply text-xs xl:text-base;
   }
 
   h1,
