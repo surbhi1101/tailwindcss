@@ -174,8 +174,8 @@
     @apply relative w-full;
   }
 
-  .swiper-button-prev {
-    @apply left-0 w-[10%] lg:ml-[33px];
+  .swiper-navigation-icon {
+    display: none;
   }
 
   .swiper-button-next {

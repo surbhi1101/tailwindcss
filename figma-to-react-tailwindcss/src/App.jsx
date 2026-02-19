@@ -548,9 +548,16 @@ function App() {
               </div>
             </div>
             <Swiper
-              modules={[Pagination, Mousewheel, Keyboard]}
+              modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+              navigation={{
+                prevEl: enquirePrevRef.current,
+                nextEl: enquireNextRef.current,
+              }}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = enquirePrevRef.current;
+                swiper.params.navigation.nextEl = enquireNextRef.current;
+              }}
               pagination={true}
-              mousewheel={false}
               keyboard={true}
               className="mySwiper"
             >
