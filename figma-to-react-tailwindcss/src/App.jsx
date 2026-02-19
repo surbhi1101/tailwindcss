@@ -397,7 +397,7 @@ function App() {
               <SwiperSlide>
                 <div className="experiences overlay-section">
                   <img src={Lion} alt="Lion" className="media-cover " />
-                  <div className="experiences-details p-responsive flex-col-layout ">
+                  <div className="experiences-details p-responsive absolute-center-col">
                     <div className="experiences-content flex-col-layout">
                       <div className="experiences-heading flex-col-layout title-white">
                         <div className="sub-title">
@@ -445,7 +445,7 @@ function App() {
               <SwiperSlide>
                 <div className="experiences overlay-section">
                   <img src={Lion} alt="Lion" className="media-cover " />
-                  <div className="experiences-details p-responsive flex-col-layout ">
+                  <div className="experiences-details p-responsive absolute-center-col">
                     <div className="experiences-content flex-col-layout">
                       <div className="experiences-heading flex-col-layout title-white">
                         <div className="sub-title">

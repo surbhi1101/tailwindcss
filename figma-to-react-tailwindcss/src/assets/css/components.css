@@ -102,8 +102,7 @@
     @apply px-0 lg:px-[7.5px] font-normal text-xs leading-[22px] text-center;
   }
   .heading-title {
-    @apply font-heading text-[28px] md:text-3xl
-         font-normal leading-none tracking-[1.14px] xl:text-4xl;
+    @apply font-heading text-[28px] md:text-3xl font-normal leading-none tracking-[1.14px] xl:text-4xl;
   }
 
   /* our-accommodation */
@@ -152,8 +151,7 @@
   }
 
   .experiences-description p {
-    @apply text-[10px] md:text-[13px] lg:text-[14px]
-    xl:text-base md:leading-[25px] md:tracking-[0.34px] md:w-[50%];
+    @apply text-[10px] md:text-[13px] lg:text-[14px] xl:text-base md:leading-[25px] md:tracking-[0.34px] md:w-[50%];
   }
 
   .experience-actions {
