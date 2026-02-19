@@ -169,6 +169,8 @@
   @apply gap-[30px];
 }
 
+/* alignments */
+
 .absolute-center {
   @apply absolute inset-0 text-center items-center justify-center;
 }
