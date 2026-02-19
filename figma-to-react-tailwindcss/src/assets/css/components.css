@@ -58,7 +58,7 @@
   }
 
   .hero-content {
-    @apply absolute items-center text-center gap-[39px];
+    @apply absolute flex flex-col items-center text-center gap-[39px];
   }
 
   .main-title {
@@ -84,22 +84,22 @@
   /* Why book with us section */
 
   .why-book-inner {
-    @apply items-center text-center xl:gap-[50px];
+    @apply flex flex-col items-center text-center xl:gap-[50px];
   }
 
   .info-block {
-    @apply items-center gap-[13px];
+    @apply flex flex-col items-center gap-[13px];
   }
 
   .icon-title {
-    @apply items-center;
+    @apply flex flex-col items-center;
   }
 
   .icon-title-text {
-    @apply font-body font-normal text-[18px] md:text-base text-center tracking-[0.43px] leading-[100%];
+    @apply flex flex-col font-body font-normal text-[18px] md:text-base text-center tracking-[0.43px] leading-[100%];
   }
   .info-text p {
-    @apply px-0 lg:px-[7.5px] font-normal text-xs leading-[22px] text-center;
+    @apply flex flex-col px-0 lg:px-[7.5px] font-normal text-xs leading-[22px] text-center;
   }
   .heading-title {
     @apply font-heading text-[28px] md:text-3xl font-normal leading-none tracking-[1.14px] xl:text-4xl;
@@ -119,7 +119,7 @@
     @apply grid items-start w-full mt-[10px] lg:mt-[80px] gap-[41px] xl:pl-[99px] xl:pr-[98px];
   }
   .overlay-content {
-    @apply absolute right-[54px] left-[10px] lg:left-[27.67px] font-body text-black bottom-20 lg:bottom-36;
+    @apply absolute flex flex-col right-[54px] left-[10px] lg:left-[27.67px] font-body text-black bottom-20 lg:bottom-36;
   }
   .tent-title :is(a, span, p, h1, h2, h3, h4, h5, h6) {
     @apply font-body font-normal text-[24px] md:text-[16px] lg:text-[21px] xl:tracking-[0.54px] xl:leading-[36px] xl:text-[26px];
@@ -143,15 +143,15 @@
   }
 
   .experiences-heading {
-    @apply gap-[18px] lg:gap-[20px] xl:gap-[24px];
+    @apply flex flex-col gap-[18px] lg:gap-[20px] xl:gap-[24px];
   }
 
   .experiences-content {
-    @apply gap-[10px] lg:gap-[20px] xl:gap-[30px];
+    @apply flex flex-col gap-[10px] lg:gap-[20px] xl:gap-[30px];
   }
 
   .experiences-description p {
-    @apply text-[10px] md:text-[13px] lg:text-[14px] xl:text-base md:leading-[25px] md:tracking-[0.34px] md:w-[50%];
+    @apply flex flex-col text-[10px] md:text-[13px] lg:text-[14px] xl:text-base md:leading-[25px] md:tracking-[0.34px] md:w-[50%];
   }
 
   .experience-actions {
@@ -197,7 +197,7 @@
     @apply block w-full object-cover h-[50vh] md:h-auto;
   }
   .slide-content {
-    @apply px-[45px] md:px-[40px] lg:px-[115px] xl:px-[284px];
+    @apply flex flex-col px-[45px] md:px-[40px] lg:px-[115px] xl:px-[284px];
     z-index: 10;
   }
 
@@ -253,7 +253,7 @@
   }
 
   .news-text {
-    @apply xl:gap-[47px] px-[20px] xl:pr-[94px] xl:pl-[100px] xl:pb-[87px];
+    @apply flex flex-col xl:gap-[47px] px-[20px] xl:pr-[94px] xl:pl-[100px] xl:pb-[87px];
   }
   .footer-input input,
   .footer-input button {

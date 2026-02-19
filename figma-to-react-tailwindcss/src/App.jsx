@@ -124,7 +124,7 @@ function App() {
       {/* Header section */}
       <header className="header">
         <section className="hero animate-fadeIn-scroll">
-          <div className="hero-content flex-col-layout">
+          <div className="hero-content">
             <div className="heading-title title-white text-dance">
               <h1>Authentic African Safaris</h1>
             </div>
@@ -187,13 +187,13 @@ function App() {
         </section>
         {/* why-book-with-us section */}
         <section className="animate-fadeIn-scroll p-responsive">
-          <div className="why-book-inner page-container flex-col-layout">
+          <div className="why-book-inner page-container">
             <div className="title-light main-heading text-32 type-heading text-dance">
               <h2>Why book with us?</h2>
             </div>
             <div className="book-section grid-responsive-4">
-              <div className="info-block flex-col-layout">
-                <div className="icon-title flex-col-layout g-20">
+              <div className="info-block">
+                <div className="icon-title g-20">
                   <img src={Location} alt="Location" />
                   <h6 className="icon-title-text">
                     Location, Location, Location
@@ -207,8 +207,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="info-block flex-col-layout">
-                <div className="icon-title flex-col-layout g-20">
+              <div className="info-block">
+                <div className="icon-title g-20">
                   <img src={Heart} alt="Heart" />
                   <h6 className="icon-title-text"> Our Impact</h6>
                 </div>
@@ -219,8 +219,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="info-block flex-col-layout">
-                <div className="icon-title flex-col-layout g-20">
+              <div className="info-block">
+                <div className="icon-title g-20">
                   <img src={Compass} alt="Compass" />
                   <h6 className="icon-title-text">Authentic Experiences</h6>
                 </div>
@@ -232,8 +232,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="info-block flex-col-layout">
-                <div className="icon-title flex-col-layout g-20">
+              <div className="info-block">
+                <div className="icon-title g-20">
                   <img src={Sunset} alt="Sunset" />
                   <h6 className="icon-title-text">The Spirit of Tulia</h6>
                 </div>
@@ -316,7 +316,7 @@ function App() {
                 alt="DeluxeTents"
                 className="img-cover-full"
               />
-              <div className="overlay-content flex-col-layout">
+              <div className="overlay-content">
                 <div className="tent-heading title-white">
                   <div className="tent-title">
                     <h3>Deluxe Tents</h3>
@@ -350,8 +350,8 @@ function App() {
                 <div className="experiences overlay-section">
                   <img src={Lion} alt="Lion" className="media-cover " />
                   <div className="experiences-details p-responsive absolute-center-col">
-                    <div className="experiences-content flex-col-layout">
-                      <div className="experiences-heading flex-col-layout title-white">
+                    <div className="experiences-content">
+                      <div className="experiences-heading title-white">
                         <div className="sub-title">
                           <h6>Experiences</h6>
                         </div>
@@ -398,8 +398,8 @@ function App() {
                 <div className="experiences overlay-section">
                   <img src={Lion} alt="Lion" className="media-cover " />
                   <div className="experiences-details p-responsive absolute-center-col">
-                    <div className="experiences-content flex-col-layout">
-                      <div className="experiences-heading flex-col-layout title-white">
+                    <div className="experiences-content">
+                      <div className="experiences-heading title-white">
                         <div className="sub-title">
                           <h6>Experiences</h6>
                         </div>
@@ -446,8 +446,8 @@ function App() {
                 <div className="experiences overlay-section">
                   <img src={Lion} alt="Lion" className="media-cover " />
                   <div className="experiences-details p-responsive absolute-center-col">
-                    <div className="experiences-content flex-col-layout">
-                      <div className="experiences-heading flex-col-layout title-white">
+                    <div className="experiences-content">
+                      <div className="experiences-heading title-white">
                         <div className="sub-title">
                           <h6>Experiences</h6>
                         </div>
@@ -568,7 +568,7 @@ function App() {
                     alt="Enquirenow"
                     className="media-cover "
                   />
-                  <div className="slide-content absolute-center flex-col-layout">
+                  <div className="slide-content absolute-center">
                     <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -598,7 +598,7 @@ function App() {
                     alt="Enquirenow"
                     className="media-cover "
                   />
-                  <div className="slide-content absolute-center  flex-col-layout">
+                  <div className="slide-content absolute-center">
                     <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -628,7 +628,7 @@ function App() {
                     alt="Enquirenow"
                     className="media-cover"
                   />
-                  <div className="slide-content absolute-center flex-col-layout">
+                  <div className="slide-content absolute-center">
                     <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -658,7 +658,7 @@ function App() {
       {/* footer section */}
       <footer className="bg-light">
         <div className="footer-section animate-fadeIn-scroll">
-          <div className="news-text flex-col-layout">
+          <div className="news-text">
             <p>Hear the latest news about Tulia</p>
             <div className="footer-input grid-footer-input">
               <input type="text" name="name" id="name" placeholder="Name" />
