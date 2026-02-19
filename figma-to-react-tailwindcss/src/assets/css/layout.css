@@ -19,6 +19,10 @@
     @apply relative overflow-hidden;
   }
 
+  .dining-detail {
+    @apply grid gap-[20px] md:gap-0;
+  }
+
   /* Why book with us section */
   .book-section {
     @apply grid mt-[20px] md:mt-20 xl:mt-0 lg:justify-center gap-[32px];

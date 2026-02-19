@@ -88,11 +88,11 @@
 }
 
 .main-heading :is(h1, h2, h3, h4, h5, h6) {
-  @apply font-normal text-center text-2xl;
+  @apply font-semibold md:font-normal text-center text-2xl;
 }
 
 .sub-title :is(h1, h2, h3, h4, h5, h6) {
-  @apply text-[24px] md:text-[16px] lg:text-[14px] xl:text-base 2xl:text-[24px] font-normal tracking-normal leading-[100%];
+  @apply text-[24px] md:text-[16px] lg:text-[14px] xl:text-base 2xl:text-[24px] font-semibold md:font-normal tracking-normal leading-[100%];
 }
 
 /* font-family */
@@ -105,7 +105,7 @@
   @apply font-normal;
 }
 .title-light :is(h1, h2, h3, h4, h5, h6) {
-  @apply font-light;
+  @apply md:font-light;
 }
 
 /* color */

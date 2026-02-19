@@ -129,11 +129,11 @@
     @apply flex flex-col gap-[10px] xl:gap-[18px];
   }
   .explore-link :is(a, span, p, h1, h2, h3, h4, h5, h6) {
-    @apply font-body relative text-[15px] cursor-pointer decoration-0 tracking-[0.32px];
+    @apply font-body relative text-[12px] md:text-[15px] cursor-pointer decoration-0 tracking-[0.32px];
   }
   .explore-link::after {
     content: "";
-    @apply absolute left-0 mt-26 w-[55px] md:w-[35px] lg:w-[60px] h-[1px] bg-white;
+    @apply absolute left-0 mt-26 w-[45px] md:w-[35px] lg:w-[60px] h-[1px] bg-white;
   }
 
   /* experience */
@@ -366,8 +366,8 @@
   }
 
   .golden-btn {
-    @apply border-accent text-[13px] text-accent 
-         md:w-auto py-[8px] px-[16px] md:text-[16px] md:px-[37px];
+    @apply border-accent text-[13px] text-accent w-[100%]
+         md:w-auto py-[11px] px-[22px] md:text-[16px] md:py-[8px] md:px-[37px];
   }
 
   .golden-btn::before {

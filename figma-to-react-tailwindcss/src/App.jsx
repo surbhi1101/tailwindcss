@@ -188,7 +188,7 @@ function App() {
         {/* why-book-with-us section */}
         <section className="animate-fadeIn-scroll p-responsive">
           <div className="why-book-inner page-container flex-col-layout">
-            <div className="title-light main-heading text-32 type-heading">
+            <div className="title-light main-heading text-32 type-heading text-dance">
               <h2>Why book with us?</h2>
             </div>
             <div className="book-section grid-responsive-4">
@@ -252,7 +252,7 @@ function App() {
         <section className="our-accommodation section-mt animate-fadeIn-scroll p-responsive">
           <div className="accommodation-content">
             <div className="accommodation-heading">
-              <div className="main-heading type-heading">
+              <div className="main-heading type-heading text-dance">
                 <h2>Our Accommodation</h2>
               </div>
 
@@ -494,13 +494,13 @@ function App() {
 
         {/* Dining section */}
         <section className="Dining section-mt animate-fadeIn-scroll ">
-          <div className="grid-responsive-2">
+          <div className="dining-detail grid-responsive-2">
             <img
               src={Dining}
               alt="Dine in the open"
               className="img-cover-full"
             />
-            <div className="dining-content p-responsive">
+            <div className="dining-content">
               <div className="dining-subsection">
                 <div className="sub-title">
                   <h6>Dining</h6>
