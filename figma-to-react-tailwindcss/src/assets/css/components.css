@@ -226,7 +226,7 @@
 
   /* dining */
   .dining-content {
-    @apply grid gap-[30px] md:px-[20px] md:py-[40px] lg:px-0 lg:py-0 md:gap-0 xl:gap-[64px] xl:ml-[114px] xl:mt-[110px] xl:mb-[110px] xl:mr-[109px];
+    @apply grid gap-[30px] md:px-[20px] md:py-[40px] md:gap-0 xl:px-0 xl:gap-[64px] xl:ml-[114px] xl:py-[100px] xl:mr-[109px];
   }
 
   .dining-subsection {
@@ -259,6 +259,10 @@
 
   .footer-brand {
     @apply flex flex-col items-center justify-center md:items-start md:justify-start md:text-left;
+  }
+
+  .dropdown-arrow {
+    @apply w-25 h-15 transition-transform duration-300 md:hidden;
   }
 
   .footer-brand p {

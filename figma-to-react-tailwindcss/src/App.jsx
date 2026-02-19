@@ -697,10 +697,7 @@ function App() {
                 <img
                   src={ArrowIcon}
                   alt="Dropdown"
-                  className={`
-    w-25 h-15 transition-transform duration-300 md:hidden
-    ${openMenu === "about" ? "rotate-180" : ""}
-  `}
+                  className={`dropdown-arrow ${openMenu === "about" ? "rotate-180" : ""}`}
                 />
               </button>
 
@@ -743,19 +740,12 @@ function App() {
                 <img
                   src={ArrowIcon}
                   alt="Dropdown"
-                  className={`
-    w-25 h-15 transition-transform duration-300 md:hidden
-    ${openMenu === "accommodation" ? "rotate-180" : ""}
-  `}
+                  className={`dropdown-arrow ${openMenu === "accommodation" ? "rotate-180" : ""}`}
                 />
               </button>
-
               <hr />
               <ul
-                className={`
-      title-light text-faded flex-col md:flex
-      ${openMenu === "accommodation" ? "flex" : "hidden"}
-    `}
+                className={`title-light text-faded flex-col md:flex ${openMenu === "accommodation" ? "flex" : "hidden"}`}
               >
                 <li>
                   <a href="#superbtents">Superb tents</a>
@@ -777,10 +767,7 @@ function App() {
                 <img
                   src={ArrowIcon}
                   alt="Dropdown"
-                  className={`
-    w-25 h-15 transition-transform duration-300 md:hidden
-    ${openMenu === "experiences" ? "rotate-180" : ""}
-  `}
+                  className={`dropdown-arrow ${openMenu === "experiences" ? "rotate-180" : ""}`}
                 />
               </button>
               <hr />
