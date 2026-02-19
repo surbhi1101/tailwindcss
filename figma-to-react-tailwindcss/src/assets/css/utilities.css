@@ -92,7 +92,7 @@
 }
 
 .sub-title :is(h1, h2, h3, h4, h5, h6) {
-  @apply text-[24px] md:text-[16px] lg:text-[14px] xl:text-base font-normal tracking-normal leading-[100%];
+  @apply text-[24px] md:text-[16px] lg:text-[14px] xl:text-base 2xl:text-[24px] font-normal tracking-normal leading-[100%];
 }
 
 /* font-family */

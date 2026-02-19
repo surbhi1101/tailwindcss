@@ -78,7 +78,7 @@
     @apply flex flex-col gap-[15px] lg:gap-[24px];
   }
   .text-content {
-    @apply flex flex-col gap-[10px] text-[16px] lg:gap-[30px];
+    @apply flex flex-col gap-[10px] text-[16px] xl:text-[26px] lg:gap-[30px];
   }
 
   /* Why book with us section */
@@ -139,16 +139,17 @@
   /* experience */
   .experiences {
     @apply relative w-full;
+    z-index: 0;
   }
   .experiences::before {
     content: "";
     @apply absolute inset-0 bg-black/40 md:bg-transparent;
-    pointer-events: none;
   }
   .experiences-details {
     @apply absolute justify-center items-center inset-0 flex flex-col 
     gap-[20px] lg:ml-[103px]
      xl:gap-[45px];
+    z-index: 10;
   }
 
   .experiences-heading {
@@ -175,6 +176,9 @@
   .arrow-btn {
     @apply flex gap-12 w-60 lg:w-[40%] xl:gap-[24px];
   }
+  .arrow-btn button {
+    @apply cursor-pointer;
+  }
   /* Enquire Now */
 
   .swiper-wrapper-custom {
@@ -199,17 +203,19 @@
 
   .slide {
     @apply relative w-full;
-    pointer-events: none;
+    z-index: 0;
   }
   .slide::before {
     content: "";
     @apply absolute inset-0 bg-black/40 md:bg-transparent;
+    z-index: 0;
   }
   .media-cover {
     @apply block w-full object-cover h-[50vh] md:h-auto;
   }
   .slide-content {
     @apply absolute inset-0 items-center justify-center text-center px-[45px] md:px-[40px] lg:px-[115px] xl:px-[284px];
+    z-index: 10;
   }
   .slide-content .review p,
   .slide-content .author span {
@@ -230,18 +236,16 @@
     @apply h-25 w-25 lg:h-full lg:w-full;
   }
   .mySwiper .swiper-pagination-bullet {
-    @apply w-2 h-2 border border-white rounded-full;
+    @apply w-2 h-2 !border !border-white rounded-full;
   }
 
   .mySwiper .swiper-pagination-bullet-active {
-    @apply bg-white;
+    @apply !bg-white;
   }
 
   /* dining */
   .dining-content {
-    @apply grid gap-[30px] 
-    xl:gap-[64px] xl:mb-[110px] xl:ml-[114px] 
-    xl:mt-[110px] xl:mr-[109px];
+    @apply grid gap-[30px] xl:gap-[64px] xl:mb-[110px] xl:ml-[114px] xl:mt-[110px] xl:mr-[109px];
   }
 
   .dining-subsection {
@@ -336,12 +340,10 @@
   }
 
   .btn::before {
+    @apply absolute inset-0 block z-[-1];
     content: "";
-    position: absolute;
-    inset: 0;
     transform: translateX(-100%);
     transition: transform 0.35s ease;
-    z-index: -1;
   }
 
   .btn:hover::before {
@@ -384,8 +386,7 @@
   /* Footer */
 
   .footer-btn {
-    @apply border border-black px-[12px] py-[6px] 
-         lg:px-[31px] lg:py-[8px] text-black;
+    @apply border border-black px-[12px] py-[6px] lg:px-[31px] lg:py-[8px] text-black;
   }
 
   .footer-btn::before {
