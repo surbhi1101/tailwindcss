@@ -85,11 +85,14 @@ function App() {
 
         <img src={Logo} alt="Logo" className="logo-size" />
 
-        <a className="btn white-btn tracking-sm plan-btn" href="#planyoutrip">
+        <a
+          className="btn white-btn tracking-sm plan-btn clickable"
+          href="#planyoutrip"
+        >
           Plan Your Trip
         </a>
 
-        <ul className="navbar text-white-primary">
+        <ul className="navbar text-white-primary clickable">
           <li>
             <a href="#accommodation">Accommodation</a>
           </li>
@@ -99,13 +102,18 @@ function App() {
           <li>
             <a href="#experiences">Experiences</a>
           </li>
-          <a className="white-btn btn tracking-sm " href="#planyoutrip">
-            Plan Your Trip
-          </a>
+          <li>
+            <a
+              className="white-btn btn tracking-sm clickable"
+              href="#planyoutrip"
+            >
+              Plan Your Trip
+            </a>
+          </li>
         </ul>
 
         {isMobileMenuOpen && (
-          <div className="menu-icon">
+          <div className="menu-icon clickable">
             <ul className="flex-col-layout">
               <li>
                 <a href="#accommodation">Accommodation</a>
@@ -124,11 +132,11 @@ function App() {
       {/* Header section */}
       <header className="header">
         <section className="hero animate-fadeIn-scroll">
-          <div className="hero-content">
+          <div className="hero-content flex-col-layout">
             <div className="heading-title title-white text-dance">
               <h1>Authentic African Safaris</h1>
             </div>
-            <a className="btn white-btn tracking-md" href="#explore">
+            <a className="btn white-btn tracking-md clickable" href="#explore">
               Explore Accommodation
             </a>
           </div>
@@ -143,9 +151,9 @@ function App() {
               alt="View of Tulia Amboseli Safari Camp near Mt Kilimanjaro"
               className="img-cover-full"
             />
-            <div className="story-content">
-              <div className="story-text">
-                <div className="story-heading">
+            <div className="story-content flex-col-layout">
+              <div className="story-text flex-col-layout ">
+                <div className="story-heading flex-col-layout ">
                   <div className="sub-title">
                     <p>Our Story</p>
                   </div>
@@ -179,7 +187,7 @@ function App() {
               <div className="cta-wrapper">
                 <a
                   href="#ourstory"
-                  className="btn golden-btn shadow tracking-md"
+                  className="btn golden-btn shadow tracking-md clickable"
                 >
                   Our Story
                 </a>
@@ -193,22 +201,22 @@ function App() {
           id="why-book-with-us"
           className="animate-fadeIn-scroll p-responsive"
         >
-          <div className="why-book-inner page-container">
+          <div className="why-book-inner page-container flex-col-layout">
             <div className="title-light main-heading text-32 type-heading text-dance">
               <h2>Why book with us?</h2>
             </div>
             <div className="book-section grid-responsive-4">
-              <div className="info-block">
-                <div className="icon-title g-20">
+              <div className="info-block flex-col-layout">
+                <div className="icon-title g-20 flex-col-layout">
                   <img
                     src={Location}
                     alt="Prime safari camp location near Amboseli National Park"
                   />
-                  <h3 className="icon-title-text">
+                  <h3 className="icon-title-text flex-col-layout">
                     Location, Location, Location
                   </h3>
                 </div>
-                <div className="text-muted info-text">
+                <div className="text-muted info-text flex-col-layout">
                   <p>
                     Our portfolio features properties in Africa's most
                     celebrated wildlife regions, ensuring that our guests get as
@@ -216,8 +224,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="info-block">
-                <div className="icon-title g-20">
+              <div className="info-block flex-col-layout">
+                <div className="icon-title g-20 flex-col-layout">
                   <img
                     src={Heart}
                     alt="Tulia conservation and sustainability commitment"
@@ -231,8 +239,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="info-block">
-                <div className="icon-title g-20">
+              <div className="info-block flex-col-layout">
+                <div className="icon-title g-20 flex-col-layout">
                   <img
                     src={Compass}
                     alt="Compass icon representing guided safari experiences"
@@ -247,8 +255,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="info-block">
-                <div className="icon-title g-20">
+              <div className="info-block flex-col-layout">
+                <div className="icon-title g-20 flex-col-layout">
                   <img
                     src={Sunset}
                     alt="African sunset experience at Tulia Safari Camp"
@@ -271,14 +279,17 @@ function App() {
           id="accommodation"
           className="our-accommodation section-mt animate-fadeIn-scroll p-responsive"
         >
-          <div className="accommodation-content">
+          <div className="accommodation-content flex-col-layout">
             <div className="accommodation-heading">
               <div className="main-heading type-heading text-dance">
                 <h2>Our Accommodation</h2>
               </div>
 
               <div className="explore-action">
-                <a href="#exploreall" className="btn golden-btn tracking-md">
+                <a
+                  href="#exploreall"
+                  className="btn golden-btn tracking-md clickable "
+                >
                   Explore All
                 </a>
               </div>
@@ -291,7 +302,10 @@ function App() {
               </p>
             </div>
             <div className="mobile-explore">
-              <a href="#exploreall" className="btn golden-btn tracking-md">
+              <a
+                href="#exploreall"
+                className="btn golden-btn tracking-md clickable "
+              >
                 Explore All
               </a>
             </div>
@@ -303,12 +317,12 @@ function App() {
                 alt="Luxury Superb Tents at Tulia Amboseli Safari Camp"
                 className="img-cover-full"
               />
-              <div className="overlay-content">
-                <div className="tent-heading title-white">
+              <div className="overlay-content flex-col-layout">
+                <div className="tent-heading title-white flex-col-layout ">
                   <div className="tent-title">
                     <h3>Superb Tents</h3>
                   </div>
-                  <div className="explore-link">
+                  <div className="explore-link clickable">
                     <a href="#explore">Explore</a>
                   </div>
                 </div>
@@ -320,12 +334,12 @@ function App() {
                 alt="Luxury Superb Family Tents at Tulia Amboseli Safari Camp"
                 className="img-cover-full"
               />
-              <div className="overlay-content">
+              <div className="overlay-content flex-col-layout">
                 <div className="tent-heading title-white">
                   <div className="tent-title">
                     <h3>Superb Family Tents</h3>
                   </div>
-                  <div className="explore-link">
+                  <div className="explore-link clickable">
                     <a href="#explore">Explore</a>
                   </div>
                 </div>
@@ -337,12 +351,12 @@ function App() {
                 alt="Deluxe Safari Tents with Mt Kilimanjaro views"
                 className="img-cover-full"
               />
-              <div className="overlay-content">
+              <div className="overlay-content flex-col-layout">
                 <div className="tent-heading title-white">
                   <div className="tent-title">
                     <h3>Deluxe Tents</h3>
                   </div>
-                  <div className="explore-link">
+                  <div className="explore-link clickable">
                     <a href="#explore">Explore</a>
                   </div>
                 </div>
@@ -378,6 +392,67 @@ function App() {
                     className="media-cover "
                   />
                   <div className="experiences-details p-responsive absolute-center-col">
+                    <div className="experiences-content flex-col-layout ">
+                      <div className="experiences-heading title-white flex-col-layout">
+                        <div className="sub-title">
+                          <h2>Experiences</h2>
+                        </div>
+                        <div className="title-md type-heading">
+                          <h3>Breathe in the Real Africa</h3>
+                        </div>
+                      </div>
+                      <div className="experiences-description text-white-primary flex-col-layout">
+                        <p>
+                          Nothing can prepare you for a trip to Africa - the
+                          vast landscapes, the thrilling encounters with big
+                          game, the details brought to life by your expert
+                          guides. It's in the cool of the morning and afternoon
+                          that your senses will be most alive, stimulated
+                          whether you are on foot, atop a horse, in a game
+                          vehicle, hot air balloon or boat.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="experience-actions">
+                      <a
+                        href="#experiences-details"
+                        className="btn white-btn tracking-sm clickable "
+                      >
+                        Explore Experiences
+                      </a>
+
+                      <div className="game-drives">
+                        <div className="text-white-primary">
+                          <p>Game Drives</p>
+                        </div>
+                        <div className="arrow-btn">
+                          <button
+                            onClick={() => expSwiper?.slidePrev()}
+                            className="clickable "
+                          >
+                            <img src={LeftArrow} alt="Previous" />
+                          </button>
+
+                          <button
+                            onClick={() => expSwiper?.slideNext()}
+                            className="clickable "
+                          >
+                            <img src={RightArrow} alt="Next" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="experiences overlay-section">
+                  <img
+                    src={Lion}
+                    alt="Lion walking in Amboseli National Park during Safari"
+                    className="media-cover "
+                  />
+                  <div className="experiences-details p-responsive absolute-center-col">
                     <div className="experiences-content">
                       <div className="experiences-heading title-white">
                         <div className="sub-title">
@@ -411,7 +486,7 @@ function App() {
                         <div className="text-white-primary">
                           <p>Game Drives</p>
                         </div>
-                        <div className="arrow-btn">
+                        <div className="arrow-btn clickable ">
                           <button onClick={() => expSwiper?.slidePrev()}>
                             <img src={LeftArrow} alt="Previous" />
                           </button>
@@ -466,62 +541,7 @@ function App() {
                         <div className="text-white-primary">
                           <p>Game Drives</p>
                         </div>
-                        <div className="arrow-btn">
-                          <button onClick={() => expSwiper?.slidePrev()}>
-                            <img src={LeftArrow} alt="Previous" />
-                          </button>
-
-                          <button onClick={() => expSwiper?.slideNext()}>
-                            <img src={RightArrow} alt="Next" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="experiences overlay-section">
-                  <img
-                    src={Lion}
-                    alt="Lion walking in Amboseli National Park during Safari"
-                    className="media-cover "
-                  />
-                  <div className="experiences-details p-responsive absolute-center-col">
-                    <div className="experiences-content">
-                      <div className="experiences-heading title-white">
-                        <div className="sub-title">
-                          <h2>Experiences</h2>
-                        </div>
-                        <div className="title-md type-heading">
-                          <h3>Breathe in the Real Africa</h3>
-                        </div>
-                      </div>
-                      <div className="experiences-description text-white-primary">
-                        <p>
-                          Nothing can prepare you for a trip to Africa - the
-                          vast landscapes, the thrilling encounters with big
-                          game, the details brought to life by your expert
-                          guides. It's in the cool of the morning and afternoon
-                          that your senses will be most alive, stimulated
-                          whether you are on foot, atop a horse, in a game
-                          vehicle, hot air balloon or boat.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="experience-actions">
-                      <a
-                        href="#experiences-details"
-                        className="btn white-btn tracking-sm"
-                      >
-                        Explore Experiences
-                      </a>
-
-                      <div className="game-drives">
-                        <div className="text-white-primary">
-                          <p>Game Drives</p>
-                        </div>
-                        <div className="arrow-btn">
+                        <div className="arrow-btn clickable ">
                           <button onClick={() => expSwiper?.slidePrev()}>
                             <img src={LeftArrow} alt="Previous" />
                           </button>
@@ -572,7 +592,10 @@ function App() {
                 </div>
               </div>
               <div className="cta-wrapper">
-                <a href="#exploredining" className="btn golden-btn tracking-md">
+                <a
+                  href="#exploredining"
+                  className="btn golden-btn tracking-md clickable "
+                >
                   Explore Dining
                 </a>
               </div>
@@ -584,7 +607,7 @@ function App() {
         {/* Enquire section  */}
         <section className="section-container animate-fadeIn-scroll">
           <div className="swiper-wrapper-custom">
-            <div className="swipe-btn">
+            <div className="swipe-btn clickable ">
               <div className="swiper-button-prev" ref={enquirePrevRef}>
                 <img src={LeftArrow} alt="Left arrow" className="arrow" />
               </div>
@@ -613,7 +636,7 @@ function App() {
                     alt="Guest enjoying Tulia Amboseli Safari Camp with view of Mt. Kilimanjaro"
                     className="media-cover "
                   />
-                  <div className="slide-content absolute-center">
+                  <div className="slide-content absolute-center flex-col-layout">
                     <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -630,7 +653,7 @@ function App() {
                         <span>Ranjan P</span>
                       </div>
                     </div>
-                    <button className="btn white-btn tracking-md">
+                    <button className="btn white-btn tracking-md clickable ">
                       Enquire Now Trip
                     </button>
                   </div>
@@ -643,7 +666,7 @@ function App() {
                     alt="Guest relaxing at Tulia Amboseli Safari Camp"
                     className="media-cover "
                   />
-                  <div className="slide-content absolute-center">
+                  <div className="slide-content absolute-center flex-col-layout">
                     <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -660,7 +683,7 @@ function App() {
                         <span>Ranjan P</span>
                       </div>
                     </div>
-                    <button className="btn white-btn tracking-md">
+                    <button className="btn white-btn tracking-md clickable ">
                       Enquire Now Trip
                     </button>
                   </div>
@@ -673,7 +696,7 @@ function App() {
                     alt="Guest relaxing at Tulia Amboseli Safari Camp"
                     className="media-cover"
                   />
-                  <div className="slide-content absolute-center">
+                  <div className="slide-content absolute-center flex-col-layout">
                     <div className="review text-white-primary type-heading">
                       <p>
                         “I visited this beautiful property in the wilderness
@@ -690,7 +713,7 @@ function App() {
                         <span>Ranjan P</span>
                       </div>
                     </div>
-                    <button className="btn white-btn tracking-md">
+                    <button className="btn white-btn tracking-md clickable ">
                       Enquire Now Trip
                     </button>
                   </div>
@@ -703,7 +726,7 @@ function App() {
       {/* footer section */}
       <footer className="bg-light">
         <div className="footer-section animate-fadeIn-scroll">
-          <div className="news-text">
+          <div className="news-text flex-col-layout ">
             <p>Hear the latest news about Tulia</p>
             <div className="footer-input grid-footer-input">
               <input type="text" name="name" id="name" placeholder="Name" />
@@ -719,13 +742,16 @@ function App() {
                 id="email"
                 placeholder="Email Address"
               />
-              <button className="footer-btn btn shadow" type="submit">
+              <button
+                className="footer-btn btn shadow clickable "
+                type="submit"
+              >
                 Subscribe
               </button>
             </div>
           </div>
           <div className="footer-details grid-footer-details g-20">
-            <div className="footer-brand">
+            <div className="footer-brand flex-col-layout">
               <div className="logo-size">
                 <img src={FooterImg} alt="Footer Image" srcSet="" />
               </div>
@@ -748,7 +774,7 @@ function App() {
                 </a>
               </div>
             </div>
-            <div className="footer-links">
+            <div className="footer-links flex-col-layout ">
               <button
                 className="links-title"
                 onClick={() => toggleMenu("about")}
@@ -820,7 +846,7 @@ function App() {
             </div>
             <div className="footer-links">
               <button
-                className="links-title "
+                className="links-title"
                 onClick={() => toggleMenu("experiences")}
               >
                 <span>Experiences </span>

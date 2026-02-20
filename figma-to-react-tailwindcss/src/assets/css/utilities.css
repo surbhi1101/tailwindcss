@@ -219,3 +219,9 @@
   @apply absolute inset-0 bg-black/40 md:bg-transparent;
   z-index: 0;
 }
+
+/* cursor-pointer */
+
+.clickable :is(a, span, p, h1, h2, h3, h4, h5, h6) {
+  @apply cursor-pointer;
+}

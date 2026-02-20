@@ -18,10 +18,6 @@
     @apply hidden items-center text-[15px] font-body capitalize md:flex tracking-[0.34px] leading-[22.5px] gap-[24px];
   }
 
-  .navbar ul li a {
-    @apply cursor-pointer;
-  }
-
   .logo-size {
     @apply w-[100px] object-contain lg:w-auto;
   }
@@ -36,7 +32,7 @@
   }
 
   .menu-icon ul {
-    @apply flex flex-col py-10;
+    @apply py-10;
   }
 
   .menu-icon li {
@@ -63,7 +59,7 @@
   }
 
   .hero-content {
-    @apply absolute flex flex-col items-center text-center gap-[39px];
+    @apply absolute items-center text-center gap-[39px];
   }
 
   .main-title {
@@ -73,38 +69,38 @@
   /* our-story */
 
   .story-content {
-    @apply flex flex-col gap-[30px] lg:gap-[45px];
+    @apply gap-[30px] lg:gap-[45px];
   }
   .story-text {
-    @apply flex flex-col gap-[15px] lg:gap-[30px];
+    @apply gap-[15px] lg:gap-[30px];
   }
 
   .story-heading {
-    @apply flex flex-col gap-[15px] lg:gap-[24px];
+    @apply gap-[15px] lg:gap-[24px];
   }
   .text-content {
-    @apply flex flex-col gap-[10px] text-[16px] xl:text-[26px] xl:gap-[30px];
+    @apply gap-[10px] text-[16px] xl:text-[26px] xl:gap-[30px];
   }
 
   /* Why book with us section */
 
   .why-book-inner {
-    @apply flex flex-col items-center text-center xl:gap-[50px];
+    @apply items-center text-center xl:gap-[50px];
   }
 
   .info-block {
-    @apply flex flex-col items-center gap-[13px];
+    @apply items-center gap-[13px];
   }
 
   .icon-title {
-    @apply flex flex-col items-center;
+    @apply items-center;
   }
 
   .icon-title-text {
-    @apply flex flex-col font-body font-normal text-[18px] md:text-base text-center tracking-[0.43px] leading-[100%];
+    @apply font-body font-normal text-[18px] md:text-base text-center tracking-[0.43px] leading-[100%];
   }
   .info-text p {
-    @apply flex flex-col px-0 xl:px-[7.5px] font-normal text-xs leading-[22px] text-center;
+    @apply px-0 xl:px-[7.5px] font-normal text-xs leading-[22px] text-center;
   }
   .heading-title {
     @apply font-heading text-[26px] md:text-3xl font-normal leading-none tracking-[1.14px] xl:text-4xl;
@@ -112,7 +108,7 @@
 
   /* our-accommodation */
   .accommodation-content {
-    @apply flex flex-col gap-[21px] xl:ml-[101px] xl:mr-[98px];
+    @apply gap-[21px] xl:ml-[101px] xl:mr-[98px];
   }
   .accommodation-heading {
     @apply px-2 md:flex items-center justify-between;
@@ -124,13 +120,13 @@
     @apply grid items-start w-full mt-[10px] lg:mt-[80px] gap-[41px] xl:pl-[99px] xl:pr-[98px];
   }
   .overlay-content {
-    @apply absolute flex flex-col right-[54px] left-[10px] lg:left-[27.67px] font-body text-black bottom-20 lg:bottom-36;
+    @apply absolute right-[54px] left-[10px] lg:left-[27.67px] font-body text-black bottom-20 lg:bottom-36;
   }
   .tent-title :is(a, span, p, h1, h2, h3, h4, h5, h6) {
     @apply font-body font-normal text-[24px] md:text-[16px] lg:text-[21px] xl:tracking-[0.54px] xl:leading-[36px] xl:text-[26px];
   }
   .tent-heading {
-    @apply flex flex-col gap-[10px] xl:gap-[18px];
+    @apply gap-[10px] xl:gap-[18px];
   }
   .explore-link :is(a, span, p, h1, h2, h3, h4, h5, h6) {
     @apply font-body relative text-[12px] md:text-[15px] cursor-pointer decoration-0 tracking-[0.32px];
@@ -148,15 +144,15 @@
   }
 
   .experiences-heading {
-    @apply flex flex-col gap-[18px] lg:gap-[20px] xl:gap-[24px];
+    @apply gap-[18px] lg:gap-[20px] xl:gap-[24px];
   }
 
   .experiences-content {
-    @apply flex flex-col gap-[10px] lg:gap-[20px] xl:gap-[30px];
+    @apply gap-[10px] lg:gap-[20px] xl:gap-[30px];
   }
 
   .experiences-description p {
-    @apply flex flex-col text-[10px] md:text-[13px] lg:text-[14px] xl:text-base md:leading-[25px] md:tracking-[0.34px] md:w-[50%];
+    @apply text-[10px] md:text-[13px] lg:text-[14px] xl:text-base md:leading-[25px] md:tracking-[0.34px] md:w-[50%];
   }
 
   .experience-actions {
@@ -173,9 +169,6 @@
 
   .arrow-btn {
     @apply flex gap-12 w-60 lg:w-[40%] xl:gap-[24px];
-  }
-  .arrow-btn button {
-    @apply cursor-pointer;
   }
   /* Enquire Now */
 
@@ -207,7 +200,7 @@
     @apply block w-full object-cover h-[50vh] md:h-auto;
   }
   .slide-content {
-    @apply flex flex-col px-[45px] md:px-[40px] lg:px-[115px] xl:px-[284px];
+    @apply px-[45px] md:px-[40px] lg:px-[115px] xl:px-[284px];
     z-index: 10;
   }
 
@@ -263,7 +256,7 @@
   }
 
   .news-text {
-    @apply flex flex-col xl:gap-[47px] px-[20px] xl:pr-[94px] xl:pl-[100px] xl:pb-[87px];
+    @apply xl:gap-[47px] px-[20px] xl:pr-[94px] xl:pl-[100px] xl:pb-[87px];
   }
   .footer-input input,
   .footer-input button {
@@ -271,7 +264,7 @@
   }
 
   .footer-brand {
-    @apply flex flex-col items-center justify-center md:items-start md:justify-start md:text-left;
+    @apply items-center justify-center md:items-start md:justify-start md:text-left;
   }
 
   .dropdown-arrow {
@@ -294,7 +287,7 @@
   }
 
   .footer-links {
-    @apply flex flex-col gap-[4px];
+    @apply gap-[4px];
   }
 
   .footer-links a {
@@ -302,7 +295,7 @@
   }
 
   .links-title {
-    @apply font-heading font-normal leading-[29px] tracking-[0.34px] text-[18px] py-[10px] md:py-0 flex items-center justify-between gap-2 text-center w-full lg:justify-start lg:text-left;
+    @apply font-heading font-normal leading-[29px] tracking-[0.34px] text-[18px] py-[10px] md:py-0 justify-between gap-2 text-center w-full lg:justify-start lg:text-left;
   }
 
   .socialmedia-links {
@@ -317,7 +310,7 @@
   }
 
   .rights-reserved {
-    @apply flex flex-col text-center md:gap-4 text-[16px] mt-[19px] px-10 py-[20px] md:flex md:flex-row md:text-left lg:pt-[19px] pb-[37px] xl:pl-[98px] xl:pr-[88px];
+    @apply flex text-center md:gap-4 text-[16px] mt-[19px] px-10 py-[20px] md:flex md:flex-row md:text-left lg:pt-[19px] pb-[37px] xl:pl-[98px] xl:pr-[88px];
   }
 
   .policy-links {
@@ -331,7 +324,7 @@
   /* buttons */
 
   .btn {
-    @apply inline-flex items-center justify-center font-body cursor-pointer w-fit border rounded-[5px] relative overflow-hidden whitespace-nowrap;
+    @apply inline-flex items-center justify-center font-body w-fit border rounded-[5px] relative overflow-hidden whitespace-nowrap;
   }
 
   .btn::before {
