@@ -17,6 +17,11 @@
   .navbar {
     @apply hidden items-center text-[15px] font-body capitalize md:flex tracking-[0.34px] leading-[22.5px] gap-[24px];
   }
+
+  .navbar ul li a {
+    @apply cursor-pointer;
+  }
+
   .logo-size {
     @apply w-[100px] object-contain lg:w-auto;
   }
@@ -162,7 +167,7 @@
     @apply flex items-center gap-12 xl:gap-[52px] ml-auto xl:mr-[103px];
   }
 
-  .game-drives p{
+  .game-drives p {
     @apply text-[10px] md:text-base;
   }
 
@@ -188,6 +193,7 @@
   .swiper-button-next {
     @apply right-0;
   }
+
   .swiper-wrapper-custom .swiper-button-next {
     @apply right-[33.05px] lg:mr-[33px];
   }
@@ -315,7 +321,7 @@
   }
 
   .policy-links {
-    @apply flex justify-center gap-[30px] md:ml-auto;
+    @apply flex justify-center gap-[10px] md:gap-[30px] md:ml-auto;
   }
 
   .news-text p {
@@ -355,7 +361,7 @@
   }
 
   .golden-btn {
-    @apply border-accent text-[13px] text-accent w-[100%] md:w-auto py-[11px] px-[22px] md:text-[16px] md:py-[8px] md:px-[37px];
+    @apply border-accent text-[13px] text-accent w-[100%] md:w-auto py-[10px] px-[20px] md:text-[16px] md:py-[8px] md:px-[37px];
   }
 
   .golden-btn::before {
