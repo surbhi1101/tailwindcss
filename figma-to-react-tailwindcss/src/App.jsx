@@ -147,7 +147,7 @@ function App() {
               <div className="story-text">
                 <div className="story-heading">
                   <div className="sub-title">
-                    <h6>Our Story</h6>
+                    <p>Our Story</p>
                   </div>
                   <div className="title-md type-heading">
                     <h2>Tulia Amboseli Safari Camp</h2>
@@ -177,16 +177,22 @@ function App() {
                 </div>
               </div>
               <div className="cta-wrapper">
-                <button className="btn golden-btn shadow tracking-md">
+                <a
+                  href="#ourstory"
+                  className="btn golden-btn shadow tracking-md"
+                >
                   Our Story
-                </button>
+                </a>
               </div>
             </div>
           </div>
-          <img src={Path} alt="path" />
+          <img src={Path} alt="path" aria-hidden="true" />
         </section>
         {/* why-book-with-us section */}
-        <section className="animate-fadeIn-scroll p-responsive">
+        <section
+          id="why-book-with-us"
+          className="animate-fadeIn-scroll p-responsive"
+        >
           <div className="why-book-inner page-container">
             <div className="title-light main-heading text-32 type-heading text-dance">
               <h2>Why book with us?</h2>
@@ -194,10 +200,13 @@ function App() {
             <div className="book-section grid-responsive-4">
               <div className="info-block">
                 <div className="icon-title g-20">
-                  <img src={Location} alt="Location" />
-                  <h6 className="icon-title-text">
+                  <img
+                    src={Location}
+                    alt="Prime safari camp location near Amboseli National Park"
+                  />
+                  <h3 className="icon-title-text">
                     Location, Location, Location
-                  </h6>
+                  </h3>
                 </div>
                 <div className="text-muted info-text">
                   <p>
@@ -209,8 +218,11 @@ function App() {
               </div>
               <div className="info-block">
                 <div className="icon-title g-20">
-                  <img src={Heart} alt="Heart" />
-                  <h6 className="icon-title-text"> Our Impact</h6>
+                  <img
+                    src={Heart}
+                    alt="Tulia conservation and sustainability commitment"
+                  />
+                  <h3 className="icon-title-text"> Our Impact</h3>
                 </div>
                 <div className="text-muted info-text">
                   <p>
@@ -221,8 +233,11 @@ function App() {
               </div>
               <div className="info-block">
                 <div className="icon-title g-20">
-                  <img src={Compass} alt="Compass" />
-                  <h6 className="icon-title-text">Authentic Experiences</h6>
+                  <img
+                    src={Compass}
+                    alt="Compass icon representing guided safari experiences"
+                  />
+                  <h3 className="icon-title-text">Authentic Experiences</h3>
                 </div>
                 <div className="text-muted info-text">
                   <p>
@@ -234,8 +249,11 @@ function App() {
               </div>
               <div className="info-block">
                 <div className="icon-title g-20">
-                  <img src={Sunset} alt="Sunset" />
-                  <h6 className="icon-title-text">The Spirit of Tulia</h6>
+                  <img
+                    src={Sunset}
+                    alt="African sunset experience at Tulia Safari Camp"
+                  />
+                  <h3 className="icon-title-text">The Spirit of Tulia</h3>
                 </div>
                 <div className="text-muted info-text">
                   <p>
@@ -249,7 +267,10 @@ function App() {
           </div>
         </section>
         {/* our-accommodation section */}
-        <section className="our-accommodation section-mt animate-fadeIn-scroll p-responsive">
+        <section
+          id="accommodation"
+          className="our-accommodation section-mt animate-fadeIn-scroll p-responsive"
+        >
           <div className="accommodation-content">
             <div className="accommodation-heading">
               <div className="main-heading type-heading text-dance">
@@ -257,9 +278,9 @@ function App() {
               </div>
 
               <div className="explore-action">
-                <button className="btn golden-btn tracking-md">
+                <a href="#exploreall" className="btn golden-btn tracking-md">
                   Explore All
-                </button>
+                </a>
               </div>
             </div>
             <div className="accommodation-detail text-muted">
@@ -270,16 +291,16 @@ function App() {
               </p>
             </div>
             <div className="mobile-explore">
-              <button className="btn golden-btn tracking-md">
+              <a href="#exploreall" className="btn golden-btn tracking-md">
                 Explore All
-              </button>
+              </a>
             </div>
           </div>
           <div className="accommodation-card grid-responsive-3">
             <div className="section-container">
               <img
                 src={SuperbTents}
-                alt="Superb Tents"
+                alt="Luxury Superb Tents at Tulia Amboseli Safari Camp"
                 className="img-cover-full"
               />
               <div className="overlay-content">
@@ -288,7 +309,7 @@ function App() {
                     <h3>Superb Tents</h3>
                   </div>
                   <div className="explore-link">
-                    <a>Explore</a>
+                    <a href="#explore">Explore</a>
                   </div>
                 </div>
               </div>
@@ -296,7 +317,7 @@ function App() {
             <div className="relative overflow-hidden">
               <img
                 src={SuperbFamilyTents}
-                alt="SuperbFamilyTents"
+                alt="Luxury Superb Family Tents at Tulia Amboseli Safari Camp"
                 className="img-cover-full"
               />
               <div className="overlay-content">
@@ -305,7 +326,7 @@ function App() {
                     <h3>Superb Family Tents</h3>
                   </div>
                   <div className="explore-link">
-                    <a href="#">Explore</a>
+                    <a href="#explore">Explore</a>
                   </div>
                 </div>
               </div>
@@ -313,7 +334,7 @@ function App() {
             <div className="relative overflow-hidden">
               <img
                 src={DeluxeTents}
-                alt="DeluxeTents"
+                alt="Deluxe Safari Tents with Mt Kilimanjaro views"
                 className="img-cover-full"
               />
               <div className="overlay-content">
@@ -322,7 +343,7 @@ function App() {
                     <h3>Deluxe Tents</h3>
                   </div>
                   <div className="explore-link">
-                    <a>Explore</a>
+                    <a href="#explore">Explore</a>
                   </div>
                 </div>
               </div>
@@ -331,7 +352,10 @@ function App() {
         </section>
 
         {/* Experiences section */}
-        <section className="experiences-wrapper section-mt animate-fadeIn-scroll">
+        <section
+          id="experiences"
+          className="experiences-wrapper section-mt animate-fadeIn-scroll"
+        >
           <div className="swiper-wrapper-custom">
             <Swiper
               modules={[Navigation, Mousewheel, Keyboard]}
@@ -348,15 +372,19 @@ function App() {
             >
               <SwiperSlide>
                 <div className="experiences overlay-section">
-                  <img src={Lion} alt="Lion" className="media-cover " />
+                  <img
+                    src={Lion}
+                    alt="Lion walking in Amboseli National Park during Safari"
+                    className="media-cover "
+                  />
                   <div className="experiences-details p-responsive absolute-center-col">
                     <div className="experiences-content">
                       <div className="experiences-heading title-white">
                         <div className="sub-title">
-                          <h6>Experiences</h6>
+                          <h2>Experiences</h2>
                         </div>
                         <div className="title-md type-heading">
-                          <h2>Breathe in the Real Africa</h2>
+                          <h3>Breathe in the Real Africa</h3>
                         </div>
                       </div>
                       <div className="experiences-description text-white-primary">
@@ -372,9 +400,12 @@ function App() {
                       </div>
                     </div>
                     <div className="experience-actions">
-                      <button className="btn white-btn tracking-sm">
+                      <a
+                        href="#experiences-details"
+                        className="btn white-btn tracking-sm"
+                      >
                         Explore Experiences
-                      </button>
+                      </a>
 
                       <div className="game-drives">
                         <div className="text-white-primary">
@@ -396,15 +427,19 @@ function App() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="experiences overlay-section">
-                  <img src={Lion} alt="Lion" className="media-cover " />
+                  <img
+                    src={Lion}
+                    alt="Lion walking in Amboseli National Park during Safari"
+                    className="media-cover "
+                  />
                   <div className="experiences-details p-responsive absolute-center-col">
                     <div className="experiences-content">
                       <div className="experiences-heading title-white">
                         <div className="sub-title">
-                          <h6>Experiences</h6>
+                          <h2>Experiences</h2>
                         </div>
                         <div className="title-md type-heading">
-                          <h2>Breathe in the Real Africa</h2>
+                          <h3>Breathe in the Real Africa</h3>
                         </div>
                       </div>
                       <div className="experiences-description text-white-primary">
@@ -420,9 +455,12 @@ function App() {
                       </div>
                     </div>
                     <div className="experience-actions">
-                      <button className="btn white-btn tracking-sm">
+                      <a
+                        href="#experiences-details"
+                        className="btn white-btn tracking-sm"
+                      >
                         Explore Experiences
-                      </button>
+                      </a>
 
                       <div className="game-drives">
                         <div className="text-white-primary">
@@ -444,15 +482,19 @@ function App() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="experiences overlay-section">
-                  <img src={Lion} alt="Lion" className="media-cover " />
+                  <img
+                    src={Lion}
+                    alt="Lion walking in Amboseli National Park during Safari"
+                    className="media-cover "
+                  />
                   <div className="experiences-details p-responsive absolute-center-col">
                     <div className="experiences-content">
                       <div className="experiences-heading title-white">
                         <div className="sub-title">
-                          <h6>Experiences</h6>
+                          <h2>Experiences</h2>
                         </div>
                         <div className="title-md type-heading">
-                          <h2>Breathe in the Real Africa</h2>
+                          <h3>Breathe in the Real Africa</h3>
                         </div>
                       </div>
                       <div className="experiences-description text-white-primary">
@@ -468,9 +510,12 @@ function App() {
                       </div>
                     </div>
                     <div className="experience-actions">
-                      <button className="btn white-btn tracking-sm">
+                      <a
+                        href="#experiences-details"
+                        className="btn white-btn tracking-sm"
+                      >
                         Explore Experiences
-                      </button>
+                      </a>
 
                       <div className="game-drives">
                         <div className="text-white-primary">
@@ -499,16 +544,16 @@ function App() {
           <div className="dining-detail grid-responsive-2">
             <img
               src={Dining}
-              alt="Dine in the open"
+              alt="Outdoor dining experience at Tulia Amboseli Safari Camp"
               className="img-cover-full"
             />
             <div className="dining-content">
               <div className="dining-subsection">
                 <div className="sub-title">
-                  <h6>Dining</h6>
+                  <h2>Dining</h2>
                 </div>
                 <div className="title-md type-heading">
-                  <h2>Dine in the open</h2>
+                  <h3>Dine in the open</h3>
                 </div>
                 <div className="text-muted">
                   <p>
@@ -527,9 +572,9 @@ function App() {
                 </div>
               </div>
               <div className="cta-wrapper">
-                <button className="btn golden-btn tracking-md">
+                <a href="#exploredining" className="btn golden-btn tracking-md">
                   Explore Dining
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -565,7 +610,7 @@ function App() {
                 <div className="slide overlay-section">
                   <img
                     src={Enquirenow}
-                    alt="Enquirenow"
+                    alt="Guest enjoying Tulia Amboseli Safari Camp with view of Mt. Kilimanjaro"
                     className="media-cover "
                   />
                   <div className="slide-content absolute-center">
@@ -595,7 +640,7 @@ function App() {
                 <div className="slide overlay-section">
                   <img
                     src={Enquirenow}
-                    alt="Enquirenow"
+                    alt="Guest relaxing at Tulia Amboseli Safari Camp"
                     className="media-cover "
                   />
                   <div className="slide-content absolute-center">
@@ -625,7 +670,7 @@ function App() {
                 <div className="slide overlay-section">
                   <img
                     src={Enquirenow}
-                    alt="Enquirenow"
+                    alt="Guest relaxing at Tulia Amboseli Safari Camp"
                     className="media-cover"
                   />
                   <div className="slide-content absolute-center">
@@ -674,7 +719,9 @@ function App() {
                 id="email"
                 placeholder="Email Address"
               />
-              <button className="footer-btn btn shadow">Subscribe</button>
+              <button className="footer-btn btn shadow" type="submit">
+                Subscribe
+              </button>
             </div>
           </div>
           <div className="footer-details grid-footer-details g-20">
@@ -690,9 +737,15 @@ function App() {
                 </p>
               </div>
               <div className="socialmedia-links g-10">
-                <img src={Instagram} alt="Instagram" />
-                <img src={Facebook} alt="Facebook" />
-                <img src={Youtube} alt="Youtube" />
+                <a href="#instagram">
+                  <img src={Instagram} alt="Instagram icon" />
+                </a>
+                <a href="#facebook">
+                  <img src={Facebook} alt="Facebook icon" />
+                </a>
+                <a href="#youtube">
+                  <img src={Youtube} alt="Youtube icon" />
+                </a>
               </div>
             </div>
             <div className="footer-links">
