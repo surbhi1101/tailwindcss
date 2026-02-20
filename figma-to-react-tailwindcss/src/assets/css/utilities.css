@@ -79,12 +79,12 @@
 
 /* spacing */
 .page-container {
-  @apply lg:ml-[117px] lg:mr-[116px];
+  @apply xl:ml-[117px] xl:mr-[116px];
 }
 
 /* title */
 .title-md :is(h1, h2, h3, h4, h5, h6) {
-  @apply font-normal text-[18px] md:text-[15px] xl:text-3xl;
+  @apply font-normal text-[18px] xl:text-3xl;
 }
 
 .main-heading :is(h1, h2, h3, h4, h5, h6) {
@@ -92,7 +92,7 @@
 }
 
 .sub-title :is(h1, h2, h3, h4, h5, h6) {
-  @apply text-[24px] md:text-[16px] xl:text-base font-semibold md:font-normal tracking-normal leading-[100%];
+  @apply text-[24px] xl:text-base font-semibold md:font-normal tracking-normal leading-[100%];
 }
 
 /* font-family */
