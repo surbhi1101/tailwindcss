@@ -161,7 +161,7 @@ function App() {
                     <h2>Tulia Amboseli Safari Camp</h2>
                   </div>
                 </div>
-                <div className="text-content text-muted">
+                <div className="text-content text-muted flex-col-layout">
                   <p>
                     Tulia Amboseli Safari Camp is an eco-friendly safari camp
                     just outside of Kimana Gate in the southeast area of the
@@ -216,7 +216,7 @@ function App() {
                     Location, Location, Location
                   </h3>
                 </div>
-                <div className="text-muted info-text flex-col-layout">
+                <div className="text-muted info-text">
                   <p>
                     Our portfolio features properties in Africa's most
                     celebrated wildlife regions, ensuring that our guests get as
@@ -335,7 +335,7 @@ function App() {
                 className="img-cover-full"
               />
               <div className="overlay-content flex-col-layout">
-                <div className="tent-heading title-white">
+                <div className="tent-heading title-white flex-col-layout">
                   <div className="tent-title">
                     <h3>Superb Family Tents</h3>
                   </div>
@@ -352,7 +352,7 @@ function App() {
                 className="img-cover-full"
               />
               <div className="overlay-content flex-col-layout">
-                <div className="tent-heading title-white">
+                <div className="tent-heading title-white flex-col-layout">
                   <div className="tent-title">
                     <h3>Deluxe Tents</h3>
                   </div>
@@ -742,10 +742,7 @@ function App() {
                 id="email"
                 placeholder="Email Address"
               />
-              <button
-                className="footer-btn btn shadow clickable "
-                type="submit"
-              >
+              <button className="footer-btn btn shadow clickable" type="submit">
                 Subscribe
               </button>
             </div>
@@ -894,7 +891,7 @@ function App() {
         <hr className="footer-hr" />
         <div className="rights-reserved">
           <p>All rights reserved © 2025 Tulia</p>
-          <div className="policy-links">
+          <div className="policy-links clickable">
             <p>Terms and Conditions</p>
             <p>Privacy Policy</p>
           </div>
