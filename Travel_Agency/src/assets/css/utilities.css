@@ -1,0 +1,157 @@
+/* fade-in */
+
+.animate-fadeIn-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-fadeIn-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Mobile menu item animation */
+@keyframes menuReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mobile-active ul li {
+  opacity: 0;
+  animation: menuReveal 0.35s ease forwards;
+}
+
+.mobile-active ul li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.mobile-active ul li:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.mobile-active ul li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.mobile-active ul li:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.mobile-active ul li:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.section-spacing {
+  @apply px-[16px] py-[80px]
+         md:px-[32px] md:py-[80px]
+         lg:px-[32px] lg:py-[100px]
+         xl:px-[32px] xl:py-[140px];
+}
+.section-spacing-no-pl {
+  @apply 2xl:pl-[182px];
+}
+
+.heading-block {
+  @apply flex flex-col gap-[32px];
+}
+
+.heading-title {
+  @apply flex flex-col gap-[20px] font-heading text-[48px] lg:text-[64px] font-normal text-[#172432];
+}
+
+.section-description {
+  @apply flex;
+}
+
+.offer-header {
+  @apply flex;
+}
+
+.offer-desc {
+  @apply flex flex-col lg:ml-auto gap-[32px];
+}
+
+.heading-block2 {
+  @apply text-left md:text-right;
+}
+
+.heading-block2 h2 {
+  @apply font-heading font-normal text-[40px] lg:text-[54px] tracking-normal leading-none text-[#1B262E];
+}
+
+.heading-block2 p {
+  @apply text-gray-500 text-lg;
+}
+
+/* cursor-pointer */
+
+.clickable :is(a, span, p, h1, h2, h3, h4, h5, h6, button) {
+  @apply cursor-pointer;
+}
+
+.section-header {
+  @apply flex flex-col justify-between gap-[32px];
+}
+
+.section-title :is(h1, h2, h3, h4, h5, h6) {
+  @apply flex flex-col font-heading text-[40px] md:text-[54px] lg:text-[64px] font-normal text-[#172432];
+}
+
+.section-description :is(a, span, p) {
+  @apply font-body text-[20px] md:text-[24px] text-[#767E86];
+  @apply lg:max-w-[780px] xl:max-w-full;
+}
+
+.page-container {
+  @apply px-16 py-[80px] 
+  md:px-[20px] 
+  lg:px-[32px] lg:pt-[100px] 
+  2xl:px-[182px] xl:pt-[140px];
+}
+
+.left-space {
+  @apply px-[16px] py-[80px] md:pl-[20px] lg:pl-[32px] 2xl:pl-[182px];
+}
+
+.underline-sm,
+.underline-base,
+.underline-md,
+.underline-lg,
+.underline-xl,
+.underline-full {
+  @apply text-[#FF7D61] border-3 mt-[20px];
+}
+
+.underline-sm {
+  @apply w-[150px];
+}
+.underline-base {
+  @apply w-[231px];
+}
+.underline-md {
+  @apply w-[241px] md:ml-auto;
+}
+
+.underline-lg {
+  @apply w-[283px];
+}
+
+.underline-xl {
+  @apply w-[304px] md:w-[347px];
+}
+
+.underline-full {
+  @apply w-[227px] md:w-[365px];
+}

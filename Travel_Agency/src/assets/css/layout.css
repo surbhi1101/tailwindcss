@@ -1,0 +1,30 @@
+@layer layout {
+  .hero-mobile {
+    @apply block md:hidden relative w-full 
+           px-[16px] pb-[100px] gap-[100px] mt-[148px]
+           flex flex-col;
+  }
+
+  .destinations-section {
+    @apply relative flex flex-col gap-[100px];
+  }
+
+  .special-offer {
+    @apply relative;
+  }
+
+  .gallery-desktop-wrapper {
+    @apply hidden lg:flex flex-row justify-center gap-[32px];
+  }
+
+  .trip-planners-section {
+    @apply py-[80px] px-[16px] lg:py-[140px] overflow-hidden;
+  }
+
+  .Special-offer {
+    @apply mt-[140px];
+  }
+  .footer {
+    @apply bg-[#172432];
+  }
+}
