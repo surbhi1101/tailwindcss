@@ -14,7 +14,7 @@
   }
 
   .gallery-desktop-wrapper {
-    @apply hidden lg:flex flex-row justify-center gap-[32px];
+    @apply hidden lg:flex flex-row justify-center mt-[100px];
   }
 
   .trip-planners-section {

@@ -514,7 +514,7 @@
     @apply scale-110;
   }
   .gallery-mobile-wrapper {
-    @apply flex flex-col gap-[32px] mt-10 lg:hidden;
+    @apply flex flex-col gap-[32px] mt-[100px] lg:hidden;
   }
 
   .gallery-card-mobile {
@@ -671,7 +671,7 @@
   }
 
   .mobile-arrows {
-    @apply flex justify-center gap-[24px] lg:hidden;
+    @apply flex justify-center gap-[24px] lg:hidden mt-[100px];
   }
 
   .footer-btn {
