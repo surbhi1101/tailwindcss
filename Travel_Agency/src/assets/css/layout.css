@@ -8,15 +8,9 @@
   .section-base {
     @apply flex flex-col py-[80px] lg:py-[100px] xl:py-[140px];
   }
-  .section-container {
-    @apply px-[16px]
-    md:px-[20px]
-    lg:px-[32px]
-    2xl:px-[182px];
-  }
 
   .destinations-section {
-    @apply relative
+    @apply relative flex flex-col
          pl-[16px] gap-[100px]
          md:pl-[20px]
       lg:pl-[32px]
@@ -25,12 +19,17 @@
 
   .special-offer {
     @apply relative
-        gap-[60px]
-      md:gap-[100px];
+        px-[16px] gap-[60px]
+          md:px-[20px] md:gap-[100px]
+         lg:px-[32px]
+         2xl:px-[182px];
   }
 
   .Blog-section {
-    @apply gap-[100px];
+    @apply px-[16px] gap-[100px]
+         md:px-[20px]
+         lg:px-[32px]
+        2xl:px-[182px];
   }
 
   .trip-planners-section {
@@ -43,7 +42,11 @@
   }
 
   .Gallery-section {
-    @apply gap-[100px];
+    @apply flex flex-col
+         px-[16px] gap-[100px]
+         md:px-[20px]
+          lg:px-[32px]
+         2xl:px-[182px];
   }
 
   .experiences-gallery {

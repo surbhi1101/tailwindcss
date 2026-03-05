@@ -378,7 +378,7 @@ function App() {
           </div>
         </section>
         {/* special-offer */}
-        <section className="special-offer section-base section-container  animate-fadeIn-scroll">
+        <section className="special-offer section-base animate-fadeIn-scroll">
           <div className="offer-header">
             <div className="offer-desc">
               <div className="heading-block2">
@@ -560,7 +560,7 @@ function App() {
           </div>
         </section>
         {/* Blog-section */}
-        <section className="Blog-section section-base section-container animate-fadeIn-scroll">
+        <section className="Blog-section section-base animate-fadeIn-scroll">
           <div className="section-header">
             <div className="heading">
               <div className="section-title">
@@ -807,7 +807,7 @@ function App() {
           )}
         </section>
         {/* Gallery-section */}
-        <section className="Gallery-section section-base section-container animate-fadeIn-scroll">
+        <section className="Gallery-section section-base animate-fadeIn-scroll">
           <div className="heading-block">
             <div className="heading-title">
               <h2>Destination Gallery</h2>
@@ -884,7 +884,7 @@ function App() {
               onSwiper={(swiper) => (experiencesSwiperRef.current = swiper)}
               breakpoints={{
                 320: { slidesPerView: 1 },
-                768: { slidesPerView: 1.6 },
+                768: { slidesPerView: 1.7 },
                 1152: { slidesPerView: 2.2 },
                 1440: { slidesPerView: 2.3 },
                 1920: { slidesPerView: 2.5 },
