@@ -299,7 +299,7 @@
   }
 
   .experiencesSwiper .swiper-slide {
-    @apply mt-[100px] 2xl:mt-[160px] !overflow-visible h-auto flex justify-center;
+    @apply mt-[63px] !overflow-visible h-auto flex justify-center;
   }
 
   .experiences-card {
