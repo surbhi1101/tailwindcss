@@ -673,7 +673,7 @@
   }
 
   .destinations-section .desktop-arrows {
-    @apply hidden lg:flex gap-[24px] lg:ml-auto lg:mr-[182px] mr-[32px];
+    @apply hidden lg:flex gap-[24px] lg:ml-auto mr-[32px] 2xl:mr-[182px];
   }
 
   .desktop-arrows {
