@@ -20,8 +20,8 @@
   }
 
   .Blog-section {
-    @apply flex flex-col px-[16px] gap-[100px]
-         md:px-[20px] lg:px-[32px]
+    @apply flex flex-col px-[16px] gap-[100px] 
+         md:px-[20px] lg:px-[32px] py-[80px] lg:py-[100px] xl:py-[140px]
         2xl:px-[182px];
   }
 
