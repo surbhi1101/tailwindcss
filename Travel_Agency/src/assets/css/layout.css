@@ -4,6 +4,11 @@
            px-[16px] pb-[100px] gap-[100px] mt-[148px]
            flex flex-col;
   }
+
+  .section-base {
+    @apply flex flex-col;
+  }
+
   .destinations-section {
     @apply relative flex flex-col
          py-[80px] pl-[16px] gap-[100px]
@@ -15,7 +20,7 @@
   .special-offer {
     @apply relative flex flex-col
          py-[80px] px-[16px] gap-[60px]
-         md:py-[80px] md:px-[20px] md:gap-[100px]
+          md:px-[20px] md:gap-[100px]
          lg:py-[100px] lg:px-[32px]
          xl:py-[140px] 
          2xl:px-[182px];
@@ -24,7 +29,7 @@
   .Blog-section {
     @apply flex flex-col
          py-[80px] px-[16px] gap-[100px]
-         md:py-[80px] md:px-[20px]
+         md:px-[20px]
          lg:py-[100px] lg:px-[32px]
          xl:py-[140px] 
         2xl:px-[182px];
@@ -33,7 +38,7 @@
   .trip-planners-section {
     @apply flex flex-col
          py-[80px] px-[16px] gap-[80px]
-         md:py-[80px] md:px-[20px]
+         md:px-[20px]
          lg:py-[100px] lg:pl-[32px] lg:px-0
          xl:py-[140px] 
          2xl:pl-[182px] 2xl:gap-[100px]
@@ -43,7 +48,7 @@
   .Gallery-section {
     @apply flex flex-col
          py-[80px] px-[16px] gap-[100px]
-         md:py-[80px] md:px-[20px]
+         md:px-[20px]
          lg:py-[100px] lg:px-[32px]
          xl:py-[140px] 
          2xl:px-[182px];
@@ -52,7 +57,7 @@
   .experiences-gallery {
     @apply flex flex-col
          py-[80px] pl-[16px] gap-[100px]
-         md:py-[80px] md:pl-[32px] md:gap-[160px]
+         md:pl-[32px] md:gap-[160px]
          lg:pt-[100px] lg:pl-[32px] lg:pb-[100px]
          xl:pt-[140px]  xl:pb-[240px] 
          2xl:pl-[182px];

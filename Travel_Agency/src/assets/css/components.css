@@ -358,6 +358,9 @@
     @apply lg:flex-1;
   }
   /* Trip-planners */
+  .trip-planners-section .heading-block {
+    @apply md:w-[50%] lg:w-full xl:w-[50%] 2xl:w-[30%];
+  }
   .destinationSwiper .planner-content {
     @apply flex flex-col gap-[20px];
   }
@@ -381,7 +384,7 @@
   }
 
   .planner-card {
-    @apply relative h-[399px]  rounded-[26px] overflow-hidden shadow-2xl z-10 -mt-12 transition-all;
+    @apply relative h-[399px] rounded-[26px] overflow-hidden shadow-2xl z-10 -mt-12 transition-all;
   }
 
   .planner-meta {
@@ -454,7 +457,7 @@
     @apply absolute -top-[19px] px-[16px] -left-[14px] w-[43px] h-[43px] bg-[#172432] -z-10;
   }
   .decor-box-grey {
-    @apply absolute -bottom-[17px] left-[160px] px-[16px] w-[43px] h-[43px] bg-[#767E86] -z-10;
+    @apply absolute -bottom-[17px] left-[170px] px-[16px] w-[43px] h-[43px] bg-[#767E86] -z-10;
   }
 
   .planner-card:hover .planner-image-overlay {
@@ -524,17 +527,12 @@
   .gallery-card:hover img {
     @apply scale-110;
   }
+
   .gallery-mobile-wrapper {
     @apply flex flex-col gap-[32px] lg:hidden;
   }
-
-  .gallery-mobile-wrapper,
   .gallery-desktop-wrapper {
-    @apply flex flex-col gap-[32px];
-  }
-
-  .gallery-desktop-wrapper {
-    @apply hidden justify-center;
+    @apply hidden lg:grid grid-cols-4 gap-[32px] justify-center;
   }
 
   .gallery-card-mobile {
@@ -550,7 +548,14 @@
   }
   /* footer */
   .newsletter-wrapper {
-    @apply relative z-10 -translate-y-1/1;
+    @apply relative z-10 -translate-y-1/2;
+  }
+
+  .newsletter-wrapper .Our-Newsletter {
+    @apply w-full lg:block hidden 
+    gap-[60px] xl:gap-[100px]
+    px-[16px] lg:px-[40px] xl:px-[80px] lg:py-[60px]
+    bg-white rounded-[16px] md:rounded-[26px];
   }
 
   .mobile-newsletter-wrapper {
@@ -573,16 +578,9 @@
   }
 
   .Our-Newsletter {
-    @apply w-full block lg:hidden lg:flex lg:flex-col
+    @apply w-full lg:flex 
     gap-[60px] 
     px-[16px] 
-    bg-white rounded-[16px] md:rounded-[26px];
-  }
-
-  .newsletter-wrapper .Our-Newsletter {
-    @apply w-full lg:block hidden 
-    gap-[60px] xl:gap-[100px]
-    px-[16px] lg:px-[40px] xl:px-[80px] lg:py-[60px]
     bg-white rounded-[16px] md:rounded-[26px];
   }
 
@@ -649,6 +647,11 @@
     @apply flex items-center justify-center leading-none tracking-normal gap-[12px] text-[20px]
     font-normal transition-all duration-300 font-body;
   }
+
+  .btn-plans {
+    @apply relative inline-flex items-center justify-center w-fit p-[20px] text-[18px] font-body font-normal rounded-[12px];
+  }
+
   .btn-login {
     @apply font-body py-[16px] text-[16px] lg:text-[20px] text-black lg:text-white;
   }
