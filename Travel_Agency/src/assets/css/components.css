@@ -238,8 +238,7 @@
   .offer-price {
     @apply flex flex-col md:flex-row gap-[20px] md:justify-between md:items-center;
   }
-
-  .offer-price p:first-child {
+  .planner-footer-row span .offer-price p:first-child {
     @apply text-[#767E86] font-normal text-[18px] xl:text-[20px] py-[7px] xl:py-[11.2px];
   }
   .offer-price p:nth-child(2) {
@@ -392,7 +391,7 @@
   }
 
   .planner-tag h4 {
-    @apply font-body font-normal text-[18px] tracking-normal leading-none uppercase;
+    @apply font-body font-normal text-[18px] md:text-[24px] tracking-normal leading-none uppercase;
   }
 
   .planner-tag span {
@@ -491,18 +490,18 @@
   }
 
   .planner-city {
-    @apply font-heading font-semibold text-[28px] leading-none tracking-normal text-[#172432];
+    @apply font-heading font-semibold text-[28px] md:text-[32px] leading-none tracking-normal text-[#172432];
   }
 
   .planner-price {
-    @apply font-body text-[18px] font-normal tracking-normal leading-none text-[#172432];
+    @apply font-body text-[18px] md:text-[24px] font-normal tracking-normal leading-none text-[#172432];
   }
 
   .planner-footer-row {
     @apply flex justify-between items-center;
   }
   .planner-footer-row span {
-    @apply text-[16px];
+    @apply text-[18px] md:text-[24px] font-normal font-body leading-none tracking-normal;
   }
 
   /* GALLERY SECTION */
