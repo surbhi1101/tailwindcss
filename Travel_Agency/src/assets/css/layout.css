@@ -6,25 +6,61 @@
   }
 
   .destinations-section {
-    @apply relative flex flex-col gap-[100px];
+    @apply relative flex flex-col
+         py-[80px] px-[16px] gap-[100px]
+         md:px-[20px]
+         lg:py-[100px] lg:px-[32px]
+         xl:py-[140px] xl:px-[32px]
+         2xl:py-[140px] 2xl:pl-[182px];
   }
 
   .special-offer {
-    @apply relative;
+    @apply relative flex flex-col
+         py-[80px] px-[16px] gap-[60px]
+         md:py-[80px] md:px-[20px] md:gap-[100px]
+         lg:py-[100px] lg:px-[32px]
+         xl:py-[140px] xl:px-[32px]
+         2xl:py-[140px] 2xl:px-[182px];
   }
 
-  .gallery-desktop-wrapper {
-    @apply hidden lg:flex flex-row justify-center mt-[100px];
+  .Blog-section {
+    @apply flex flex-col
+         py-[80px] px-[16px] gap-[100px]
+         md:py-[80px] md:px-[20px]
+         lg:py-[100px] lg:px-[32px]
+         xl:py-[140px] xl:px-[32px]
+         2xl:py-[140px] 2xl:px-[182px];
   }
 
   .trip-planners-section {
-    @apply py-[80px] px-[16px] lg:py-[140px] overflow-hidden;
+    @apply flex flex-col
+         py-[80px] px-[16px] gap-[80px]
+         md:py-[80px] md:px-[20px]
+         lg:py-[100px] lg:px-[32px]
+         xl:py-[140px] xl:px-[32px]
+         2xl:py-[140px] 2xl:pl-[182px] 2xl:gap-[100px]
+         lg:flex lg:flex-row items-center overflow-hidden;
   }
 
-  .Special-offer {
-    @apply mt-[140px];
+  .Gallery-section {
+    @apply flex flex-col
+         py-[80px] px-[16px] gap-[100px]
+         md:py-[80px] md:px-[20px]
+         lg:py-[100px] lg:px-[32px]
+         xl:py-[140px] xl:px-[32px]
+         2xl:py-[140px] 2xl:px-[182px];
+  }
+
+  .experiences-gallery {
+    @apply flex flex-col
+         py-[80px] px-[16px] gap-[100px]
+         md:py-[80px] md:px-[32px] md:gap-[160px]
+         lg:pt-[100px] lg:px-[32px] lg:pb-[100px] lg:gap-[160px]
+         xl:pt-[140px] xl:px-[32px] xl:pb-[240px] xl:gap-[160px]
+         2xl:pt-[140px] 2xl:px-[182px] 2xl:pb-[240px] 2xl:gap-[160px];
   }
   .footer {
-    @apply bg-[#172432];
+    @apply flex flex-col bg-[#172432]
+         py-[80px] px-[16px] gap-[4px];
   }
 }

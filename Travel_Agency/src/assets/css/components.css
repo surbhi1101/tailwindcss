@@ -1,7 +1,8 @@
 @layer components {
-  /* ===== Hero Container ===== */
   .hero-container {
-    @apply relative md:h-screen overflow-hidden flex gap-[100px] flex-col;
+    @apply relative md:h-screen overflow-hidden flex gap-[100px] 
+    
+    flex-col;
     background:
       linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../images/hero_section.png");
@@ -39,12 +40,12 @@
   }
 
   .mobile-navlinks {
-    @apply flex flex-col gap-[12px];
+    @apply flex flex-col gap-[12px] px-[12px];
   }
 
   .mobile-active {
     @apply absolute top-full left-1/2 -translate-x-1/2 w-[280px] bg-white text-black
-           flex flex-col gap-[16px] p-6 shadow-xl rounded-xl z-[2500] lg:hidden;
+           flex flex-col gap-[16px] py-[12px] shadow-xl rounded-xl z-[2500] lg:hidden;
   }
 
   .heroSwiper {
@@ -54,19 +55,23 @@
   .heroSwiper .swiper-slide {
     @apply w-full;
   }
-
   .hero-slide img {
     @apply w-full md:h-[789px] lg:h-screen object-cover;
   }
 
   .hero-overlay {
-    @apply absolute inset-0 bg-black/25 flex flex-col justify-center;
+    @apply absolute inset-0 bg-black/25 flex flex-col 
+    gap-[100px] lg:gap-[140px]
+    xl:gap-[170px]
+    
+    justify-center;
   }
 
   .hero-content {
-    @apply flex flex-col gap-[16px]
+    @apply flex flex-col gap-[16px] 
+          mt-[100px] md:mt-[72px] lg:mt-[140px]
            md:px-[20px]
-           lg:px-[32px] lg:mt-[72px] 
+           lg:px-[32px] 
            2xl:px-[182px]
            xl:max-w-[100%];
   }
@@ -81,7 +86,7 @@
   }
 
   .hero-content p {
-    @apply text-[18px] md:text-[20px] text-white;
+    @apply text-[18px] md:text-[20px] lg:text-[24px] text-white;
   }
 
   .hero-mobile-subtitle {
@@ -95,7 +100,7 @@
   }
 
   .booking-bar {
-    @apply hidden md:grid mt-[100px] lg:mt-[140px]
+    @apply hidden md:grid 
          md:grid-cols-[2fr_1fr]
          lg:grid-cols-[4fr_1fr]
          shadow-[0_20px_50px_rgba(0,0,0,0.1)]
@@ -118,13 +123,13 @@
   }
 
   .booking-field label {
-    @apply text-[16px]   uppercase
+    @apply text-[14px] md:text-[16px] uppercase font-body
            text-[#767E86];
   }
 
   .booking-field input,
   .booking-field select {
-    @apply text-[#172432] text-[20px] border-b border-[#000000] font-heading;
+    @apply text-[#172432] text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] pb-[10px] border-b border-[#000000] font-heading;
   }
 
   .swiper-pagination-bullet {
@@ -133,6 +138,10 @@
 
   .swiper-pagination-bullet-active {
     @apply !bg-[#FF7757] !border !border-white;
+  }
+
+  .mobile-btn {
+    @apply flex gap-[32px] px-[12px];
   }
 
   /* ===== DESTINATION SECTION ==== */
@@ -187,12 +196,18 @@
     @apply text-[18px] md:text-[24px] leading-none text-white;
   }
   /* Special-offer */
+  .section-description {
+    @apply flex;
+  }
+  .special-offer .section-description p {
+    @apply ml-auto;
+  }
 
   .specialOfferSwiper {
-    @apply mt-[60px] md:mt-[100px];
+    @apply w-full;
   }
   .cards {
-    @apply grid grid-cols-1 md:grid-cols-3 gap-[32px];
+    @apply grid grid-cols-1 md:grid-cols-3 md:gap-[32px];
   }
 
   .card-offer {
@@ -246,7 +261,7 @@
     @apply flex lg:hidden mt-[60px] md:mt-[100px] gap-[40px];
   }
   .specialOfferSwiper .swiper-wrapper {
-    @apply !flex !gap-[32px];
+    @apply !flex lg:!gap-[32px];
   }
 
   /* Traveler’s Experiences */
@@ -313,7 +328,7 @@
   }
 
   .blog-content {
-    @apply flex flex-col lg:flex-row mt-[100px] gap-[32px];
+    @apply flex flex-col lg:flex-row gap-[32px];
   }
 
   .blog-image img {
@@ -343,10 +358,6 @@
     @apply lg:flex-1;
   }
   /* Trip-planners */
-
-  .planner-container {
-    @apply flex flex-col gap-[80px] lg:flex lg:flex-row items-center xl:gap-[100px];
-  }
   .destinationSwiper .planner-content {
     @apply flex flex-col gap-[20px];
   }
@@ -370,7 +381,7 @@
   }
 
   .planner-card {
-    @apply relative w-full lg:w-[250px] h-[399px] lg:h-[350px] rounded-[26px] overflow-hidden shadow-2xl z-10 -mt-12 transition-all;
+    @apply relative h-[399px]  rounded-[26px] overflow-hidden shadow-2xl z-10 -mt-12 transition-all;
   }
 
   .planner-meta {
@@ -417,8 +428,8 @@
   .planner-details {
     @apply absolute inset-0 flex flex-col justify-end py-[20px] gap-[12px] text-black z-0;
   }
-  .plannerSwiper .swiper-slide {
-    @apply !w-fit overflow-visible;
+  .plannerSwiper .swiper-slide img {
+    @apply w-full;
   }
   .side-card {
     @apply mt-0;
@@ -514,7 +525,16 @@
     @apply scale-110;
   }
   .gallery-mobile-wrapper {
-    @apply flex flex-col gap-[32px] mt-[100px] lg:hidden;
+    @apply flex flex-col gap-[32px] lg:hidden;
+  }
+
+  .gallery-mobile-wrapper,
+  .gallery-desktop-wrapper {
+    @apply flex flex-col gap-[32px];
+  }
+
+  .gallery-desktop-wrapper {
+    @apply hidden justify-center;
   }
 
   .gallery-card-mobile {
@@ -530,7 +550,7 @@
   }
   /* footer */
   .newsletter-wrapper {
-    @apply relative z-10 -translate-y-1/2;
+    @apply relative z-10 -translate-y-1/1;
   }
 
   .mobile-newsletter-wrapper {
@@ -544,7 +564,7 @@
          overflow-hidden;
   }
   .desktop-newsletter-wrapper {
-    @apply hidden lg:block 
+    @apply hidden lg:block
          bg-white xl:mx-[80px]
          rounded-[20px] 2xl:mx-[182px]
          border border-[#F1F1F1]
@@ -553,7 +573,14 @@
   }
 
   .Our-Newsletter {
-    @apply flex justify-between md:block lg:flex
+    @apply w-full block lg:hidden lg:flex lg:flex-col
+    gap-[60px] 
+    px-[16px] 
+    bg-white rounded-[16px] md:rounded-[26px];
+  }
+
+  .newsletter-wrapper .Our-Newsletter {
+    @apply w-full lg:block hidden 
     gap-[60px] xl:gap-[100px]
     px-[16px] lg:px-[40px] xl:px-[80px] lg:py-[60px]
     bg-white rounded-[16px] md:rounded-[26px];
@@ -660,7 +687,7 @@
     @apply bg-[#FF7D61];
   }
   .gallery-arrows {
-    @apply flex justify-center lg:justify-end gap-[20px] mt-[100px] lg:mt-[160px] lg:pr-[32px] 2xl:pr-[182px];
+    @apply flex justify-center lg:justify-end gap-[20px] lg:pr-[32px] 2xl:pr-[182px];
   }
   .desktop-arrows {
     @apply hidden lg:flex gap-[24px] lg:ml-auto mr-[32px];
@@ -671,7 +698,7 @@
   }
 
   .mobile-arrows {
-    @apply flex justify-center gap-[24px] lg:hidden mt-[100px];
+    @apply flex justify-center gap-[24px] lg:hidden;
   }
 
   .footer-btn {

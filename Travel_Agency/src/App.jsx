@@ -274,7 +274,7 @@ function App() {
       </div>
       <main>
         {/* destinations-section */}
-        <section className="destinations-section section-spacing section-spacing-no-pl section-spacing-no-pr animate-fadeIn-scroll">
+        <section className="destinations-section animate-fadeIn-scroll">
           <div className="heading-block">
             <div className="heading-title">
               <h2>Popular Destinations</h2>
@@ -378,31 +378,31 @@ function App() {
           </div>
         </section>
         {/* special-offer */}
-        <section className="special-offer page-container animate-fadeIn-scroll">
+        <section className="special-offer animate-fadeIn-scroll">
           <div className="offer-header">
-            <div className="nav-arrows desktop-nav">
-              <div className="arrow-btn prev btn-base clickable">
-                <button
-                  onClick={() => specialOfferSwiperRef.current?.slidePrev()}
-                >
-                  ‹
-                </button>
-              </div>
-
-              <div className="arrow-btn next btn-base clickable">
-                <button
-                  onClick={() => specialOfferSwiperRef.current?.slideNext()}
-                >
-                  ›
-                </button>
-              </div>
-            </div>
             <div className="offer-desc">
               <div className="heading-block2">
                 <h2>Special Offer</h2>
                 <div className="underline-md"></div>
               </div>
               <div className="section-description">
+                <div className="nav-arrows desktop-nav">
+                  <div className="arrow-btn prev btn-base clickable">
+                    <button
+                      onClick={() => specialOfferSwiperRef.current?.slidePrev()}
+                    >
+                      ‹
+                    </button>
+                  </div>
+
+                  <div className="arrow-btn next btn-base clickable">
+                    <button
+                      onClick={() => specialOfferSwiperRef.current?.slideNext()}
+                    >
+                      ›
+                    </button>
+                  </div>
+                </div>
                 <p>Check out our special offer and discounts</p>
               </div>
             </div>
@@ -560,7 +560,7 @@ function App() {
           </div>
         </section>
         {/* Blog-section */}
-        <section className="Blog-section page-container animate-fadeIn-scroll">
+        <section className="Blog-section animate-fadeIn-scroll">
           <div className="section-header">
             <div className="heading">
               <div className="section-title">
@@ -597,226 +597,212 @@ function App() {
           </div>
         </section>
         {/* trip-planners-section */}
-        <section className="trip-planners-section section-spacing section-spacing-no-pl section-spacing-no-pr animate-fadeIn-scroll">
-          <div className="planner-container">
-            <div className="planner-heading">
-              <div className="planner-content">
-                <div className="planner-title">
-                  <h2>Trip Planners</h2>
+        <section className="trip-planners-section animate-fadeIn-scroll">
+          <div className="heading-block">
+            <div className="heading-title">
+              <h2>Trip Planners</h2>
+              <div className="underline-base"></div>
+            </div>
+            <div className="section-description">
+              <p>
+                20 years from now you will be more disappointed by the things
+                that you didn't do. Stop regretting and start travelling, start
+                throwing off the bowlines.
+              </p>
+            </div>
+          </div>
+
+          {isDesktop ? (
+            <Swiper
+              spaceBetween={32}
+              slidesPerView={1}
+              className="plannerSwiper"
+              onSwiper={(swiper) => (plannerSwiperRef.current = swiper)}
+              breakpoints={{
+                1152: { slidesPerView: 2 },
+                1440: { slidesPerView: 2.4 },
+                1920: { slidesPerView: 3.4 },
+              }}
+            >
+              {[trip1, trip2, trip3, trip4].map((trip, index) => (
+                <SwiperSlide key={index}>
+                  <div
+                    className={`planner-card side-card group ${
+                      activeCard === index ? "card-active" : ""
+                    }`}
+                  >
+                    <div className="planner-details">
+                      <div className="planner-meta">
+                        <div className="planner-tag">
+                          <span>Guided Tour</span>
+                        </div>
+                        <div className="planner-price">
+                          <span>€95/Day</span>
+                        </div>
+                      </div>
+
+                      <div className="planner-card-title">
+                        <h3>Paris City Tour</h3>
+                      </div>
+
+                      <div className="planner-footer">
+                        <div className="star-img">
+                          {[...Array(5)].map((_, i) => (
+                            <img key={i} src={star} alt="star" />
+                          ))}
+                        </div>
+
+                        <div className="planner-duration">
+                          <span>7 Days tour</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      className="planner-image-wrapper"
+                      onClick={() => toggleCard(index)}
+                    >
+                      <img src={trip} className="trip-img" alt="trip" />
+                      <div className="planner-image-overlay" />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="planner-stack">
+              <div className="planner-card-mobile">
+                <div className="planner-mobile-image">
+                  <img src={trip1} alt="Rome tour" />
                 </div>
-                <div className="underline-base"></div>
+
+                <div className="planner-mobile-details">
+                  <div className="planner-data">
+                    <div className="planner-tag">
+                      <h4>Guided Tour</h4>
+                    </div>
+
+                    <div className="planner-price">
+                      €99<span>/Day</span>
+                    </div>
+                  </div>
+
+                  <div className="planner-city">
+                    <h3>Rome City Tour</h3>
+                  </div>
+
+                  <div className="planner-footer-row">
+                    <div className="star-img">
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src={star} alt="star" />
+                      ))}
+                    </div>
+
+                    <span>7 Days tour</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="planner-description">
-                <p>
-                  20 years from now you will be more disappointed by the things
-                  that you didn't do. Stop regretting and start travelling,
-                  start throwing off the bowlines.
-                </p>
+              <div className="planner-card-mobile">
+                <div className="planner-mobile-image">
+                  <img src={trip2} alt="Paris tour" />
+                </div>
+
+                <div className="planner-mobile-details">
+                  <div className="planner-data">
+                    <div className="planner-tag">
+                      <h4>Guided Tour</h4>
+                    </div>
+
+                    <div className="planner-price">
+                      €95<span>/Day</span>
+                    </div>
+                  </div>
+
+                  <div className="planner-city">
+                    <h3>Paris City Tour</h3>
+                  </div>
+
+                  <div className="planner-footer-row">
+                    <div className="star-img">
+                      {[...Array(4)].map((_, i) => (
+                        <img key={i} src={star} alt="star" />
+                      ))}
+                    </div>
+
+                    <span>5 Days tour</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="planner-btn-wrapper">
-                <div className="decor-box-navy"></div>
-                <div className="decor-box-grey"></div>
+              <div className="planner-card-mobile">
+                <div className="planner-mobile-image">
+                  <img src={trip3} alt="London tour" />
+                </div>
 
-                <div className="btn-primary view-trip clickable">
-                  <a href="#">View all trip plans</a>
+                <div className="planner-mobile-details">
+                  <div className="planner-data">
+                    <div className="planner-tag">
+                      <h4>Guided Tour</h4>
+                    </div>
+
+                    <div className="planner-price">
+                      €89<span>/Day</span>
+                    </div>
+                  </div>
+
+                  <div className="planner-city">
+                    <h3>Barcelona City Tour</h3>
+                  </div>
+
+                  <div className="planner-footer-row">
+                    <div className="star-img">
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src={star} alt="star" />
+                      ))}
+                    </div>
+
+                    <span>10 Days tour</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="planner-card-mobile">
+                <div className="planner-mobile-image">
+                  <img src={trip4} alt="Maldives tour" />
+                </div>
+
+                <div className="planner-mobile-details">
+                  <div className="planner-data">
+                    <div className="planner-tag">
+                      <h4>Guided Tour</h4>
+                    </div>
+
+                    <div className="planner-price">
+                      €89<span>/Day</span>
+                    </div>
+                  </div>
+
+                  <div className="planner-city">
+                    <h3>Budapest City Tour</h3>
+                  </div>
+
+                  <div className="planner-footer-row">
+                    <div className="star-img">
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src={star} alt="star" />
+                      ))}
+                    </div>
+
+                    <span>6 Days tour</span>
+                  </div>
                 </div>
               </div>
             </div>
-
-            {isDesktop ? (
-              <Swiper
-                spaceBetween={32}
-                slidesPerView={1}
-                className="plannerSwiper"
-                onSwiper={(swiper) => (plannerSwiperRef.current = swiper)}
-                breakpoints={{
-                  1152: { slidesPerView: 2.2 },
-                  1440: { slidesPerView: 2.4 },
-                  1920: { slidesPerView: 3.4 },
-                }}
-              >
-                {[trip1, trip2, trip3, trip4].map((trip, index) => (
-                  <SwiperSlide key={index}>
-                    <div
-                      className={`planner-card side-card group ${
-                        activeCard === index ? "card-active" : ""
-                      }`}
-                    >
-                      <div className="planner-details">
-                        <div className="planner-meta">
-                          <div className="planner-tag">
-                            <span>Guided Tour</span>
-                          </div>
-                          <div className="planner-price">
-                            <span>€95/Day</span>
-                          </div>
-                        </div>
-
-                        <div className="planner-card-title">
-                          <h3>Paris City Tour</h3>
-                        </div>
-
-                        <div className="planner-footer">
-                          <div className="star-img">
-                            {[...Array(5)].map((_, i) => (
-                              <img key={i} src={star} alt="star" />
-                            ))}
-                          </div>
-
-                          <div className="planner-duration">
-                            <span>7 Days tour</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div
-                        className="planner-image-wrapper"
-                        onClick={() => toggleCard(index)}
-                      >
-                        <img src={trip} className="trip-img" alt="trip" />
-                        <div className="planner-image-overlay" />
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            ) : (
-              <div className="planner-stack">
-                <div className="planner-card-mobile">
-                  <div className="planner-mobile-image">
-                    <img src={trip1} alt="Rome tour" />
-                  </div>
-
-                  <div className="planner-mobile-details">
-                    <div className="planner-data">
-                      <div className="planner-tag">
-                        <h4>Guided Tour</h4>
-                      </div>
-
-                      <div className="planner-price">
-                        €99<span>/Day</span>
-                      </div>
-                    </div>
-
-                    <div className="planner-city">
-                      <h3>Rome City Tour</h3>
-                    </div>
-
-                    <div className="planner-footer-row">
-                      <div className="star-img">
-                        {[...Array(5)].map((_, i) => (
-                          <img key={i} src={star} alt="star" />
-                        ))}
-                      </div>
-
-                      <span>7 Days tour</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="planner-card-mobile">
-                  <div className="planner-mobile-image">
-                    <img src={trip2} alt="Paris tour" />
-                  </div>
-
-                  <div className="planner-mobile-details">
-                    <div className="planner-data">
-                      <div className="planner-tag">
-                        <h4>Guided Tour</h4>
-                      </div>
-
-                      <div className="planner-price">
-                        €95<span>/Day</span>
-                      </div>
-                    </div>
-
-                    <div className="planner-city">
-                      <h3>Paris City Tour</h3>
-                    </div>
-
-                    <div className="planner-footer-row">
-                      <div className="star-img">
-                        {[...Array(4)].map((_, i) => (
-                          <img key={i} src={star} alt="star" />
-                        ))}
-                      </div>
-
-                      <span>5 Days tour</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="planner-card-mobile">
-                  <div className="planner-mobile-image">
-                    <img src={trip3} alt="London tour" />
-                  </div>
-
-                  <div className="planner-mobile-details">
-                    <div className="planner-data">
-                      <div className="planner-tag">
-                        <h4>Guided Tour</h4>
-                      </div>
-
-                      <div className="planner-price">
-                        €89<span>/Day</span>
-                      </div>
-                    </div>
-
-                    <div className="planner-city">
-                      <h3>Barcelona City Tour</h3>
-                    </div>
-
-                    <div className="planner-footer-row">
-                      <div className="star-img">
-                        {[...Array(5)].map((_, i) => (
-                          <img key={i} src={star} alt="star" />
-                        ))}
-                      </div>
-
-                      <span>10 Days tour</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="planner-card-mobile">
-                  <div className="planner-mobile-image">
-                    <img src={trip4} alt="Maldives tour" />
-                  </div>
-
-                  <div className="planner-mobile-details">
-                    <div className="planner-data">
-                      <div className="planner-tag">
-                        <h4>Guided Tour</h4>
-                      </div>
-
-                      <div className="planner-price">
-                        €89<span>/Day</span>
-                      </div>
-                    </div>
-
-                    <div className="planner-city">
-                      <h3>Budapest City Tour</h3>
-                    </div>
-
-                    <div className="planner-footer-row">
-                      <div className="star-img">
-                        {[...Array(5)].map((_, i) => (
-                          <img key={i} src={star} alt="star" />
-                        ))}
-                      </div>
-
-                      <span>6 Days tour</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+          )}
         </section>
         {/* Gallery-section */}
-        <section className="Gallery-section page-container animate-fadeIn-scroll">
+        <section className="Gallery-section animate-fadeIn-scroll">
           <div className="heading-block">
             <div className="heading-title">
               <h2>Destination Gallery</h2>
@@ -824,7 +810,6 @@ function App() {
             </div>
             <div className="section-description">
               <p>Our photo gallery on trip</p>
-
               <div className="desktop-arrows clickable">
                 <div className="arrow-btn prev btn-base clickable">
                   <button onClick={handlePrev}>‹</button>
@@ -876,172 +861,147 @@ function App() {
           </div>
         </section>
         {/* experiences-gallery */}
-        <section className="animate-fadeIn-scroll section-spacing-no-pl section-spacing section-spacing-no-pl ">
-          <div className="experiences-gallery">
-            <div className="heading-block">
-              <div className="heading-title">
-                <h2>Traveler's Experiences</h2>
-                <div className="underline-xl"></div>
-              </div>
-              <div className="section-description">
-                <p>Here some awesome feedback from our travelers</p>
-              </div>
+        <section className="experiences-gallery animate-fadeIn-scroll">
+          <div className="heading-block">
+            <div className="heading-title">
+              <h2>Traveler's Experiences</h2>
+              <div className="underline-xl"></div>
             </div>
-            <div className="experiences">
-              <Swiper
-                className="experiencesSwiper"
-                spaceBetween={32}
-                watchSlidesProgress={true}
-                onSwiper={(swiper) => (experiencesSwiperRef.current = swiper)}
-                breakpoints={{
-                  320: { slidesPerView: 1 },
-                  768: { slidesPerView: 1.2 },
-                  1152: { slidesPerView: 2.2 },
-                  1440: { slidesPerView: 2.3 },
-                  1920: { slidesPerView: 2.5 },
-                }}
+            <div className="section-description">
+              <p>Here some awesome feedback from our travelers</p>
+            </div>
+          </div>
+          <div className="experiences">
+            <Swiper
+              className="experiencesSwiper"
+              spaceBetween={32}
+              watchSlidesProgress={true}
+              onSwiper={(swiper) => (experiencesSwiperRef.current = swiper)}
+              breakpoints={{
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 1.2 },
+                1152: { slidesPerView: 2.2 },
+                1440: { slidesPerView: 2.3 },
+                1920: { slidesPerView: 2.5 },
+              }}
+            >
+              <SwiperSlide>
+                <div className="experiences-card">
+                  <div className="experiences-person">
+                    <div className="person-img">
+                      <img src={exp1} alt="John Doe" />
+                    </div>
+                  </div>
+                  <div className="experiences-text">
+                    <p>
+                      But I must explain to you how all this mistaken idea of
+                      denouncing pleasure and praising pain was born and I will
+                      give you a complete account of the system and expound the
+                      actual teachings of the great explorer of the truth, the
+                      master- builder of human happiness.
+                    </p>
+                  </div>
+                  <div className="star-img">
+                    {[...Array(5)].map((_, i) => (
+                      <img key={i} src={star} alt="star" />
+                    ))}
+                  </div>
+                  <div className="person-details">
+                    <h4>John Doe</h4>
+                    <p>Accountant</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="experiences-card">
+                  <div className="experiences-person">
+                    <div className="person-img">
+                      <img src={exp2} alt="John Smith" />
+                    </div>
+                  </div>
+                  <div className="experiences-text">
+                    <p>
+                      But I must explain to you how all this mistaken idea of
+                      denouncing pleasure and praising pain was born and I will
+                      give you a complete account of the system and expound the
+                      actual teachings of the great explorer of the truth, the
+                      master- builder of human happiness.
+                    </p>
+                  </div>
+                  <div className="star-img">
+                    {[...Array(5)].map((_, i) => (
+                      <img key={i} src={star} alt="star" />
+                    ))}
+                  </div>
+                  <div className="person-details">
+                    <h4>John Smith</h4>
+                    <p>Journalist, HWO News</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="experiences-card">
+                  <div className="experiences-person">
+                    <div className="person-img">
+                      <img src={exp3} alt="Tamara Bellis" />
+                    </div>
+                  </div>
+                  <div className="experiences-text">
+                    <p>
+                      But I must explain to you how all this mistaken idea of
+                      denouncing pleasure and praising pain was born and I will
+                      give you a complete account of the system and expound the
+                      actual teachings of the great explorer of the truth, the
+                      master- builder of human happiness.
+                    </p>
+                  </div>
+                  <div className="star-img">
+                    {[...Array(5)].map((_, i) => (
+                      <img key={i} src={star} alt="star" />
+                    ))}
+                  </div>
+                  <div className="person-details">
+                    <h4>Tamara Bellis</h4>
+                    <p>Managing Director, JTH</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+          <div className="gallery-arrows">
+            <div className="arrow-btn prev btn-base clickable">
+              <button onClick={() => experiencesSwiperRef.current?.slidePrev()}>
+                ‹
+              </button>
+            </div>
+            <div className="arrow-btn next btn-base clickable">
+              <button
+                className="arrow-btn next"
+                onClick={() => experiencesSwiperRef.current?.slideNext()}
               >
-                <SwiperSlide>
-                  <div className="experiences-card">
-                    <div className="experiences-person">
-                      <div className="person-img">
-                        <img src={exp1} alt="John Doe" />
-                      </div>
-                    </div>
-                    <div className="experiences-text">
-                      <p>
-                        But I must explain to you how all this mistaken idea of
-                        denouncing pleasure and praising pain was born and I
-                        will give you a complete account of the system and
-                        expound the actual teachings of the great explorer of
-                        the truth, the master- builder of human happiness.
-                      </p>
-                    </div>
-                    <div className="star-img">
-                      {[...Array(5)].map((_, i) => (
-                        <img key={i} src={star} alt="star" />
-                      ))}
-                    </div>
-                    <div className="person-details">
-                      <h4>John Doe</h4>
-                      <p>Accountant</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="experiences-card">
-                    <div className="experiences-person">
-                      <div className="person-img">
-                        <img src={exp2} alt="John Smith" />
-                      </div>
-                    </div>
-                    <div className="experiences-text">
-                      <p>
-                        But I must explain to you how all this mistaken idea of
-                        denouncing pleasure and praising pain was born and I
-                        will give you a complete account of the system and
-                        expound the actual teachings of the great explorer of
-                        the truth, the master- builder of human happiness.
-                      </p>
-                    </div>
-                    <div className="star-img">
-                      {[...Array(5)].map((_, i) => (
-                        <img key={i} src={star} alt="star" />
-                      ))}
-                    </div>
-                    <div className="person-details">
-                      <h4>John Smith</h4>
-                      <p>Journalist, HWO News</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="experiences-card">
-                    <div className="experiences-person">
-                      <div className="person-img">
-                        <img src={exp3} alt="Tamara Bellis" />
-                      </div>
-                    </div>
-                    <div className="experiences-text">
-                      <p>
-                        But I must explain to you how all this mistaken idea of
-                        denouncing pleasure and praising pain was born and I
-                        will give you a complete account of the system and
-                        expound the actual teachings of the great explorer of
-                        the truth, the master- builder of human happiness.
-                      </p>
-                    </div>
-                    <div className="star-img">
-                      {[...Array(5)].map((_, i) => (
-                        <img key={i} src={star} alt="star" />
-                      ))}
-                    </div>
-                    <div className="person-details">
-                      <h4>Tamara Bellis</h4>
-                      <p>Managing Director, JTH</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-            <div className="gallery-arrows">
-              <div className="arrow-btn prev btn-base clickable">
-                <button
-                  onClick={() => experiencesSwiperRef.current?.slidePrev()}
-                >
-                  ‹
-                </button>
-              </div>
-              <div className="arrow-btn next btn-base clickable">
-                <button
-                  className="arrow-btn next"
-                  onClick={() => experiencesSwiperRef.current?.slideNext()}
-                >
-                  ›
-                </button>
-              </div>
+                ›
+              </button>
             </div>
           </div>
         </section>
       </main>
-      <section className="footer-section">
-        <div className="Our-Newsletter">
-          <div className="mobile-newsletter-wrapper">
-            <div className="newsletter-heading">
-              <h3>Our Newsletter</h3>
-            </div>
-
-            <div className="form-data">
-              <label htmlFor="email">Email</label>
-
-              <div className="form-input">
-                <input
-                  type="email"
-                  name="email"
-                  id="email-mobile"
-                  placeholder="Enter your email"
-                />
-                <div className="btn-base footer-btn btn-primary clickable">
-                  <button>Subscribe</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer className="footer animate-fadeIn-scroll section-spacing ">
-          <div className="newsletter-wrapper desktop-newsletter-wrapper">
-            <div className="Our-Newsletter">
+      {/* footer */}
+      <footer>
+        <section className="footer-section">
+          <div className="Our-Newsletter section-large-vertical">
+            <div className="mobile-newsletter-wrapper">
               <div className="newsletter-heading">
                 <h3>Our Newsletter</h3>
               </div>
 
               <div className="form-data">
                 <label htmlFor="email">Email</label>
+
                 <div className="form-input">
                   <input
                     type="email"
                     name="email"
-                    id="email"
+                    id="email-mobile"
                     placeholder="Enter your email"
                   />
                   <div className="btn-base footer-btn btn-primary clickable">
@@ -1051,79 +1011,103 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="footer-grid">
-            <div className="footer-section">
-              <img src={Logo} alt="logo" className="logo" />
-              <h4>Copyright © Travellian 2020 All rights reserved</h4>
-            </div>
+          <div className="footer animate-fadeIn-scroll">
+            <div className="newsletter-wrapper desktop-newsletter-wrapper">
+              <div className="Our-Newsletter">
+                <div className="newsletter-heading">
+                  <h3>Our Newsletter</h3>
+                </div>
 
-            <div className="footer-section">
-              <div className="footer-column">
-                <h3>Menu</h3>
+                <div className="form-data">
+                  <label htmlFor="email">Email</label>
+                  <div className="form-input">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your email"
+                    />
+                    <div className="btn-base footer-btn btn-primary clickable">
+                      <button>Subscribe</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <ul className="footer-menu">
-                <li>
-                  <a href="#home">Home</a>
-                </li>
-                <li>
-                  <a href="#explore">Explore</a>
-                </li>
-                <li>
-                  <a href="#travel">Travel</a>
-                </li>
-                <li>
-                  <a href="#blog">Blog</a>
-                </li>
-                <li>
-                  <a href="#pricing">Pricing</a>
-                </li>
-              </ul>
             </div>
+            <div className="footer-grid">
+              <div className="footer-section">
+                <img src={Logo} alt="logo" className="logo" />
+                <h4>Copyright © Travellian 2020 All rights reserved</h4>
+              </div>
 
-            <div className="footer-section">
-              <div className="footer-column">
-                <h3>Information</h3>
+              <div className="footer-section">
+                <div className="footer-column">
+                  <h3>Menu</h3>
+                </div>
+                <ul className="footer-menu">
+                  <li>
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#explore">Explore</a>
+                  </li>
+                  <li>
+                    <a href="#travel">Travel</a>
+                  </li>
+                  <li>
+                    <a href="#blog">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#pricing">Pricing</a>
+                  </li>
+                </ul>
               </div>
-              <ul className="footer-menu">
-                <li>
-                  <a href="#destinations">Destinations</a>
-                </li>
-                <li>
-                  <a href="#support">Support</a>
-                </li>
-                <li>
-                  <a href="#terms">Terms & Conditions</a>
-                </li>
-                <li>
-                  <a href="#privacy">Privacy</a>
-                </li>
-              </ul>
-            </div>
 
-            <div className="footer-section">
-              <div className="footer-column">
-                <h3>Contact Info</h3>
+              <div className="footer-section">
+                <div className="footer-column">
+                  <h3>Information</h3>
+                </div>
+                <ul className="footer-menu">
+                  <li>
+                    <a href="#destinations">Destinations</a>
+                  </li>
+                  <li>
+                    <a href="#support">Support</a>
+                  </li>
+                  <li>
+                    <a href="#terms">Terms & Conditions</a>
+                  </li>
+                  <li>
+                    <a href="#privacy">Privacy</a>
+                  </li>
+                </ul>
               </div>
-              <div className="footer-menu">
-                <p>+123 456 789</p>
-                <p>info@travellian.com</p>
-                <p>1245, New Yourk, USA</p>
+
+              <div className="footer-section">
+                <div className="footer-column">
+                  <h3>Contact Info</h3>
+                </div>
+                <div className="footer-menu">
+                  <p>+123 456 789</p>
+                  <p>info@travellian.com</p>
+                  <p>1245, New Yourk, USA</p>
+                </div>
               </div>
-            </div>
-            <div className="footer-section">
-              <div className="footer-column">
-                <h3>Follow us on</h3>
-              </div>
-              <div className="social-links">
-                <img src={facebook} alt="facebook" />
-                <img src={pinterest} alt="pinterest" />
-                <img src={instagram} alt="instagram" />
-                <img src={twitter} alt="twitter" />
+              <div className="footer-section">
+                <div className="footer-column">
+                  <h3>Follow us on</h3>
+                </div>
+                <div className="social-links">
+                  <img src={facebook} alt="facebook" />
+                  <img src={pinterest} alt="pinterest" />
+                  <img src={instagram} alt="instagram" />
+                  <img src={twitter} alt="twitter" />
+                </div>
               </div>
             </div>
           </div>
-        </footer>
-      </section>
+        </section>
+      </footer>
     </div>
   );
 }
