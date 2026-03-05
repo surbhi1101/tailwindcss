@@ -211,7 +211,7 @@
   }
 
   .card-offer {
-    @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden shadow-sm hover:scale-[1.02] transition-transform;
+    @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden shadow-sm hover:scale-[1.02] transition-transform w-fit;
   }
 
   .card-img img {
@@ -232,7 +232,7 @@
   }
 
   .card-content p {
-    @apply font-body text-base md:text-[18px] leading-[20px] md:leading-none tracking-normal;
+    @apply font-body text-base md:text-[18px] text-[#172432] leading-[20px] md:leading-none tracking-normal;
   }
 
   .offer-price {

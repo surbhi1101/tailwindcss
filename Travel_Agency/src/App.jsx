@@ -415,7 +415,7 @@ function App() {
             breakpoints={{
               320: { slidesPerView: 1 },
               768: { slidesPerView: 1 },
-              1152: { slidesPerView: 3 },
+              1152: { slidesPerView: 3.3 },
             }}
           >
             <SwiperSlide>
