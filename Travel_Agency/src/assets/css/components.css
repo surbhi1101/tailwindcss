@@ -258,7 +258,7 @@
   }
 
   .mobile-nav {
-    @apply flex lg:hidden mt-[60px] md:mt-[100px] gap-[40px];
+    @apply flex lg:hidden gap-[40px];
   }
   .specialOfferSwiper .swiper-wrapper {
     @apply !flex lg:!gap-[32px];
@@ -384,7 +384,7 @@
   }
 
   .planner-card {
-    @apply relative h-[399px] rounded-[26px] overflow-hidden shadow-2xl z-10 -mt-12 transition-all;
+    @apply relative h-[399px] rounded-[26px] overflow-hidden z-10 -mt-12 transition-all;
   }
 
   .planner-meta {
