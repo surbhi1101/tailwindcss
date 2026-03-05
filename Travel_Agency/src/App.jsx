@@ -274,7 +274,7 @@ function App() {
       </div>
       <main>
         {/* destinations-section */}
-        <section className="destinations-section section-base animate-fadeIn-scroll">
+        <section className="destinations-section animate-fadeIn-scroll">
           <div className="heading-block">
             <div className="heading-title">
               <h2>Popular Destinations</h2>
@@ -378,7 +378,7 @@ function App() {
           </div>
         </section>
         {/* special-offer */}
-        <section className="special-offer section-base animate-fadeIn-scroll">
+        <section className="special-offer animate-fadeIn-scroll">
           <div className="offer-header">
             <div className="offer-desc">
               <div className="heading-block2">
@@ -560,7 +560,7 @@ function App() {
           </div>
         </section>
         {/* Blog-section */}
-        <section className="Blog-section section-base animate-fadeIn-scroll">
+        <section className="Blog-section animate-fadeIn-scroll">
           <div className="section-header">
             <div className="heading">
               <div className="section-title">
@@ -597,7 +597,7 @@ function App() {
           </div>
         </section>
         {/* trip-planners-section */}
-        <section className="trip-planners-section section-base animate-fadeIn-scroll">
+        <section className="trip-planners-section animate-fadeIn-scroll">
           <div className="heading-block">
             <div className="heading-title">
               <h2>Trip Planners</h2>
@@ -807,7 +807,7 @@ function App() {
           )}
         </section>
         {/* Gallery-section */}
-        <section className="Gallery-section section-base animate-fadeIn-scroll">
+        <section className="Gallery-section animate-fadeIn-scroll">
           <div className="heading-block">
             <div className="heading-title">
               <h2>Destination Gallery</h2>
