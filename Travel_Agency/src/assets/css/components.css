@@ -552,7 +552,7 @@
   }
   /* footer */
   .newsletter-wrapper {
-    @apply relative z-10 -translate-y-1/2;
+    @apply relative z-10 -translate-y-1/1;
   }
   .newsletter-wrapper .Our-Newsletter {
     @apply w-full lg:justify-between gap-[60px] xl:gap-[100px] px-[16px] lg:px-[40px] xl:px-[80px] lg:py-[60px] bg-white rounded-[16px] md:rounded-[26px];
@@ -561,7 +561,7 @@
     @apply block lg:hidden gap-[60px] flex flex-col px-[20px] py-[40px] md:px-[40px] md:py-[40px] bg-white rounded-[20px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden;
   }
   .desktop-newsletter-wrapper {
-    @apply hidden lg:block bg-white xl:mx-[80px] rounded-[20px] 2xl:mx-[182px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden;
+    @apply hidden lg:block bg-white rounded-[20px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden;
   }
   .Our-Newsletter {
     @apply w-full lg:flex gap-[60px] px-[16px] bg-white rounded-[16px] md:rounded-[26px];
@@ -601,7 +601,6 @@
 
   .footer-grid {
     @apply flex flex-col gap-[60px] lg:gap-[16px]
-    2xl:px-[182px]
     lg:flex-row justify-between text-white;
   }
   .footer-section {
