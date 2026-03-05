@@ -992,7 +992,7 @@ function App() {
       </main>
       {/* footer */}
       <footer>
-        <section className="footer-section">
+        <section className="animate-fadeIn-scroll">
           <div className="Our-Newsletter section-large-vertical">
             <div className="mobile-newsletter-wrapper">
               <div className="newsletter-heading">
