@@ -241,6 +241,11 @@
   .planner-footer-row span .offer-price p:first-child {
     @apply text-[#767E86] font-normal text-[18px] xl:text-[20px] py-[7px] xl:py-[11.2px];
   }
+
+  .offer-price p:nth-child(1) {
+    @apply text-[18px] xl:text-[20px] py-[7px] font-normal font-body leading-none tracking-normal;
+  }
+
   .offer-price p:nth-child(2) {
     @apply text-[32px] lg:text-[28px] xl:text-[40px] font-normal font-body leading-none tracking-normal text-[#ff7757];
   }
