@@ -610,6 +610,11 @@ function App() {
                 throwing off the bowlines.
               </p>
             </div>
+            <div className="btn-base btn-primary btn-plans">
+              <span className="decor-box-navy"></span>
+              <span className="decor-box-grey "></span>
+              <a href="#">View all trip plans</a>
+            </div>
           </div>
 
           {isDesktop ? (
@@ -879,7 +884,7 @@ function App() {
               onSwiper={(swiper) => (experiencesSwiperRef.current = swiper)}
               breakpoints={{
                 320: { slidesPerView: 1 },
-                768: { slidesPerView: 1.2 },
+                768: { slidesPerView: 1.7 },
                 1152: { slidesPerView: 2.2 },
                 1440: { slidesPerView: 2.3 },
                 1920: { slidesPerView: 2.5 },
