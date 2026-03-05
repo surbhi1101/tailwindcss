@@ -671,8 +671,13 @@
   .gallery-arrows {
     @apply flex justify-center lg:justify-end gap-[20px] lg:pr-[32px] 2xl:pr-[182px];
   }
+
+  .destinations-section .desktop-arrows {
+    @apply hidden lg:flex gap-[24px] lg:ml-auto lg:mr-[182px] mr-[32px];
+  }
+
   .desktop-arrows {
-    @apply hidden lg:flex gap-[24px] lg:ml-auto mr-[32px];
+    @apply hidden lg:flex gap-[24px] lg:ml-auto;
   }
 
   .btn-details {
