@@ -32,6 +32,7 @@ import facebook from "./assets/images/facebook.png";
 import pinterest from "./assets/images/pinterest.png";
 import instagram from "./assets/images/instagram.png";
 import twitter from "./assets/images/twitter.png";
+import hamburger from "./assets/images/hamburger.png";
 
 function App() {
   const [readMore, setReadMore] = useState(false);
@@ -145,7 +146,7 @@ function App() {
               className="lg:hidden text-white text-3xl z-[3000]"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? "✕" : "☰"}
+              {isMenuOpen ? "✕" : <img src={hamburger} />}
             </button>
           </div>
 
