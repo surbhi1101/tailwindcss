@@ -136,8 +136,8 @@ function App() {
               <div className="btn-base btn-login clickable">
                 <a href="#login">Login</a>
               </div>
-              <div className="btn-base btn-primary btn-signup">
-                <a>Sign Up</a>
+              <div className="btn-base btn-primary btn-signup clickable">
+                <a href="#signup">Sign Up</a>
               </div>
             </div>
 
@@ -172,10 +172,10 @@ function App() {
 
               <div className="mobile-btn">
                 <div className="btn-login btn-base clickable">
-                  <a href="/login">Login</a>
+                  <a href="#login">Login</a>
                 </div>
                 <div className="btn-signup btn-primary clickable">
-                  <a href="/signup">Sign Up</a>
+                  <a href="#signup">Sign Up</a>
                 </div>
               </div>
             </div>

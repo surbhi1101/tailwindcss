@@ -44,7 +44,7 @@
   }
 
   .mobile-active {
-    @apply absolute top-full left-1/2 -translate-x-1/2 w-[280px] bg-white text-black
+    @apply absolute top-full right-0 bg-white text-black
            flex flex-col gap-[16px] py-[12px] shadow-xl rounded-xl z-[2500] lg:hidden;
   }
 
@@ -552,7 +552,7 @@
   }
   /* footer */
   .newsletter-wrapper {
-    @apply relative z-10 -translate-y-1/1;
+    @apply relative z-10 -translate-y-1/2;
   }
   .newsletter-wrapper .Our-Newsletter {
     @apply w-full lg:justify-between gap-[60px] xl:gap-[100px] px-[16px] lg:px-[40px] xl:px-[80px] lg:py-[60px] bg-white rounded-[16px] md:rounded-[26px];

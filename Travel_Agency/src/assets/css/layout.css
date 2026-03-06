@@ -6,47 +6,30 @@
   }
 
   .destinations-section {
-    @apply relative flex flex-col
-         pl-[16px] gap-[100px]
-         md:pl-[20px] lg:pl-[32px] 2xl:pl-[182px] py-[80px] lg:py-[100px] xl:py-[140px];
+    @apply relative flex flex-col px-[16px] gap-[100px] md:px-[20px] lg:px-0 lg:pl-[32px] 2xl:pl-[182px] py-[80px] lg:py-[100px] xl:py-[140px];
   }
 
   .special-offer {
-    @apply relative flex flex-col
-         px-[16px] gap-[60px]
-          md:px-[20px] md:gap-[100px]
-          lg:px-[32px]
-         2xl:px-[182px] py-[80px] lg:py-[100px] xl:py-[140px];
+    @apply relative flex flex-col px-[16px] gap-[60px] md:px-[20px] md:gap-[100px] lg:px-[32px] 2xl:px-[182px] py-[80px] lg:py-[100px] xl:py-[140px];
   }
 
   .Blog-section {
-    @apply flex flex-col px-[16px] gap-[100px] 
-         md:px-[20px] lg:px-[32px] py-[80px] lg:py-[100px] xl:py-[140px]
-        2xl:px-[182px];
+    @apply flex flex-col px-[16px] gap-[100px] md:px-[20px] lg:px-[32px] py-[80px] lg:py-[100px] xl:py-[140px] 2xl:px-[182px];
   }
 
   .trip-planners-section {
-    @apply flex flex-col
-          px-[16px] gap-[80px]
-         md:px-[20px] lg:pl-[32px] lg:px-0
-         2xl:pl-[182px] 2xl:gap-[100px] py-[80px] lg:py-[100px] xl:py-[140px]
-         lg:flex lg:flex-row overflow-hidden;
+    @apply flex flex-col px-[16px] gap-[80px] md:px-[20px] lg:pl-[32px] lg:px-0 2xl:pl-[182px] 2xl:gap-[100px] py-[80px] lg:py-[100px] xl:py-[140px] lg:flex lg:flex-row overflow-hidden;
   }
 
   .Gallery-section {
-    @apply flex flex-col
-        px-[16px] gap-[100px]
-         md:px-[20px] lg:px-[32px]
-         2xl:px-[182px] py-[80px] lg:py-[100px] xl:py-[140px];
+    @apply flex flex-col px-[16px] gap-[100px] md:px-[20px] lg:px-[32px] 2xl:px-[182px] py-[80px] lg:py-[100px] xl:py-[140px];
   }
 
   .experiences-gallery {
     @apply flex flex-col
          py-[80px] pl-[16px] gap-[100px]
          md:pl-[32px] md:gap-[160px]
-         lg:pt-[100px] lg:pl-[32px] lg:pb-[100px]
-         xl:pt-[140px]  xl:pb-[240px] 
-         2xl:pl-[182px];
+         lg:pt-[100px] lg:pl-[32px] lg:pb-[100px] xl:pt-[140px]  xl:pb-[240px] 2xl:pl-[182px];
   }
   .footer {
     @apply flex flex-col bg-[#172432]
