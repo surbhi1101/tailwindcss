@@ -84,14 +84,12 @@
 @layer base {
   body {
     @apply font-body font-normal;
-    color: theme(--color-text);
   }
 
   p {
     color: var(--color-text);
     font-family: theme(--font-body);
     font-size: theme(--text-base);
-    @apply text-xs xl:text-base;
   }
 
   h1,

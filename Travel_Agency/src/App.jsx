@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Mousewheel, Navigation } from "swiper/modules";
 import "./assets/css/App.css";
+import "swiper/css/navigation";
 import Logo from "./assets/images/Logo.svg";
 import Herosection from "./assets/images/hero_section.png";
 import anthonyreungere from "./assets/images/anthony-reungere.jpg";
@@ -40,6 +41,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const destinationSwiperRef = useRef(null);
   const plannerSwiperRef = useRef(null);
+  const heroSwiperRef = useRef(null);
   const experiencesSwiperRef = useRef(null);
   const specialOfferSwiperRef = useRef(null);
   const gallerySwiperRef = useRef(null);
@@ -223,6 +225,7 @@ function App() {
           direction={"vertical"}
           pagination={{ clickable: true }}
           mousewheel={{ releaseOnEdges: true }}
+          onSwiper={(swiper) => (heroSwiperRef.current = swiper)}
           modules={[Pagination, Mousewheel]}
           className="heroSwiper"
         >
@@ -272,6 +275,12 @@ function App() {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        <div className="hero-arrows">
+          <button onClick={() => heroSwiperRef.current?.slidePrev()}>∧</button>
+
+          <button onClick={() => heroSwiperRef.current?.slideNext()}>∨</button>
+        </div>
       </div>
       <main>
         {/* destinations-section */}
@@ -281,8 +290,11 @@ function App() {
               <h2>Popular Destinations</h2>
               <div className="underline-full"></div>
             </div>
-            <div className="section-description">
-              <p>Here some awesome feedback from our travelers</p>
+            <div className="section-description section-desc-lg">
+              <p>
+                Most popular destinations around the world, from historical
+                places to natural wonders.
+              </p>
               <div className="desktop-arrows">
                 <div className="arrow-btn prev btn-base clickable">
                   <button
@@ -386,7 +398,7 @@ function App() {
                 <h2>Special Offer</h2>
                 <div className="underline-md"></div>
               </div>
-              <div className="section-description">
+              <div className="section-desc-md">
                 <div className="nav-arrows desktop-nav">
                   <div className="arrow-btn prev btn-base clickable">
                     <button
@@ -425,11 +437,13 @@ function App() {
                   <img src={veronika} alt="Lisbon" />
                 </div>
                 <div className="card-content">
-                  <h3>Lisbon, Portugal</h3>
-                  <div className="star-img">
-                    {[...Array(5)].map((_, i) => (
-                      <img key={i} src={star} alt="star" />
-                    ))}
+                  <div className="card-title">
+                    <h3>Lisbon, Portugal</h3>
+                    <div className="star-img">
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src={star} alt="star" />
+                      ))}
+                    </div>
                   </div>
                   <p>
                     5 nights and 4 days in 5 star hotel, breakfast and lunch
@@ -455,11 +469,13 @@ function App() {
                   <img src={hansreniers} alt="Athens" />
                 </div>
                 <div className="card-content">
-                  <h3>Athens, Greece</h3>
-                  <div className="star-img">
-                    {[...Array(5)].map((_, i) => (
-                      <img key={i} src={star} alt="star" />
-                    ))}
+                  <div className="card-title">
+                    <h3>Athens, Greece</h3>
+                    <div className="star-img">
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src={star} alt="star" />
+                      ))}
+                    </div>
                   </div>
                   <p>
                     5 nights and 4 days in 5 star hotel, breakfast and lunch
@@ -486,11 +502,13 @@ function App() {
                 </div>
                 <div className="card-heading">
                   <div className="card-content">
-                    <h3>Rome, Italy</h3>
-                    <div className="star-img">
-                      {[...Array(5)].map((_, i) => (
-                        <img key={i} src={star} alt="star" />
-                      ))}
+                    <div className="card-title">
+                      <h3>Rome, Italy</h3>
+                      <div className="star-img">
+                        {[...Array(5)].map((_, i) => (
+                          <img key={i} src={star} alt="star" />
+                        ))}
+                      </div>
                     </div>
                     <p>
                       5 nights and 4 days in 5 star hotel, breakfast and lunch
@@ -517,11 +535,13 @@ function App() {
                   <img src={veronika} alt="Lisbon" />
                 </div>
                 <div className="card-content">
-                  <h3>Lisbon, Portugal</h3>
-                  <div className="star-img">
-                    {[...Array(5)].map((_, i) => (
-                      <img key={i} src={star} alt="star" />
-                    ))}
+                  <div className="card-title">
+                    <h3>Lisbon, Portugal</h3>
+                    <div className="star-img">
+                      {[...Array(5)].map((_, i) => (
+                        <img key={i} src={star} alt="star" />
+                      ))}
+                    </div>
                   </div>
                   <p>
                     5 nights and 4 days in 5 star hotel, breakfast and lunch
@@ -569,7 +589,7 @@ function App() {
               </div>
               <div className="underline-sm"></div>
             </div>
-            <div className="section-description">
+            <div className="section-desc-md">
               <p>An insight the incredible experience in the world</p>
             </div>
           </div>
@@ -591,8 +611,9 @@ function App() {
               </div>
               <div className="blog-readmore clickable">
                 <button onClick={() => setReadMore(!readMore)}>
-                  {readMore ? "Read Less -" : "Read More -"} {">"}
+                  {readMore ? "Read Less" : "Read More "}
                 </button>
+                <span>→</span>
               </div>
             </div>
           </div>
@@ -604,7 +625,7 @@ function App() {
               <h2>Trip Planners</h2>
               <div className="underline-base"></div>
             </div>
-            <div className="section-description">
+            <div className="section-desc-sm ">
               <p>
                 20 years from now you will be more disappointed by the things
                 that you didn't do. Stop regretting and start travelling, start
@@ -625,8 +646,8 @@ function App() {
               className="plannerSwiper"
               onSwiper={(swiper) => (plannerSwiperRef.current = swiper)}
               breakpoints={{
-                1152: { slidesPerView: 2 },
-                1440: { slidesPerView: 2.4 },
+                1152: { slidesPerView: 2.3 },
+                1440: { slidesPerView: 2.7 },
                 1920: { slidesPerView: 3.4 },
               }}
             >
@@ -812,9 +833,9 @@ function App() {
           <div className="heading-block">
             <div className="heading-title">
               <h2>Destination Gallery</h2>
-              <div className="underline-full"></div>
+              <div className="underline-lg"></div>
             </div>
-            <div className="section-description">
+            <div className="section-desc-md">
               <p>Our photo gallery on trip</p>
               <div className="desktop-arrows clickable">
                 <div className="arrow-btn prev btn-base clickable">
@@ -851,7 +872,7 @@ function App() {
               <div key={idx} className="gallery-card-mobile">
                 <img
                   src={img}
-                  className="gallery-img-mobile"
+                  className="gallery-img-mobile "
                   alt="mobile gallery"
                 />
               </div>
@@ -873,7 +894,7 @@ function App() {
               <h2>Traveler's Experiences</h2>
               <div className="underline-xl"></div>
             </div>
-            <div className="section-description">
+            <div className="section-desc-lg">
               <p>Here some awesome feedback from our travelers</p>
             </div>
           </div>
@@ -885,7 +906,7 @@ function App() {
               onSwiper={(swiper) => (experiencesSwiperRef.current = swiper)}
               breakpoints={{
                 320: { slidesPerView: 1 },
-                768: { slidesPerView: 1.7 },
+                768: { slidesPerView: 1.6 },
                 1152: { slidesPerView: 2.2 },
                 1440: { slidesPerView: 2.3 },
                 1920: { slidesPerView: 2.5 },

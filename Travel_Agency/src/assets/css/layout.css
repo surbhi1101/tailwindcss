@@ -27,8 +27,8 @@
 
   .experiences-gallery {
     @apply flex flex-col
-         py-[80px] pl-[16px] gap-[100px]
-         md:pl-[32px] md:gap-[160px]
+         py-[80px] px-[16px] gap-[100px]
+         md:pl-[32px] md:gap-[97px] md:px-0
          lg:pt-[100px] lg:pl-[32px] lg:pb-[100px] xl:pt-[140px]  xl:pb-[240px] 2xl:pl-[182px];
   }
   .footer {

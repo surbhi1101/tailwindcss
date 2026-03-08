@@ -1,8 +1,6 @@
 @layer components {
   .hero-container {
-    @apply relative md:h-screen overflow-hidden flex gap-[100px] 
-    
-    flex-col;
+    @apply relative md:h-screen overflow-hidden;
     background:
       linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../images/hero_section.png");
@@ -11,18 +9,18 @@
   }
 
   .logo {
-    @apply w-[120px] md:w-[150px] lg:w-[180px];
+    @apply w-[140px] md:w-[234px];
   }
   .navbar-container {
-    @apply fixed top-0 left-0 w-full z-[2000] transition-all duration-300;
+    @apply fixed top-0 left-0 w-full z-[2000] px-[16px] md:px-0 transition-all duration-300;
   }
 
   .navbar-content {
     @apply relative flex items-center justify-between
-     py-[24px] px-[32px]
-           md:px-[32px] md:py-[20px]
+     py-[24px] px-[16px] p-0
+           md:px-[20px] md:py-[32px] 
            lg:p-[32px]
-           xl:py-[32px] 2xl:px-[182px];
+           2xl:py-[32px] 2xl:px-[182px];
   }
 
   .nav-links {
@@ -44,7 +42,7 @@
   }
 
   .mobile-active {
-    @apply absolute top-full right-0 bg-white text-black
+    @apply absolute top-full right-[16px] bg-white text-black
            flex flex-col py-[12px] shadow-xl rounded-xl z-[2500] lg:hidden;
   }
 
@@ -63,13 +61,12 @@
     @apply absolute inset-0 bg-black/25 flex flex-col 
     gap-[100px] lg:gap-[140px]
     xl:gap-[170px]
-    
     justify-center;
   }
 
   .hero-content {
     @apply flex flex-col gap-[16px] 
-          mt-[100px] md:mt-[72px] lg:mt-[140px]
+          mt-0 md:mt-[120px] lg:mt-[72px] xl:mt-[142px]
            md:px-[20px]
            lg:px-[32px] 
            2xl:px-[182px]
@@ -81,12 +78,11 @@
            md:text-[54px]
            lg:text-[64px]
            xl:text-[84px]
-           lg:max-w-[72%]
-           text-white leading-none;
+           lg:max-w-[72%] text-white leading-none tracking-normal;
   }
 
   .hero-content p {
-    @apply text-[18px] md:text-[20px] lg:text-[24px] text-white;
+    @apply text-[18px] md:text-[20px] lg:text-[24px] text-white tracking-normal leading-none;
   }
 
   .hero-mobile-subtitle {
@@ -94,7 +90,7 @@
   }
   .mobile-booking-card {
     @apply bg-white rounded-[16px]
-           shadow-2xl
+           shadow-2xl gap-[60px]
            overflow-hidden
            flex flex-col;
   }
@@ -103,17 +99,15 @@
     @apply hidden md:grid 
          md:grid-cols-[2fr_1fr]
          lg:grid-cols-[4fr_1fr]
-         shadow-[0_20px_50px_rgba(0,0,0,0.1)]
          overflow-hidden;
   }
 
   .booking-fields {
     @apply bg-white grid 
-    grid-cols-1
+    grid-cols-1 p-[20px]
           md:grid-cols-2 
          lg:grid-cols-4 
          gap-[40px] 
-         px-[20px] pt-[20px] pb-[80px]
          md:py-[23px] md:pl-[32px] md:pr-[100px] lg:py-[55.5px]
          2xl:pl-[182px] 2xl:py-[74px];
   }
@@ -124,16 +118,18 @@
 
   .booking-field label {
     @apply text-[14px] md:text-[16px] uppercase font-body
-           text-[#767E86];
+           text-[#767E86] tracking-normal leading-none;
   }
 
   .booking-field input,
   .booking-field select {
-    @apply text-[#172432] text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] pb-[10px] border-b border-[#000000] font-heading;
+    @apply text-[#172432] text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] 
+    pb-[10px] border-b border-[#000000] font-heading
+    placeholder:text-[#172432];
   }
 
   .swiper-pagination-bullet {
-    @apply !bg-white !opacity-100 !h-[16px] !w-[16px];
+    @apply !bg-white !opacity-100 !h-[12px] !w-[12px];
   }
 
   .swiper-pagination-bullet-active {
@@ -144,6 +140,33 @@
     @apply flex gap-[32px] px-[12px];
   }
 
+  .hero-nav {
+    @apply absolute right-[36px] top-[55%] top-[59%]
+         flex flex-col gap-[16px] z-20;
+  }
+
+  .swiper-vertical > .swiper-pagination-bullets,
+  .swiper-pagination-vertical.swiper-pagination-bullets {
+    @apply !right-[36px];
+  }
+  .hero-arrows {
+    @apply hidden md:block;
+  }
+  .hero-nav button {
+    @apply w-[14px] h-[6px] text-white;
+  }
+
+  .hero-nav button:active {
+    @apply text-[#FF7757];
+  }
+
+  .swiper-pagination-bullet {
+    @apply !bg-white !opacity-100;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply !bg-[#FF7757];
+  }
   /* ===== DESTINATION SECTION ==== */
 
   .section-header {
@@ -166,7 +189,7 @@
   }
 
   .destination-card {
-    @apply relative rounded-[20px] overflow-hidden cursor-pointer h-full;
+    @apply relative rounded-[16px] md:rounded-[26px] overflow-hidden cursor-pointer h-full;
   }
 
   .destination-card img {
@@ -175,8 +198,9 @@
 
   .card-overlay {
     @apply absolute bottom-0 left-0 w-full
-         flex flex-col gap-[17px]
-         p-[24px] text-white;
+         flex flex-col gap-[17px] px-[20px] pb-[40px]
+         /* p-[24px] */
+          text-white;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
   }
 
@@ -189,33 +213,38 @@
   }
 
   .card-overlay h3 {
-    @apply text-[24px] md:text-[28px] font-medium leading-none text-white;
+    @apply text-[24px] md:text-[28px] font-medium leading-none tracking-normal text-white;
   }
 
   .card-overlay p {
-    @apply text-[18px] md:text-[24px] leading-none text-white;
+    @apply text-[18px] md:text-[24px] font-normal leading-none tracking-normal text-white;
   }
   /* Special-offer */
   .section-description {
     @apply flex;
   }
   .special-offer .section-description p {
-    @apply ml-auto;
+    @apply md:ml-auto;
   }
 
   .specialOfferSwiper {
     @apply w-full;
   }
+
+  .card-title {
+    @apply flex flex-col gap-[8px];
+  }
+
   .cards {
     @apply grid grid-cols-1 md:grid-cols-3 md:gap-[32px];
   }
 
   .card-offer {
-    @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden shadow-sm hover:scale-[1.02] transition-transform w-fit;
+    @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden w-fit;
   }
 
   .card-img img {
-    @apply w-full h-[280px] object-cover;
+    @apply w-full h-[286px] object-cover;
   }
 
   .card-content {
@@ -232,7 +261,7 @@
   }
 
   .card-content p {
-    @apply font-body text-base md:text-[18px] text-[#172432] leading-[20px] md:leading-none tracking-normal;
+    @apply text-base md:text-[18px] text-[#172432] leading-[20px] md:leading-none tracking-normal;
   }
 
   .offer-price {
@@ -243,7 +272,7 @@
   }
 
   .offer-price p:nth-child(1) {
-    @apply text-[18px] xl:text-[20px] py-[7px] font-normal font-body leading-none tracking-normal;
+    @apply text-[18px] xl:text-[20px] py-[7px] font-normal leading-none tracking-normal text-[#767E86];
   }
 
   .offer-price p:nth-child(2) {
@@ -299,7 +328,7 @@
   }
 
   .star-img {
-    @apply flex gap-1 mb-4;
+    @apply flex gap-[4px];
   }
 
   .experiencesSwiper .swiper-slide {
@@ -316,14 +345,13 @@
   }
 
   .experiences-person {
-    @apply absolute -top-[70px] ml-[20px] md:ml-[40px] -translate-x-1/2 w-[100px] h-[100px] z-[50];
+    @apply absolute -top-[70px] ml-[30px] md:ml-[40px] -translate-x-1/2 w-[100px] h-[100px] z-[50];
   }
 
   .person-img img {
     @apply relative top-0 left-0 w-[100px] h-[100px]
          rounded-full border-[6px] border-white
          object-cover shadow-md;
-
     transform: none;
   }
   /* Our-blog */
@@ -336,24 +364,24 @@
   }
 
   .blog-image img {
-    @apply w-full h-full object-cover p-[4px];
-    border-radius: 26px;
+    @apply rounded-[26px] h-[314px] md:h-[555px] lg:h-[686px] xl:h-[802px] 2xl:h-[873px] w-full object-cover;
   }
 
   .blog-title :is(h1, h2, h3, h4, h5, h6) {
-    @apply font-heading font-normal text-[40px] md:text-[54px] md:w-[50%] lg:w-[70%] xl:w-[60%] leading-none tracking-normal text-[#172432];
+    @apply font-normal text-[40px] md:text-[54px] md:w-[50%] lg:w-[70%] xl:w-[60%] leading-none tracking-normal;
   }
 
   .blog-text {
-    @apply flex flex-col gap-[24px] xl:gap-[32px] lg:py-[32px] xl:py-[106.5px];
+    @apply flex flex-col gap-[24px] xl:gap-[32px] lg:py-[32px] xl:py-[45px];
   }
   .blog-description p {
-    @apply font-body font-normal text-[18px] xl:text-[24px] tracking-normal leading-[42px] xl:leading-[52px];
+    @apply font-normal text-[18px] xl:text-[24px] tracking-normal leading-[42px] xl:leading-[52px] text-[#172432];
   }
 
-  .blog-readmore button {
-    @apply font-body font-normal text-[24px] text-[#FF7757] tracking-normal leading-[52px];
+  .blog-readmore {
+    @apply flex gap-[20px] font-body font-normal text-[24px] text-[#FF7757] tracking-normal leading-[52px];
   }
+
   .blog-image {
     @apply lg:flex-1;
   }
@@ -363,13 +391,13 @@
   }
   /* Trip-planners */
   .trip-planners-section .heading-block {
-    @apply md:w-[50%] lg:w-full xl:w-[50%] 2xl:w-[30%];
+    @apply md:w-[50%] lg:w-[66%] xl:w-[50%] 2xl:w-[30%];
   }
   .destinationSwiper .planner-content {
     @apply flex flex-col gap-[20px];
   }
   .planner-heading {
-    @apply flex flex-col gap-[32px] max-w-[692px] w-full;
+    @apply flex flex-col gap-[32px] max-w-[394px];
   }
   .planner-title h2 {
     @apply font-heading text-[40px] lg:text-[64px] font-normal leading-none tracking-normal text-[#172432];
@@ -388,7 +416,7 @@
   }
 
   .planner-card {
-    @apply relative h-[399px] rounded-[26px] overflow-hidden z-10 -mt-12 transition-all;
+    @apply relative h-[350px] w-[250px] xl:h-[399px] xl:w-[300px] rounded-[26px] overflow-hidden z-10 -mt-12 transition-all;
   }
 
   .planner-meta {
@@ -404,11 +432,11 @@
   }
 
   .planner-price span {
-    @apply font-body text-[18px] tracking-normal leading-none font-normal;
+    @apply font-body text-[18px] md:text-[24px] tracking-normal leading-none font-normal;
   }
 
   .planner-card-title h3 {
-    @apply font-heading font-semibold text-[28px] leading-none tracking-normal;
+    @apply font-heading font-semibold text-[28px] leading-none tracking-normal w-[250px];
   }
 
   .planner-footer {
@@ -446,7 +474,7 @@
     @apply h-[500px] lg:h-[580px] -mt-12 z-20 shadow-2xl opacity-100;
   }
   .planner-stack {
-    @apply w-full;
+    @apply w-full flex flex-col gap-[40px];
   }
 
   .card-active .planner-image-wrapper {
@@ -458,17 +486,17 @@
   }
 
   .decor-box-navy {
-    @apply absolute -top-[19px] px-[16px] -left-[14px] w-[43px] h-[43px] bg-[#172432] -z-10;
+    @apply absolute -top-[14px] px-[16px] -left-[14px] w-[43px] h-[43px] bg-[#172432] -z-10;
   }
   .decor-box-grey {
-    @apply absolute -bottom-[17px] left-[170px] px-[16px] w-[43px] h-[43px] bg-[#767E86] -z-10;
+    @apply absolute -bottom-[12px] left-[160px] px-[16px] w-[43px] h-[43px] bg-[#767E86] -z-10;
   }
 
   .planner-card:hover .planner-image-overlay {
     @apply opacity-0;
   }
   .planner-card-mobile {
-    @apply bg-white overflow-hidden mb-[24px] text-[#1a1f24];
+    @apply bg-white overflow-hidden text-[#172432];
   }
 
   .planner-mobile-image {
@@ -476,7 +504,7 @@
   }
 
   .planner-mobile-image img {
-    @apply w-full h-full object-cover rounded-[24px];
+    @apply w-full h-full object-cover rounded-[26px];
   }
 
   .planner-mobile-details {
@@ -495,11 +523,11 @@
   }
 
   .planner-city {
-    @apply font-heading font-semibold text-[28px] md:text-[32px] leading-none tracking-normal text-[#172432];
+    @apply font-semibold text-[28px] md:text-[32px] leading-none tracking-normal;
   }
 
   .planner-price {
-    @apply font-body text-[18px] md:text-[24px] font-normal tracking-normal leading-none text-[#172432];
+    @apply font-body text-[18px] md:text-[24px] font-normal tracking-normal leading-none;
   }
 
   .planner-footer-row {
@@ -540,7 +568,7 @@
   }
 
   .gallery-card-mobile {
-    @apply rounded-[30px] overflow-hidden;
+    @apply rounded-[26px] overflow-hidden;
   }
 
   .gallery-img-mobile {
@@ -568,7 +596,7 @@
   }
 
   .newsletter-heading h3 {
-    @apply font-heading font-normal text-[40px] md:text-[54px] xl:text-[64px] text-[#767E86];
+    @apply font-normal text-[40px] md:text-[54px] xl:text-[64px] text-[#767E86];
   }
 
   .footer-form {
@@ -579,20 +607,19 @@
     @apply flex flex-col gap-[16px];
   }
 
-  .footer-form label {
-    @apply font-body text-[20px] font-normal tracking-normal leading-none;
-  }
-
   .form-data {
     @apply flex flex-col gap-[16px];
   }
 
+  .form-data label {
+    @apply font-body text-[20px] font-normal tracking-normal leading-none text-[#767E86];
+  }
   .form-input {
     @apply flex flex-col md:flex-row gap-[32px];
   }
 
   .form-input input {
-    @apply px-[24px] py-[24px] lg:py-[16px] 2xl:px-[40px] md:w-full text-[#FF7757] text-[20px] 2xl:py-[24px] rounded-[12px] bg-[#FFF2EC] outline-none;
+    @apply text-center md:text-left py-[24px] px-[40px] lg:py-[16px] 2xl:px-[40px] md:w-full text-[#FF7757] text-[20px] 2xl:py-[24px] rounded-[12px] bg-[#FFF2EC] outline-none;
   }
 
   .footer-section h4 {
@@ -631,7 +658,7 @@
   }
 
   .btn-plans {
-    @apply relative inline-flex items-center justify-center w-fit p-[20px] text-[18px] font-body font-normal rounded-[12px];
+    @apply relative inline-flex items-center justify-center w-fit p-[20px] text-[18px] font-body font-normal ml-[16px] rounded-[12px];
   }
 
   .btn-login {
@@ -657,12 +684,12 @@
     @apply flex gap-[12px];
   }
   .booking-footer-btn {
-    @apply py-[40px] px-[20px];
+    @apply py-[40px] px-[20px] justify-between;
   }
 
   .arrow-btn {
-    @apply w-[55px] h-[55px] flex items-center justify-center
-         rounded-lg text-3xl text-white rounded-[12px]
+    @apply w-[60px] h-[66px] flex gap-[40px] items-center justify-center
+         text-3xl text-white rounded-[12px]
          duration-300 hover:opacity-90;
   }
   .arrow-btn.prev {
@@ -672,7 +699,7 @@
     @apply bg-[#FF7D61];
   }
   .gallery-arrows {
-    @apply flex justify-center lg:justify-end gap-[20px] lg:pr-[32px] 2xl:pr-[182px];
+    @apply flex justify-center lg:justify-end gap-[20px] md:mt-[63px] lg:pr-[32px] 2xl:pr-[182px];
   }
 
   .destinations-section .desktop-arrows {
@@ -684,15 +711,17 @@
   }
 
   .btn-details {
-    @apply w-fit px-[24px] py-[16px] xl:px-[40px] xl:py-[20px] rounded-[16px];
+    @apply w-fit px-[24px] py-[16px] xl:px-[40px] xl:py-[20px] rounded-[12px];
   }
-
+  .btn-details button {
+    @apply uppercase;
+  }
   .mobile-arrows {
-    @apply flex justify-center gap-[24px] lg:hidden;
+    @apply flex justify-center gap-[40px] lg:hidden;
   }
 
   .footer-btn {
-    @apply px-[40px] py-[16px] text-[20px] font-body  rounded-[12px];
+    @apply py-[16px] px-[40px] text-[20px] font-body  rounded-[12px];
   }
 
   .view-trip {
