@@ -650,7 +650,7 @@ function App() {
               breakpoints={{
                 1152: { slidesPerView: 2.5 },
                 1440: { slidesPerView: 2.86 },
-                1920: { slidesPerView: 3.9 },
+                1920: { slidesPerView: 4.1 },
               }}
             >
               {[trip1, trip2, trip3, trip4].map((trip, index) => (

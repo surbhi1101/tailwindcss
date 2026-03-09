@@ -29,12 +29,10 @@
     @apply flex flex-col
          py-[80px] px-[16px] gap-[100px]
          md:pl-[32px] md:gap-[97px] md:px-0
-         lg:pt-[100px] lg:pl-[32px] lg:pb-[100px] xl:pt-[140px]  xl:pb-[240px] 2xl:pl-[182px];
+         lg:pt-[100px] lg:pl-[32px] lg:pb-[200px] xl:pt-[140px]  xl:pb-[240px] 2xl:pl-[182px];
   }
   .footer {
     @apply flex flex-col bg-[#172432]
-         py-[80px] px-[16px] 
-         md:px-[32px] md:pt-[100px] md:pb-[140px] 2xl:px-[182px]
          gap-[4px];
   }
 }

@@ -66,7 +66,7 @@
 
   .hero-content {
     @apply flex flex-col gap-[16px] 
-          mt-0 md:mt-[120px] lg:mt-[72px] xl:mt-[142px]
+          mt-0 md:mt-[120px] lg:mt-[72px] xl:mt-0
            md:px-[20px]
            lg:px-[32px] 
            2xl:px-[182px]
@@ -199,7 +199,7 @@
   .card-overlay {
     @apply absolute bottom-0 left-0 w-full
          flex flex-col gap-[17px] px-[20px] pb-[40px]
-         /* p-[24px] */
+         2xl:px-[24px]
           text-white;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
   }
@@ -249,7 +249,7 @@
 
   .card-content {
     @apply p-20 md:p-0;
-    @apply flex flex-col gap-[24px] px-[24px] py-[20px];
+    @apply flex flex-col gap-[24px] px-[24px] py-[20px] lg:px-[24px] lg:py-[20px] xl:py-[40px];
   }
 
   .card-heading {
@@ -287,7 +287,7 @@
   }
 
   .desktop-nav {
-    @apply hidden lg:flex gap-[40px];
+    @apply hidden lg:flex gap-[40px] mt-[-30px];
   }
 
   .mobile-nav {
@@ -372,7 +372,7 @@
   }
 
   .blog-text {
-    @apply flex flex-col gap-[24px] xl:gap-[32px] lg:py-[32px] xl:py-[45px] 2xl:py-[106px];
+    @apply flex flex-col gap-[24px] lg:py-[32px] xl:py-[45px] 2xl:py-[106px];
   }
   .blog-description p {
     @apply font-normal text-[18px] xl:text-[24px] tracking-normal leading-[42px] xl:leading-[52px] text-[#172432];
@@ -391,7 +391,7 @@
   }
   /* Trip-planners */
   .trip-planners-section .heading-block {
-    @apply md:w-[50%] lg:w-[66%] xl:w-[50%] 2xl:w-[30%];
+    @apply md:w-[50%] lg:w-[66%] xl:w-[50%] 2xl:w-[25%];
   }
   .destinationSwiper .planner-content {
     @apply flex flex-col gap-[20px];
@@ -428,15 +428,15 @@
   }
 
   .planner-tag span {
-    @apply text-[18px] leading-none font-body tracking-normal uppercase font-normal;
+    @apply text-[18px] md:text-[24px] lg:text-[18px] leading-none font-body tracking-normal uppercase font-normal;
   }
 
   .planner-price span {
-    @apply font-body text-[18px] md:text-[24px] tracking-normal leading-none font-normal;
+    @apply font-body text-[18px] md:text-[24px] lg:text-[18px] tracking-normal leading-none font-normal;
   }
 
   .planner-card-title h3 {
-    @apply font-heading font-semibold text-[28px] leading-none tracking-normal w-[250px];
+    @apply font-heading font-semibold text-[28px] md:text-[32px] lg:text-[28px] leading-none tracking-normal;
   }
 
   .planner-footer {
@@ -548,7 +548,7 @@
 
   .gallery-card {
     @apply relative bg-white ease-in-out cursor-pointer
-     rounded-[40px] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-6;
+     rounded-[26px] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-6;
   }
 
   .gallery-card:hover {
@@ -592,7 +592,8 @@
     @apply block lg:hidden gap-[60px] flex flex-col px-[20px] py-[40px] md:px-[40px] md:py-[40px] bg-white rounded-[20px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden;
   }
   .desktop-newsletter-wrapper {
-    @apply hidden lg:block bg-white rounded-[20px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden;
+    @apply hidden lg:block bg-white rounded-[20px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden 
+    lg:mx-[36px] xl:mx-[89px] 2xl:mx-[329px];
   }
   .Our-Newsletter {
     @apply w-full lg:flex gap-[60px] px-[16px] bg-white rounded-[16px] md:rounded-[26px];
@@ -611,7 +612,7 @@
   }
 
   .form-data {
-    @apply flex flex-col gap-[16px];
+    @apply flex flex-col gap-[32px];
   }
 
   .form-data label {
@@ -631,6 +632,8 @@
 
   .footer-grid {
     @apply flex flex-col gap-[60px] lg:gap-[16px]
+       px-[16px] 
+         md:px-[32px] md:pb-[140px] 2xl:pt-0 2xl:px-[182px]
     lg:flex-row justify-between text-white;
   }
   .footer-section {
@@ -679,7 +682,7 @@
 
   .btn-book {
     @apply px-[20px] py-[60px] md:mr-[100px] lg:mr-[96px] 2xl:mr-[235px]
-        lg:px-[20px] lg:py-[40px]
+        lg:px-[20px] lg:py-[40px] 2xl:px-[20px] 2xl:py-[60px]
          rounded-tr-[20px]
          rounded-br-[20px];
   }
@@ -710,7 +713,7 @@
   }
 
   .desktop-arrows {
-    @apply hidden lg:flex gap-[24px] lg:ml-auto;
+    @apply hidden lg:flex gap-[24px] lg:ml-auto mt-[-30px];
   }
 
   .btn-details {
