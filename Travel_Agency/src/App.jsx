@@ -641,14 +641,16 @@ function App() {
 
           {isDesktop ? (
             <Swiper
-              spaceBetween={32}
-              slidesPerView={1}
+              slidesPerView={4}
+              centeredSlides={true}
               className="plannerSwiper"
+              centeredSlidesBounds
+              watchOverflow
               onSwiper={(swiper) => (plannerSwiperRef.current = swiper)}
               breakpoints={{
-                1152: { slidesPerView: 2.3 },
-                1440: { slidesPerView: 2.7 },
-                1920: { slidesPerView: 3.4 },
+                1152: { slidesPerView: 2.5 },
+                1440: { slidesPerView: 2.86 },
+                1920: { slidesPerView: 3.9 },
               }}
             >
               {[trip1, trip2, trip3, trip4].map((trip, index) => (

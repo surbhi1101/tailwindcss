@@ -372,7 +372,7 @@
   }
 
   .blog-text {
-    @apply flex flex-col gap-[24px] xl:gap-[32px] lg:py-[32px] xl:py-[45px];
+    @apply flex flex-col gap-[24px] xl:gap-[32px] lg:py-[32px] xl:py-[45px] 2xl:py-[106px];
   }
   .blog-description p {
     @apply font-normal text-[18px] xl:text-[24px] tracking-normal leading-[42px] xl:leading-[52px] text-[#172432];
@@ -465,6 +465,9 @@
   }
   .plannerSwiper .swiper-slide img {
     @apply w-full;
+  }
+  .plannerSwiper .swiper-wrapper {
+    @apply flex !gap-[32px];
   }
   .side-card {
     @apply mt-0;
