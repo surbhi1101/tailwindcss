@@ -141,7 +141,7 @@
   }
 
   .hero-nav {
-    @apply absolute right-[36px] top-[55%] top-[59%]
+    @apply absolute right-[36px] top-[59%]
          flex flex-col gap-[16px] z-20;
   }
 
@@ -227,20 +227,8 @@
     @apply md:ml-auto;
   }
 
-  .specialOfferSwiper {
-    @apply w-full;
-  }
-
   .card-title {
     @apply flex flex-col gap-[8px];
-  }
-
-  .cards {
-    @apply grid grid-cols-1 md:grid-cols-3 md:gap-[32px];
-  }
-
-  .card-offer {
-    @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden w-fit;
   }
 
   .card-img img {
@@ -293,10 +281,13 @@
   .mobile-nav {
     @apply flex lg:hidden gap-[40px];
   }
-  .specialOfferSwiper .swiper-wrapper {
-    @apply !flex lg:!gap-[32px];
+  .offer-cards {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-[32px];
+    transition: transform 0.5s ease;
   }
-
+  .card-offer {
+    @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden;
+  }
   /* Traveler’s Experiences */
 
   .heading-subtitle {
@@ -404,7 +395,7 @@
   }
   .planner-description p {
     @apply font-body font-normal text-[18px]
-         md:max-w-[400px] md:max-w-[420px] lg:max-w-full
+         md:max-w-[420px] lg:max-w-full
          leading-relaxed;
   }
   .planner-cards-wrapper {
@@ -632,8 +623,8 @@
 
   .footer-grid {
     @apply flex flex-col gap-[60px] lg:gap-[16px]
-       px-[16px] 
-         md:px-[32px] md:pb-[140px] 2xl:pt-0 2xl:px-[182px]
+       px-[16px]  pt-[80px] md:pt-[100px]
+         md:px-[32px] md:pb-[140px] lg:pt-0 2xl:px-[182px]
     lg:flex-row justify-between text-white;
   }
   .footer-section {

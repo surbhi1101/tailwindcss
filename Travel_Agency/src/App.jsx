@@ -43,18 +43,55 @@ function App() {
   const plannerSwiperRef = useRef(null);
   const heroSwiperRef = useRef(null);
   const experiencesSwiperRef = useRef(null);
-  const specialOfferSwiperRef = useRef(null);
   const gallerySwiperRef = useRef(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeCard, setActiveCard] = useState(null);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   const [isSticky, setIsSticky] = useState(false);
-
-  const handleNext = () => {
-    setGalleryIndex(galleryIndex === 0 ? 4 : 0);
+  const nextOffers = () => {
+    setOfferIndex((prev) => (prev >= offers.length - 3 ? 0 : prev + 1));
   };
+  const offers = [
+    {
+      img: veronika,
+      title: "Lisbon, Portugal",
+      price: "€500",
+      desc: "5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.",
+    },
+    {
+      img: hansreniers,
+      title: "Athens, Greece",
+      price: "€800",
+      desc: "5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.",
+    },
+    {
+      img: dan,
+      title: "Rome, Italy",
+      price: "€750",
+      desc: "5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.",
+    },
+    {
+      img: veronika,
+      title: "Lisbon, Portugal",
+      price: "€500",
+      desc: "5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.",
+    },
+  ];
+  const prevOffers = () => {
+    setOfferIndex((prev) =>
+      prev <= 0 ? offers.length - cardsPerView : prev - 1,
+    );
+  };
+  const handleNext = () => {
+    setOfferIndex((prev) =>
+      prev >= offers.length - cardsPerView ? 0 : prev + 1,
+    );
+  };
+  const cardsPerView = window.innerWidth < 1152 ? 1 : 3;
+  const [offerIndex, setOfferIndex] = useState(0);
 
+  const visibleOffers = offers.slice(offerIndex, offerIndex + cardsPerView);
   const handlePrev = () => {
     setGalleryIndex(galleryIndex === 4 ? 0 : 4);
   };
@@ -401,182 +438,58 @@ function App() {
               <div className="section-desc-md">
                 <div className="nav-arrows desktop-nav">
                   <div className="arrow-btn prev btn-base clickable">
-                    <button
-                      onClick={() => specialOfferSwiperRef.current?.slidePrev()}
-                    >
-                      ‹
-                    </button>
+                    <button onClick={prevOffers}>‹</button>
                   </div>
 
                   <div className="arrow-btn next btn-base clickable">
-                    <button
-                      onClick={() => specialOfferSwiperRef.current?.slideNext()}
-                    >
-                      ›
-                    </button>
+                    <button onClick={nextOffers}>›</button>
                   </div>
                 </div>
                 <p>Check out our special offer and discounts</p>
               </div>
             </div>
           </div>
+          <div className="offer-cards">
+            {visibleOffers.map((offer, index) => (
+              <div key={index} className="card-offer">
+                <div className="card-img">
+                  <img src={offer.img} alt={offer.title} />
+                </div>
 
-          <Swiper
-            modules={[Navigation]}
-            className="specialOfferSwiper"
-            onSwiper={(swiper) => (specialOfferSwiperRef.current = swiper)}
-            breakpoints={{
-              320: { slidesPerView: 1 },
-              768: { slidesPerView: 1 },
-              1152: { slidesPerView: 3.1 },
-            }}
-          >
-            <SwiperSlide>
-              <div className="card-offer">
-                <div className="card-img">
-                  <img src={veronika} alt="Lisbon" />
-                </div>
                 <div className="card-content">
                   <div className="card-title">
-                    <h3>Lisbon, Portugal</h3>
+                    <h3>{offer.title}</h3>
+
                     <div className="star-img">
                       {[...Array(5)].map((_, i) => (
                         <img key={i} src={star} alt="star" />
                       ))}
                     </div>
                   </div>
-                  <p>
-                    5 nights and 4 days in 5 star hotel, breakfast and lunch
-                    included. Very popular during the renaissance. Passage and
-                    going through the cites of the world in classical
-                    literature.
-                  </p>
+
+                  <p>{offer.desc}</p>
+
                   <div className="offer-price">
                     <div className="price-text">
                       <p>From</p>
-                      <p>€500</p>
+                      <p>{offer.price}</p>
                     </div>
+
                     <div className="btn-base btn-primary btn-details">
                       <button>Details</button>
                     </div>
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card-offer">
-                <div className="card-img">
-                  <img src={hansreniers} alt="Athens" />
-                </div>
-                <div className="card-content">
-                  <div className="card-title">
-                    <h3>Athens, Greece</h3>
-                    <div className="star-img">
-                      {[...Array(5)].map((_, i) => (
-                        <img key={i} src={star} alt="star" />
-                      ))}
-                    </div>
-                  </div>
-                  <p>
-                    5 nights and 4 days in 5 star hotel, breakfast and lunch
-                    included. Very popular during the renaissance. Passage and
-                    going through the cites of the world in classical
-                    literature.
-                  </p>
-                  <div className="offer-price">
-                    <div className="price-text">
-                      <p>From</p>
-                      <p>€800</p>
-                    </div>
-                    <div className="btn-base btn-primary btn-details">
-                      <button>Details</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card-offer">
-                <div className="card-img">
-                  <img src={dan} alt="Rome" />
-                </div>
-                <div className="card-heading">
-                  <div className="card-content">
-                    <div className="card-title">
-                      <h3>Rome, Italy</h3>
-                      <div className="star-img">
-                        {[...Array(5)].map((_, i) => (
-                          <img key={i} src={star} alt="star" />
-                        ))}
-                      </div>
-                    </div>
-                    <p>
-                      5 nights and 4 days in 5 star hotel, breakfast and lunch
-                      included. Very popular during the renaissance. Passage and
-                      going through the cites of the world in classical
-                      literature.
-                    </p>
-                    <div className="offer-price">
-                      <div className="price-text">
-                        <p>From</p>
-                        <p>€750</p>
-                      </div>
-                      <div className="btn-base btn-primary btn-details">
-                        <button>Details</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card-offer">
-                <div className="card-img">
-                  <img src={veronika} alt="Lisbon" />
-                </div>
-                <div className="card-content">
-                  <div className="card-title">
-                    <h3>Lisbon, Portugal</h3>
-                    <div className="star-img">
-                      {[...Array(5)].map((_, i) => (
-                        <img key={i} src={star} alt="star" />
-                      ))}
-                    </div>
-                  </div>
-                  <p>
-                    5 nights and 4 days in 5 star hotel, breakfast and lunch
-                    included. Very popular during the renaissance. Passage and
-                    going through the cites of the world in classical
-                    literature.
-                  </p>
-                  <div className="offer-price">
-                    <div className="price-text">
-                      <p>From</p>
-                      <p>€500</p>
-                    </div>
-                    <div className="btn-base btn-primary btn-details">
-                      <button>Details</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+            ))}
+          </div>
           <div className="nav-arrows mobile-nav">
             <div className="arrow-btn prev btn-base clickable">
-              <button
-                onClick={() => specialOfferSwiperRef.current?.slidePrev()}
-              >
-                ‹
-              </button>
+              <button onClick={prevOffers}>‹</button>
             </div>
 
             <div className="arrow-btn next btn-base clickable">
-              <button
-                onClick={() => specialOfferSwiperRef.current?.slideNext()}
-              >
-                ›
-              </button>
+              <button onClick={nextOffers}>›</button>
             </div>
           </div>
         </section>
