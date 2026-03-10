@@ -628,7 +628,7 @@
     @apply mr-[32px] 2xl:mr-[182px];
   }
   .desktop-arrows {
-    @apply hidden lg:flex gap-10 lg:ml-auto;
+    @apply hidden lg:flex gap-10 lg:ml-auto mt-[-32px];
   }
 
   .btn-details {
