@@ -53,21 +53,6 @@
   animation-delay: 0.3s;
 }
 
-.section-base {
-  @apply py-[80px]
-         md:py-[80px]
-         lg:py-[100px]
-         xl:py-[140px]
-         px-[16px]
-         md:px-[20px]
-         lg:px-[32px]
-         xl:px-[32px];
-}
-
-.section-stack {
-  @apply flex flex-col;
-}
-
 .heading-block {
   @apply flex flex-col gap-[32px];
 }

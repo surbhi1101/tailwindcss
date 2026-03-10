@@ -136,11 +136,6 @@
     @apply flex gap-[32px] px-[12px];
   }
 
-  .hero-nav {
-    @apply absolute right-[36px] top-[59%]
-         flex flex-col gap-[16px] z-20;
-  }
-
   .swiper-vertical > .swiper-pagination-bullets,
   .swiper-pagination-vertical.swiper-pagination-bullets {
     @apply !right-[36px];
@@ -148,18 +143,7 @@
   .hero-arrows {
     @apply hidden md:block;
   }
-  .hero-nav button {
-    @apply w-[14px] h-[6px] text-white;
-  }
-
-  .hero-nav button:active {
-    @apply text-[#FF7757];
-  }
   /* ===== DESTINATION SECTION ==== */
-
-  .section-header {
-    @apply flex flex-col gap-6;
-  }
 
   .destinationSwiper {
     @apply w-full overflow-visible;
@@ -276,9 +260,6 @@
     @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden;
   }
   /* Our-blog */
-  .Our-blog {
-    @apply flex flex-col gap-[32px];
-  }
 
   .blog-content {
     @apply flex flex-col lg:flex-row gap-[32px];
@@ -311,9 +292,7 @@
   .trip-planners-section .heading-block {
     @apply md:w-[50%] lg:w-[66%] xl:w-[50%] 2xl:w-[25%];
   }
-  .destinationSwiper .planner-content {
-    @apply flex flex-col gap-[20px];
-  }
+
   .planner-card {
     @apply relative h-[350px] w-[250px] xl:h-[399px] xl:w-[300px] rounded-[26px] overflow-hidden z-10 -mt-12 transition-all;
   }
@@ -347,7 +326,12 @@
   }
 
   .planner-image-wrapper {
-    @apply absolute inset-0 z-10 transition-transform duration-700 ease-in-out group-hover:-translate-y-[150px];
+    @apply absolute inset-0 z-10;
+    transition: transform 0.7s ease;
+  }
+
+  .planner-card:not(.card-active):hover .planner-image-wrapper {
+    transform: translateY(-150px);
   }
 
   .trip-img {
@@ -374,10 +358,6 @@
 
   .planner-stack {
     @apply w-full flex flex-col gap-[40px];
-  }
-
-  .card-active .planner-image-wrapper {
-    transform: translateY(-120px);
   }
 
   .decor-box-navy {
@@ -467,10 +447,6 @@
   }
   /* Traveler’s Experiences */
 
-  .heading-subtitle {
-    @apply font-body text-[24px] text-[#767E86] mt-[16px];
-  }
-
   .experiences {
     @apply w-full overflow-hidden;
   }
@@ -543,10 +519,6 @@
 
   .newsletter-heading h3 {
     @apply font-normal text-[40px] md:text-[54px] xl:text-[64px] text-[#767E86];
-  }
-
-  .footer-form {
-    @apply flex flex-col gap-[16px];
   }
 
   .form-data {

@@ -578,10 +578,7 @@ function App() {
 
           {isDesktop ? (
             <Swiper
-              slidesPerView={4}
-              centeredSlides={true}
               className="plannerSwiper"
-              centeredSlidesBounds
               watchOverflow
               onSwiper={(swiper) => (plannerSwiperRef.current = swiper)}
               breakpoints={{
