@@ -12,38 +12,38 @@
     @apply w-[140px] md:w-[234px];
   }
   .navbar-container {
-    @apply fixed top-0 left-0 w-full z-[2000] px-[16px] md:px-0 transition-all duration-300;
+    @apply fixed top-0 left-0 w-full z-[2000] px-4 md:px-0 transition-all duration-300;
   }
 
   .navbar-content {
     @apply relative flex items-center justify-between
-     py-[24px] px-[16px] p-0
-           md:px-[20px] md:py-[32px] 
+     py-6 px-4 p-0
+           md:px-5 md:py-8 
            lg:p-[32px]
-           2xl:py-[32px] 2xl:px-[182px];
+           2xl:py-8 2xl:px-[182px];
   }
 
   .nav-links {
-    @apply hidden lg:flex gap-[32px] text-white items-center;
+    @apply hidden lg:flex gap-8 text-white items-center;
   }
 
   .nav-links li a {
     @apply transition-all duration-200 hover:border-b-[3px] hover:font-medium hover:border-[#FF7757] hover:pb-1
-    text-[16px] lg:text-[20px]
+    text-base lg:text-[20px]
     font-body font-normal leading-none tracking-normal;
   }
 
   .auth-buttons {
-    @apply hidden lg:flex gap-[36px] items-center;
+    @apply hidden lg:flex gap-9 items-center;
   }
 
   .mobile-navlinks {
-    @apply flex flex-col gap-[12px] px-[12px];
+    @apply flex flex-col gap-3 px-3;
   }
 
   .mobile-active {
-    @apply absolute top-full right-[16px] bg-white text-black
-           flex flex-col py-[12px] shadow-xl rounded-xl z-[2500] lg:hidden;
+    @apply absolute top-full right-4 bg-white text-black
+           flex flex-col py-3 shadow-xl rounded-xl z-[2500] lg:hidden;
   }
 
   .heroSwiper {
@@ -65,10 +65,9 @@
   }
 
   .hero-content {
-    @apply flex flex-col gap-[16px] 
-          mt-0 md:mt-[120px] lg:mt-[72px] xl:mt-0
-           md:px-[20px]
-           lg:px-[32px] 
+    @apply flex flex-col gap-4 
+          mt-0 md:mt-[120px] lg:mt-[72px] xl:mt-[142px]            
+          md:px-5 lg:px-8 
            2xl:px-[182px]
            xl:max-w-[100%];
   }
@@ -82,7 +81,7 @@
   }
 
   .hero-content p {
-    @apply text-[18px] md:text-[20px] lg:text-[24px] text-white tracking-normal leading-none;
+    @apply text-lg md:text-[20px] lg:text-2xl text-white tracking-normal leading-none;
   }
   .mobile-booking-card {
     @apply bg-white rounded-[16px]
@@ -103,23 +102,23 @@
     grid-cols-1 p-[20px]
           md:grid-cols-2 
          lg:grid-cols-4 
-         gap-[40px] 
-         md:py-[23px] md:pl-[32px] md:pr-[100px] lg:py-[55.5px]
+         gap-10 
+         md:py-[23px] md:pl-8 md:pr-[100px] lg:py-[55.5px]
          2xl:pl-[182px] 2xl:py-[74px];
   }
 
   .booking-field {
-    @apply flex flex-col gap-[12px];
+    @apply flex flex-col gap-3;
   }
 
   .booking-field label {
-    @apply text-[14px] md:text-[16px] uppercase font-body
+    @apply text-sm md:text-base uppercase font-body
            text-[#767E86] tracking-normal leading-none;
   }
 
   .booking-field input,
   .booking-field select {
-    @apply text-[#172432] text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] 
+    @apply text-[#172432] text-sm md:text-base xl:text-lg 2xl:text-[20px] 
     pb-[10px] border-b border-[#000000] font-heading
     placeholder:text-[#172432];
   }
@@ -133,12 +132,12 @@
   }
 
   .mobile-btn {
-    @apply flex gap-[32px] px-[12px];
+    @apply flex gap-8 px-3;
   }
 
   .swiper-vertical > .swiper-pagination-bullets,
   .swiper-pagination-vertical.swiper-pagination-bullets {
-    @apply !right-[36px];
+    @apply !right-9;
   }
   .hero-arrows {
     @apply hidden md:block;
@@ -184,11 +183,11 @@
   }
 
   .card-overlay h3 {
-    @apply text-[24px] md:text-[28px] font-medium leading-none tracking-normal text-white;
+    @apply text-2xl md:text-[28px] font-medium leading-none tracking-normal text-white;
   }
 
   .card-overlay p {
-    @apply text-[18px] md:text-[24px] font-normal leading-none tracking-normal text-white;
+    @apply text-lg md:text-2xl font-normal leading-none tracking-normal text-white;
   }
   /* Special-offer */
   .section-description {
@@ -199,7 +198,7 @@
   }
 
   .card-title {
-    @apply flex flex-col gap-[8px];
+    @apply flex flex-col gap-2;
   }
 
   .card-img img {
@@ -208,7 +207,7 @@
 
   .card-content {
     @apply p-20 md:p-0;
-    @apply flex flex-col gap-[24px] px-[24px] py-[20px] lg:px-[24px] lg:py-[20px] xl:py-[40px];
+    @apply flex flex-col gap-6 px-6 py-5 lg:px-6 lg:py-5 xl:py-10;
   }
 
   .card-heading {
@@ -220,18 +219,18 @@
   }
 
   .card-content p {
-    @apply text-base md:text-[18px] text-[#172432] leading-[20px] md:leading-none tracking-normal;
+    @apply text-base md:text-lg text-[#172432] leading-[20px] md:leading-none tracking-normal;
   }
 
   .offer-price {
-    @apply flex flex-col md:flex-row gap-[20px] md:justify-between md:items-center;
+    @apply flex flex-col md:flex-row gap-5 md:justify-between md:items-center;
   }
   .planner-footer-row span .offer-price p:first-child {
-    @apply text-[#767E86] font-normal text-[18px] xl:text-[20px] py-[7px] xl:py-[11.2px];
+    @apply text-[#767E86] font-normal text-lg xl:text-[20px] py-[7px] xl:py-[11.2px];
   }
 
   .offer-price p:nth-child(1) {
-    @apply text-[18px] xl:text-[20px] py-[7px] font-normal leading-none tracking-normal text-[#767E86];
+    @apply text-lg xl:text-[20px] py-[7px] font-normal leading-none tracking-normal text-[#767E86];
   }
 
   .offer-price p:nth-child(2) {
@@ -239,21 +238,21 @@
   }
 
   .price-text {
-    @apply flex gap-[8px];
+    @apply flex gap-2;
   }
   .special-offer .nav-arrows {
     @apply justify-center;
   }
 
   .desktop-nav {
-    @apply hidden lg:flex gap-[40px] mt-[-30px];
+    @apply hidden lg:flex gap-10 mt-[-30px];
   }
 
   .mobile-nav {
-    @apply flex lg:hidden gap-[40px];
+    @apply flex lg:hidden gap-10;
   }
   .offer-cards {
-    @apply grid grid-cols-1 lg:grid-cols-3 gap-[32px];
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
     transition: transform 0.5s ease;
   }
   .card-offer {
@@ -262,7 +261,7 @@
   /* Our-blog */
 
   .blog-content {
-    @apply flex flex-col lg:flex-row gap-[32px];
+    @apply flex flex-col lg:flex-row gap-8;
   }
 
   .blog-image img {
@@ -274,14 +273,14 @@
   }
 
   .blog-text {
-    @apply flex flex-col gap-[24px] lg:py-[32px] xl:py-[45px] 2xl:py-[106px] lg:flex-1;
+    @apply flex flex-col gap-6 lg:py-8 xl:py-[45px] 2xl:py-[106px] lg:flex-1;
   }
   .blog-description p {
-    @apply font-normal text-[18px] xl:text-[24px] tracking-normal leading-[42px] xl:leading-[52px] text-[#172432];
+    @apply font-normal text-lg xl:text-2xl tracking-normal leading-[42px] xl:leading-[52px] text-[#172432];
   }
 
   .blog-readmore {
-    @apply flex gap-[20px] font-body font-normal text-[24px] text-[#FF7757] tracking-normal leading-[52px];
+    @apply flex gap-5 font-body font-normal text-2xl text-[#FF7757] tracking-normal leading-[52px];
   }
 
   .blog-image {
@@ -302,15 +301,15 @@
   }
 
   .planner-tag h4 {
-    @apply font-body font-normal text-[18px] md:text-[24px] tracking-normal leading-none uppercase;
+    @apply font-body font-normal text-lg md:text-2xl tracking-normal leading-none uppercase;
   }
 
   .planner-tag span {
-    @apply text-[18px] md:text-[24px] lg:text-[18px] leading-none font-body tracking-normal uppercase font-normal;
+    @apply text-lg md:text-2xl lg:text-lg leading-none font-body tracking-normal uppercase font-normal;
   }
 
   .planner-price span {
-    @apply font-body text-[18px] md:text-[24px] lg:text-[18px] tracking-normal leading-none font-normal;
+    @apply font-body text-lg md:text-2xl lg:text-lg tracking-normal leading-none font-normal;
   }
 
   .planner-card-title h3 {
@@ -322,16 +321,15 @@
   }
 
   .planner-duration span {
-    @apply font-body font-normal text-[18px] leading-none tracking-normal;
+    @apply font-body font-normal text-lg leading-none tracking-normal;
   }
 
   .planner-image-wrapper {
-    @apply absolute inset-0 z-10;
-    transition: transform 0.7s ease;
+    @apply absolute inset-0 z-10 transition-transform duration-700 ease-in-out;
   }
 
-  .planner-card:not(.card-active):hover .planner-image-wrapper {
-    transform: translateY(-150px);
+  .card-active .planner-image-wrapper {
+    @apply -translate-y-[150px];
   }
 
   .trip-img {
@@ -344,27 +342,27 @@
   }
 
   .planner-details {
-    @apply absolute inset-0 flex flex-col justify-end py-[20px] gap-[12px] text-black z-0;
+    @apply absolute inset-0 flex flex-col justify-end py-5 gap-3 text-black z-0;
   }
   .plannerSwiper .swiper-slide img {
     @apply w-full;
   }
   .plannerSwiper .swiper-wrapper {
-    @apply flex !gap-[32px];
+    @apply flex !gap-8;
   }
   .side-card {
     @apply mt-0;
   }
 
   .planner-stack {
-    @apply w-full flex flex-col gap-[40px];
+    @apply w-full flex flex-col gap-10;
   }
 
   .decor-box-navy {
-    @apply absolute -top-[14px] px-[16px] -left-[14px] w-[43px] h-[43px] bg-[#172432] -z-10;
+    @apply absolute -top-[14px] px-4 -left-[14px] w-[43px] h-[43px] bg-[#172432] -z-10;
   }
   .decor-box-grey {
-    @apply absolute -bottom-[12px] left-[160px] px-[16px] w-[43px] h-[43px] bg-[#767E86] -z-10;
+    @apply absolute -bottom-[12px] left-[160px] px-4 w-[43px] h-[43px] bg-[#767E86] -z-10;
   }
 
   .planner-card:hover .planner-image-overlay {
@@ -383,7 +381,7 @@
   }
 
   .planner-mobile-details {
-    @apply flex flex-col gap-[12px] py-[20px];
+    @apply flex flex-col gap-3 py-5;
   }
 
   .planner-data {
@@ -391,7 +389,7 @@
   }
 
   .planner-tag p {
-    @apply text-[18px] font-normal leading-none tracking-normal uppercase;
+    @apply text-lg font-normal leading-none tracking-normal uppercase;
   }
 
   .planner-city {
@@ -399,14 +397,14 @@
   }
 
   .planner-price {
-    @apply font-body text-[18px] md:text-[24px] font-normal tracking-normal leading-none;
+    @apply font-body text-lg md:text-2xl font-normal tracking-normal leading-none;
   }
 
   .planner-footer-row {
     @apply flex justify-between items-center;
   }
   .planner-footer-row span {
-    @apply text-[18px] md:text-[24px] font-normal font-body leading-none tracking-normal;
+    @apply text-lg md:text-2xl font-normal font-body leading-none tracking-normal;
   }
   /* GALLERY SECTION */
 
@@ -432,10 +430,10 @@
   }
 
   .gallery-mobile-wrapper {
-    @apply flex flex-col gap-[32px] lg:hidden;
+    @apply flex flex-col gap-8 lg:hidden;
   }
   .gallery-desktop-wrapper {
-    @apply hidden lg:grid grid-cols-4 gap-[32px] justify-center;
+    @apply hidden lg:grid grid-cols-4 gap-8 justify-center;
   }
 
   .gallery-card-mobile {
@@ -456,7 +454,7 @@
   }
 
   .experiences-text p {
-    @apply text-[18px] leading-[23px] tracking-normal font-normal;
+    @apply text-lg leading-[23px] tracking-normal font-normal;
   }
 
   .person-details {
@@ -464,15 +462,15 @@
   }
 
   .person-details h4 {
-    @apply text-[24px] text-[#767E86] tracking-normal leading-none;
+    @apply text-2xl text-[#767E86] tracking-normal leading-none;
   }
 
   .person-details p {
-    @apply text-[18px];
+    @apply text-lg;
   }
 
   .star-img {
-    @apply flex gap-[4px];
+    @apply flex gap-1;
   }
 
   .experiencesSwiper .swiper-slide {
@@ -480,16 +478,16 @@
   }
 
   .experiences-card {
-    @apply relative flex flex-col gap-[32px] z-10 2xl:gap-[20px]
+    @apply relative flex flex-col gap-8 z-10 2xl:gap-5
          bg-[#F5F6F7] border border-[#F1F1F1] 
          rounded-[12px] 
-         px-[20px] pt-[60px] pb-[32px] 
-         lg:px-[40px] lg:pb-[40px] 
+         px-5 pt-[60px] pb-8 
+         lg:px-10 lg:pb-10 
          overflow-visible;
   }
 
   .experiences-person {
-    @apply absolute -top-[70px] ml-[30px] md:ml-[40px] -translate-x-1/2 w-[100px] h-[100px] z-[50];
+    @apply absolute -top-[70px] ml-[30px] md:ml-10 -translate-x-1/2 w-[100px] h-[100px] z-[50];
   }
 
   .person-img img {
@@ -504,17 +502,18 @@
     @apply relative z-10 -translate-y-1/2;
   }
   .newsletter-wrapper .Our-Newsletter {
-    @apply w-full lg:justify-between gap-[60px] xl:gap-[100px] px-[16px] lg:px-[40px] xl:px-[80px] lg:py-[60px] bg-white rounded-[16px] md:rounded-[26px];
+    @apply w-full lg:justify-between gap-[60px] xl:gap-[100px] px-4 lg:px-20 xl:px-20 lg:py-[60px] bg-white rounded-[16px] md:rounded-[26px];
   }
   .mobile-newsletter-wrapper {
-    @apply block lg:hidden gap-[60px] flex flex-col px-[20px] py-[40px] md:px-[40px] md:py-[40px] bg-white rounded-[20px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden;
+    @apply block lg:hidden gap-[60px] flex flex-col px-5 py-10 md:px-10 md:py-10 bg-white rounded-[20px] border border-[#F1F1F1]
+     shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden;
   }
   .desktop-newsletter-wrapper {
     @apply hidden lg:block bg-white rounded-[20px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden 
     lg:mx-[36px] xl:mx-[89px] 2xl:mx-[329px];
   }
   .Our-Newsletter {
-    @apply w-full lg:flex gap-[60px] px-[16px] bg-white rounded-[16px] md:rounded-[26px];
+    @apply w-full lg:flex gap-[60px] px-4 bg-white rounded-[16px] md:rounded-[26px];
   }
 
   .newsletter-heading h3 {
@@ -522,42 +521,47 @@
   }
 
   .form-data {
-    @apply flex flex-col gap-[32px];
+    @apply flex flex-col gap-4 md:gap-8;
   }
 
   .form-data label {
     @apply font-body text-[20px] font-normal tracking-normal leading-none text-[#767E86];
   }
   .form-input {
-    @apply flex flex-col md:flex-row gap-[32px];
+    @apply flex flex-col md:flex-row gap-8;
   }
 
   .form-input input {
-    @apply text-center md:text-left py-[24px] px-[40px] lg:py-[16px] 2xl:px-[40px] md:w-full text-[#FF7757] text-[20px] 2xl:py-[24px] rounded-[12px] bg-[#FFF2EC] outline-none;
+    @apply text-center md:text-left py-6 px-10 lg:py-4 2xl:px-10 md:w-full text-[#FF7757] text-[20px] 2xl:py-6 rounded-[12px] bg-[#FFF2EC] outline-none;
   }
 
   .footer-section h4 {
-    @apply font-body font-normal text-[14px] leading-none tracking-normal text-white;
+    @apply font-body font-normal text-sm leading-none tracking-normal text-white;
   }
 
   .footer-grid {
-    @apply flex flex-col gap-[60px] lg:gap-[16px]
-       px-[16px] py-[80px] 
-       md:pt-[100px] md:pb-[140px] md:px-[32px] 
+    @apply flex flex-col gap-[60px] lg:gap-4
+       px-4 py-20 
+       md:pt-[100px] md:pb-[140px] md:px-8 
        lg:pt-0 2xl:px-[182px]
     lg:flex-row justify-between text-white;
   }
   .footer-section {
-    @apply flex flex-col gap-[16px];
+    @apply flex flex-col gap-4;
   }
   .social-links {
-    @apply flex gap-[24px];
+    @apply flex gap-6;
   }
+
+  .social-links img {
+    @apply cursor-pointer;
+  }
+
   .footer-column h3 {
-    @apply font-body text-[24px] font-medium leading-none tracking-normal text-white;
+    @apply font-body text-2xl font-medium leading-none tracking-normal text-white;
   }
   .footer-menu {
-    @apply flex flex-col gap-[12px] text-[18px] text-white;
+    @apply flex flex-col gap-3 text-lg text-white;
   }
 
   .footer-menu p {
@@ -570,19 +574,19 @@
   /* buttons */
 
   .btn-base {
-    @apply flex items-center justify-center leading-none tracking-normal gap-[12px] text-[20px]
+    @apply flex items-center justify-center leading-none tracking-normal gap-3 text-[20px]
     font-normal transition-all duration-300 font-body;
   }
 
   .btn-plans {
-    @apply relative inline-flex items-center justify-center w-fit p-[20px] text-[18px] font-body font-normal ml-[16px] rounded-[12px];
+    @apply relative inline-flex items-center justify-center w-fit p-[20px] text-lg font-body font-normal ml-[16px] rounded-[12px];
   }
 
   .btn-login {
-    @apply font-body py-[16px] text-[16px] lg:text-[20px] text-black lg:text-white;
+    @apply font-body py-4 text-base lg:text-[20px] text-black lg:text-white;
   }
   .btn-signup {
-    @apply font-body active:scale-95 px-[20px] py-[10px] lg:px-[32px] lg:py-[20px] rounded-[12px];
+    @apply font-body active:scale-95 px-5 py-[10px] lg:px-8 lg:py-5 rounded-[12px];
   }
   .btn-primary {
     @apply bg-[#FF7757] text-white hover:bg-[#e66b4e];
@@ -592,23 +596,24 @@
   }
 
   .btn-book {
-    @apply px-[20px] py-[60px] md:mr-[100px] lg:mr-[96px] 2xl:mr-[235px]
-        lg:px-[20px] lg:py-[40px] 2xl:px-[20px] 2xl:py-[60px]
+    @apply px-5 py-[60px] md:mr-[100px] lg:mr-[96px] 2xl:mr-[235px]
+        lg:px-5 lg:py-10 2xl:px-5 2xl:py-[60px]
          rounded-tr-[20px]
          rounded-br-[20px];
   }
   .btn-book a {
-    @apply flex gap-[12px];
+    @apply flex gap-3;
   }
   .booking-footer-btn {
-    @apply py-[40px] px-[20px] justify-between;
+    @apply py-10 px-5 justify-between;
   }
 
   .arrow-btn {
-    @apply w-[60px] h-[66px] flex gap-[40px] items-center justify-center
-         text-3xl text-white rounded-[12px]
+    @apply px-[28px] py-[20px] flex gap-1 items-center justify-center
+         text-white rounded-[12px]
          duration-300 hover:opacity-90;
   }
+
   .arrow-btn.prev {
     @apply bg-[#1B262E];
   }
@@ -616,28 +621,27 @@
     @apply bg-[#FF7D61];
   }
   .gallery-arrows {
-    @apply flex justify-center lg:justify-end gap-[20px] md:mt-[63px] lg:pr-[32px] 2xl:pr-[182px];
+    @apply flex justify-center lg:justify-end gap-10 md:mt-[63px] lg:pr-[32px] 2xl:pr-[182px];
   }
 
   .destinations-section .desktop-arrows {
-    @apply hidden lg:flex gap-[24px] lg:ml-auto mr-[32px] 2xl:mr-[182px];
+    @apply mr-[32px] 2xl:mr-[182px];
   }
-
   .desktop-arrows {
-    @apply hidden lg:flex gap-[24px] lg:ml-auto mt-[-30px];
+    @apply hidden lg:flex gap-10 lg:ml-auto;
   }
 
   .btn-details {
-    @apply w-fit px-[24px] py-[16px] xl:px-[40px] xl:py-[20px] rounded-[12px];
+    @apply w-fit py-4 px-6 xl:px-10 xl:py-5 rounded-[12px];
   }
   .btn-details button {
     @apply uppercase;
   }
   .mobile-arrows {
-    @apply flex justify-center gap-[40px] lg:hidden;
+    @apply flex justify-center gap-10 lg:hidden;
   }
 
   .footer-btn {
-    @apply py-[16px] px-[40px] text-[20px] font-body  rounded-[12px];
+    @apply py-4 px-10 text-[20px] font-body  rounded-[12px];
   }
 }

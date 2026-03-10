@@ -8,19 +8,6 @@
   --color-title: #172432;
   --color-text: #767e86;
 
-  /* ===== Typography ===== */
-  --text-12: 12px;
-  --text-xs: 13px;
-  --text-sm: 14px;
-  --text-15: 15px;
-  --text-base: 16px;
-  --text-lg: 18px;
-  --text-l: 22px;
-  --text-xl: 26px;
-  --text-2xl: 32px;
-  --text-3xl: 36px;
-  --text-4xl: 50px;
-
   /* =====  letter-spacing ===== */
   --ls-sm: 0.8;
   --ls-tight: 0.34px;
@@ -47,6 +34,7 @@
   --spacing-200: 200px;
   --spacing-234: 234px;
   --spacing-240: 240px;
+  --spacing-320: 320px;
   --spacing-789: 789px;
 }
 @layer base {

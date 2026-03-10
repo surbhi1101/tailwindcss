@@ -34,7 +34,8 @@ import pinterest from "./assets/images/pinterest.png";
 import instagram from "./assets/images/instagram.png";
 import twitter from "./assets/images/twitter.png";
 import hamburger from "./assets/images/hamburger.png";
-
+import nextbtn from "./assets/images/next-btn.png";
+import prevbtn from "./assets/images/prev-btn.png";
 function App() {
   const [readMore, setReadMore] = useState(false);
   const readMoreRef = useRef(null);
@@ -176,7 +177,7 @@ function App() {
               : "bg-transparent"
           }`}
         >
-          <div className="navbar-content">
+          <div className="navbar-content clickable">
             <img src={Logo} alt="Logo" className="logo" />
             <ul className="nav-links">
               <li>
@@ -336,12 +337,6 @@ function App() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        <div className="hero-arrows">
-          <button onClick={() => heroSwiperRef.current?.slidePrev()}>∧</button>
-
-          <button onClick={() => heroSwiperRef.current?.slideNext()}>∨</button>
-        </div>
       </div>
       <main>
         {/* destinations-section */}
@@ -351,24 +346,26 @@ function App() {
               <h2>Popular Destinations</h2>
               <div className="underline-full"></div>
             </div>
-            <div className="section-description section-desc-lg">
+            <div className="heading-bottom section-description section-desc-lg">
               <p>
                 Most popular destinations around the world, from historical
                 places to natural wonders.
               </p>
+
               <div className="desktop-arrows">
-                <div className="arrow-btn prev btn-base clickable">
+                <div className="arrow-btn prev clickable">
                   <button
                     onClick={() => destinationSwiperRef.current?.slidePrev()}
                   >
-                    ‹
+                    <img src={prevbtn} alt="prevbtn" />
                   </button>
                 </div>
-                <div className="arrow-btn next btn-base clickable">
+
+                <div className="arrow-btn next clickable">
                   <button
                     onClick={() => destinationSwiperRef.current?.slideNext()}
                   >
-                    ›
+                    <img src={nextbtn} alt="next-btn" />
                   </button>
                 </div>
               </div>
@@ -441,12 +438,12 @@ function App() {
           <div className="mobile-arrows">
             <div className="arrow-btn prev clickable">
               <button onClick={() => destinationSwiperRef.current?.slidePrev()}>
-                ‹
+                <img src={prevbtn} alt="prevbtn" />
               </button>
             </div>
             <div className="arrow-btn next clickable">
               <button onClick={() => destinationSwiperRef.current?.slideNext()}>
-                ›
+                <img src={nextbtn} alt="next-btn" />
               </button>
             </div>
           </div>
@@ -461,12 +458,16 @@ function App() {
               </div>
               <div className="section-desc-md">
                 <div className="nav-arrows desktop-nav">
-                  <div className="arrow-btn prev btn-base clickable">
-                    <button onClick={prevOffer}>‹</button>
+                  <div className="arrow-btn prev clickable">
+                    <button onClick={prevOffer}>
+                      <img src={prevbtn} alt="prevbtn" />
+                    </button>
                   </div>
 
-                  <div className="arrow-btn next btn-base clickable">
-                    <button onClick={nextOffer}>›</button>
+                  <div className="arrow-btn next clickable">
+                    <button onClick={nextOffer}>
+                      <img src={nextbtn} alt="next-btn" />
+                    </button>
                   </div>
                 </div>
                 <p>Check out our special offer and discounts</p>
@@ -499,7 +500,7 @@ function App() {
                       <p>{offer.price}</p>
                     </div>
 
-                    <div className="btn-base btn-primary btn-details">
+                    <div className="btn-base btn-primary btn-details clickable">
                       <button>Details</button>
                     </div>
                   </div>
@@ -508,12 +509,16 @@ function App() {
             ))}
           </div>
           <div className="nav-arrows mobile-nav">
-            <div className="arrow-btn prev btn-base clickable">
-              <button onClick={prevOffer}>‹</button>
+            <div className="arrow-btn prev clickable">
+              <button onClick={prevOffer}>
+                <img src={prevbtn} alt="prevbtn" />
+              </button>
             </div>
 
-            <div className="arrow-btn next btn-base clickable">
-              <button onClick={nextOffer}>›</button>
+            <div className="arrow-btn next clickable">
+              <button onClick={nextOffer}>
+                <img src={nextbtn} alt="next-btn" />
+              </button>
             </div>
           </div>
         </section>
@@ -771,19 +776,24 @@ function App() {
               <h2>Destination Gallery</h2>
               <div className="underline-lg"></div>
             </div>
-            <div className="section-desc-md">
+            <div className="heading-bottom section-desc-md">
               <p>Our photo gallery on trip</p>
-              <div className="desktop-arrows clickable">
-                <div className="arrow-btn prev btn-base clickable">
-                  <button onClick={prevGallery}>‹</button>
+
+              <div className="desktop-arrows">
+                <div className="arrow-btn prev clickable">
+                  <button onClick={prevGallery}>
+                    <img src={prevbtn} alt="prevbtn" />
+                  </button>
                 </div>
+
                 <div className="arrow-btn next clickable">
-                  <button onClick={nextGallery}>›</button>
+                  <button onClick={nextGallery}>
+                    <img src={nextbtn} alt="next-btn" />
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-
           <div className="gallery-desktop-wrapper">
             {[
               Gallery1,
@@ -817,11 +827,15 @@ function App() {
               ))}
           </div>
           <div className="mobile-arrows">
-            <div className="arrow-btn prev btn-base clickable">
-              <button onClick={prevGallery}>‹</button>
+            <div className="arrow-btn prev clickable">
+              <button onClick={prevGallery}>
+                <img src={prevbtn} alt="prevbtn" />
+              </button>
             </div>
             <div className="arrow-btn next clickable">
-              <button onClick={nextGallery}>›</button>
+              <button onClick={nextGallery}>
+                <img src={nextbtn} alt="next-btn" />
+              </button>
             </div>
           </div>
         </section>
@@ -933,18 +947,16 @@ function App() {
               </SwiperSlide>
             </Swiper>
           </div>
+
           <div className="gallery-arrows">
-            <div className="arrow-btn prev btn-base clickable">
+            <div className="arrow-btn prev clickable">
               <button onClick={() => experiencesSwiperRef.current?.slidePrev()}>
-                ‹
+                <img src={prevbtn} alt="prevbtn" />
               </button>
             </div>
-            <div className="arrow-btn next btn-base clickable">
-              <button
-                className="arrow-btn next"
-                onClick={() => experiencesSwiperRef.current?.slideNext()}
-              >
-                ›
+            <div className="arrow-btn next clickable">
+              <button onClick={() => experiencesSwiperRef.current?.slideNext()}>
+                <img src={nextbtn} alt="next-btn" />
               </button>
             </div>
           </div>
@@ -1009,7 +1021,7 @@ function App() {
                 <div className="footer-column">
                   <h3>Menu</h3>
                 </div>
-                <ul className="footer-menu">
+                <ul className="footer-menu clickable">
                   <li>
                     <a href="#home">Home</a>
                   </li>
@@ -1032,7 +1044,7 @@ function App() {
                 <div className="footer-column">
                   <h3>Information</h3>
                 </div>
-                <ul className="footer-menu">
+                <ul className="footer-menu clickable">
                   <li>
                     <a href="#destinations">Destinations</a>
                   </li>
@@ -1052,11 +1064,17 @@ function App() {
                 <div className="footer-column">
                   <h3>Contact Info</h3>
                 </div>
-                <div className="footer-menu">
-                  <p>+123 456 789</p>
-                  <p>info@travellian.com</p>
-                  <p>1245, New Yourk, USA</p>
-                </div>
+                <ul className="footer-menu clickable">
+                  <li>
+                    <a href="#number">+123 456 789</a>
+                  </li>
+                  <li>
+                    <a href="#mail">info@travellian.com</a>
+                  </li>
+                  <li>
+                    <a href="#address">1245, New Yourk, USA</a>
+                  </li>
+                </ul>
               </div>
               <div className="footer-section">
                 <div className="footer-column">
