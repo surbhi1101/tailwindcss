@@ -630,7 +630,9 @@
   .desktop-arrows {
     @apply hidden lg:flex gap-10 lg:ml-auto mt-[-32px];
   }
-
+  .hero-content h1 .btn-details {
+    @apply w-fit py-4 px-6 xl:px-10 xl:py-5 rounded-[12px];
+  }
   .btn-details {
     @apply w-fit py-4 px-6 xl:px-10 xl:py-5 rounded-[12px];
   }
