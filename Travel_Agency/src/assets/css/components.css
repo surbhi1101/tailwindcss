@@ -628,11 +628,9 @@
     @apply mr-[32px] 2xl:mr-[182px];
   }
   .desktop-arrows {
-    @apply hidden lg:flex gap-10 lg:ml-auto mt-[-32px];
+    @apply hidden lg:flex gap-10 lg:ml-auto mt-[-33px];
   }
-  .hero-content h1 .btn-details {
-    @apply w-fit py-4 px-6 xl:px-10 xl:py-5 rounded-[12px];
-  }
+
   .btn-details {
     @apply w-fit py-4 px-6 xl:px-10 xl:py-5 rounded-[12px];
   }
