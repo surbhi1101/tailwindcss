@@ -167,10 +167,11 @@
   .swiper-pagination-bullet-active {
     @apply !bg-[#FF7757];
   }
+
   /* ===== DESTINATION SECTION ==== */
 
   .section-header {
-    @apply flex flex-col gap-[24px];
+    @apply flex flex-col gap-6;
   }
 
   .destinationSwiper {
@@ -198,18 +199,17 @@
 
   .card-overlay {
     @apply absolute bottom-0 left-0 w-full
-         flex flex-col gap-[17px] px-[20px] pb-[40px]
-         2xl:px-[24px]
-          text-white;
+         flex flex-col gap-[17px] px-5 pb-10
+         2xl:px-6 text-white;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
   }
 
   .place-name {
-    @apply flex gap-[16px];
+    @apply flex gap-4;
   }
 
   .place-name img {
-    @apply w-[16px] h-[24px];
+    @apply w-4 h-6;
   }
 
   .card-overlay h3 {
@@ -287,63 +287,6 @@
   }
   .card-offer {
     @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden;
-  }
-  /* Traveler’s Experiences */
-
-  .heading-subtitle {
-    @apply font-body text-[24px] text-[#767E86] mt-[16px];
-  }
-
-  .experiences {
-    @apply w-full overflow-hidden;
-  }
-
-  .experiencesSwiper .swiper-wrapper {
-    @apply !overflow-visible;
-  }
-
-  .experiences-text p {
-    @apply text-[18px] leading-[23px] tracking-normal font-normal;
-  }
-
-  .person-details {
-    @apply flex flex-col gap-[4px];
-  }
-
-  .person-details h4 {
-    @apply text-[24px] text-[#767E86] tracking-normal leading-none;
-  }
-
-  .person-details p {
-    @apply text-[18px];
-  }
-
-  .star-img {
-    @apply flex gap-[4px];
-  }
-
-  .experiencesSwiper .swiper-slide {
-    @apply mt-[63px] !overflow-visible h-auto flex justify-center;
-  }
-
-  .experiences-card {
-    @apply relative flex flex-col gap-[32px] z-10 2xl:gap-[20px]
-         bg-[#F5F6F7] border border-[#F1F1F1] 
-         rounded-[12px] 
-         px-[20px] pt-[60px] pb-[32px] 
-         lg:px-[40px] lg:pb-[40px] 
-         overflow-visible;
-  }
-
-  .experiences-person {
-    @apply absolute -top-[70px] ml-[30px] md:ml-[40px] -translate-x-1/2 w-[100px] h-[100px] z-[50];
-  }
-
-  .person-img img {
-    @apply relative top-0 left-0 w-[100px] h-[100px]
-         rounded-full border-[6px] border-white
-         object-cover shadow-md;
-    transform: none;
   }
   /* Our-blog */
   .Our-blog {
@@ -530,7 +473,6 @@
   .planner-footer-row span {
     @apply text-[18px] md:text-[24px] font-normal font-body leading-none tracking-normal;
   }
-
   /* GALLERY SECTION */
 
   .Gallery-section .section-header {
@@ -572,6 +514,64 @@
   .gallery-mobile-stack .gallery-card {
     @apply h-[300px] md:h-[450px] rounded-[26px];
   }
+  /* Traveler’s Experiences */
+
+  .heading-subtitle {
+    @apply font-body text-[24px] text-[#767E86] mt-[16px];
+  }
+
+  .experiences {
+    @apply w-full overflow-hidden;
+  }
+
+  .experiencesSwiper .swiper-wrapper {
+    @apply !overflow-visible;
+  }
+
+  .experiences-text p {
+    @apply text-[18px] leading-[23px] tracking-normal font-normal;
+  }
+
+  .person-details {
+    @apply flex flex-col gap-[4px];
+  }
+
+  .person-details h4 {
+    @apply text-[24px] text-[#767E86] tracking-normal leading-none;
+  }
+
+  .person-details p {
+    @apply text-[18px];
+  }
+
+  .star-img {
+    @apply flex gap-[4px];
+  }
+
+  .experiencesSwiper .swiper-slide {
+    @apply mt-[63px] !overflow-visible h-auto flex justify-center;
+  }
+
+  .experiences-card {
+    @apply relative flex flex-col gap-[32px] z-10 2xl:gap-[20px]
+         bg-[#F5F6F7] border border-[#F1F1F1] 
+         rounded-[12px] 
+         px-[20px] pt-[60px] pb-[32px] 
+         lg:px-[40px] lg:pb-[40px] 
+         overflow-visible;
+  }
+
+  .experiences-person {
+    @apply absolute -top-[70px] ml-[30px] md:ml-[40px] -translate-x-1/2 w-[100px] h-[100px] z-[50];
+  }
+
+  .person-img img {
+    @apply relative top-0 left-0 w-[100px] h-[100px]
+         rounded-full border-[6px] border-white
+         object-cover shadow-md;
+    transform: none;
+  }
+
   /* footer */
   .newsletter-wrapper {
     @apply relative z-10 -translate-y-1/2;
@@ -598,10 +598,6 @@
     @apply flex flex-col gap-[16px];
   }
 
-  .input-group {
-    @apply flex flex-col gap-[16px];
-  }
-
   .form-data {
     @apply flex flex-col gap-[32px];
   }
@@ -623,8 +619,9 @@
 
   .footer-grid {
     @apply flex flex-col gap-[60px] lg:gap-[16px]
-       px-[16px]  pt-[80px] md:pt-[100px]
-         md:px-[32px] md:pb-[140px] lg:pt-0 2xl:px-[182px]
+       px-[16px] py-[80px] 
+       md:pt-[100px] md:pb-[140px] md:px-[32px] 
+       lg:pt-0 2xl:px-[182px]
     lg:flex-row justify-between text-white;
   }
   .footer-section {

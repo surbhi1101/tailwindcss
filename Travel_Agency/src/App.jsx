@@ -49,9 +49,9 @@ function App() {
   const [activeCard, setActiveCard] = useState(null);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   const [isSticky, setIsSticky] = useState(false);
-  const nextOffers = () => {
-    setOfferIndex((prev) => (prev >= offers.length - 3 ? 0 : prev + 1));
-  };
+  const [offerIndex, setOfferIndex] = useState(0);
+  const cardsPerView = isDesktop ? 3 : 1;
+  // offer
   const offers = [
     {
       img: veronika,
@@ -78,23 +78,47 @@ function App() {
       desc: "5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.",
     },
   ];
-  const prevOffers = () => {
-    setOfferIndex((prev) =>
-      prev <= 0 ? offers.length - cardsPerView : prev - 1,
-    );
-  };
-  const handleNext = () => {
+
+  const nextOffer = () => {
     setOfferIndex((prev) =>
       prev >= offers.length - cardsPerView ? 0 : prev + 1,
     );
   };
-  const cardsPerView = window.innerWidth < 1152 ? 1 : 3;
-  const [offerIndex, setOfferIndex] = useState(0);
+
+  const prevOffer = () => {
+    setOfferIndex((prev) =>
+      prev <= 0 ? offers.length - cardsPerView : prev - 1,
+    );
+  };
 
   const visibleOffers = offers.slice(offerIndex, offerIndex + cardsPerView);
-  const handlePrev = () => {
-    setGalleryIndex(galleryIndex === 4 ? 0 : 4);
+
+  // gallery-img
+  const galleryImages = [
+    Gallery1,
+    Gallery2,
+    Gallery3,
+    Gallery4,
+    trip1,
+    trip2,
+    trip3,
+    trip4,
+  ];
+
+  const nextGallery = () => {
+    setGalleryIndex((prev) =>
+      prev >= galleryImages.length - 4 ? 0 : prev + 4,
+    );
   };
+
+  const prevGallery = () => {
+    setGalleryIndex((prev) =>
+      prev <= 0 ? galleryImages.length - 4 : prev - 4,
+    );
+  };
+
+  const visibleGallery = galleryImages.slice(galleryIndex, galleryIndex + 4);
+
   const toggleCard = (index) => {
     setActiveCard(activeCard === index ? null : index);
   };
@@ -438,11 +462,11 @@ function App() {
               <div className="section-desc-md">
                 <div className="nav-arrows desktop-nav">
                   <div className="arrow-btn prev btn-base clickable">
-                    <button onClick={prevOffers}>‹</button>
+                    <button onClick={prevOffer}>‹</button>
                   </div>
 
                   <div className="arrow-btn next btn-base clickable">
-                    <button onClick={nextOffers}>›</button>
+                    <button onClick={nextOffer}>›</button>
                   </div>
                 </div>
                 <p>Check out our special offer and discounts</p>
@@ -485,11 +509,11 @@ function App() {
           </div>
           <div className="nav-arrows mobile-nav">
             <div className="arrow-btn prev btn-base clickable">
-              <button onClick={prevOffers}>‹</button>
+              <button onClick={prevOffer}>‹</button>
             </div>
 
             <div className="arrow-btn next btn-base clickable">
-              <button onClick={nextOffers}>›</button>
+              <button onClick={nextOffer}>›</button>
             </div>
           </div>
         </section>
@@ -754,10 +778,10 @@ function App() {
               <p>Our photo gallery on trip</p>
               <div className="desktop-arrows clickable">
                 <div className="arrow-btn prev btn-base clickable">
-                  <button onClick={handlePrev}>‹</button>
+                  <button onClick={prevGallery}>‹</button>
                 </div>
                 <div className="arrow-btn next clickable">
-                  <button onClick={handleNext}>›</button>
+                  <button onClick={nextGallery}>›</button>
                 </div>
               </div>
             </div>
@@ -783,22 +807,24 @@ function App() {
           </div>
 
           <div className="gallery-mobile-wrapper">
-            {[Gallery1, Gallery2, Gallery3, Gallery4].map((img, idx) => (
-              <div key={idx} className="gallery-card-mobile">
-                <img
-                  src={img}
-                  className="gallery-img-mobile "
-                  alt="mobile gallery"
-                />
-              </div>
-            ))}
+            {galleryImages
+              .slice(galleryIndex, galleryIndex + 4)
+              .map((img, idx) => (
+                <div key={idx} className="gallery-card-mobile">
+                  <img
+                    src={img}
+                    className="gallery-img-mobile"
+                    alt="mobile gallery"
+                  />
+                </div>
+              ))}
           </div>
           <div className="mobile-arrows">
             <div className="arrow-btn prev btn-base clickable">
-              <button onClick={handlePrev}>‹</button>
+              <button onClick={prevGallery}>‹</button>
             </div>
             <div className="arrow-btn next clickable">
-              <button onClick={handleNext}>›</button>
+              <button onClick={nextGallery}>›</button>
             </div>
           </div>
         </section>

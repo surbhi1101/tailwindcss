@@ -149,7 +149,7 @@
 }
 
 .section-desc-lg p {
-  @apply text-[18px] md:text-[20px] lg:text-[24px] md:max-w-[85%] xl:max-w-full;
+  @apply text-[18px] md:text-[20px] lg:text-[24px] md:max-w-[70%] xl:max-w-full;
 }
 .section-desc-md p {
   @apply text-[18px] md:text-[24px];
@@ -162,7 +162,7 @@
 }
 
 .section-desc-md {
-  @apply flex;
+  @apply md:flex;
 }
 
 .section-desc-sm p {
