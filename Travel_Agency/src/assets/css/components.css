@@ -84,10 +84,6 @@
   .hero-content p {
     @apply text-[18px] md:text-[20px] lg:text-[24px] text-white tracking-normal leading-none;
   }
-
-  .hero-mobile-subtitle {
-    @apply text-white text-[16px];
-  }
   .mobile-booking-card {
     @apply bg-white rounded-[16px]
            shadow-2xl gap-[60px]
@@ -159,15 +155,6 @@
   .hero-nav button:active {
     @apply text-[#FF7757];
   }
-
-  .swiper-pagination-bullet {
-    @apply !bg-white !opacity-100;
-  }
-
-  .swiper-pagination-bullet-active {
-    @apply !bg-[#FF7757];
-  }
-
   /* ===== DESTINATION SECTION ==== */
 
   .section-header {
@@ -306,7 +293,7 @@
   }
 
   .blog-text {
-    @apply flex flex-col gap-[24px] lg:py-[32px] xl:py-[45px] 2xl:py-[106px];
+    @apply flex flex-col gap-[24px] lg:py-[32px] xl:py-[45px] 2xl:py-[106px] lg:flex-1;
   }
   .blog-description p {
     @apply font-normal text-[18px] xl:text-[24px] tracking-normal leading-[42px] xl:leading-[52px] text-[#172432];
@@ -320,9 +307,6 @@
     @apply lg:flex-1;
   }
 
-  .blog-text {
-    @apply lg:flex-1;
-  }
   /* Trip-planners */
   .trip-planners-section .heading-block {
     @apply md:w-[50%] lg:w-[66%] xl:w-[50%] 2xl:w-[25%];
@@ -330,25 +314,6 @@
   .destinationSwiper .planner-content {
     @apply flex flex-col gap-[20px];
   }
-  .planner-heading {
-    @apply flex flex-col gap-[32px] max-w-[394px];
-  }
-  .planner-title h2 {
-    @apply font-heading text-[40px] lg:text-[64px] font-normal leading-none tracking-normal text-[#172432];
-  }
-  .planner-description p {
-    @apply font-body font-normal text-[18px]
-         md:max-w-[420px] lg:max-w-full
-         leading-relaxed;
-  }
-  .planner-cards-wrapper {
-    @apply flex-1 w-full overflow-visible py-[73px];
-  }
-
-  .planner-cards {
-    @apply flex items-center justify-center lg:justify-start gap-[32px];
-  }
-
   .planner-card {
     @apply relative h-[350px] w-[250px] xl:h-[399px] xl:w-[300px] rounded-[26px] overflow-hidden z-10 -mt-12 transition-all;
   }
@@ -407,19 +372,12 @@
     @apply mt-0;
   }
 
-  .featured-card {
-    @apply h-[500px] lg:h-[580px] -mt-12 z-20 shadow-2xl opacity-100;
-  }
   .planner-stack {
     @apply w-full flex flex-col gap-[40px];
   }
 
   .card-active .planner-image-wrapper {
     transform: translateY(-120px);
-  }
-
-  .planner-btn-wrapper {
-    @apply relative inline-block mt-8;
   }
 
   .decor-box-navy {
@@ -450,9 +408,6 @@
 
   .planner-data {
     @apply flex justify-between;
-  }
-  .planner-meta-row h3 {
-    @apply text-[20px] font-semibold;
   }
 
   .planner-tag p {
@@ -509,10 +464,6 @@
 
   .gallery-img-mobile {
     @apply w-full h-[350px] object-cover;
-  }
-
-  .gallery-mobile-stack .gallery-card {
-    @apply h-[300px] md:h-[450px] rounded-[26px];
   }
   /* Traveler’s Experiences */
 
@@ -716,9 +667,5 @@
 
   .footer-btn {
     @apply py-[16px] px-[40px] text-[20px] font-body  rounded-[12px];
-  }
-
-  .view-trip {
-    @apply p-[20px] rounded-[12px] w-fit;
   }
 }
