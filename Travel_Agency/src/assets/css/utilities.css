@@ -132,7 +132,7 @@
 }
 
 .section-desc-sm p {
-  @apply text-[18px];
+  @apply text-[18px] max-w-[100%] md:max-w-[95%] xl:max-w-[85%] 2xl:max-w-[98%];
 }
 
 .underline-sm,
