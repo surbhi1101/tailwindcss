@@ -30,7 +30,7 @@
   .nav-links li a {
     @apply transition-all duration-200 hover:border-b-[3px] hover:font-medium hover:border-[#FF7757] hover:pb-1
     text-base lg:text-xl
-    font-body font-normal leading-none tracking-normal;
+    font-body    leading-[100%];
   }
 
   .auth-buttons {
@@ -57,7 +57,6 @@
     @apply w-full md:h-[789px] lg:h-screen object-cover;
   }
 
-
   .hero-overlay {
     @apply absolute inset-0 bg-black/25 flex flex-col 
     gap-[100px] lg:gap-[140px]
@@ -78,11 +77,11 @@
            md:text-[54px]
            lg:text-[64px]
            xl:text-[84px]
-           lg:max-w-[72%] text-white leading-none tracking-normal;
+           lg:max-w-[72%] text-white leading-[100%];
   }
 
   .hero-content p {
-    @apply text-lg md:text-xl lg:text-2xl text-white tracking-normal leading-none;
+    @apply text-lg md:text-xl lg:text-2xl text-white   leading-[100%];
   }
   .mobile-booking-card {
     @apply bg-white rounded-[16px]
@@ -114,7 +113,7 @@
 
   .booking-field label {
     @apply text-sm md:text-base uppercase font-body
-           text-[#767E86] tracking-normal leading-none;
+           text-[#767E86]   leading-[100%];
   }
 
   .booking-field input,
@@ -169,12 +168,20 @@
   }
 
   .card-overlay {
-    @apply absolute bottom-0 left-0 w-full
-         flex flex-col gap-[17px] px-5 pb-10
-         2xl:px-6 text-white;
+    @apply absolute bottom-0 left-0 w-full text-white
+         flex flex-col gap-[17px] 
+         px-5 pb-10
+         lg:px-6;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
   }
 
+  .card-overlay h3 {
+    @apply text-2xl md:text-[28px] font-medium leading-[100%] text-white;
+  }
+
+  .card-overlay p {
+    @apply text-lg md:text-2xl leading-[100%] text-white flex items-center;
+  }
   .place-name {
     @apply flex gap-4;
   }
@@ -182,66 +189,57 @@
   .place-name img {
     @apply w-4 h-6;
   }
-
-  .card-overlay h3 {
-    @apply text-2xl md:text-[28px] font-medium leading-none tracking-normal text-white;
-  }
-
-  .card-overlay p {
-    @apply text-lg md:text-2xl font-normal leading-none tracking-normal text-white;
-  }
   /* Special-offer */
-  .section-description {
-    @apply flex;
+
+  .offer-cards {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+    transition: transform 0.5s ease;
   }
-  .special-offer .section-description p {
-    @apply md:ml-auto;
+  .card-offer {
+    @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden;
+  }
+
+  .card-img img {
+    @apply w-full h-[286px] object-cover;
+  }
+
+  .card-content {
+    @apply flex flex-col gap-6 p-5 
+    md:px-6 md:py-5 
+    xl:py-10;
   }
 
   .card-title {
     @apply flex flex-col gap-2;
   }
 
-  .card-img img {
-    @apply w-full h-[286px] object-cover;
-    
-  }
-
-  .card-content {
-    @apply p-20 md:p-0;
-    @apply flex flex-col gap-6 p-5 md:px-6 py-5 xl:py-10;
-  }
-
-  .card-heading {
-    @apply flex flex-col gap-2;
-  }
-
-  .card-content h3 {
-    @apply font-card-title text-[28px] font-normal text-[#767E86] leading-none tracking-normal;
+  .card-title h3 {
+    @apply font-card-title text-[28px] text-[#767E86] leading-[100%];
   }
 
   .card-content p {
-    @apply text-base md:text-lg text-[#172432] leading-[20px] md:leading-none tracking-normal;
+    @apply text-base md:text-lg text-[#172432] leading-[20px] md:leading-[100%];
   }
 
   .offer-price {
     @apply flex flex-col md:flex-row gap-5 md:justify-between md:items-center;
   }
-  .planner-footer-row span .offer-price p:first-child {
-    @apply text-[#767E86] font-normal text-lg xl:text-xl py-[7px] xl:py-[11.2px];
-  }
-
-  .offer-price p:nth-child(1) {
-    @apply text-lg xl:text-xl flex items-center font-normal leading-none tracking-normal text-[#767E86];
-  }
-
-  .offer-price p:nth-child(2) {
-    @apply text-[32px] lg:text-[28px] xl:text-[40px] font-normal font-body leading-none tracking-normal text-[#ff7757];
-  }
-
   .price-text {
     @apply flex gap-2;
   }
+  .planner-footer-row span .offer-price p:first-child {
+    @apply text-[#767E86] text-lg xl:text-xl py-[7px] xl:py-[11.2px];
+  }
+
+  .offer-price p:nth-child(1) {
+    @apply text-lg xl:text-xl flex items-center leading-[100%] text-[#767E86];
+  }
+
+  .offer-price p:nth-child(2) {
+    @apply font-body leading-[100%] text-[#ff7757]
+     text-[32px] lg:text-[28px] xl:text-[40px];
+  }
+
   .special-offer .nav-arrows {
     @apply justify-center;
   }
@@ -253,14 +251,10 @@
   .mobile-nav {
     @apply flex lg:hidden gap-10;
   }
-  .offer-cards {
-    @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
-    transition: transform 0.5s ease;
-  }
-  .card-offer {
-    @apply bg-[#FFF8F1] rounded-[26px] overflow-hidden;
-  }
   /* Our-blog */
+  .blog-title :is(h1, h2, h3, h4, h5, h6) {
+    @apply md:w-[50%] lg:w-[70%] xl:w-[60%] leading-[100%] text-[40px] md:text-[54px];
+  }
 
   .blog-content {
     @apply flex flex-col lg:flex-row gap-8;
@@ -270,19 +264,15 @@
     @apply rounded-[26px] h-[314px] md:h-[555px] lg:h-[686px] xl:h-[802px] 2xl:h-[873px] w-full object-cover;
   }
 
-  .blog-title :is(h1, h2, h3, h4, h5, h6) {
-    @apply font-normal text-[40px] md:text-[54px] md:w-[50%] lg:w-[70%] xl:w-[60%] leading-none tracking-normal;
-  }
-
   .blog-text {
     @apply flex flex-col gap-6 lg:py-8 xl:py-[45px] 2xl:py-[106px] lg:flex-1;
   }
   .blog-description p {
-    @apply font-normal text-lg xl:text-2xl tracking-normal leading-[42px] xl:leading-[52px] text-[#172432];
+    @apply text-lg xl:text-2xl leading-[42px] xl:leading-[52px] text-[#172432];
   }
 
   .blog-readmore {
-    @apply flex gap-5 font-body font-normal text-2xl text-[#FF7757] tracking-normal leading-[52px];
+    @apply flex gap-5 font-body text-2xl text-[#FF7757] leading-[52px];
   }
 
   .blog-image {
@@ -302,20 +292,20 @@
     @apply flex justify-between items-center;
   }
 
-  .planner-tag h4 {
-    @apply font-body font-normal text-lg md:text-2xl tracking-normal leading-none uppercase;
+  .planner-tag p {
+    @apply font-body text-lg md:text-2xl leading-[100%] uppercase text-[#172432];
   }
 
   .planner-tag span {
-    @apply text-lg md:text-2xl lg:text-lg leading-none font-body tracking-normal uppercase font-normal;
+    @apply text-lg md:text-2xl lg:text-lg leading-[100%] font-body uppercase;
   }
 
   .planner-price span {
-    @apply font-body text-lg md:text-2xl lg:text-lg tracking-normal leading-none font-normal;
+    @apply font-body text-lg md:text-2xl lg:text-lg leading-[100%];
   }
 
   .planner-card-title h3 {
-    @apply font-heading font-semibold text-[28px] md:text-[32px] lg:text-[28px] leading-none tracking-normal;
+    @apply font-heading font-semibold text-[28px] md:text-[32px] lg:text-[28px] leading-[100%];
   }
 
   .planner-footer {
@@ -323,7 +313,7 @@
   }
 
   .planner-duration span {
-    @apply font-body font-normal text-lg leading-none tracking-normal;
+    @apply font-body text-lg leading-[100%];
   }
 
   .planner-image-wrapper {
@@ -390,36 +380,27 @@
     @apply flex justify-between;
   }
 
-  .planner-tag p {
-    @apply text-lg font-normal leading-none tracking-normal uppercase;
-  }
-
-  .planner-city {
-    @apply font-semibold text-[28px] md:text-[32px] leading-none tracking-normal;
+  .planner-city h3 {
+    @apply font-semibold text-[28px] md:text-[32px] leading-[100%];
   }
 
   .planner-price {
-    @apply font-body text-lg md:text-2xl font-normal tracking-normal leading-none;
+    @apply font-body text-lg md:text-2xl leading-[100%];
   }
 
   .planner-footer-row {
     @apply flex justify-between items-center;
   }
   .planner-footer-row span {
-    @apply text-lg md:text-2xl font-normal font-body leading-none tracking-normal;
+    @apply text-lg md:text-2xl font-body leading-[100%];
   }
+
   /* GALLERY SECTION */
-
-  .Gallery-section .section-header {
-    @apply flex flex-col lg:flex-row lg:justify-between lg:items-end mb-12 lg:mb-[60px];
-  }
-
   .gallery-card {
-    @apply relative bg-white ease-in-out cursor-pointer
-     rounded-[26px] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-6;
+    @apply relative bg-white ease-in-out cursor-pointer rounded-[26px] overflow-hidden shadow-lg transition-all duration-500;
   }
 
-  .gallery-card:hover {
+  .gallery-card.active {
     @apply -translate-y-[50px];
   }
 
@@ -427,10 +408,9 @@
     @apply w-full h-full object-cover transition-transform duration-700;
   }
 
-  .gallery-card:hover img {
+  .gallery-card.active img {
     @apply scale-110;
   }
-
   .gallery-mobile-wrapper {
     @apply flex flex-col gap-8 lg:hidden;
   }
@@ -445,6 +425,7 @@
   .gallery-img-mobile {
     @apply w-full h-[350px] object-cover;
   }
+
   /* Traveler’s Experiences */
 
   .experiences {
@@ -456,7 +437,7 @@
   }
 
   .experiences-text p {
-    @apply text-lg leading-[23px] tracking-normal font-normal;
+    @apply text-lg leading-[23px];
   }
 
   .person-details {
@@ -464,15 +445,11 @@
   }
 
   .person-details h4 {
-    @apply text-2xl text-[#767E86] tracking-normal leading-none;
+    @apply text-2xl text-[#767E86]  leading-[100%];
   }
 
   .person-details p {
     @apply text-lg;
-  }
-
-  .star-img {
-    @apply flex gap-1;
   }
 
   .experiencesSwiper .swiper-slide {
@@ -480,7 +457,7 @@
   }
 
   .experiences-card {
-    @apply relative flex flex-col gap-8 z-10 2xl:gap-5
+    @apply relative flex flex-col gap-5 z-10 2xl:gap-5
          bg-[#F5F6F7] border border-[#F1F1F1] 
          rounded-[12px] 
          px-5 pt-[60px] pb-8 
@@ -519,7 +496,7 @@
   }
 
   .newsletter-heading h3 {
-    @apply font-normal text-[40px] md:text-[54px] xl:text-[64px] text-[#767E86];
+    @apply text-[40px] md:text-[54px] xl:text-[64px] text-[#767E86];
   }
 
   .form-data {
@@ -527,18 +504,18 @@
   }
 
   .form-data label {
-    @apply font-body text-xl font-normal tracking-normal leading-none text-[#767E86];
+    @apply font-body text-xl leading-[100%] text-[#767E86];
   }
   .form-input {
     @apply flex flex-col md:flex-row gap-8;
   }
 
   .form-input input {
-    @apply text-center md:text-left py-6 lg:py-4 2xl:px-10 md:w-full text-[#FF7757] text-xl 2xl:py-6 rounded-[12px] bg-[#FFF2EC] outline-none;
+    @apply text-center md:text-left py-6 md:px-6 lg:py-4 2xl:px-10 md:w-full text-[#FF7757] text-xl 2xl:py-6 rounded-[12px] bg-[#FFF2EC] outline-none;
   }
 
   .footer-section h4 {
-    @apply font-body font-normal text-sm leading-none tracking-normal text-white;
+    @apply font-body    text-sm leading-[100%]   text-white;
   }
 
   .footer-grid {
@@ -560,7 +537,7 @@
   }
 
   .footer-column h3 {
-    @apply font-body text-2xl font-medium leading-none tracking-normal text-white;
+    @apply font-body text-2xl font-medium leading-[100%]   text-white;
   }
   .footer-menu {
     @apply flex flex-col gap-3 text-lg text-white;
@@ -576,12 +553,12 @@
   /* buttons */
 
   .btn-base {
-    @apply flex items-center justify-center leading-none tracking-normal gap-3 text-xl
-    font-normal transition-all duration-300 font-body;
+    @apply flex items-center justify-center leading-[100%]   gap-3 text-xl
+       transition-all duration-300 font-body;
   }
 
   .btn-plans {
-    @apply relative inline-flex items-center justify-center w-fit p-[20px] text-lg font-body font-normal ml-[16px] rounded-[12px];
+    @apply relative inline-flex items-center justify-center w-fit p-[20px] text-lg font-body    ml-[16px] rounded-[12px];
   }
 
   .btn-login {

@@ -39,15 +39,15 @@
 }
 @layer base {
   body {
-    @apply font-body font-normal;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size:18px;
   }
-
+  
   p {
     color: var(--color-text);
-    font-family: theme(--font-body);
-    font-size: theme(--text-base);
+    font-family: var(--font-body);
   }
-
   h1,
   h2,
   h3,
@@ -55,6 +55,6 @@
   h5,
   h6 {
     color: var(--color-title);
-    font-family: theme(--font-heading);
+    font-family: var(--font-heading);
   }
 }

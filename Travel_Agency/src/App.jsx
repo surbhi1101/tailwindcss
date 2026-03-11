@@ -51,6 +51,7 @@ function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   const [isSticky, setIsSticky] = useState(false);
   const [offerIndex, setOfferIndex] = useState(0);
+  const [activeGallery, setActiveGallery] = useState(null);
   const cardsPerView = isDesktop ? 3 : 1;
   // offer
   const offers = [
@@ -346,7 +347,7 @@ function App() {
               <h2>Popular Destinations</h2>
               <div className="underline-full"></div>
             </div>
-            <div className="heading-bottom section-description section-desc-lg">
+            <div className="heading-bottom section-desc-lg">
               <p>
                 Most popular destinations around the world, from historical
                 places to natural wonders.
@@ -450,28 +451,26 @@ function App() {
         </section>
         {/* special-offer */}
         <section className="special-offer animate-fadeIn-scroll">
-          <div className="offer-header">
-            <div className="offer-desc">
-              <div className="heading-block2">
-                <h2>Special Offer</h2>
-                <div className="underline-md"></div>
-              </div>
-              <div className="section-desc-md">
-                <div className="nav-arrows desktop-nav">
-                  <div className="arrow-btn prev clickable">
-                    <button onClick={prevOffer}>
-                      <img src={prevbtn} alt="prevbtn" />
-                    </button>
-                  </div>
-
-                  <div className="arrow-btn next clickable">
-                    <button onClick={nextOffer}>
-                      <img src={nextbtn} alt="next-btn" />
-                    </button>
-                  </div>
+          <div className="offer-desc">
+            <div className="heading-title">
+              <h2>Special Offer</h2>
+              <div className="underline-md"></div>
+            </div>
+            <div className="section-desc-md">
+              <div className="nav-arrows desktop-nav">
+                <div className="arrow-btn prev clickable">
+                  <button onClick={prevOffer}>
+                    <img src={prevbtn} alt="prevbtn" />
+                  </button>
                 </div>
-                <p>Check out our special offer and discounts</p>
+
+                <div className="arrow-btn next clickable">
+                  <button onClick={nextOffer}>
+                    <img src={nextbtn} alt="next-btn" />
+                  </button>
+                </div>
               </div>
+              <p>Check out our special offer and discounts</p>
             </div>
           </div>
           <div className="offer-cards">
@@ -524,11 +523,9 @@ function App() {
         </section>
         {/* Blog-section */}
         <section className="Blog-section animate-fadeIn-scroll">
-          <div className="section-header">
-            <div className="heading">
-              <div className="section-title">
-                <h2>Our Blog</h2>
-              </div>
+          <div className="heading-block">
+            <div className="heading-title">
+              <h2>Our Blog</h2>
               <div className="underline-sm"></div>
             </div>
             <div className="section-desc-md">
@@ -647,7 +644,7 @@ function App() {
                 <div className="planner-mobile-details">
                   <div className="planner-data">
                     <div className="planner-tag">
-                      <h4>Guided Tour</h4>
+                      <p>Guided Tour</p>
                     </div>
 
                     <div className="planner-price">
@@ -679,7 +676,7 @@ function App() {
                 <div className="planner-mobile-details">
                   <div className="planner-data">
                     <div className="planner-tag">
-                      <h4>Guided Tour</h4>
+                      <p>Guided Tour</p>
                     </div>
 
                     <div className="planner-price">
@@ -711,7 +708,7 @@ function App() {
                 <div className="planner-mobile-details">
                   <div className="planner-data">
                     <div className="planner-tag">
-                      <h4>Guided Tour</h4>
+                      <p>Guided Tour</p>
                     </div>
 
                     <div className="planner-price">
@@ -743,7 +740,7 @@ function App() {
                 <div className="planner-mobile-details">
                   <div className="planner-data">
                     <div className="planner-tag">
-                      <h4>Guided Tour</h4>
+                      <p>Guided Tour</p>
                     </div>
 
                     <div className="planner-price">
@@ -807,7 +804,15 @@ function App() {
             ]
               .slice(galleryIndex, galleryIndex + 4)
               .map((img, idx) => (
-                <div key={idx} className="gallery-card">
+                <div
+                  key={idx}
+                  className={`gallery-card ${
+                    activeGallery === idx ? "active" : ""
+                  }`}
+                  onClick={() =>
+                    setActiveGallery(activeGallery === idx ? null : idx)
+                  }
+                >
                   <img src={img} className="gallery-img" alt="gallery" />
                 </div>
               ))}
@@ -858,10 +863,10 @@ function App() {
               onSwiper={(swiper) => (experiencesSwiperRef.current = swiper)}
               breakpoints={{
                 320: { slidesPerView: 1 },
-                768: { slidesPerView: 1.6 },
-                1152: { slidesPerView: 2.2 },
-                1440: { slidesPerView: 2.3 },
-                1920: { slidesPerView: 2.5 },
+                768: { slidesPerView: 1.4 },
+                1152: { slidesPerView: 2.16 },
+                1440: { slidesPerView: 2.43 },
+                1920: { slidesPerView: 2.55 },
               }}
             >
               <SwiperSlide>
