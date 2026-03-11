@@ -57,6 +57,7 @@
     @apply w-full md:h-[789px] lg:h-screen object-cover;
   }
 
+
   .hero-overlay {
     @apply absolute inset-0 bg-black/25 flex flex-col 
     gap-[100px] lg:gap-[140px]
@@ -203,11 +204,12 @@
 
   .card-img img {
     @apply w-full h-[286px] object-cover;
+    
   }
 
   .card-content {
     @apply p-20 md:p-0;
-    @apply flex flex-col gap-6 px-6 py-5 lg:px-6 lg:py-5 xl:py-10;
+    @apply flex flex-col gap-6 p-5 md:px-6 py-5 xl:py-10;
   }
 
   .card-heading {
