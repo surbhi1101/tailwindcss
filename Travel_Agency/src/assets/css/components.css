@@ -487,6 +487,7 @@
   }
   .desktop-newsletter-wrapper {
     @apply hidden lg:block bg-white rounded-[20px] border border-[#F1F1F1] shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden 
+   
     lg:mx-[36px] xl:mx-[89px] 2xl:mx-[329px];
   }
   .Our-Newsletter {
@@ -619,6 +620,6 @@
   }
 
   .footer-btn {
-    @apply py-4 px-10 text-xl font-body rounded-[12px];
+    @apply py-6 px-10 text-xl font-body rounded-[12px];
   }
 }
