@@ -202,7 +202,7 @@ function App() {
               <div className="btn-base btn-login clickable">
                 <a href="#login">Login</a>
               </div>
-              <div className="btn-base btn-primary btn-signup clickable">
+              <div className="btn-base btn-primary btn-signup clickable btn-anim">
                 <a href="#signup">Sign Up</a>
               </div>
             </div>
@@ -240,8 +240,10 @@ function App() {
                 <div className="btn-login btn-base clickable">
                   <a href="#login">Login</a>
                 </div>
-                <div className="btn-signup btn-primary clickable">
-                  <a href="#signup">Sign Up</a>
+                <div className="btn-signup btn-primary btn-anim clickable">
+                  <a href="#signup" onClick={(e) => e.preventDefault()}>
+                    Sign Up
+                  </a>
                 </div>
               </div>
             </div>
@@ -279,7 +281,9 @@ function App() {
               </div>
             </div>
             <div className="booking-footer-btn btn-base btn-primary btn-heading-lg clickable">
-              <a href="#booking">Book Now</a>
+              <a href="#booking" onClick={(e) => e.preventDefault()}>
+                Book Now
+              </a>
               <span>→</span>
             </div>
           </div>
@@ -329,7 +333,9 @@ function App() {
                       </div>
                     </div>
                     <div className="btn-base btn-primary btn-heading-lg btn-book clickable">
-                      <a href="#booking">Book Now</a>
+                      <a href="#booking" onClick={(e) => e.preventDefault()}>
+                        Book Now
+                      </a>
                       <span>→</span>
                     </div>
                   </div>
@@ -354,7 +360,7 @@ function App() {
               </p>
 
               <div className="desktop-arrows">
-                <div className="arrow-btn prev clickable">
+                <div className="arrow-btn prev clickable ">
                   <button
                     onClick={() => destinationSwiperRef.current?.slidePrev()}
                   >
@@ -499,8 +505,10 @@ function App() {
                       <p>{offer.price}</p>
                     </div>
 
-                    <div className="btn-base btn-primary btn-details clickable">
-                      <button>Details</button>
+                    <div className="btn-base btn-primary btn-details clickable btn-anim">
+                      <a href="#" onClick={(e) => e.preventDefault()}>
+                        Details
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -574,7 +582,9 @@ function App() {
             <div className="btn-base btn-primary btn-plans">
               <span className="decor-box-navy"></span>
               <span className="decor-box-grey "></span>
-              <a href="#">View all trip plans</a>
+              <a href="#" onClick={(e) => e.preventDefault()}>
+                View all trip plans
+              </a>
             </div>
           </div>
 
@@ -586,7 +596,7 @@ function App() {
               breakpoints={{
                 1152: { slidesPerView: 2.4 },
                 1440: { slidesPerView: 2.9 },
-                1920: { slidesPerView: 3.98 },
+                1920: { slidesPerView: 3.9 },
               }}
             >
               {[trip1, trip2, trip3, trip4].map((trip, index) => (

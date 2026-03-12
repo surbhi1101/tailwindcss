@@ -587,9 +587,8 @@
   }
 
   .arrow-btn {
-    @apply px-[28px] py-5 flex gap-1 items-center justify-center
-         text-white rounded-[12px]
-         duration-300 hover:opacity-90;
+    @apply px-[28px] py-5 flex gap-1 items-center justify-center text-white rounded-[12px]
+   duration-300 hover:opacity-90;
   }
 
   .arrow-btn.prev {
@@ -621,5 +620,32 @@
 
   .footer-btn {
     @apply py-6 px-10 text-xl font-body rounded-[12px];
+  }
+  .btn-anim {
+    @apply relative overflow-hidden inline-flex items-center justify-center;
+  }
+
+  /* before */
+
+  .btn-anim::before {
+    content: "";
+    @apply absolute inset-0 bg-[#320d05] transition-transform duration-300;
+    transform: translateX(-100%);
+    z-index: 1;
+  }
+
+  .btn-anim:hover::before {
+    transform: translateX(0);
+  }
+
+  .btn-anim a,
+  .btn-anim button,
+  .btn-anim span {
+    @apply relative z-[2] transition-colors duration-300;
+  }
+
+  .btn-anim:hover a,
+  .btn-anim:hover button {
+    @apply text-white;
   }
 }
