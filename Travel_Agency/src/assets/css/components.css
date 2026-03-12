@@ -285,7 +285,7 @@
   }
 
   .planner-card {
-    @apply relative h-[350px] w-[250px] xl:h-[399px] xl:w-[300px] rounded-[26px] overflow-hidden z-10 -mt-12 transition-all;
+    @apply relative h-[350px] xl:h-[399px] rounded-[26px] overflow-hidden z-10 -mt-12 transition-all;
   }
 
   .planner-meta {
@@ -338,9 +338,6 @@
   }
   .plannerSwiper .swiper-slide img {
     @apply w-full;
-  }
-  .plannerSwiper .swiper-wrapper {
-    @apply flex !gap-8;
   }
   .side-card {
     @apply mt-0;
@@ -481,10 +478,11 @@
     @apply relative z-10 -translate-y-1/2;
   }
   .newsletter-wrapper .Our-Newsletter {
-    @apply w-full lg:justify-between gap-[60px] xl:gap-[100px] px-4 lg:px-20 xl:px-20 lg:py-[60px] bg-white rounded-[16px] md:rounded-[26px];
+    @apply w-full lg:justify-between gap-[60px] px-4 lg:py-[60px] lg:px-10 
+    xl:px-20 xl:gap-[100px] bg-white rounded-[16px] md:rounded-[26px];
   }
   .mobile-newsletter-wrapper {
-    @apply block lg:hidden gap-[60px] flex flex-col px-5 py-10 md:px-10 md:py-10 bg-white rounded-[20px] border border-[#F1F1F1]
+    @apply block lg:hidden gap-[60px] flex flex-col px-5 py-10 md:p-10 bg-white rounded-[20px] md:rounded-[26px] border border-[#F1F1F1]
      shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden;
   }
   .desktop-newsletter-wrapper {

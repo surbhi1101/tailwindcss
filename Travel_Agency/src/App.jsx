@@ -581,12 +581,12 @@ function App() {
           {isDesktop ? (
             <Swiper
               className="plannerSwiper"
-              watchOverflow
+              spaceBetween={32}
               onSwiper={(swiper) => (plannerSwiperRef.current = swiper)}
               breakpoints={{
-                1152: { slidesPerView: 2.5 },
-                1440: { slidesPerView: 2.86 },
-                1920: { slidesPerView: 4.1 },
+                1152: { slidesPerView: 2.4 },
+                1440: { slidesPerView: 2.9 },
+                1920: { slidesPerView: 3.98 },
               }}
             >
               {[trip1, trip2, trip3, trip4].map((trip, index) => (
