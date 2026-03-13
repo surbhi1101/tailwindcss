@@ -145,11 +145,7 @@
   /* ===== DESTINATION SECTION ==== */
 
   .destinationSwiper {
-    @apply w-full overflow-visible;
-  }
-
-  .destinationSwiper .swiper-wrapper {
-    @apply w-fit;
+    @apply w-full;
   }
 
   .destinationSwiper .swiper-slide {
@@ -157,6 +153,11 @@
          md:!h-[456px]
          lg:!h-[661px]
          lg:!w-[497px];
+  }
+  .plannerSwiper .swiper-slide {
+    @apply !h-[320px]
+         md:!h-[350px]
+         lg:!h-[399px];
   }
 
   .destination-card {

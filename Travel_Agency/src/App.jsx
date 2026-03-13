@@ -1,10 +1,9 @@
 import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Mousewheel, Navigation } from "swiper/modules";
 import "./assets/css/App.css";
-import "swiper/css/navigation";
 import Logo from "./assets/images/Logo.svg";
 import Herosection from "./assets/images/hero_section.png";
 import anthonyreungere from "./assets/images/anthony-reungere.jpg";
@@ -13,7 +12,6 @@ import damianobaschiera from "./assets/images/damiano-baschiera.jpg";
 import tombyrom from "./assets/images/tom-byrom.jpg";
 import location from "./assets/images/location.png";
 import joshhild from "./assets/images/josh-hild.jpg";
-import mobilehero from "./assets/images/mobilehero.jpg";
 import star from "./assets/images/star.png";
 import veronika from "./assets/images/veronika.jpg";
 import hansreniers from "./assets/images/hans-reniers.jpg";
@@ -44,9 +42,7 @@ function App() {
   const plannerSwiperRef = useRef(null);
   const heroSwiperRef = useRef(null);
   const experiencesSwiperRef = useRef(null);
-  const gallerySwiperRef = useRef(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(1);
   const [activeCard, setActiveCard] = useState(null);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   const [isSticky, setIsSticky] = useState(false);
@@ -118,8 +114,6 @@ function App() {
       prev <= 0 ? galleryImages.length - 4 : prev - 4,
     );
   };
-
-  const visibleGallery = galleryImages.slice(galleryIndex, galleryIndex + 4);
 
   const toggleCard = (index) => {
     setActiveCard(activeCard === index ? null : index);
@@ -203,7 +197,9 @@ function App() {
                 <a href="#login">Login</a>
               </div>
               <div className="btn-base btn-primary btn-signup clickable btn-anim">
-                <a href="#signup">Sign Up</a>
+                <a href="#signup" onClick={(e) => e.preventDefault()}>
+                  Sign Up
+                </a>
               </div>
             </div>
 
@@ -379,16 +375,10 @@ function App() {
             </div>
           </div>
           <Swiper
+            slidesPerView={"auto"}
             spaceBetween={32}
             className="destinationSwiper"
             onSwiper={(swiper) => (destinationSwiperRef.current = swiper)}
-            breakpoints={{
-              320: { slidesPerView: 1 },
-              768: { slidesPerView: 1 },
-              1152: { slidesPerView: 2 },
-              1440: { slidesPerView: 2 },
-              1920: { slidesPerView: 2 },
-            }}
           >
             <SwiperSlide>
               <div className="destination-card">
@@ -802,16 +792,7 @@ function App() {
             </div>
           </div>
           <div className="gallery-desktop-wrapper">
-            {[
-              Gallery1,
-              Gallery2,
-              Gallery3,
-              Gallery4,
-              trip1,
-              trip2,
-              trip3,
-              trip4,
-            ]
+            {galleryImages
               .slice(galleryIndex, galleryIndex + 4)
               .map((img, idx) => (
                 <div
