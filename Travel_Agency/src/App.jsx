@@ -4,8 +4,6 @@ import { Pagination, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./assets/css/App.css";
-import gsap from "gsap";
-import SplitText from "gsap/SplitText";
 import Logo from "./assets/images/Logo.svg";
 import Herosection from "./assets/images/hero_section.png";
 import anthonyreungere from "./assets/images/anthony-reungere.jpg";
@@ -163,46 +161,6 @@ function App() {
 
     return () => observer.disconnect();
   }, []);
-
-  // animate-text
-
-  gsap.registerPlugin(SplitText);
-
-  useEffect(() => {
-    document.fonts.ready.then(() => {
-      gsap.registerPlugin(SplitText);
-
-      const elements = document.querySelectorAll(
-        ".animate-title p, .animate-text p",
-      );
-
-      const observer = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const split = SplitText.create(entry.target, {
-                type: "chars,words,lines",
-              });
-
-              gsap.from(split.chars, {
-                x: 150,
-                opacity: 0,
-                duration: 0.7,
-                ease: "power4.out",
-                stagger: 0.04,
-              });
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.3 },
-      );
-
-      elements.forEach((el) => observer.observe(el));
-
-      return () => observer.disconnect();
-    });
-  }, []);
   return (
     <div>
       <div className="hero-container">
@@ -288,7 +246,7 @@ function App() {
           )}
         </nav>
         <div className="hero-mobile">
-          <div className="hero-content animate-fadeIn-scroll">
+          <div className="hero-content">
             <h1>Start your unforgettable journey with us.</h1>
             <div className="animate-text">
               <p>The best travel for your journey begins now</p>
@@ -394,7 +352,7 @@ function App() {
               <h2>Popular Destinations</h2>
               <div className="underline-full"></div>
             </div>
-            <div className="heading-bottom section-desc-lg animate-title">
+            <div className="heading-bottom section-desc-lg ">
               <p>
                 Most popular destinations around the world, from historical
                 places to natural wonders.
@@ -497,7 +455,7 @@ function App() {
               <h2>Special Offer</h2>
               <div className="underline-md"></div>
             </div>
-            <div className="section-desc-md animate-title">
+            <div className="section-desc-md ">
               <div className="nav-arrows desktop-nav">
                 <div className="arrow-btn prev clickable">
                   <button onClick={prevOffer}>
@@ -571,7 +529,7 @@ function App() {
               <h2>Our Blog</h2>
               <div className="underline-sm"></div>
             </div>
-            <div className="section-desc-md animate-title">
+            <div className="section-desc-md ">
               <p>An insight the incredible experience in the world</p>
             </div>
           </div>
@@ -607,7 +565,7 @@ function App() {
               <h2>Trip Planners</h2>
               <div className="underline-base"></div>
             </div>
-            <div className="section-desc-sm animate-title">
+            <div className="section-desc-sm ">
               <p>
                 20 years from now you will be more disappointed by the things
                 that you didn't do. Stop regretting and start travelling, start
@@ -818,7 +776,7 @@ function App() {
               <h2>Destination Gallery</h2>
               <div className="underline-lg"></div>
             </div>
-            <div className="heading-bottom section-desc-md animate-title">
+            <div className="heading-bottom section-desc-md ">
               <p>Our photo gallery on trip</p>
 
               <div className="desktop-arrows">
@@ -887,7 +845,7 @@ function App() {
               <h2>Traveler's Experiences</h2>
               <div className="underline-xl"></div>
             </div>
-            <div className="section-desc-lg animate-title">
+            <div className="section-desc-lg ">
               <p>Here some awesome feedback from our travelers</p>
             </div>
           </div>

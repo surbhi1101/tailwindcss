@@ -157,5 +157,5 @@
 /* animation text */
 .animate-title p,
 .animate-text p {
-  @apply font-body font-normal;
+  @apply font-body font-normal inline-block;
 }
