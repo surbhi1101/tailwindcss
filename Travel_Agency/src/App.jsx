@@ -105,6 +105,7 @@ function App() {
     trip4,
   ];
 
+  // gallery button
   const nextGallery = () => {
     setGalleryIndex((prev) =>
       prev >= galleryImages.length - 4 ? 0 : prev + 4,
@@ -121,6 +122,7 @@ function App() {
     setActiveCard(activeCard === index ? null : index);
   };
 
+  // resizing of screen
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1024);
@@ -129,6 +131,8 @@ function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // read more button
   useLayoutEffect(() => {
     if (readMore && readMoreRef.current) {
       readMoreRef.current.scrollIntoView({
@@ -145,6 +149,8 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // section animation
   useEffect(() => {
     const elements = document.querySelectorAll(".animate-fadeIn-scroll");
 
@@ -198,6 +204,33 @@ function App() {
 
       return () => observer.disconnect();
     });
+  }, []);
+
+  // underline animation
+  useEffect(() => {
+    const lines = document.querySelectorAll(".animate-underline");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            gsap.from(entry.target, {
+              width: 0,
+              opacity: 0,
+              duration: 2,
+              ease: "power2.out",
+            });
+
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+
+    lines.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
   return (
     <div>
@@ -388,7 +421,7 @@ function App() {
           <div className="heading-block">
             <div className="heading-title">
               <h2>Popular Destinations</h2>
-              <div className="underline-full"></div>
+              <div className="underline-full animate-underline"></div>
             </div>
             <div className="heading-bottom section-desc-lg animate-title">
               <p>
@@ -491,7 +524,7 @@ function App() {
           <div className="offer-desc">
             <div className="heading-title">
               <h2>Special Offer</h2>
-              <div className="underline-md"></div>
+              <div className="underline-md animate-underline"></div>
             </div>
             <div className="section-desc-md animate-title">
               <div className="nav-arrows desktop-nav">
@@ -565,7 +598,7 @@ function App() {
           <div className="heading-block">
             <div className="heading-title">
               <h2>Our Blog</h2>
-              <div className="underline-sm"></div>
+              <div className="underline-sm animate-underline"></div>
             </div>
             <div className="section-desc-md animate-title">
               <p>An insight the incredible experience in the world</p>
@@ -601,7 +634,7 @@ function App() {
           <div className="heading-block">
             <div className="heading-title">
               <h2>Trip Planners</h2>
-              <div className="underline-base"></div>
+              <div className="underline-base animate-underline"></div>
             </div>
             <div className="section-desc-sm animate-title">
               <p>
@@ -812,7 +845,7 @@ function App() {
           <div className="heading-block">
             <div className="heading-title">
               <h2>Destination Gallery</h2>
-              <div className="underline-lg"></div>
+              <div className="underline-lg animate-underline"></div>
             </div>
             <div className="heading-bottom section-desc-md animate-title">
               <p>Our photo gallery on trip</p>
@@ -881,7 +914,7 @@ function App() {
           <div className="heading-block">
             <div className="heading-title">
               <h2>Traveler's Experiences</h2>
-              <div className="underline-xl"></div>
+              <div className="underline-xl animate-underline"></div>
             </div>
             <div className="section-desc-lg animate-title">
               <p>Here some awesome feedback from our travelers</p>
