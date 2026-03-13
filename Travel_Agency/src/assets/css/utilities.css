@@ -112,7 +112,7 @@
 }
 
 .section-desc-sm p {
-  @apply text-[18px] md:max-w-[95%] xl:max-w-[85%] 2xl:max-w-[98%]; 
+  @apply text-[18px] md:max-w-[95%] xl:max-w-[85%] 2xl:max-w-[98%];
 }
 
 /* cursor-pointer */
@@ -152,4 +152,10 @@
 
 .underline-full {
   @apply w-[227px] md:w-[365px];
+}
+
+/* animation text */
+.animate-title p,
+.animate-text p {
+  @apply font-body font-normal;
 }
