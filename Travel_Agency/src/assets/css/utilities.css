@@ -159,3 +159,12 @@
 .animate-text p {
   @apply font-body font-normal inline-block;
 }
+
+/* split lines */
+.split-lines {
+  opacity: 50;
+}
+
+.split-lines .line {
+  overflow: hidden;
+}

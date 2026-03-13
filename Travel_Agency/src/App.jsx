@@ -232,6 +232,47 @@ function App() {
 
     return () => observer.disconnect();
   }, []);
+
+  // split lines
+  useEffect(() => {
+    document.fonts.ready.then(() => {
+      const elements = document.querySelectorAll(".split-lines p");
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+
+              gsap.set(el, { opacity: 1 });
+
+              SplitText.create(el, {
+                type: "words,lines",
+                autoSplit: true,
+
+                onSplit: (self) => {
+                  return gsap.from(self.lines, {
+                    yPercent: 40,
+                    opacity: 0,
+                    stagger: 0.06,
+                    duration: 1,
+                    ease: "power2.out",
+                  });
+                },
+              });
+
+              observer.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+
+      elements.forEach((el) => observer.observe(el));
+
+      return () => observer.disconnect();
+    });
+  }, []);
   return (
     <div>
       <div className="hero-container">
@@ -560,9 +601,9 @@ function App() {
                       ))}
                     </div>
                   </div>
-
-                  <p>{offer.desc}</p>
-
+                  <div className="split-lines">
+                    <p>{offer.desc}</p>
+                  </div>
                   <div className="offer-price">
                     <div className="price-text">
                       <p>From</p>
@@ -613,7 +654,7 @@ function App() {
               <div className="blog-title">
                 <h3>Beautiful Italy Let's travel</h3>
               </div>
-              <div className="blog-description" ref={readMoreRef}>
+              <div className="blog-description split-lines" ref={readMoreRef}>
                 <p>
                   {readMore
                     ? `But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness. No one rejects, dislike, or avoids plasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremly painful. Nor again is there anyone who loves or pursues.`
@@ -941,7 +982,7 @@ function App() {
                       <img src={exp1} alt="John Doe" />
                     </div>
                   </div>
-                  <div className="experiences-text">
+                  <div className="experiences-text split-lines">
                     <p>
                       But I must explain to you how all this mistaken idea of
                       denouncing pleasure and praising pain was born and I will
@@ -968,7 +1009,7 @@ function App() {
                       <img src={exp2} alt="John Smith" />
                     </div>
                   </div>
-                  <div className="experiences-text">
+                  <div className="experiences-text split-lines">
                     <p>
                       But I must explain to you how all this mistaken idea of
                       denouncing pleasure and praising pain was born and I will
@@ -995,7 +1036,7 @@ function App() {
                       <img src={exp3} alt="Tamara Bellis" />
                     </div>
                   </div>
-                  <div className="experiences-text">
+                  <div className="experiences-text split-lines">
                     <p>
                       But I must explain to you how all this mistaken idea of
                       denouncing pleasure and praising pain was born and I will
