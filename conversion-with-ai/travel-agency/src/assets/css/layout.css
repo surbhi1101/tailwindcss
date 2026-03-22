@@ -1,0 +1,68 @@
+@layer components {
+  /* 1. Popular Destinations */
+  .popular-destinations-section {
+    @apply flex flex-col
+           px-4 py-20 gap-[100px]
+           md:px-5
+           lg:px-0 lg:pl-8 lg:py-[100px]
+           xl:pl-8 xl:py-[140px]
+           2xl:pl-[182px];
+  }
+
+  /* 2. Special Offer */
+  .special-offer-section {
+    @apply flex flex-col
+           px-4 py-20 gap-[60px]
+           md:px-5 md:gap-[100px]
+           lg:px-8 lg:py-[100px]
+           xl:px-8 xl:py-[140px]
+           2xl:px-[182px];
+  }
+
+  /* 3. Our Blog */
+  .our-blog-section {
+    @apply flex flex-col
+           px-4 py-20 gap-[100px]
+           md:px-5
+           lg:px-8 lg:py-[100px]
+           xl:px-8 xl:py-[140px]
+           2xl:px-[182px];
+  }
+
+  /* 4. Trip Planner */
+  .trip-planner-section {
+    @apply flex flex-col lg:flex-row
+           px-4 py-20 gap-20
+           md:px-5
+           lg:px-0 lg:pl-8 lg:py-[100px]
+           xl:py-[140px]
+           2xl:pl-[182px] 2xl:gap-[100px];
+  }
+
+  /* 5. Destination Gallery */
+  .destination-gallery-section {
+    @apply flex flex-col
+           px-4 py-20 gap-[100px]
+           md:px-5
+           lg:px-8 lg:py-[100px]
+           xl:px-8 xl:py-[140px]
+           2xl:px-[182px];
+  }
+
+  /* 6. Traveler’s Experiences */
+  .travelers-experiences-section {
+    @apply flex flex-col
+           px-4 py-20 gap-[100px]
+           md:px-0 md:pl-8 md:gap-[160px]
+           lg:pl-8 lg:pt-[100px] lg:pb-[200px] lg:gap-[160px]
+           xl:pl-8 xl:pt-[140px] xl:pb-[240px]
+           2xl:pl-[182px];
+  }
+  /* footer */
+  .footer {
+    @apply bg-[#172432]
+           px-4 py-20 flex flex-col gap-1 lg:flex-row
+           md:px-8 md:pt-[100px] md:pb-[140px]
+           2xl:px-[182px];
+  }
+}

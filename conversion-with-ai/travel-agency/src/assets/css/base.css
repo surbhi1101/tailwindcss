@@ -1,0 +1,30 @@
+@layer base {
+  /* Font Variables */
+  :root {
+    --font-playfair: "Playfair Display", serif;
+    --font-rubik: "Rubik", sans-serif;
+    --font-mulish: "Mulish", sans-serif;
+    --color-primary-text: #172432;
+    --color-secondary-text: #767e86;
+  }
+
+  body {
+    color: var(--color-secondary-text);
+  }
+  /* Headings → Playfair Display */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-playfair);
+    color: var(--color-primary-text);
+  }
+
+  /* Paragraph → Rubik */
+  p {
+    font-family: var(--font-rubik);
+    color: var(--color-secondary-text);
+  }
+}

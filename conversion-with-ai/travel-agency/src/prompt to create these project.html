@@ -1,0 +1,736 @@
+think like a web developer create 6 section with the following details the css will be there
+as per the tailwind version 4
+the structure for css will be as follow 
+app.css with the import
+base.css 
+component.css
+layout.css
+utilites.css 
+
+the css will be written in layout.css the structure of css is as follow for example
+* `base.css` → `@layer base`
+* `component.css` → `@layer components`
+* `layout.css` → still `@layer components` (since Tailwind only supports base/components/utilities)
+
+✔ Tailwind **does NOT support a "layout" layer**, so:
+
+> 👉 Keep layout classes inside `@layer components`
+Breakpoints:
+sm:320px
+md:768px
+lg:1152px
+xl:1440px
+2xl:1920px
+> In `base.css`:
+>
+> * Define font variables:
+> --font-heading (Playfair Display)
+> --font-body (Rubik)
+> --font-alt (Mulish)
+> * Apply:
+>
+> * h1–h6 → heading font + color #172432
+> * p → Rubik + color #172432
+> * body → Mulish + color #767E86
+>
+> In `layout.css`:
+>
+> * Use `@layer components`
+> * Create 6 section classes:
+>
+> * popular-destinations-section
+> * special-offer-section
+> * our-blog-section
+> * trip-planner-section
+> * destination-gallery-section
+> * travelers-experiences-section
+> * Each section:
+>
+> * must include `flex flex-col`
+> * must follow given responsive padding & gap rules
+
+
+for 1st sectiondetails are below -section name =>Popular Destinations
+in 320px
+
+px-4
+py-20
+gap-[100px]
+
+in 768px
+px-5
+py-20
+gap-[100px]
+
+in 1152px
+px-0
+pl-8
+py-[100px]
+gap-[100px]
+
+in 1440px
+pl-8
+py-[140px]
+gap-[100px]
+
+1920px
+px-[182px]
+py-[140px]
+gap-[100px]
+
+for 2nd sectiondetails are below -section name =>Special Offer
+.special-offer-section .section-heading,
+.special-offer-section .section-heading-top {
+@apply ml-auto;
+}
+in 320px
+px-4
+py-20
+gap-[60px]
+
+in 768px
+px-5
+py-20
+gap-[100px]
+
+in 1152px
+px-8
+py-[100px]
+gap-[100px]
+
+in 1440px
+px-8
+py-[140px]
+gap-[100px]
+
+1920px
+px-[182px]
+py-[140px]
+gap-[100px]
+
+for 3rd section details are below -section name => Our Blog
+in 320px
+px-4
+py-20
+gap-[100px]
+
+in 768px
+px-5 
+py-20
+gap-[100px]
+
+in 1152px
+px-8
+py-[100px]
+gap-[100px]
+
+in 1440px
+px-8
+py-[140px]
+gap-[100px]
+
+1920px
+px-[182px]
+py-[140px]
+gap-[100px]
+
+for 4th sectiondetails are below -section name => trip-planner
+in 320px
+px-4
+py-20
+gap-20
+
+in 768px
+px-5
+py-20
+gap-20
+
+in 1152px
+px-0
+py-[100px]
+gap-20
+
+in 1440px
+pl-8
+py-[140px]
+gap-20
+
+in 1920px
+px-[182px]
+py-[140px]
+gap-[100px]
+
+for 5th sectiondetails are below -section name => Destination Gallery
+in 320px
+px-4
+py-20
+gap-[100px]
+
+in 768px
+px-5
+py-20
+gap-[100px]
+
+in 1152px
+px-8
+py-[100px]
+gap-[100px]
+
+in 1440px
+px-8
+py-[140px]
+gap-[100px]
+
+in 1920px
+px-[182px]
+py-[140px]
+gap-[100px]
+
+for 6th sectiondetails are below -section name => Traveler’s Experiences
+in 320px
+px-4
+py-20
+gap-[100px]
+
+in 768px
+px-0
+pl-8
+py-20
+gap-[160px]
+
+in 1152px
+pl-8
+pt-[100px]
+pb-[200px]
+gap-[160px]
+
+in 1440px
+pl-8
+pt-[140px]
+pb-[240px]
+gap-[160px]
+
+in 1920px
+pl-[182px]
+pt-[140px]
+pb-[240px]
+gap-[160px]
+>
+> In `utilities.css`:
+>
+> * Create fade-in animation:
+>
+> * `.fade-section` (hidden state)
+> * `.fade-in` (visible state)
+>
+import the following font family in app.css
+Playfair Display
+Rubik
+Mulish
+
+now create base.css with for h1 to h6 will be Playfair Display for p rubik
+create 3 different in these way --font-playfair ,font-rubik
+for heading tags & p tag color will be #172432
+for normal text color will be #767E86
+
+for heading
+now create section heading with the following details create the heading in such a way it's
+class can be reuse
+components.css
+
+Create reusable .section-heading component:
+
+Structure:
+
+wrapper → flex flex-col gap-8
+
+top → flex flex-col gap-5
+
+h3 (title)
+
+underline
+
+p (description)
+
+h3:
+
+text-[#172432]
+
+font-normal leading-none
+
+text-[40px] md:text-[54px] lg:text-[64px]
+
+
+p:
+
+text-[#767E86]
+
+font-normal leading-none
+
+text-[18px] md:text-[24px]
+
+keep them in @layer utilities using tailwind v-4 as per the tailwind v-4 you cannot use class in @apply create the
+multiple underline from the below details
+> ### Underline => the below details will be same for every underline give them section name 
+to the underline
+create a common class for these
+> * border-bottom: 3px solid #FF7757
+> * same for all breakpoints
+create different width class for the use
+> just the width will be different
+1) width: [150px] =>our-blog-section ml-auto
+2) width: [241px]=> special-offer-section
+3)width: [231px]=> trip-planner-section
+4)width: [347px] => travelers-experiences-section
+
+* not same for all breakpoints
+1)width : [227px] md:[365px] =>popular-destinations-section
+2)width: [288px] md:[283px] => destination-gallery-section
+
+
+create the two button  just aligned to section-heading-desc p in lg+ for below of them the button 
+will be show below the content & the desktop button  will be hide in 320px & 768px
+the mobile button  will be visibe down of the content 
+by following the condition
+gap between button  is flex gap-10
+one will be previous button  & another will be next button  
+the structure will be 
+<div>
+<div>
+    <button ><img src="" alt=""></button >
+</div>
+<div>
+    <button ><img src="" alt=""></button >
+</div>
+</div>
+
+the first button  details are as follow
+py-[28px] px-5 bg #172432 border-radius:[12px]
+
+the second button  details are as follow
+py-[28px] px-5 bg #FF7757 border-radius:[12px]
+
+keep:
+.travelers-experiences-section .nav-btn-mobile {
+@apply flex ml-auto pr-4 md:pr-5
+lg:pr-8 2xl:pr-[182px];
+}
+
+
+<!-- Popular Destinations -->
+
+create a swiper where 
+the structure of swiper will be 
+<swiper>
+    <swiperslider>
+        <div>flex gap-8
+            <div>border-radius 16px md+:26px
+                <img src="" alt=""/>
+            </div>
+            <div>flex flex-col gap-[17px] px-6 pb-[40px]
+                <div>color:#FFFFFF
+                320px
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 24px;
+                leading-trim: NONE;
+                line-height: 100%;
+                letter-spacing: 0%;
+                
+                768px
+                font-size: 28px;
+                    <h3>Monument of Berlin</h3></div>
+                <div> flex gap-4
+                    <img src="" alt="location"/>
+                    <div>
+                        color:#FFFFFF
+                    320px
+                    font-family: Rubik;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 18px;
+                    leading-trim: NONE;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    
+                    768px
+                    font-size: 24px;
+                        <p>Berlin, Germany</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </swiperslider>
+</swiper>
+for multiple swiperslide
+keep them by default swiper + it should move when the button is clicked 
+there is 2 button for navigation of the swiperslide you have to just set the logic
+keep the following point to be noted the swiperslide in sm & md will be 1
+when the next button is click in sm or md it should show the next swiperslide & 
+when previous button is click than previous swiperslide should show
+from lg onwards it will diplay 3 swiperslide
+when the next button is click in lg+ it should show the next 3 card & when previous button
+is click than previous 3 swiper should show
+
+<!-- special offer -->
+Create a special offer section that features a layout consisting of three cards, each with
+a rounded-[26px]. The display of these cards should adapt to different screen sizes as
+follows: on screens that are 320px wide, display 1 card; on screens that are 768px wide,
+also display 1 card; than from screens that are 1152px wide and larger, display all 3 cards
+simultaneously. Each card should be divided into two sections: the first section will
+contain an image, while the second section will feature the content.The style will be in
+@layer component {
+.classname{
+@apply cssname;
+}
+}
+create resuable class css
+The HTML structure for each card should be organized
+as follows:
+<div>
+    <div>background-color: #FFF8F1;
+        <div>
+            <img src="{}" alt="">
+        </div>
+        <div>flex gap-6 p-5 md:px-6 md:py-5 xl:px-6 xl:py-10
+            <div>
+                <h4>Lisbon, Portugal</h4>
+            </div>
+            <div class="star-img"> map the flex gap-1
+                <img src="{}" alt="star" />
+                <img src="{}" alt="star" />
+                <img src="{}" alt="star" />
+                <img src="{}" alt="star" />
+                <img src="{}" alt="star" />
+            </div>
+            <div class="card-content">
+                <p>5 nights and 4 days in a 5-star hotel, breakfast and lunch included. Very popular during the
+                    renaissance. Passage and going through the cities of the world in classical literature.</p>
+            </div>
+            <div class="price-details">flex flex-col md:flex-row justify-between gap-5 md:gap-0
+                <div class="price-tag">flex gap-2
+                    <span>From</span>
+                    <p>€500</p>
+                </div>
+                <div>background-color: #FF7654; rounded-[12px];
+                    <button >color: white; font-size: 20px; text-transform: uppercase;Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+The styling for each card should adhere to the following specifications:
+For the <h4> element:-
+    Color:#767E86
+    Font Family: Mulish
+    Font Weight: 400
+    Font Style: Regular
+    Font Size: 28px
+    Line Height: 100%
+    Letter Spacing: 0%
+    For the paragraph in the card content:-
+    Color: #172432
+    Font Weight: 400
+    Font Style: Normal
+    Letter Spacing: 0%
+    Font Size: 16px
+    Line Height: 20px
+    When the screen size reaches
+    768px:- Font Size: 18px
+    Line Height:100%
+    For the price tag span:-
+    Text Color: #767E86
+    Font Weight: Normal
+    Line Height: 100%
+    At 320px: Font Size: 18px
+    At 1440px: Font Size: 20px
+    For the price tag paragraph:-
+    Color: #FF7757
+    Font Family: Rubik
+    Font Weight: 400
+    Font Style: Regular
+    Line Height: 100%
+    At 320px: Font Size: 32px
+    At 1152px: Font Size: 28px
+    From 1440px:
+    Font Size:40px
+    Please ensure that the final output is structured clearly and follows the specified design guidelines for
+    optimal presentation across different devices.
+
+    there is an 2 button  for navigation of the card you have to just set the logic
+    keep the following point to be noted
+    the card in sm & md will be 1
+    when the next button  is click in sm or md it should show the next card & when previous button 
+    is click than previous card should show
+    from lg onwards it will diplay 3 card
+    when the next button  is click in lg+ it should show the next 3 card & when previous button 
+    is click than previous 3 card should show
+
+our blog section:
+the structure for our-blog-section will be as follow:
+<div> flex flex-col md:flex-row gap-8 
+    <div>
+        <img src="" alt="">
+        @apply rounded-[26px]
+        md:h-[555px] md:w-full
+        lg:h-[686px]
+        xl:h-[802px]
+        2xl:h-[873px];
+    </div>
+    <div> flex flex-col lg:flex-row gap-6 lg:px-8 xl:px-[45px] 2xl:px-[106.5px]
+        <div> color-#172432
+        <h3>Beautiful Italy
+        Let's travel</h3>
+        </div>
+        <div> color-#172432 
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give
+        you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master-
+        builder of human happiness. No one rejects, dislike, or avoids plasure itself, because it is pleasure, but because those
+        who do not know how to pursue pleasure rationally encounter consequences that are extremly painful. Nor again is there
+        anyone who loves or pursues.</p>
+        </div>
+        <div> flex gap-5 color-#FF7757
+            <a href="">read more <span>-></span></a href="">
+        
+    </div>
+</div>
+h3 have to follow the following style:
+the common for all screen 
+font-family: "Playfair Display";
+font-weight: 400;
+font-style: normal;
+line-height: 100%;
+letter-spacing: 0%;
+
+the differnt:
+320px → font-size: 40px;
+768px+ → font-size: 54px;
+
+for p have to follow the following style:
+the common for all screen
+font-family: "Rubik";
+font-weight: 400;
+font-style: normal;
+letter-spacing: 0%;
+
+the differnt:
+320px 768px 1152px
+font-size: 18px;
+line-height: 42px;
+
+for the xl & 2xl
+font-size: 24px;
+line-height: 52px;
+
+<!-- Trip Planners -->
+
+create a button with the follow style make sure that you create css class for reuse 
+there will be 2 box behind the button one will be at left-top color-#172432 w-43px h-43px
+ & another will be right-bottom color-#767E86 w-43px h-43px
+border-radius:12px
+bg:#FF7757
+p-5
+
+text will be View all trip plans
+color-#FFFFFF
+font-family: Rubik;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+create trip planner div with the following details 
+create with 2 different logic the first one will be for 320 & 768px than another will be for 
+swiper from 1152 px 
+from 320 to 768px that will be in card view image where the image will above & the content
+will be below the image with py-5 flex flex-col gap-3
+& from the 1152px +  there will be swiper with the following details & point to be noted
+that the details will be hidden behind the image when the image is click or hover 
+the details will be display when mouse move & dosen't not display details
+when the mouse is not on the image the details will be hide once again
+the structure of details
+<div> py-5 flex flex-col gap-3
+<div> justify-between
+<div>
+    320:
+    font-family: Rubik;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+768:
+font-size: 24px;
+1152px +:
+font-size: 18px;
+    <h5>Guided Tour</h5>
+    </div>
+    <div>
+        320:
+        font-family: Rubik;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        768:
+        font-size: 24px;
+        1152px +:
+        font-size: 18px;
+        <p>€99/Day</p>
+    </div>
+</div>
+<div>
+    320:
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 28px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    768:
+    font-size: 32px;
+    1152:
+    font-size: 28px;
+    <h3>Paris City Tour</h3>
+</div>
+<div> justify-between
+<div className="star-img">
+    {Array.from({ length: 5 }).map((_, i) => (
+    <img key={i} src={star} alt="star" />
+    ))}
+</div>
+        <div>
+            320:
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 18px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            768:
+            font-size: 24px;
+            1152px +:
+            font-size: 18px;
+            <p>7 Days tour</p>
+        </div>
+    </div>
+</div>
+
+destination gallery:
+create 4 card for image with gap-8 & border-radius 26px
+the card will be display in flex-col in sm md & flex-row from lg onwards
+when the mouse is hover to the card it should move slight upward & when the mouse is not on the
+image it will stay normal 
+
+there will be 2 navigation button when next button is clicked the other next 4 image should 
+show & when previous button is click the previous image should show
+the structure will be as follow:
+<div>
+    <div>
+        <img src={} alt="">
+    </div>
+    <div>
+        <img src={} alt="">
+    </div>
+    <div>
+        <img src={} alt="">
+    </div>
+    <div>
+        <img src={} alt="">
+    </div>
+</div>
+
+create a footer with the following details 
+background color: #172432
+320px:px-4 py-20 gap-1 flex flex-col lg:flex-row
+768px:px-8 pt-[100px] pb-[140px]
+1920px:px-[182px] 
+
+now create struture of the footer text will be white for all
+<div> flex flex-col gap-[60px] from lg flex-row justify-between 
+<div>
+    <img src={logo} alt="logo">
+    <p>Copyright © Travellian 2020 All rights reserved</p>
+    font-family: Rubik;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+</div>
+<div> flex flex-col gap-2 
+    <h4>title</h4>
+    
+    font-family: Rubik;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+<ul>flex flex-col gap-3
+    <li><a href="">Home</a></li>
+    <li><a href="">Explore</a></li>
+    <li><a href="">Travel</a></li>
+</ul>
+</div>
+<div> flex flex-col gap-2
+    <h4>title</h4>
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    <ul>flex flex-col gap-3
+        <li><a href="">Home</a></li>text-[18px]
+        <li><a href="">Explore</a></li>text-[18px]
+        <li><a href="">Travel</a></li>text-[18px]
+    </ul>
+</div>
+<div> flex flex-col gap-4
+    <h4>title</h4>
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    <ul>flex flex-col gap-3
+        <li><a href="">Home</a></li> text-[18px]
+        <li><a href="">Explore</a></li>text-[18px]
+        <li><a href="">Travel</a></li>text-[18px]
+    </ul>
+</div>
+<div>social-media links flex flex-col gap-4
+    <h4>title</h4>
+<div>social-icon flex gap-6
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+
+</div>
+</div>
+</div>
+li a css 
+font-family: Rubik;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;

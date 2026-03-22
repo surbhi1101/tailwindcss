@@ -1,0 +1,70 @@
+@layer utilities {
+  /* animation for section */
+  .fade-section {
+    @apply opacity-0 translate-y-10 transition-all duration-700 ease-out;
+  }
+
+  .fade-section.show {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* underline */
+
+  .underline-base {
+    @apply border-b-[3px] border-[#FF7757];
+  }
+  .underline-popular-destinations {
+    @apply w-[227px] md:w-[365px];
+  }
+
+  .underline-special-offer {
+    @apply w-[241px] md:ml-auto;
+  }
+
+  .underline-our-blog {
+    @apply w-[150px];
+  }
+
+  .underline-trip-planner {
+    @apply w-[231px];
+  }
+
+  .underline-destination-gallery {
+    @apply w-[288px] md:w-[283px];
+  }
+
+  .underline-travelers-exp {
+    @apply w-[347px] overflow-hidden;
+  }
+  /* button base */
+  .nav-btn {
+    @apply py-[28px] px-[20px] rounded-[12px] flex items-center justify-center h-[66px] w-[60px];
+  }
+
+  .nav-btn-prev {
+    @apply bg-[#172432];
+  }
+
+  .nav-btn-next {
+    @apply bg-[#FF7757];
+  }
+
+  .nav-btn-group {
+    @apply flex gap-10;
+  }
+  .nav-btn-desktop {
+    @apply hidden lg:flex;
+  }
+
+  .nav-btn-mobile {
+    @apply flex lg:hidden justify-center;
+  }
+  .travelers-experiences-section .nav-btn-mobile {
+    @apply flex ml-auto pr-4 md:pr-5
+    lg:pr-8 2xl:pr-[182px];
+  }
+
+  .popular-destinations-section .nav-btn-desktop {
+    @apply lg:pr-8 2xl:pr-[182px];
+  }
+}

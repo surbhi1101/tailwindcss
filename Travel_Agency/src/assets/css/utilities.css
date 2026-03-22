@@ -97,7 +97,7 @@
 }
 
 .section-desc-lg p {
-  @apply text-[18px] md:text-[20px] lg:text-[24px] font-normal font-body leading-[100%] md:max-w-[86%] lg:max-w-[66%] xl:max-w-full;
+  @apply text-[18px] md:text-[20px] lg:text-[24px] font-normal font-body leading-[100%] md:max-w-[86%] lg:max-w-[68%] xl:max-w-full;
 }
 .section-desc-md p {
   @apply text-[18px] md:text-[24px];
