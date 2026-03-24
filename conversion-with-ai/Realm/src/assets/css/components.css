@@ -38,7 +38,7 @@
   }
 
   .navbar-left {
-    @apply flex items-center gap-6;
+    @apply flex gap-6;
   }
 
   .navbar-right {
@@ -49,7 +49,7 @@
     @apply w-auto h-[24px] hidden xl:block;
   }
   .hero-header-content {
-    @apply w-full flex flex-col items-start gap-6 xl:px-[48px] pb-5 px-5;
+    @apply w-full flex flex-col items-start gap-6 pb-5 px-5 xl:px-[48px] xl:pb-[48px];
   }
 
   .hero-heading {
