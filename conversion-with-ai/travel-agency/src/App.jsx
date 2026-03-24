@@ -636,7 +636,7 @@ function App() {
         </div>
       </section>
       {/* travelers-experiences-section */}
-      {/* <section className="travelers-experiences-section fade-section">
+      <section className="travelers-experiences-section fade-section">
         <div className="section-heading">
           <div className="section-heading-top">
             <div className="section-heading-title">
@@ -661,7 +661,7 @@ function App() {
             </button>
           </div>
         </div>
-      </section> */}
+      </section>
       <footer className="footer">
         <div className="footer-content">
           {/* Logo + Copyright */}
@@ -674,7 +674,7 @@ function App() {
 
           {/* Column 1 */}
           <div className="footer-menu">
-            <h4 className="footer-title">Menu</h4>
+            <h4>Menu</h4>
             <ul className="footer-list">
               <li>
                 <a href="#">Home</a>
@@ -699,7 +699,7 @@ function App() {
 
           {/* Column 2 */}
           <div className="footer-menu">
-            <h4 className="footer-title">Information</h4>
+            <h4>Information</h4>
             <ul className="footer-list footer-list-lg">
               <li>
                 <a href="#">Destinations</a>
@@ -718,7 +718,7 @@ function App() {
 
           {/* Column 3 */}
           <div className="footer-menu footer-menu-wide">
-            <h4 className="footer-title">Contact Info</h4>
+            <h4>Contact Info</h4>
             <ul className="footer-list footer-list-lg">
               <li>
                 <a href="#">+123 456 789</a>
@@ -734,7 +734,7 @@ function App() {
 
           {/* Social */}
           <div className="footer-social">
-            <h4 className="footer-title">Follow us on</h4>
+            <h4>Follow us on</h4>
             <div className="footer-icons">
               <img src={facebook} alt="social" />
               <img src={pinterest} alt="social" />

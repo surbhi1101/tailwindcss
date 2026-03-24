@@ -1,0 +1,46 @@
+@layer layout {
+  .section-padding {
+    @apply flex flex-col gap-6 pt-[120px];
+    @apply lg:pt-[160px] lg:px-[48px];
+  }
+  .left-padding {
+    @apply pl-5;
+  }
+  .section-padding-x {
+    @apply px-5;
+  }
+  /* ================= SHOP PRODUCTS ================= */
+  .shop-products {
+    @apply flex flex-col gap-6;
+  }
+
+  .shop-header {
+    @apply flex justify-between items-center;
+  }
+  /* ================= FRESH AIR ================= */
+
+  .fresh-air {
+    @apply flex flex-col gap-8;
+  }
+
+  .fresh-air-list {
+    @apply flex flex-col gap-8 xl:flex-row xl:gap-5;
+  }
+
+  .fresh-air-card {
+    @apply flex flex-col gap-8;
+  }
+
+  .fresh-air-image {
+    @apply flex flex-col gap-[16px] xl:gap-5;
+  }
+  /* ================= AIRCARE ================= */
+
+  .aircare {
+    @apply px-4 pt-[120px] xl:pt-[160px] flex flex-col gap-6;
+  }
+  /* footer */
+  .footer {
+    @apply pt-[120px] xl:pt-[160px] flex flex-col gap-[48px];
+  }
+}

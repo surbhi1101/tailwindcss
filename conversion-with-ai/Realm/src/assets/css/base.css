@@ -1,0 +1,15 @@
+@layer base {
+  body {
+    font-family: "FT Polar", sans-serif;
+    color: #3d3b33;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "BB Modern Pro", serif;
+  }
+}

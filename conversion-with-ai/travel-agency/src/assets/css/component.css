@@ -351,7 +351,7 @@
     @apply flex flex-col gap-4;
   }
 
-  .footer-title {
+  .footer-menu h4 {
     @apply text-white text-[24px] leading-none font-medium;
     font-family: var(--font-rubik);
   }

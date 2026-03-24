@@ -34,7 +34,7 @@
   }
 
   .underline-travelers-exp {
-    @apply w-[347px] overflow-hidden;
+    @apply w-[304px] md:w-[347px]  overflow-hidden;
   }
   /* button base */
   .nav-btn {
@@ -60,7 +60,7 @@
     @apply flex lg:hidden justify-center;
   }
   .travelers-experiences-section .nav-btn-mobile {
-    @apply flex ml-auto pr-4 md:pr-5
+    @apply flex md:ml-auto pr-4 md:pr-5
     lg:pr-8 2xl:pr-[182px];
   }
 
