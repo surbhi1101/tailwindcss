@@ -142,12 +142,18 @@ function App() {
   const handleClick = (e) => {
     e.preventDefault();
   };
+  const offerText = "Join our email list for 15% off";
 
+  const offerItems = Array.from({ length: 12 }, () => offerText);
   return (
     <div>
       <header>
-        <div className="email-offer email-offer-text">
-          <h4>Join our email list for 15% off</h4>
+        <div className="email-offer">
+          <div className="email-offer-track">
+            {offerItems.map((text, index) => (
+              <h4 key={index}>{text}</h4>
+            ))}
+          </div>
         </div>
 
         <div className={`navbar ${sticky ? "navbar-sticky" : ""}`}>

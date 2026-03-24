@@ -1,10 +1,29 @@
 @layer components {
   .email-offer {
-    @apply bg-[#CCC0DD] flex justify-center text-center;
+    @apply bg-[#CCC0DD] overflow-hidden;
   }
 
-  .email-offer-text h4 {
-    @apply font-normal uppercase text-center py-[6px] md:py-[7px] text-[10px] leading-[12px] tracking-[0.4px] xl:text-[11px] xl:leading-[14px] xl:tracking-[0.5px];
+  .email-offer-track {
+    @apply flex whitespace-nowrap;
+    animation: marquee 12s linear infinite;
+  }
+
+  .email-offer-track h4 {
+    @apply font-normal uppercase
+  py-[6px] md:py-[7px]
+  text-[10px] leading-[12px] tracking-[0.4px]
+  xl:text-[11px] xl:leading-[14px] xl:tracking-[0.5px]
+  px-6;
+  }
+
+  /* animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
   .hero-header {
     @apply w-full bg-cover bg-center flex items-end min-h-[380px];
