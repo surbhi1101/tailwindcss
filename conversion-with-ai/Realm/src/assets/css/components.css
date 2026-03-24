@@ -311,7 +311,7 @@
   }
 
   .aircare-border {
-    @apply border-0 border-[#3D3B331F] w-full;
+    @apply border border-[#3D3B331F] w-full;
   }
 
   /* fresh-air */
