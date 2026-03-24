@@ -111,7 +111,7 @@
   /* hero-section */
 
   .hero-heading h3 {
-    @apply font-[FT_Polar] text-[#F5F2EB] text-[40px] leading-[46px] text-center xl:text-left xl:text-[60px] xl:leading-[66px];
+    @apply font-[FT_Polar] text-[#F5F2EB] text-[40px] leading-[46px]  xl:text-left xl:text-[60px] xl:leading-[66px];
   }
 
   .hero-heading h4 {
