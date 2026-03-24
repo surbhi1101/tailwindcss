@@ -111,7 +111,7 @@
   /* hero-section */
 
   .hero-heading h3 {
-    @apply font-[FT_Polar] text-[#F5F2EB] text-[40px] leading-[46px]  xl:text-left xl:text-[60px] xl:leading-[66px];
+    @apply font-[FT_Polar] text-[#F5F2EB] text-[40px] leading-[46px] xl:text-left xl:text-[60px] xl:leading-[66px] font-normal;
   }
 
   .hero-heading h4 {
@@ -163,7 +163,7 @@
   }
 
   .product-image {
-    @apply relative w-full aspect-square;
+    @apply relative h-[184px] w-[184px] xl:w-[361px] xl:h-[361px];
   }
 
   .product-image img {
@@ -183,11 +183,11 @@
   }
 
   .product-badge {
-    @apply absolute top-2 left-2 bg-[#F5F2EB] text-[#3D3B33] px-2 py-[2px];
+    @apply absolute top-[10px] left-[10px];
   }
 
   .product-badge a {
-    @apply font-[FT_Polar] text-[9px] leading-[11px] tracking-[0.16px] xl:text-[10px] xl:leading-[12px] xl:tracking-[0.2px];
+    @apply font-[FT_Polar] text-[9px] bg-[#F5F2EB] text-[#3D3B33] leading-[11px] tracking-[0.16px] xl:text-[10px] xl:leading-[12px] xl:tracking-[0.2px]  px-1 py-[2px] xl:px-[6px] xl:py-1;
   }
 
   .product-heading h4 {
