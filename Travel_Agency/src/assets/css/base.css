@@ -1,0 +1,60 @@
+@theme {
+  /* ===== Fonts ===== */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Rubik", sans-serif;
+  --font-card-title: "Mulish", sans-serif;
+
+  /* ===== Colors ===== */
+  --color-title: #172432;
+  --color-text: #767e86;
+
+  /* =====  letter-spacing ===== */
+  --ls-sm: 0.8;
+  --ls-tight: 0.34px;
+  --ls-lg: 0.77px;
+  --ls-md: 0.39px;
+  --ls-wide: 1.14px;
+
+  /* =====  border-radius ===== */
+  --radius-5: 5px;
+
+  /* padding - margin - height - width - gap */
+
+  --spacing-23: 23px;
+  --spacing-60: 60px;
+  --spacing-72: 72px;
+  --spacing-74: 74px;
+  --spacing-97: 97px;
+  --spacing-100: 100px;
+  --spacing-120: 120px;
+  --spacing-140: 140px;
+  --spacing-148: 148px;
+  --spacing-170: 170px;
+  --spacing-182: 182px;
+  --spacing-200: 200px;
+  --spacing-234: 234px;
+  --spacing-240: 240px;
+  --spacing-320: 320px;
+  --spacing-789: 789px;
+}
+@layer base {
+  body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size:18px;
+  }
+  
+  p {
+    color: var(--color-text);
+    font-family: var(--font-body);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-title);
+    font-family: var(--font-heading);
+  }
+}

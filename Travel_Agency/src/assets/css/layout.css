@@ -1,0 +1,61 @@
+@layer layout {
+  .hero-mobile {
+    @apply block md:hidden relative w-full 
+           px-4 pb-[100px] gap-[100px] mt-[148px]
+           flex flex-col;
+  }
+
+  .destinations-section {
+    @apply relative flex flex-col gap-[100px] 
+    px-4 py-20
+    md:px-5 
+    lg:px-0 lg:pl-8 lg:py-[100px] 
+    xl:py-[140px] 
+    2xl:pl-[182px];
+  }
+
+  .special-offer {
+    @apply relative flex flex-col gap-[60px] 
+    px-4 py-20
+    md:px-5 md:gap-[100px] 
+    lg:px-8 lg:py-[100px] 
+    xl:py-[140px] 2xl:px-[182px];
+  }
+
+  .Blog-section {
+    @apply flex flex-col px-4 py-20 gap-[100px] 
+    md:px-5
+    lg:px-8 lg:py-[100px] 
+    xl:py-[140px] 
+    2xl:px-[182px];
+  }
+
+  .trip-planners-section {
+    @apply flex flex-col px-4 py-20 gap-20 
+    md:px-5
+    lg:pl-8 lg:px-0 lg:py-[100px]
+    xl:py-[140px]
+    2xl:gap-[100px] 2xl:pl-[182px] 
+    lg:flex-row overflow-hidden;
+  }
+
+  .Gallery-section {
+    @apply flex flex-col gap-[100px]
+         py-20 px-4
+         md:px-5
+         lg:py-[100px] lg:px-8 
+         xl:py-[140px]
+          2xl:px-[182px];
+  }
+
+  .experiences-gallery {
+    @apply flex flex-col gap-[35px]
+         py-20 px-4
+         md:pl-8 md:gap-[95px] md:px-0
+         lg:pt-[100px] lg:pl-8 lg:pb-[200px] xl:pt-[140px] xl:pb-[240px] 2xl:pl-[182px];
+  }
+  .footer {
+    @apply flex flex-col bg-[#172432]
+         gap-1;
+  }
+}

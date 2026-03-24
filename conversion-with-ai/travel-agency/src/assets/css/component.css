@@ -327,8 +327,7 @@
   }
   /* footer */
   .footer-content {
-    @apply flex flex-col gap-[60px]
-           lg:flex-row lg:justify-between;
+    @apply flex gap-[60px];
   }
 
   /* brand */

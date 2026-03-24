@@ -62,7 +62,8 @@
   .footer {
     @apply bg-[#172432]
            px-4 py-20 flex flex-col gap-1 lg:flex-row
-           md:px-8 md:pt-[100px] md:pb-[140px]
+           md:px-8 md:pt-[100px] md:pb-[140px] 
+           lg:justify-between
            2xl:px-[182px];
   }
 }
