@@ -4,10 +4,10 @@
     @apply lg:pt-[160px] lg:px-[48px];
   }
   .left-padding {
-    @apply pl-5;
+    @apply pl-5 xl:px-[48px];
   }
   .section-padding-x {
-    @apply px-5;
+    @apply px-5 xl:px-[48px];
   }
   /* ================= SHOP PRODUCTS ================= */
   .shop-products {
@@ -37,7 +37,7 @@
   /* ================= AIRCARE ================= */
 
   .aircare {
-    @apply px-4 pt-[120px] xl:pt-[160px] flex flex-col gap-6;
+    @apply pt-[120px] xl:pt-[160px] flex flex-col gap-6;
   }
   /* footer */
   .footer {
