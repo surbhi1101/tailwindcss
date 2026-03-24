@@ -9,11 +9,7 @@
   }
 
   .email-offer-track h4 {
-    @apply font-normal uppercase
-  py-[6px] md:py-[7px]
-  text-[10px] leading-[12px] tracking-[0.4px]
-  xl:text-[11px] xl:leading-[14px] xl:tracking-[0.5px]
-  px-6;
+    @apply font-normal uppercase py-[6px] md:py-[7px]  text-[10px] leading-[12px] tracking-[0.4px] xl:text-[11px] xl:leading-[14px] xl:tracking-[0.5px] px-6;
   }
 
   /* animation */
@@ -25,16 +21,9 @@
       transform: translateX(-50%);
     }
   }
-  .hero-header {
-    @apply w-full bg-cover bg-center flex items-end min-h-[380px];
-    background-image: url("../images/mobile-header.png");
-  }
 
-  @media (min-width: 1152px) {
-    .hero-header {
-      @apply min-h-[700px];
-      background-image: url("../images/desktop-header.png");
-    }
+  .hero-header {
+    @apply w-full bg-cover bg-center flex items-end min-h-[380px] xl:min-h-[800px];
   }
   .navbar {
     @apply fixed top-0 left-0 w-full z-50 pt-[23px] xl:pt-[27px];
@@ -57,13 +46,8 @@
   }
 
   .navbar-logo img {
-    @apply w-auto h-[24px] hidden lg:block;
+    @apply w-auto h-[24px] hidden xl:block;
   }
-
-  .hero-header {
-    @apply w-full bg-cover bg-center flex items-end min-h-[500px] xl:min-h-[700px];
-  }
-
   .hero-header-content {
     @apply w-full flex flex-col items-start gap-6 xl:px-[48px] pb-5 px-5;
   }
@@ -73,11 +57,11 @@
   }
 
   .menu-btn {
-    @apply block lg:hidden font-[FT_Polar] text-[#F5F2EB] text-[16px] leading-[22px];
+    @apply block xl:hidden font-[FT_Polar] text-[#F5F2EB] text-[16px] leading-[22px];
   }
 
   .nav-links {
-    @apply hidden lg:flex gap-2 xl:gap-6;
+    @apply hidden xl:flex gap-2 xl:gap-6;
   }
   .nav-links.open {
     @apply flex flex-col absolute top-full left-[10px]
@@ -89,7 +73,7 @@
     @apply relative inline-block
   font-[FT_Polar] text-[#3D3B33] 
   text-[16px] leading-[22px]
-  lg:text-[#F5F2EB] xl:text-[#F5F2EB];
+  xl:text-[#F5F2EB] xl:text-[#F5F2EB];
   }
 
   /* underline base */
@@ -158,7 +142,7 @@
     @apply block xl:hidden;
   }
 
-  .lg-title {
+  .xl-title {
     @apply hidden xl:block;
   }
 

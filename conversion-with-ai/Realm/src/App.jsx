@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import logo from "./assets/images/logo.png";
+import mobileHeader from "./assets/images/mobile-header.png";
+import desktopHeader from "./assets/images/desktop-header.png";
 import footerlogo from "./assets/images/footer-logo.png";
-import desktopheader from "./assets/images/desktop-header.png";
-import mobileheader from "./assets/images/mobile-header.png";
 import product1 from "./assets/images/product1.png";
 import product2 from "./assets/images/product2.png";
 import product3 from "./assets/images/product3.png";
@@ -189,7 +189,12 @@ function App() {
           </div>
         </div>
 
-        <div className="hero-header">
+        <div
+          className="hero-header"
+          style={{
+            backgroundImage: `url(${window.innerWidth >= 1440 ? desktopHeader : mobileHeader})`,
+          }}
+        >
           <div className="hero-header-content">
             <div className="hero-heading">
               <h3>Free of toxins,</h3>
@@ -222,7 +227,7 @@ function App() {
                     bedding.
                   </h1>
 
-                  <h1 className="lg-title">
+                  <h1 className="xl-title">
                     Non-toxic fine fragrance that neutralizes odor and lingers
                     beautifully in air and on fabric.
                   </h1>
