@@ -339,6 +339,7 @@
     @apply w-full h-[195px] xl:h-[244px];
   }
 
+  /* footer */
   .footer-container {
     @apply w-full px-4 xl:px-[48px] pb-[72px] xl:pb-[48px];
   }
@@ -376,7 +377,7 @@
   }
 
   .desktop-copyrights {
-    @apply hidden xl:block mr-[230px];
+    @apply hidden xl:block xl:w-[500px];
   }
 
   .mobile-newsletter {
