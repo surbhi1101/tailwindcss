@@ -376,7 +376,7 @@
   }
 
   .desktop-copyrights {
-    @apply hidden xl:block;
+    @apply hidden xl:block mr-[230px];
   }
 
   .mobile-newsletter {
