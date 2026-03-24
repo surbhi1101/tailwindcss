@@ -244,7 +244,7 @@ function App() {
         </section>
         {/* Shop our products */}
         <section className="section-padding fade-section left-padding ">
-          <div className="shop-header">
+          <div className="shop-header section-title">
             <h3>Shop our products</h3>
             <a href="#" onClick={handleClick}>
               Shop all
@@ -296,7 +296,7 @@ function App() {
         </section>
         {/*Our signature scents */}
         <section className="section-padding fade-section section-padding-x ">
-          <div className="signature-header">
+          <div className="signature-header section-title">
             <h4>Our signature scents</h4>
             <a href="#" onClick={handleClick}>
               Shop all
@@ -394,7 +394,7 @@ function App() {
         </section>
         {/* fresh-air */}
         <section className="section-padding fade-section section-padding-x">
-          <div className="fresh-air-header">
+          <div className="fresh-air-header section-title">
             <h3>Fresh Air</h3>
             <h4>The Realm Blog</h4>
           </div>

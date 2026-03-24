@@ -108,6 +108,10 @@
     @apply block;
   }
 
+  /* section-title */
+  .section-title {
+    @apply font-[FT_Polar] text-[#3D3B33] text-[22px] leading-[26px] xl:text-[32px] xl:leading-[36px];
+  }
   /* hero-section */
 
   .hero-heading h3 {
@@ -150,9 +154,6 @@
     @apply font-[BB_Modern_Pro] font-normal text-center text-[#3D3B33] text-[32px] leading-[36px] xl:text-[60px] xl:leading-[66px];
   }
   /* Shop our products */
-  .shop-header h3 {
-    @apply font-[FT_Polar] font-normal text-[#3D3B33] text-center text-[22px] leading-[26px] xl:text-[32px] xl:leading-[36px];
-  }
 
   .shop-header a {
     @apply hidden xl:block font-[FT_Polar] text-[#3D3B3399] text-[16px] leading-[22px];
@@ -206,10 +207,6 @@
 
   .signature-header {
     @apply flex justify-between items-center;
-  }
-
-  .signature-header h4 {
-    @apply text-[#3D3B33] font-[FT_Polar] text-[22px] leading-[26px] xl:text-[32px] xl:leading-[36px];
   }
 
   .signature-header a {
@@ -270,10 +267,6 @@
     @apply flex flex-col gap-3;
   }
 
-  .aircare-title {
-    @apply font-[FT_Polar] text-[#3D3B33] text-[22px] leading-[26px] xl:text-[32px] xl:leading-[36px];
-  }
-
   .aircare-title span {
     @apply align-super text-[12px];
   }
@@ -315,9 +308,6 @@
   }
 
   /* fresh-air */
-  .fresh-air-header h3 {
-    @apply font-[FT_Polar] font-normal text-[#3D3B33] text-[22px] leading-[26px] xl:text-[32px] xl:leading-[36px];
-  }
 
   .fresh-air-header h4 {
     @apply font-[FT_Polar] font-normal text-[#3D3B3366] text-[22px] leading-[26px] xl:text-[32px] xl:leading-[36px];
@@ -448,11 +438,6 @@
   .btn-anim {
     @apply relative overflow-hidden transition-all duration-300 ease-in-out;
   }
-
-  .btn-anim {
-    @apply relative overflow-hidden transition-all duration-300 ease-in-out;
-  }
-
   .btn-anim::before {
     content: "";
     position: absolute;
