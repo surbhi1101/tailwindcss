@@ -1,10 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import "./assets/css/app.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import herosection from "./assets/images/hero_section.png";
 import logo from "./assets/images/logo.svg";
+import hamburger from "./assets/images/hamburger.png";
 import locationicon from "./assets/images/location.png";
 import delanoix from "./assets/images/anthony-delanoix.jpg";
 import reungere from "./assets/images/anthony-reungere.jpg";
@@ -25,6 +28,9 @@ import gallery1 from "./assets/images/gallery1.jpg";
 import gallery2 from "./assets/images/gallery2.jpg";
 import gallery3 from "./assets/images/gallery3.jpg";
 import gallery4 from "./assets/images/gallery4.jpg";
+import exp1 from "./assets/images/exp-1.png";
+import exp2 from "./assets/images/exp-2.png";
+import exp3 from "./assets/images/exp-3.png";
 import facebook from "./assets/images/facebook.png";
 import instagram from "./assets/images/instagram.png";
 import twitter from "./assets/images/twitter.png";
@@ -36,6 +42,23 @@ function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   const cardsPerView = isDesktop ? 3 : 1;
   const swiperRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const heroSwiperRef = useRef(null);
+  const experiencesSwiperRef = useRef(null);
+  const [activeExperience, setActiveExperience] = useState(0);
+
+  // sticky navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // fade in effect
   useEffect(() => {
@@ -206,6 +229,187 @@ function App() {
 
   return (
     <div>
+      <div className="hero-container">
+        <nav
+          id="siteHeader"
+          className={`navbar-container ${
+            isSticky
+              ? "bg-black/85 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
+              : "bg-transparent"
+          }`}
+        >
+          <div className="navbar-content clickable">
+            <img src={logo} alt="Logo" className="logo" />
+            <ul className="nav-links">
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#explore">Explore</a>
+              </li>
+              <li>
+                <a href="#travel">Travel</a>
+              </li>
+              <li>
+                <a href="#blog">Blog</a>
+              </li>
+              <li>
+                <a href="#pricing">Pricing</a>
+              </li>
+            </ul>
+
+            <div className="auth-buttons">
+              <div className="btn-base btn-login clickable">
+                <a href="#login">Login</a>
+              </div>
+              <div className="btn-base btn-primary btn-signup">
+                <a href="#signup" onClick={(e) => e.preventDefault()}>
+                  Sign Up
+                </a>
+              </div>
+            </div>
+
+            <button
+              className="lg:hidden text-white text-3xl z-[3000]"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? "✕" : <img src={hamburger} />}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="mobile-active">
+              <ul className="mobile-navlinks clickable">
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#explore">Explore</a>
+                </li>
+                <li>
+                  <a href="#travel">Travel</a>
+                </li>
+                <li>
+                  <a href="#blog">Blog</a>
+                </li>
+                <li>
+                  <a href="#pricing">Pricing</a>
+                </li>
+              </ul>
+
+              <div className="mobile-btn">
+                <div className="btn-login btn-base btn-animate clickable">
+                  <a href="#login">Login</a>
+                </div>
+                <div className="btn-signup btn-primary btn-animate clickable">
+                  <a href="#signup" onClick={(e) => e.preventDefault()}>
+                    Sign Up
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
+        </nav>
+        <div className="hero-mobile">
+          <div className="hero-content">
+            <h1>Start your unforgettable journey with us.</h1>
+            <div className="animate-text">
+              <p>The best travel for your journey begins now</p>
+            </div>
+          </div>
+
+          <div className="mobile-booking-card">
+            <div className="booking-fields">
+              <div className="booking-field">
+                <label>Destination</label>
+                <input type="text" placeholder="Dubai" />
+              </div>
+
+              <div className="booking-field">
+                <label>Person</label>
+                <select defaultValue="2">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+
+              <div className="booking-field">
+                <label>Check In</label>
+                <input type="date" defaultValue="2020-09-17" />
+              </div>
+
+              <div className="booking-field">
+                <label>Check Out</label>
+                <input type="date" defaultValue="2020-10-17" />
+              </div>
+            </div>
+            <div className="booking-footer-btn btn-base btn-primary btn-heading-lg clickable">
+              <a href="#booking" onClick={(e) => e.preventDefault()}>
+                Book Now
+              </a>
+              <span>→</span>
+            </div>
+          </div>
+        </div>
+        <Swiper
+          direction={"vertical"}
+          pagination={{ clickable: true }}
+          mousewheel={{ releaseOnEdges: true }}
+          onSwiper={(swiper) => (heroSwiperRef.current = swiper)}
+          modules={[Pagination, Mousewheel]}
+          className="heroSwiper"
+        >
+          {[...Array(5)].map((_, index) => (
+            <SwiperSlide key={index}>
+              <div className="hero-slide">
+                <img src={herosection} alt="hero" />
+
+                <div className="hero-overlay animate-fadeIn-scroll">
+                  <div className="hero-content">
+                    <h1>Start your unforgettable journey with us.</h1>
+                    <div className="animate-text">
+                      <p>The best travel for your journey begins now</p>
+                    </div>
+                  </div>
+                  <div className="booking-bar">
+                    <div className="booking-fields ">
+                      <div className="booking-field">
+                        <label>Destination</label>
+                        <input type="text" placeholder="Dubai" />
+                      </div>
+
+                      <div className="booking-field">
+                        <label>Person</label>
+                        <select defaultValue="2">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+
+                      <div className="booking-field">
+                        <label>Check In</label>
+                        <input type="date" defaultValue="2020-09-17" />
+                      </div>
+
+                      <div className="booking-field">
+                        <label>Check Out</label>
+                        <input type="date" defaultValue="2020-10-17" />
+                      </div>
+                    </div>
+                    <div className="booking-footer-btn btn-base btn-primary btn-heading-lg clickable">
+                      <a href="#booking" onClick={(e) => e.preventDefault()}>
+                        Book Now
+                      </a>
+                      <span>→</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       {/* popular-destinations-section */}
       <section className="popular-destinations-section fade-section">
         <div className="section-heading">
@@ -282,13 +486,19 @@ function App() {
         </Swiper>
         <div className="nav-btn-group nav-btn-mobile">
           <div className="nav-btn nav-btn-prev">
-            <button onClick={() => swiperRef.current?.slidePrev()}>
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="clickable"
+            >
               <img src={prevbtn} alt="previous" />
             </button>
           </div>
 
           <div className="nav-btn nav-btn-next">
-            <button onClick={() => swiperRef.current?.slideNext()}>
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="clickable"
+            >
               <img src={nextbtn} alt="next" />
             </button>
           </div>
@@ -315,7 +525,9 @@ function App() {
                 onClick={prevOffer}
                 disabled={offerIndex === 0}
                 className={
-                  offerIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
+                  offerIndex === 0
+                    ? "clickable opacity-50 cursor-not-allowed"
+                    : ""
                 }
               >
                 <img src={prevbtn} alt="previous" />
@@ -328,7 +540,7 @@ function App() {
                 disabled={offerIndex >= cards.length - cardsPerView}
                 className={
                   offerIndex >= cards.length - cardsPerView
-                    ? "opacity-50 cursor-not-allowed"
+                    ? "opacity-50 cursor-not-allowed clickable"
                     : ""
                 }
               >
@@ -372,7 +584,7 @@ function App() {
                         <p>{card.price}</p>
                       </div>
 
-                      <div className="offer-btn">
+                      <div className="offer-btn clickable ">
                         <a href="#">Details</a>
                       </div>
                     </div>
@@ -382,8 +594,8 @@ function App() {
             ))}
           </div>
         </div>
-        <div className="nav-btn-group nav-btn-mobile">
-          <div className="nav-btn nav-btn-prev">
+        <div className="nav-btn-group nav-btn-mobile ">
+          <div className="nav-btn nav-btn-prev  clickable">
             <button
               onClick={prevOffer}
               disabled={offerIndex === 0}
@@ -395,7 +607,7 @@ function App() {
             </button>
           </div>
 
-          <div className="nav-btn nav-btn-next">
+          <div className="nav-btn nav-btn-next clickable">
             <button
               onClick={nextOffer}
               disabled={offerIndex >= cards.length - cardsPerView}
@@ -479,7 +691,9 @@ function App() {
               <div className="trip-btn-bg trip-btn-bg-left"></div>
               <div className="trip-btn-bg trip-btn-bg-right"></div>
 
-              <button className="trip-btn">View all trip plans</button>
+              <button className="trip-btn clickable">
+                View all trip plans
+              </button>
             </div>
           </div>
         </div>
@@ -571,7 +785,7 @@ function App() {
             </div>
           </div>
           <div className="nav-btn-group nav-btn-desktop">
-            <div className="nav-btn nav-btn-prev">
+            <div className="nav-btn nav-btn-prev  clickable">
               <button
                 onClick={prevGallery}
                 disabled={galleryIndex === 0}
@@ -583,7 +797,7 @@ function App() {
               </button>
             </div>
 
-            <div className="nav-btn nav-btn-next">
+            <div className="nav-btn nav-btn-next clickable">
               <button
                 onClick={nextGallery}
                 disabled={galleryIndex >= galleryImages.length - imagesPerView}
@@ -608,7 +822,7 @@ function App() {
         </div>
 
         <div className="nav-btn-group nav-btn-mobile">
-          <div className="nav-btn nav-btn-prev">
+          <div className="nav-btn nav-btn-prev clickable">
             <button
               onClick={prevGallery}
               disabled={galleryIndex === 0}
@@ -620,7 +834,7 @@ function App() {
             </button>
           </div>
 
-          <div className="nav-btn nav-btn-next">
+          <div className="nav-btn nav-btn-next clickable">
             <button
               onClick={nextGallery}
               disabled={galleryIndex >= galleryImages.length - imagesPerView}
@@ -648,98 +862,269 @@ function App() {
             <p>Here some awesome feedback from our travelers</p>
           </div>
         </div>
+        <div className="experiences">
+          <Swiper
+            className="experiencesSwiper"
+            spaceBetween={32}
+            watchSlidesProgress={true}
+            onSwiper={(swiper) => (experiencesSwiperRef.current = swiper)}
+            onSlideChange={(swiper) => setActiveExperience(swiper.activeIndex)}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              768: { slidesPerView: 1.4 },
+              1152: { slidesPerView: 2.16 },
+              1440: { slidesPerView: 2.43 },
+              1920: { slidesPerView: 2.55 },
+            }}
+          >
+            <SwiperSlide>
+              <div className="experiences-card">
+                <div className="experiences-person">
+                  <div className="person-img">
+                    <img src={exp1} alt="John Doe" />
+                  </div>
+                </div>
+                <div className="experiences-text split-lines">
+                  <p>
+                    But I must explain to you how all this mistaken idea of
+                    denouncing pleasure and praising pain was born and I will
+                    give you a complete account of the system and expound the
+                    actual teachings of the great explorer of the truth, the
+                    master- builder of human happiness.
+                  </p>
+                </div>
+                <div className="star-img">
+                  {[...Array(5)].map((_, i) => (
+                    <img key={i} src={star} alt="star" />
+                  ))}
+                </div>
+                <div className="person-details">
+                  <h4>John Doe</h4>
+                  <p>Accountant</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="experiences-card">
+                <div className="experiences-person">
+                  <div className="person-img">
+                    <img src={exp2} alt="John Smith" />
+                  </div>
+                </div>
+                <div className="experiences-text split-lines">
+                  <p>
+                    But I must explain to you how all this mistaken idea of
+                    denouncing pleasure and praising pain was born and I will
+                    give you a complete account of the system and expound the
+                    actual teachings of the great explorer of the truth, the
+                    master- builder of human happiness.
+                  </p>
+                </div>
+                <div className="star-img">
+                  {[...Array(5)].map((_, i) => (
+                    <img key={i} src={star} alt="star" />
+                  ))}
+                </div>
+                <div className="person-details">
+                  <h4>John Smith</h4>
+                  <p>Journalist, HWO News</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="experiences-card">
+                <div className="experiences-person">
+                  <div className="person-img">
+                    <img src={exp3} alt="Tamara Bellis" />
+                  </div>
+                </div>
+                <div className="experiences-text split-lines">
+                  <p>
+                    But I must explain to you how all this mistaken idea of
+                    denouncing pleasure and praising pain was born and I will
+                    give you a complete account of the system and expound the
+                    actual teachings of the great explorer of the truth, the
+                    master- builder of human happiness.
+                  </p>
+                </div>
+                <div className="star-img">
+                  {[...Array(5)].map((_, i) => (
+                    <img key={i} src={star} alt="star" />
+                  ))}
+                </div>
+                <div className="person-details">
+                  <h4>Tamara Bellis</h4>
+                  <p>Managing Director, JTH</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
         <div className="nav-btn-group nav-btn-mobile">
           <div>
-            <button className="nav-btn nav-btn-prev">
+            <button
+              className="nav-btn nav-btn-prev clickable"
+              onClick={() => experiencesSwiperRef.current?.slidePrev()}
+              disabled={activeExperience === 0}
+            >
               <img src={prevbtn} alt="previous" />
             </button>
           </div>
 
           <div>
-            <button className="nav-btn nav-btn-next">
+            <button
+              className="nav-btn nav-btn-next clickable"
+              onClick={() => experiencesSwiperRef.current?.slideNext()}
+              disabled={
+                activeExperience >=
+                (experiencesSwiperRef.current?.slides.length || 1) - 1
+              }
+            >
               <img src={nextbtn} alt="next" />
             </button>
           </div>
         </div>
       </section>
-      <footer className="footer">
-        <div className="footer-content">
-          {/* Logo + Copyright */}
-          <div className="footer-brand">
-            <img src={logo} alt="logo" />
-            <p className="footer-copy">
-              Copyright © Travellian 2020 All rights reserved
-            </p>
-          </div>
+      <footer>
+        {/* ===== Mobile / Tablet ===== */}
+        <div className=" card">
+          <div className="footer-card footer-card--mobile">
+            <div className="footer-card-heading">
+              <h4 className="footer-card-title">Our Newsletter</h4>
+            </div>
 
-          {/* Column 1 */}
-          <div className="footer-menu">
-            <h4>Menu</h4>
-            <ul className="footer-list">
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Explore</a>
-              </li>
-              <li>
-                <a href="#">Travel</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Pricing</a>
-              </li>
-              <li>
-                <a href="#">Pricing</a>
-              </li>
-            </ul>
-          </div>
+            <div className="footer-card-form">
+              <div className="footer-card-input-group">
+                <div className="footer-card-label-wrapper">
+                  <label className="footer-card-label">Email</label>
+                </div>
 
-          {/* Column 2 */}
-          <div className="footer-menu">
-            <h4>Information</h4>
-            <ul className="footer-list footer-list-lg">
-              <li>
-                <a href="#">Destinations</a>
-              </li>
-              <li>
-                <a href="#">Supports</a>
-              </li>
-              <li>
-                <a href="#">Terms & Conditions</a>
-              </li>
-              <li>
-                <a href="#">Privacy</a>
-              </li>
-            </ul>
-          </div>
+                <div className="footer-card-input-wrapper">
+                  <input
+                    type="text"
+                    placeholder="Enter your email"
+                    className="footer-card-input"
+                  />
+                </div>
+              </div>
 
-          {/* Column 3 */}
-          <div className="footer-menu footer-menu-wide">
-            <h4>Contact Info</h4>
-            <ul className="footer-list footer-list-lg">
-              <li>
-                <a href="#">+123 456 789</a>
-              </li>
-              <li>
-                <a href="#">info@travellian.com</a>
-              </li>
-              <li>
-                <a href="#">Travel</a>
-              </li>
-            </ul>
+              <div className="footer-card-button  clickable">
+                <a href="#" className="footer-card-btn-text">
+                  Subscribe
+                </a>
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="footer">
+          <div className="footer-card-wrapper">
+            {/* ===== Desktop ===== */}
+            <div className="footer-card footer-card--desktop">
+              <div className="footer-card-heading">
+                <h4 className="footer-card-title">Our Newsletter</h4>
+              </div>
 
-          {/* Social */}
-          <div className="footer-social">
-            <h4>Follow us on</h4>
-            <div className="footer-icons">
-              <img src={facebook} alt="social" />
-              <img src={pinterest} alt="social" />
-              <img src={instagram} alt="social" />
-              <img src={twitter} alt="social" />
+              <div className="footer-card-form">
+                <div className="footer-card-input-group">
+                  <div className="footer-card-label-wrapper">
+                    <label className="footer-card-label">Email</label>
+                  </div>
+
+                  <div className="footer-card-input-wrapper">
+                    <input
+                      type="text"
+                      placeholder="Enter your email"
+                      className="footer-card-input"
+                    />
+                  </div>
+                </div>
+
+                <div className="footer-card-button clickable">
+                  <a href="#" className="footer-card-btn-text">
+                    Subscribe
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="footer-content">
+            {/* Logo + Copyright */}
+            <div className="footer-brand">
+              <img src={logo} alt="logo" />
+              <p className="footer-copy">
+                Copyright © Travellian 2020 All rights reserved
+              </p>
+            </div>
+
+            {/* Column 1 */}
+            <div className="footer-menu">
+              <h4>Menu</h4>
+              <ul className="footer-list">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Explore</a>
+                </li>
+                <li>
+                  <a href="#">Travel</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Pricing</a>
+                </li>
+                <li>
+                  <a href="#">Pricing</a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 2 */}
+            <div className="footer-menu">
+              <h4>Information</h4>
+              <ul className="footer-list">
+                <li>
+                  <a href="#">Destinations</a>
+                </li>
+                <li>
+                  <a href="#">Supports</a>
+                </li>
+                <li>
+                  <a href="#">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="#">Privacy</a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3 */}
+            <div className="footer-menu footer-menu-wide">
+              <h4>Contact Info</h4>
+              <ul className="footer-list">
+                <li>
+                  <a href="#">+123 456 789</a>
+                </li>
+                <li>
+                  <a href="#">info@travellian.com</a>
+                </li>
+                <li>
+                  <a href="#">Travel</a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Social */}
+            <div className="footer-social">
+              <h4>Follow us on</h4>
+              <div className="footer-icons">
+                <img src={facebook} alt="social" />
+                <img src={pinterest} alt="social" />
+                <img src={instagram} alt="social" />
+                <img src={twitter} alt="social" />
+              </div>
             </div>
           </div>
         </div>

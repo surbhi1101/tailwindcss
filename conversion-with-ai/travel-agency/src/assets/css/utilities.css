@@ -67,4 +67,7 @@
   .popular-destinations-section .nav-btn-desktop {
     @apply lg:pr-8 2xl:pr-[182px];
   }
+  .clickable {
+    @apply cursor-pointer;
+  }
 }
