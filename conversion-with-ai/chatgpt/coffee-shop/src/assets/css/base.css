@@ -1,0 +1,15 @@
+@layer base {
+  :root {
+    --font-playfair: "Playfair Display", serif;
+    --font-rubik: "Rubik", sans-serif;
+  }
+  body {
+    @apply text-[#443c28] bg-[#F5F2EB];
+    font-family: var(--font-rubik);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-playfair);
+  }
+}

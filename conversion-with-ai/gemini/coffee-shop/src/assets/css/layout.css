@@ -1,0 +1,25 @@
+@layer components {
+  .main-section {
+    @apply py-[80px] lg:py-[120px] px-6 lg:px-[100px];
+  }
+
+  .container-fluid {
+    @apply max-w-[1920px] mx-auto w-full;
+  }
+
+  .layout-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center;
+  }
+
+  .navbar-container {
+    @apply fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 lg:px-[100px] py-4 bg-white/90 backdrop-blur-md;
+  }
+
+  .navbar-sticky {
+    @apply shadow-md py-3;
+  }
+
+  .footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-t border-[#443c28]/10 pt-16;
+  }
+}

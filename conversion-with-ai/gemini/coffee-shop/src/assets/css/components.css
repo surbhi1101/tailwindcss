@@ -1,0 +1,58 @@
+@layer components {
+  /* Headings & Underline */
+  .section-heading-wrapper {
+    @apply mb-12 text-center lg:text-left;
+  }
+
+  .section-heading {
+    @apply text-[32px] md:text-[48px] lg:text-[56px] leading-tight mb-4 relative inline-block;
+  }
+
+  .underline-system {
+    @apply block w-20 h-1 bg-[#443c28] mt-2;
+  }
+
+  .underline-center {
+    @apply mx-auto;
+  }
+
+  /* Buttons */
+  .btn-base {
+    @apply px-8 py-4 border-2 border-[#443c28] transition-all duration-500 font-bold uppercase tracking-wider text-[14px] cursor-pointer inline-block;
+  }
+
+  .btn-primary {
+    @apply bg-[#443c28] text-white hover:bg-transparent hover:text-[#443c28];
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-[#443c28] hover:bg-[#443c28] hover:text-white;
+  }
+
+  /* Cards */
+  .menu-card {
+    @apply bg-[#f5f2eb] p-6 rounded-none flex flex-col gap-4 h-full;
+  }
+
+  .card-img {
+    @apply w-full aspect-square object-cover mb-4;
+  }
+
+  .feature-card {
+    @apply p-8 border border-[#443c28]/10 flex flex-col items-center text-center gap-4 transition-transform duration-300 hover:-translate-y-2;
+  }
+
+  .feature-icon {
+    @apply text-[40px] mb-2;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply font-medium text-[#443c28] hover:opacity-70 transition-opacity;
+  }
+
+  /* Form */
+  .form-input {
+    @apply w-full p-4 border border-[#443c28]/20 bg-transparent focus:outline-none focus:border-[#443c28];
+  }
+}

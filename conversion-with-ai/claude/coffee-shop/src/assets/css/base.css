@@ -1,0 +1,68 @@
+@layer base {
+  :root {
+    --color-primary: #443c28;
+    --color-accent: #c8a96e;
+    --color-accent-dark: #a8894e;
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f5f2eb;
+    --color-text: #443c28;
+    --color-text-light: #7a6f5a;
+    --color-text-muted: #a89e88;
+    --color-white: #ffffff;
+    --color-overlay: rgba(30, 22, 10, 0.62);
+    --font-heading: "Playfair Display", serif;
+    --font-body: "Rubik", sans-serif;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.6s ease;
+    --shadow-sm: 0 2px 12px rgba(68, 60, 40, 0.08);
+    --shadow-md: 0 8px 32px rgba(68, 60, 40, 0.14);
+    --shadow-lg: 0 20px 60px rgba(68, 60, 40, 0.18);
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border m-0 p-0;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    @apply antialiased leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    @apply leading-tight;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  a {
+    @apply no-underline;
+    color: inherit;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  input,
+  textarea {
+    font-family: var(--font-body);
+    @apply outline-none;
+  }
+}

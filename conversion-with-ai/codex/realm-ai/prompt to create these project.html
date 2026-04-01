@@ -1,0 +1,861 @@
+@layer base {
+
+    create with following styling:
+    {h1 to h6:
+    color:#3D3B33
+    font family:BB Modern Pro
+}
+p{
+    font-family:FT Polar
+    color:#3D3B33
+}
+}
+
+@layer utilities {
+}
+ create fade in effect with logic
+
+<!-- header -->
+ create a loop moving sentence above the header with the following styling:
+ <div>
+    text-[#3D3B33]
+    bg-[#CCC0DD]
+in sm:
+font-family: FT Polar;
+font-weight: 400;
+font-style: Regular;
+font-size: 10px;
+leading-trim: NONE;
+line-height: 12px;
+letter-spacing: 0.4px;
+text-align: center;
+text-transform: uppercase;
+
+    in xl:
+    font-family: FT Polar;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 11px;
+    leading-trim: NONE;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+
+    <p>Join our email list for 15% off</p>
+ </div>
+
+ there will 2 different bg-image for sm & xl in which there will be a sticky navbar with bg-[#3D3B33] justify-between:
+ in sm: we will have 2 items & in xL: there will be 3 items to display
+ these is for sm:
+ py-[13px] px-5
+ left side there will be menu right-side cart(0) both has text-[#3D3B33] with the Shop about FAQ menu in that
+ when it is click it will be display in flex flex-col gap-1 & it will be display one by one
+
+these is for xl:
+py-5 px-[48px]
+left side there will be menu Shop about FAQ with the gap-6 flex 
+a will have the following style:
+text-[#F5F2EB]
+font-family: FT Polar;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 22px;
+letter-spacing: 0%;
+
+in center there will be logo
+on right side with gap-6 flex
+Account Cart(0) 
+
+logo & Account will be hidden in sm
+logo & Account will be visible in xl
+
+& there will content in last of the image left corner 
+structure for content
+<div>flex flex-col gap-6 px-5 pb-5 xl:py-5 xl:px-[48px]
+    <div> text-[#F5F2EB]
+<h3> 
+    in sm:
+    font-family: FT Polar;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 40px;
+    leading-trim: NONE;
+    line-height: 46px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    in xl:
+    font-family: FT Polar;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 60px;
+    leading-trim: NONE;
+    line-height: 66px;
+    letter-spacing: 0%;
+
+    Free of toxins,</h3>
+<h4>
+    in sm:
+    font-family: BB Modern Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 40px;
+    leading-trim: NONE;
+    line-height: 46px;
+    letter-spacing: 0%;
+    text-align: center;
+in xl:
+font-family: BB Modern Pro;
+font-weight: 400;
+font-style: Regular;
+font-size: 60px;
+leading-trim: NONE;
+line-height: 66px;
+letter-spacing: 0%;
+
+
+    full of pleasure.</h4>
+    </div>
+    <div> bg-[#F5F2EB]
+        text-[#3D3B33]
+        a in sm:
+        font-family: FT Polar;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: center;
+
+        a in xl:
+        font-family: FT Polar;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 13px;
+        leading-trim: NONE;
+        line-height: 18px;
+        letter-spacing: 0%;
+        text-align: center;
+
+        <a href="">Add to cart </a>
+    </div>
+</div>
+
+<!-- hero-section -->
+create a hero section:
+Requirements:
+- Write in src/styles/layout.css
+- Use @layer components
+- Use @apply only
+- No inline Tailwind
+- No @media queries
+- Use Tailwind responsive variants
+
+Design:
+- Mobile: flex column, gap 48px, pt 120px
+- XL: pt 160px using 
+
+in which there will br following content:
+<div> 
+    flex flex-ciol gap-8
+<p>
+    text-[#3D3B33]
+    in sm:
+font-family: FT Polar;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+    in xl:
+    font-family: FT Polar;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 22px;
+    leading-trim: NONE;
+    line-height: 26px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    The new standard of aircare <span>
+   in sm:font-family: FT Polar;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+position: super;
+
+in xL:
+font-family: FT Polar;
+font-weight: 400;
+font-style: Regular;
+font-size: 22px;
+leading-trim: NONE;
+line-height: 26px;
+letter-spacing: 0%;
+text-align: center;
+position: super;
+
+        TM</span></p>
+<h2>
+    text-[#3D3B33]
+    in sm:
+    font-family: BB Modern Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 32px;
+    leading-trim: NONE;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-align: center;
+in xl:
+font-family: BB Modern Pro;
+font-weight: 400;
+font-style: Regular;
+font-size: 60px;
+leading-trim: NONE;
+line-height: 66px;
+letter-spacing: 0%;
+text-align: center;
+    Non-toxic fine fragrance that neutralizes odor and lingers beautifully in air and on fabric.</h2>
+in sm:
+text-[#3D3B33]
+font-family: FT Polar;
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+leading-trim: NONE;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: center;
+
+in xl:
+font-family: FT Polar;
+font-weight: 400;
+font-style: Regular;
+font-size: 13px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: center;
+
+    <a href="">Add to cart $99</a>
+</div>
+
+<!-- fresh air -->
+
+<section className="section-content">
+    <div className="title">
+        <h4>
+            text-[#3D3B33] h4 in sm: font-family: FT Polar; font-weight: 400;
+            font-style: Regular; font-size: 22px; leading-trim: NONE;
+            line-height: 26px; letter-spacing: 0%; h4 in xl: font-family: FT
+            Polar; font-weight: 400; font-style: Regular; font-size: 32px;
+            leading-trim: NONE; line-height: 36px; letter-spacing: 0%; Fresh
+            Air
+        </h4>
+        <h5>
+            text-[#3D3B3366] h5 in sm: font-family: FT Polar; font-weight:
+            400; font-style: Regular; font-size: 22px; leading-trim: NONE;
+            line-height: 26px; letter-spacing: 0%; h5 in xl:font-family: FT
+            Polar; font-weight: 400; font-style: Regular; font-size: 32px;
+            leading-trim: NONE; line-height: 36px; letter-spacing: 0%; The
+            Realm Blog
+        </h5>
+    </div>
+    <div>
+        create 3 card with follow structure flex flex-col xl:flex-row gap-8
+        xl:gap-5
+        <div>
+            h-[194px] xl:h-[244px]
+            <img src="" alt="" />
+        </div>
+        <div>
+            <div>
+                text-[#3D3B33] h5 in sm: font-family: FT Polar; font-weight:
+                400; font-style: Regular; font-size: 16px; leading-trim: NONE;
+                line-height: 22px; letter-spacing: 0%; h5 in xl: font-family: FT
+                Polar; font-weight: 400; font-style: Regular; font-size: 22px;
+                leading-trim: NONE; line-height: 26px; letter-spacing: 0%;
+                <h5>Article Title</h5>
+            </div>
+            <div>
+                <p>
+                    text-[#3D3B33] p in sm:font-family: BB Modern Pro;
+                    font-weight: 400; font-style: Regular; font-size: 16px;
+                    leading-trim: NONE; line-height: 20px; letter-spacing: 0%; p
+                    in xl: font-family: BB Modern Pro; font-weight: 400;
+                    font-style: Regular; font-size: 22px; leading-trim: NONE;
+                    line-height: 26px; letter-spacing: 0%; Your home is your safe
+                    space. Our products are both safe and effective, so you don't
+                    have to compromise.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{/* Our signature scents */}
+<section className="section-content left-padding  fade-section">
+    <div className="product-title">
+        <h4>Our signature scents</h4>
+        <a href="#">Shop all</a>
+    </div>
+    create a 4 card view with the following structure: flex flex-col
+    lg:flex-row gap-3 lg:gap-5 there will be a image where there will be
+    title on left bottom & there will be a a href image when click on that
+    it will display details about that image
+    <div>
+        <div>
+            h-[180px] w-[390px] xl:w-[361px] xl:h-[433px]
+            <img src="" alt="" />
+        </div>
+        <div>
+            these both will be in justify-between
+            <h4>
+                text-[#F5F2EB] h4 in sm:font-family: BB Modern Pro; font-weight:
+                400; font-style: Regular; font-size: 20px; leading-trim: NONE;
+                line-height: 24px; letter-spacing: 0%; text-align: center; h4 in
+                xl:font-family: BB Modern Pro; font-weight: 400; font-style:
+                Regular; font-size: 22px; leading-trim: NONE; line-height: 26px;
+                letter-spacing: 0%; text-align: center; Saffron Citrus
+            </h4>
+            <a href="">
+                <img src="" alt="" />
+            </a>
+        </div>
+    </div>
+</section>
+
+{/* Aircare*/}
+<section className="section-content section-padding  fade-section">
+    <div className="section-title">
+        <h4>Fresh Air</h4>
+        <h5>The Realm Blog</h5>
+    </div>
+
+    <div className="cards-wrapper">
+        <div className="card">
+            <div className="card-media">
+                <img src={air1} alt="Article Image" />
+            </div>
+            <div className="card-content">
+                <h5>Article Title</h5>
+                <p>
+                    Your home is your safe space. Our products are both safe and
+                    effective, so you don't have to compromise.
+                </p>
+            </div>
+        </div>
+
+        <div className="card">
+            <div className="card-media">
+                <img src={air2} alt="Article Image" />
+            </div>
+            <div className="card-content">
+                <h5>Article Title</h5>
+                <p>
+                    Your home is your safe space. Our products are both safe and
+                    effective, so you don't have to compromise.
+                </p>
+            </div>
+        </div>
+
+        <div className="card">
+            <div className="card-media">
+                <img src={air3} alt="Article Image" />
+            </div>
+            <div className="card-content">
+                <h5>Article Title</h5>
+                <p>
+                    Your home is your safe space. Our products are both safe and
+                    effective, so you don't have to compromise.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+these struture is for xl
+<div>px-4 xl:px-[48px] justify-between
+    <div>
+        <img src={footer-logo} alt="footer-logo">
+    </div>
+    <div>grid grid-cols-1 xl:grid-cols-2 gap-5
+        <div> gap-2
+            <div>
+                text-[#3D3B3399]
+                h5 for 320px:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 13px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+                h5 for xl:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                leading-trim: NONE;
+                line-height: 20px;
+                letter-spacing: 0%;
+
+                <h5>title</h5>
+            </div>
+            <div>
+                <a>The Discovery Collection</a>
+            </div>
+            <div>
+                <a>The Discovery Collection</a>
+            </div>
+        </div>
+        <div> gap-2
+            <div>
+                text-[#3D3B3399]
+                h5 for 320px:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 13px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+                h5 for xl:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                leading-trim: NONE;
+                line-height: 20px;
+                letter-spacing: 0%;
+
+                <h5>title</h5>
+            </div>
+            <div>
+                <a>The Discovery Collection</a>
+            </div>
+            <div>
+                <a>The Discovery Collection</a>
+            </div>
+        </div>
+        <div> gap-2
+            <div>
+                text-[#3D3B3399]
+                h5 for 320px:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 13px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+                h5 for xl:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                leading-trim: NONE;
+                line-height: 20px;
+                letter-spacing: 0%;
+
+                <h5>title</h5>
+            </div>
+            <div>
+                <a>The Discovery Collection</a>
+            </div>
+            <div>
+                <a>The Discovery Collection</a>
+            </div>
+        </div>
+        <div> gap-2
+            <div>
+                text-[#3D3B3399]
+                h5 for 320px:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 13px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+                h5 for xl:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                leading-trim: NONE;
+                line-height: 20px;
+                letter-spacing: 0%;
+
+                <h5>title</h5>
+            </div>
+            <div>
+                <a>The Discovery Collection</a>
+            </div>
+            <div>
+                <a>The Discovery Collection</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+now in the left bottom in xl:
+<div> flex justify-between
+    <div>flex flex-col gap-3 xl:gap-4
+        <div>
+            text-[#3D3B33]
+            h4 in sm
+            font-family: BB Modern Pro;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+
+            h4 in xl:
+            font-family: BB Modern Pro;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+            <h4>Join the air care movement.</h4>
+            input in sm
+            font-family: BB Modern Pro;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-[#3D3B3366]
+            input in xl:
+            font-family: BB Modern Pro;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+
+            <input type="Email address">
+        </div>
+        <div>
+            text-[#3D3B33]
+            a for xl: py-[11px] w-full
+            font-family: FT Polar;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 13px;
+            leading-trim: NONE;
+            line-height: 18px;
+            letter-spacing: 0%;
+            text-align: center;
+
+            a for 320px: py-[8px] w-full
+            font-family: FT Polar;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 12px;
+            leading-trim: NONE;
+            line-height: 16px;
+            letter-spacing: 0%;
+            text-align: center;
+            <a href="">Add to cart $99</a>
+        </div>
+        <div>
+            text-[#3D3B3366]
+            h5 in sm
+            font-family: FT Polar;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 11px;
+            leading-trim: NONE;
+            line-height: 14px;
+            letter-spacing: 0%;
+
+            h5 in xl:
+            font-family: FT Polar;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 13px;
+            leading-trim: NONE;
+            line-height: 18px;
+            letter-spacing: 0%;
+
+            <h5>Thoughtful emails, sent sparingly.</h5>
+        </div>
+    </div>
+    <div>
+        text-[#3D3B3366]
+        p at 320px:
+        font-family: FT Polar;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 11px;
+        leading-trim: NONE;
+        line-height: 14px;
+        letter-spacing: 0%;
+
+        p at xl:
+        font-family: FT Polar;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 11px;
+        leading-trim: NONE;
+        line-height: 14px;
+        letter-spacing: 0%;
+        vertical-align: bottom;
+
+        <p>Copyright © 2026 Realm's Naturals Co. All Rights Reserved.</p>
+    </div>
+</div>
+
+these structure for sm
+<div> flex flex-col gap-[48px]
+    <div>
+        <img src={footer-logo} alt="footer-logo">
+    </div>
+    <div>flex flex-col gap-3 xl:gap-4
+        <div>
+            text-[#3D3B33]
+            h4 in sm
+            font-family: BB Modern Pro;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+
+            h4 in xl:
+            font-family: BB Modern Pro;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+            <h4>Join the air care movement.</h4>
+            input in sm
+            font-family: BB Modern Pro;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-[#3D3B3366]
+            input in xl:
+            font-family: BB Modern Pro;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+
+            <input type="Email address">
+        </div>
+        <div>
+            text-[#3D3B33]
+            a for xl: py-[11px] w-full
+            font-family: FT Polar;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 13px;
+            leading-trim: NONE;
+            line-height: 18px;
+            letter-spacing: 0%;
+            text-align: center;
+
+            a for 320px: py-[8px] w-full
+            font-family: FT Polar;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 12px;
+            leading-trim: NONE;
+            line-height: 16px;
+            letter-spacing: 0%;
+            text-align: center;
+            <a href="">Add to cart $99</a>
+        </div>
+        <div>
+            text-[#3D3B3366]
+            h5 in sm
+            font-family: FT Polar;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 11px;
+            leading-trim: NONE;
+            line-height: 14px;
+            letter-spacing: 0%;
+
+            h5 in xl:
+            font-family: FT Polar;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 13px;
+            leading-trim: NONE;
+            line-height: 18px;
+            letter-spacing: 0%;
+
+            <h5>Thoughtful emails, sent sparingly.</h5>
+        </div>
+    </div>
+    <div>
+        <div>flex flex-col gap-[6px]
+            <div>
+                text-[#3D3B3399]
+                h5 for 320px:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 13px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+                h5 for xl:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                leading-trim: NONE;
+                line-height: 20px;
+                letter-spacing: 0%;
+
+                <h5>title</h5>
+            </div>
+            <a>The Discovery Collection</a>
+            <a>The Discovery Collection</a>
+        </div>
+    </div>
+    <div>
+        <div>flex flex-col gap-[6px]
+            <div>
+                text-[#3D3B3399]
+                h5 for 320px:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 13px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+                h5 for xl:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                leading-trim: NONE;
+                line-height: 20px;
+                letter-spacing: 0%;
+
+                <h5>title</h5>
+            </div>
+            <a>The Discovery Collection</a>
+            <a>The Discovery Collection</a>
+        </div>
+    </div>
+    <div>
+        <div>flex flex-col gap-[6px]
+            <div>
+                text-[#3D3B3399]
+                h5 for 320px:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 13px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+                h5 for xl:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                leading-trim: NONE;
+                line-height: 20px;
+                letter-spacing: 0%;
+
+                <h5>title</h5>
+            </div>
+            <a>The Discovery Collection</a>
+            <a>The Discovery Collection</a>
+        </div>
+    </div>
+    <div>
+        <div>flex flex-col gap-[6px]
+            <div>
+                text-[#3D3B3399]
+                h5 for 320px:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 13px;
+                leading-trim: NONE;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+                h5 for xl:
+                font-family: FT Polar;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                leading-trim: NONE;
+                line-height: 20px;
+                letter-spacing: 0%;
+
+                <h5>title</h5>
+            </div>
+            <a>The Discovery Collection</a>
+            <a>The Discovery Collection</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div>
+    text-[#3D3B3366]
+    p at 320px:
+    font-family: FT Polar;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 11px;
+    leading-trim: NONE;
+    line-height: 14px;
+    letter-spacing: 0%;
+
+    p at xl:
+    font-family: FT Polar;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 11px;
+    leading-trim: NONE;
+    line-height: 14px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+
+    <p>Copyright © 2026 Realm's Naturals Co. All Rights Reserved.</p>
+</div>

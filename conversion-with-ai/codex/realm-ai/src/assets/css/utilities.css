@@ -1,0 +1,9 @@
+@layer utilities {
+  .fade-section {
+    @apply translate-y-6 opacity-0 transition-all duration-700 ease-out;
+  }
+
+  .fade-in {
+    @apply translate-y-0 opacity-100;
+  }
+}

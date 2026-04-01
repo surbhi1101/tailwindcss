@@ -1,0 +1,91 @@
+@layer components {
+  /* ── Section Wrapper ── */
+  .section-wrapper {
+    @apply py-16 md:py-20 lg:py-28;
+  }
+
+  .section-wrapper-alt {
+    @apply py-16 md:py-20 lg:py-28;
+    background-color: var(--color-bg-secondary);
+  }
+
+  /* ── Container ── */
+  .container-main {
+    @apply w-full mx-auto px-5 md:px-10 lg:px-16 xl:px-24;
+    max-width: 1320px;
+  }
+
+  /* ── About Layout ── */
+  .about-grid {
+    @apply grid grid-cols-1 gap-12 items-center lg:grid-cols-2 lg:gap-20;
+  }
+
+  .about-stats-grid {
+    @apply grid grid-cols-3 gap-4 mt-10;
+  }
+
+  /* ── Features Grid ── */
+  .features-grid {
+    @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4;
+  }
+
+  /* ── Gallery Grid ── */
+  .gallery-grid {
+    @apply grid gap-4;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .gallery-grid-item-tall {
+    grid-row: span 2;
+  }
+
+  /* ── Contact Layout ── */
+  .contact-grid {
+    @apply grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16;
+  }
+
+  /* ── Contact Info List ── */
+  .contact-info-list {
+    @apply flex flex-col gap-6 mt-8;
+  }
+
+  .contact-info-item {
+    @apply flex items-start gap-4;
+  }
+
+  /* ── Footer Grid ── */
+  .footer-grid {
+    @apply grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4;
+  }
+
+  /* ── Hero layout ── */
+  .hero-section {
+    @apply relative flex items-center justify-center overflow-hidden;
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    @apply relative z-10 text-center px-5 flex flex-col items-center;
+    max-width: 780px;
+  }
+
+  .hero-bg {
+    @apply absolute inset-0 bg-cover bg-center;
+  }
+
+  /* ── Section Spacing ── */
+  .section-title-block {
+    @apply text-center mb-12 lg:mb-16;
+  }
+
+  /* ── Swiper container spacing ── */
+  .swiper-section {
+    @apply pb-12;
+  }
+
+  /* ── Gallery wrapper ── */
+  .gallery-wrapper {
+    @apply overflow-hidden rounded-2xl;
+  }
+}

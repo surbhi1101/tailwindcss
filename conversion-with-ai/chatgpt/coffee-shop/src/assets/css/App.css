@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap");
+
+/* 2. Initialize Tailwind v4 */
+@import "tailwindcss";
+
+/* 3. Your custom layers */
+@import "./base.css";
+@import "./components.css";
+@import "./layout.css";
+@import "./utilities.css";

@@ -1,0 +1,23 @@
+@layer base {
+  :root {
+    --font-playfair: "Playfair Display", serif;
+    --font-rubik: "Rubik", sans-serif;
+    --color-primary: #443c28;
+    --color-secondary-bg: #f5f2eb;
+  }
+
+  body {
+    @apply text-[#443c28] bg-white overflow-x-hidden;
+    font-family: var(--font-rubik);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-[#443c28];
+    font-family: var(--font-playfair);
+  }
+}

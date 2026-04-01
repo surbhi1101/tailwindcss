@@ -1,0 +1,19 @@
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 border border-[#443c28] bg-[#443c28] text-white transition;
+  }
+  .btn-primary:hover {
+    @apply bg-transparent text-[#443c28];
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border border-white text-white transition;
+  }
+  .btn-outline:hover {
+    @apply bg-white text-[#443c28];
+  }
+
+  .section-heading {
+    @apply text-3xl mb-6 text-center;
+  }
+}

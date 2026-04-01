@@ -1,0 +1,30 @@
+@layer utilities {
+  .fade-section {
+    @apply opacity-0 transition-all duration-1000 translate-y-10;
+  }
+
+  .fade-in {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .bg-hero {
+    @apply bg-[url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80')] bg-cover bg-center relative;
+  }
+
+  .overlay-dark {
+    @apply absolute inset-0 bg-black/60;
+  }
+
+  .gallery-grid {
+    @apply grid grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .gallery-item {
+    @apply relative overflow-hidden aspect-square;
+  }
+
+  .gallery-overlay {
+    @apply absolute inset-0 bg-[#443c28]/80 opacity-0 transition-opacity duration-500 flex items-center justify-center text-white text-xl;
+    font-family: var(--font-playfair);
+  }
+}

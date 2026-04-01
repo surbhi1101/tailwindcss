@@ -1,0 +1,21 @@
+@layer components {
+  /* Hero Section */
+  .hero-section {
+    @apply flex flex-col items-center justify-center gap-12 px-5 lg:px-0 pt-[120px] lg:pt-[160px];
+  }
+  .section-content {
+    @apply flex flex-col gap-6;
+  }
+
+  .section-spacing {
+    @apply pt-[120px] lg:pt-[160px];
+  }
+
+  .section-padding {
+    @apply px-5 lg:px-12;
+  }
+
+  .left-padding {
+    @apply pl-5 lg:px-12;
+  }
+}
