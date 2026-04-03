@@ -60,6 +60,28 @@ for body --font-rubik: "Rubik", sans-serif;
 
 - Use fade-in system for each section
 - Classes: .fade-section and .fade-in
+  Apply fade-in to both sections AND important child elements (cards, images)
+
+## 🤖 The "Animation Architect" Personalization Profile
+
+### 1. The Core Implementation Rule
+
+> "When asked to implement scroll-based reveals, **always** use the **Intersection Observer API** rather than scroll event listeners. This ensures high performance and 60fps smoothness."
+
+### 2. Standard Logic Template
+
+Define the "Gold Standard" code the AI should follow:
+
+- **Observer Config:** Default to a `threshold` of `0.15` to `0.2`.
+- **Efficiency:** Always include `observer.unobserve(entry.target)` once the animation triggers to save CPU cycles.
+- **React Lifecycle:** Always wrap the observer in a `useEffect` with a cleanup return (`observer.disconnect()`).
+
+### 3. CSS Classes & Naming Convention
+
+> "Use a two-state CSS class system:
+>
+> - **Initial State:** `.fade-section` (opacity 0, slight translateY/transform).
+> - **Active State:** `.show` or `.fade-in` (opacity 1, transform none, with a cubic-bezier transition)."
 
 ## Naming Convention
 
@@ -105,6 +127,7 @@ Design a complete Coffee Shop website with these sections:
 - CTA button → "Order Now"
 - Mobile → hamburger menu
 - Sticky on scroll with subtle shadow
+- Navbar should change background + text color on scroll with smooth transition
 
 ### 2. Hero Section
 

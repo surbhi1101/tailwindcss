@@ -317,7 +317,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="hero-section fade-section">
       <div
         className="hero-bg"
         style={{
@@ -352,7 +352,7 @@ function Hero() {
 /* ─── About ───────────────────────────────────────────*/
 function About() {
   return (
-    <section id="about" className="section-wrapper">
+    <section id="about" className="section-wrapper fade-section">
       <div className="container-main">
         <div className="about-grid fade-section">
           <div className="about-image-wrap">
@@ -406,7 +406,7 @@ function About() {
 /* ─── Menu ──────────────────────────────────────────── */
 function Menu() {
   return (
-    <section id="menu" className="section-wrapper-alt">
+    <section id="menu" className="section-wrapper-alt fade-section">
       <div className="container-main">
         <div className="section-title-block fade-section">
           <h2 className="section-heading">Our Menu</h2>
@@ -461,7 +461,7 @@ function Menu() {
 /* ─── Why Choose Us ─────────────────────────────────── */
 function WhyUs() {
   return (
-    <section id="why" className="section-wrapper">
+    <section id="why" className="section-wrapper fade-section">
       <div className="container-main">
         <div className="section-title-block fade-section">
           <h2 className="section-heading">Why Choose Us</h2>
@@ -487,7 +487,7 @@ function WhyUs() {
 /* ─── Gallery ───────────────────────────────────────── */
 function Gallery() {
   return (
-    <section id="gallery" className="section-wrapper-alt">
+    <section id="gallery" className="section-wrapper-alt fade-section">
       <div className="container-main">
         <div className="section-title-block fade-section">
           <h2 className="section-heading">Gallery</h2>
@@ -521,7 +521,7 @@ function Gallery() {
 /* ─── Testimonials ──────────────────────────────────── */
 function Testimonials() {
   return (
-    <section id="testimonials" className="section-wrapper">
+    <section id="testimonials" className="section-wrapper fade-section">
       <div className="container-main">
         <div className="section-title-block fade-section">
           <h2 className="section-heading">What Our Guests Say</h2>
@@ -586,7 +586,7 @@ function Contact() {
   ];
 
   return (
-    <section id="contact" className="section-wrapper-alt">
+    <section id="contact" className="section-wrapper-alt fade-section">
       <div className="container-main">
         <div className="section-title-block fade-section">
           <h2 className="section-heading">Get In Touch</h2>
@@ -673,7 +673,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="footer">
+    <footer className="footer  fade-section">
       <div className="container-main">
         <div className="footer-grid">
           <div>

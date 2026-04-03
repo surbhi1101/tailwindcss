@@ -1,0 +1,52 @@
+@layer base {
+  :root {
+    --color-primary: #2c1a0e;
+    --color-accent: #c8963e;
+    --color-bg-cream: #f0e8d8;
+    --color-bg-light: #faf7f2;
+    --color-dark: #1a1208;
+    --color-text-body: #555;
+    --color-border: #e0d6c8;
+    --font-playfair: "Playfair Display", serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-outfit: "Outfit", sans-serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border m-0 p-0;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    font-family: var(--font-poppins);
+    @apply text-[#2c1a0e] bg-[#F1F0EE] antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-playfair);
+    @apply leading-tight;
+  }
+
+  p {
+    font-family: var(--font-outfit);
+  }
+
+  img {
+    @apply block w-full;
+  }
+  a {
+    @apply no-underline;
+  }
+  button {
+    @apply cursor-pointer border-none bg-transparent;
+  }
+}
