@@ -626,7 +626,7 @@ function App() {
             <div className="footer-details">
               {/* Brand */}
               <div className="lg:col-span-1">
-                <div className="footer-brand">Coffee</div>
+                <div className="footer-brand">COFFEE</div>
               </div>
 
               {/* Privacy */}

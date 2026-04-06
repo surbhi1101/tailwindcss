@@ -149,7 +149,7 @@
     @apply flex flex-col lg:flex-row gap-10 2xl:gap-[150px] px-4 md:px-5 lg:px-8 2xl:pl-[238px] 2xl:pr-[237px];
   }
   .footer-details {
-    @apply flex flex-col lg:flex-row gap-10 lg:gap-[100px] 2xl:gap-[115px];
+    @apply flex flex-col lg:flex-row gap-10 lg:gap-[100px] 2xl:gap-[100px];
   }
   .footer-social {
     @apply flex gap-3 mt-4;

@@ -1,8 +1,8 @@
 @layer components {
   /* ── Buttons ── */
   .btn-primary {
-    font-family: var(--font-poppins);
-    @apply inline-flex items-center justify-center font-medium text-[14px]
+    font-family: var(--font-outfit);
+    @apply inline-flex items-center justify-center font-medium text-[14px] xl:text-[18px]
       bg-[#fff] border-2 text-[#30261C] px-[28px] py-[11px]
       transition-all duration-300 cursor-pointer no-underline rounded-full;
   }
@@ -22,7 +22,7 @@
 
   .btn-order {
     font-family: var(--font-poppins);
-    @apply inline-flex items-center justify-center font-medium text-[12px] xl:text-[20px]
+    @apply inline-flex items-center justify-center font-medium text-[12px] xl:text-[14px]
       bg-[#2c1a0e] text-white rounded-[12px] px-[14px] py-[7px]
       transition-all duration-200 cursor-pointer no-underline;
   }
@@ -37,7 +37,7 @@
   /* ── Navbar ── */
   .nav-logo {
     font-family: var(--font-playfair);
-    @apply text-[22px] font-bold  text-[#fff] no-underline italic;
+    @apply text-[22px] xl:text-[32px] font-bold  text-[#fff] no-underline;
   }
 
   .nav-link {
@@ -76,8 +76,8 @@
 
   /* ── Hero ── */
   .hero-welcome {
-    font-family: var(--font-poppins);
-    @apply text-[13px] uppercase tracking-[3px] text-[#fff] font-medium;
+    font-family: var(--font-outfit);
+    @apply text-[13px] xl:text-[20px] uppercase tracking-[3px] text-[#fff] font-medium;
   }
 
   .hero-heading {
@@ -87,7 +87,7 @@
 
   .hero-sub {
     font-family: var(--font-outfit);
-    @apply text-[14px] text-white/70 leading-relaxed max-w-[380px];
+    @apply text-[14px] xl:text-[18px] text-white/70 leading-relaxed max-w-[420px];
   }
 
   /* ── Category Strip ── */
@@ -104,13 +104,13 @@
 
   .cat-label {
     font-family: var(--font-poppins);
-    @apply text-[12px] font-medium text-[#2c1a0e];
+    @apply text-[12px] xl:text-[18px] font-medium text-[#2c1a0e];
   }
 
   /* ── Product Section Heading ── */
   .product-heading {
     font-family: var(--font-playfair);
-    @apply text-[22px] xl:text-[32px] font-bold text-[#2c1a0e] uppercase tracking-[2px];
+    @apply text-[22px] xl:text-[32px] font-semibold text-[#2c1a0e] uppercase tracking-[2px];
   }
 
   /* ── Product Card (Figma style) ── */
@@ -161,7 +161,7 @@
   }
   .prod-card-name {
     font-family: var(--font-outfit);
-    @apply text-[17px] xl:text-[38px] font-bold text-[#2c1a0e];
+    @apply text-[17px] xl:text-[38px] font-semibold text-[#2c1a0e];
   }
 
   .prod-card-desc {
@@ -179,7 +179,7 @@
 
   .prod-card-price {
     font-family: var(--font-poppins);
-    @apply text-[14px] xl:text-[20px] font-semibold text-[#2c1a0e];
+    @apply text-[14px] xl:text-[20px] font-semibold text-[#2A0000];
   }
 
   /* ── Swiper custom arrows ── */
@@ -201,7 +201,7 @@
   /* ── CTA Banner ── */
   .cta-heading {
     font-family: var(--font-playfair);
-    @apply text-[28px] md:text-[36px] font-bold text-[#2c1a0e] leading-snug;
+    @apply text-[28px] md:text-[36px] xl:text-[40px] font-bold text-[#2c1a0e] leading-snug;
   }
 
   /* ── Testimonials ── */
@@ -212,7 +212,7 @@
 
   .testimonials-title {
     font-family: var(--font-playfair);
-    @apply text-[24px] md:text-[34px] font-bold text-[#2c1a0e];
+    @apply text-[24px] md:text-[32px] font-semibold text-[#2c1a0e];
   }
 
   .test-card {
@@ -251,7 +251,7 @@
   }
   .test-name {
     font-family: var(--font-poppins);
-    @apply text-[14px] md:text-[18px] font-semibold text-[#2c1a0e];
+    @apply text-[14px] md:text-[18px] font-semibold text-[#30261C];
   }
 
   .test-role {
@@ -275,7 +275,7 @@
 
   .test-quote {
     font-family: var(--font-poppins);
-    @apply text-[12px] text-[#30261C] leading-relaxed pr-[17px];
+    @apply text-[12px] text-[#30261C] font-medium leading-relaxed pr-[17px];
   }
 
   /* swiper dots */
@@ -292,7 +292,7 @@
   /* ── Newsletter ── */
   .newsletter-title {
     font-family: var(--font-poppins);
-    @apply text-[26px] md:text-[32px] font-bold text-[#30261C];
+    @apply text-[26px] md:text-[32px] font-semibold text-[#30261C];
   }
 
   .newsletter-sub {
@@ -319,12 +319,12 @@
 
   .newsletter-input {
     font-family: var(--font-outfit);
-    @apply flex-1 bg-white text-[#2c1a0e] text-[13px] lg:text-[16px] font-semibold outline-none border-none  px-[44px] py-[10px]  rounded-[26px];
+    @apply flex-1 bg-white text-[#30261C] text-[13px] lg:text-[16px] font-semibold outline-none border-none  px-[44px] py-[10px]  rounded-[26px];
   }
 
   .newsletter-btn {
     font-family: var(--font-poppins);
-    @apply bg-[#2c1a0e] text-white text-[13px] lg:text-[16px] font-medium cursor-pointer w-full xl:w-fit
+    @apply bg-[#30261C] text-white text-[13px] lg:text-[16px] font-medium cursor-pointer w-full xl:w-fit
       rounded-[26px] transition-all duration-200 whitespace-nowrap px-[28px] py-[10px];
   }
   .newsletter-btn:hover {
@@ -338,19 +338,19 @@
   /* ── Footer ── */
   .footer-brand {
     font-family: var(--font-playfair);
-    @apply text-[32px] font-bold text-white italic;
+    @apply text-[32px] font-bold text-white;
   }
   .footer-col {
     @apply flex flex-col gap-6;
   }
   .footer-col-title {
     font-family: var(--font-playfair);
-    @apply text-[13px] lg:text-[14px] xl:text-[24px] font-semibold text-white uppercase tracking-[1px];
+    @apply text-[13px] lg:text-[14px] xl:text-[24px] font-medium text-white uppercase tracking-[1px];
   }
 
   .footer-link {
     font-family: var(--font-poppins);
-    @apply text-[13px] xl:text-[18px] text-white no-underline transition-colors duration-200;
+    @apply text-[13px] xl:text-[18px] text-white no-underline transition-colors duration-200 font-normal;
   }
   .footer-link:hover {
     @apply text-white/60;
