@@ -181,12 +181,16 @@
     font-family: var(--font-poppins);
     @apply text-[14px] xl:text-[20px] font-semibold text-[#2A0000];
   }
+  /* ── Desktop nav wrapper ── */
+  .destop-nav {
+    @apply hidden lg:block;
+  }
 
-  /* ── Swiper custom arrows ── */
+  /* ── Desktop arrows — absolute, only on lg+ ── */
   .swiper-arrow {
-    @apply hidden lg:block absolute top-1/2 -translate-y-1/2 z-10 w-[41px] h-[41px] rounded-full border border-[#E2D9C8]
-      bg-[#E2D9C8] flex items-center justify-center text-[#2c1a0e] text-[16px]
-      cursor-pointer transition-all duration-200 shadow-sm;
+    @apply absolute top-1/2 -translate-y-1/2 z-10 w-[41px] h-[41px] rounded-full
+    border border-[#E2D9C8] bg-[#E2D9C8] items-center justify-center
+    text-[#2c1a0e] text-[16px] cursor-pointer transition-all duration-200 shadow-sm;
   }
   .swiper-arrow:hover {
     @apply bg-[#2c1a0e] text-white border-[#2c1a0e];
@@ -198,7 +202,20 @@
     @apply right-0;
   }
 
-  /* ── CTA Banner ── */
+  /* ── Mobile nav wrapper — below slider, centered, hidden on lg+ ── */
+  .mobile-nav {
+    @apply flex lg:hidden justify-center items-center gap-4 mt-5;
+  }
+
+  /* ── Mobile arrows ── */
+  .mob-arrow {
+    @apply w-[38px] h-[38px] rounded-full border border-[#E2D9C8]
+    bg-[#E2D9C8] flex items-center justify-center
+    text-[#2c1a0e] text-[16px] cursor-pointer transition-all duration-200 shadow-sm;
+  }
+  .mob-arrow:hover {
+    @apply bg-[#2c1a0e] text-white border-[#2c1a0e];
+  }
   .cta-heading {
     font-family: var(--font-playfair);
     @apply text-[28px] md:text-[36px] xl:text-[40px] font-bold text-[#2c1a0e] leading-snug;
@@ -216,7 +233,7 @@
   }
 
   .test-card {
-    @apply bg-[#E2D9C8] rounded-xl shadow-sm flex flex-col gap-5 lg:gap-[28px] pl-[28px] pt-[18px] pb-[14px] xl:pl-[22px] xl:pt-[28px] xl:pb-[17px];
+    @apply bg-[#E2D9C8] rounded-xl shadow-sm flex flex-col gap-5 lg:gap-[28px] px-[28px] pt-[18px] pb-[14px] xl:px-[22px] xl:pt-[28px] xl:pb-[17px];
   }
 
   .author-details {
@@ -231,15 +248,14 @@
     @apply w-10 h-10 xl:w-[56px] xl:h-[56px] rounded-full object-cover shrink-0;
   }
   .review-swiper .swiper-wrapper {
-    @apply flex gap-2 xl:gap-[84px];
+    @apply flex gap-2 xl:gap-5 2xl:gap-[84px];
   }
 
   .review-swiper .swiper-slide {
     @apply xl:!h-[235px] xl:!w-[441px];
   }
   .customer-review .swiper-pagination {
-    @apply !relative !mt-[24px];
-    bottom: auto;
+    @apply !relative !mt-[24px] hidden lg:!flex lg:!justify-center;
   }
 
   .review-title {
@@ -275,7 +291,7 @@
 
   .test-quote {
     font-family: var(--font-poppins);
-    @apply text-[12px] text-[#30261C] font-medium leading-relaxed pr-[17px];
+    @apply text-[12px] text-[#30261C] font-medium leading-relaxed;
   }
 
   /* swiper dots */

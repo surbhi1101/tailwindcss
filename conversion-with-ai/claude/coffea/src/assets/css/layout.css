@@ -80,11 +80,11 @@
   }
 
   .product-slider-wrap {
-    @apply relative pl-4 md:pl-5 lg:px-[60px] 2xl:px-[71px];
+    @apply relative px-4 md:px-5 lg:px-[60px] 2xl:px-[71px];
   }
 
   .customer-review {
-    @apply pl-4 md:pl-5 lg:px-8 2xl:px-[238px];
+    @apply px-4 md:px-5 lg:px-8 2xl:px-[238px];
   }
 
   /* ── CTA Banner ── */
@@ -152,7 +152,7 @@
     @apply flex flex-col lg:flex-row gap-10 lg:gap-[100px] 2xl:gap-[100px];
   }
   .footer-social {
-    @apply flex gap-3 mt-4;
+    @apply flex gap-3;
   }
   .footer-links {
     @apply flex flex-col gap-2 lg:gap-[15px];

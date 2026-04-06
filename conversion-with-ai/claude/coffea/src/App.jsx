@@ -23,6 +23,7 @@ import dessert4 from "./assets/images/dessert4.png";
 import customer from "./assets/images/customer.png";
 
 import mail from "./assets/images/mail.png";
+
 /* ─── SVG Icons ─────────────────────────────────────────── */
 const IconSearch = () => (
   <svg
@@ -216,6 +217,51 @@ const testimonials = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing ,Lorem ipsum dolor sit amet, consectetur adipisicing  dolor sit amet, consectetur adipisicing elit,Lorem ipsum  amet, consectetur adipisicing elit,Lorem ipsum dolor sit  adipisicing elit,Lorem ipsum dolor sit   dolor sit amet, consectetur adipisicing elit,",
     avatar: customer,
   },
+  {
+    id: 5,
+    name: "James Smith",
+    role: "Entrepreneur",
+    rating: 4,
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing ,Lorem ipsum dolor sit amet, consectetur adipisicing  dolor sit amet, consectetur adipisicing elit,Lorem ipsum  amet, consectetur adipisicing elit,Lorem ipsum dolor sit  adipisicing elit,Lorem ipsum dolor sit   dolor sit amet, consectetur adipisicing elit,",
+    avatar: customer,
+  },
+  {
+    id: 6,
+    name: "James Smith",
+    role: "Entrepreneur",
+    rating: 4,
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing ,Lorem ipsum dolor sit amet, consectetur adipisicing  dolor sit amet, consectetur adipisicing elit,Lorem ipsum  amet, consectetur adipisicing elit,Lorem ipsum dolor sit  adipisicing elit,Lorem ipsum dolor sit   dolor sit amet, consectetur adipisicing elit,",
+    avatar: customer,
+  },
+  {
+    id: 7,
+    name: "James Smith",
+    role: "Entrepreneur",
+    rating: 5,
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing ,Lorem ipsum dolor sit amet, consectetur adipisicing  dolor sit amet, consectetur adipisicing elit,Lorem ipsum  amet, consectetur adipisicing elit,Lorem ipsum dolor sit  adipisicing elit,Lorem ipsum dolor sit   dolor sit amet, consectetur adipisicing elit,",
+    avatar: customer,
+  },
+  {
+    id: 8,
+    name: "James Smith",
+    role: "Entrepreneur",
+    rating: 3,
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing ,Lorem ipsum dolor sit amet, consectetur adipisicing  dolor sit amet, consectetur adipisicing elit,Lorem ipsum  amet, consectetur adipisicing elit,Lorem ipsum dolor sit  adipisicing elit,Lorem ipsum dolor sit   dolor sit amet, consectetur adipisicing elit,",
+    avatar: customer,
+  },
+  {
+    id: 9,
+    name: "James Smith",
+    role: "Entrepreneur",
+    rating: 5,
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing ,Lorem ipsum dolor sit amet, consectetur adipisicing  dolor sit amet, consectetur adipisicing elit,Lorem ipsum  amet, consectetur adipisicing elit,Lorem ipsum dolor sit  adipisicing elit,Lorem ipsum dolor sit   dolor sit amet, consectetur adipisicing elit,",
+    avatar: customer,
+  },
 ];
 
 const categories = [
@@ -278,10 +324,11 @@ function App() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const coffeeSwiperRef = useRef(null);
+  const dessertSwiperRef = useRef(null);
+  const reviewSwiperRef = useRef(null);
   const prevCoffeeRef = useRef(null);
   const nextCoffeeRef = useRef(null);
-  const prevDessertRef = useRef(null);
-  const nextDessertRef = useRef(null);
   const prevTestRef = useRef(null);
   const nextTestRef = useRef(null);
 
@@ -376,7 +423,6 @@ function App() {
           </div>
         )}
       </nav>
-
       {/* ══ HERO ════════════════════════════════════════════════ */}
       <section id="home" className="hero-section">
         <div className="hero-bg" />
@@ -406,7 +452,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* ══ CATEGORY STRIP ══════════════════════════════════════ */}
       <div className="category-strip fade-section">
         <div className="container">
@@ -426,7 +471,6 @@ function App() {
           </div>
         </div>
       </div>
-
       {/* ══ OUR SPECIAL COFFEE ══════════════════════════════════ */}
       <section id="menu" className="product-section">
         <div className="container special-coffee">
@@ -435,31 +479,33 @@ function App() {
           </div>
 
           <div className="product-slider-wrap fade-section">
-            <button
-              ref={prevCoffeeRef}
-              className="swiper-arrow swiper-arrow-prev"
-              aria-label="Previous"
-            >
-              &#8592;
-            </button>
-            <button
-              ref={nextCoffeeRef}
-              className="swiper-arrow swiper-arrow-next"
-              aria-label="Next"
-            >
-              &#8594;
-            </button>
-
+            <div className="destop-nav ">
+              <button
+                onClick={() => coffeeSwiperRef.current?.slidePrev()}
+                className="swiper-arrow swiper-arrow-prev"
+                aria-label="Previous"
+              >
+                &#8592;
+              </button>
+              <button
+                onClick={() => coffeeSwiperRef.current?.slideNext()}
+                className="swiper-arrow swiper-arrow-next"
+                aria-label="Next"
+              >
+                &#8594;
+              </button>
+            </div>
             <Swiper
               modules={[Navigation]}
-              onSwiper={(sw) => wireSwiperNav(sw, prevCoffeeRef, nextCoffeeRef)}
+              onSwiper={(sw) => (coffeeSwiperRef.current = sw)}
+              coffeeSwiperRef
               slidesPerView={1}
               slidesPerGroup={1}
               className="coffee-swiper"
               spaceBetween={4}
               breakpoints={{
-                320: { slidesPerView: 1.2, slidesPerGroup: 2 },
-                640: { slidesPerView: 2.2, slidesPerGroup: 2 },
+                320: { slidesPerView: 1, slidesPerGroup: 2 },
+                640: { slidesPerView: 2, slidesPerGroup: 2 },
                 1024: { slidesPerView: 4, slidesPerGroup: 4 },
               }}
             >
@@ -470,43 +516,58 @@ function App() {
               ))}
             </Swiper>
           </div>
+          <div className="mobile-nav">
+            <button
+              onClick={() => coffeeSwiperRef.current?.slidePrev()}
+              className="mob-arrow mob-arrow-prev"
+              aria-label="Previous"
+            >
+              &#8592;
+            </button>
+            <button
+              onClick={() => coffeeSwiperRef.current?.slideNext()}
+              className="mob-arrow mob-arrow-next"
+              aria-label="Next"
+            >
+              &#8594;
+            </button>
+          </div>
         </div>
       </section>
-
       {/* ══ OUR SPECIAL DESSERT ═════════════════════════════════ */}
-      <section className="product-section" style={{ background: "#faf7f2" }}>
+      <section className="product-section">
         <div className="container special-coffee">
           <div className="product-section-title fade-section">
             <h2 className="product-heading">Our Special Dessert</h2>
           </div>
 
           <div className="product-slider-wrap fade-section">
-            <button
-              ref={prevDessertRef}
-              className="swiper-arrow swiper-arrow-prev"
-              aria-label="Previous"
-            >
-              &#8592;
-            </button>
-            <button
-              ref={nextDessertRef}
-              className="swiper-arrow swiper-arrow-next"
-              aria-label="Next"
-            >
-              &#8594;
-            </button>
+            <div className="destop-nav ">
+              <button
+                className="swiper-arrow swiper-arrow-prev"
+                aria-label="Previous"
+                onClick={() => dessertSwiperRef.current?.slidePrev()}
+              >
+                &#8592;
+              </button>
+              <button
+                className="swiper-arrow swiper-arrow-next"
+                aria-label="Next"
+                onClick={() => dessertSwiperRef.current?.slideNext()}
+              >
+                &#8594;
+              </button>
+            </div>
 
             <Swiper
               modules={[Navigation]}
-              onSwiper={(sw) =>
-                wireSwiperNav(sw, prevDessertRef, nextDessertRef)
-              }
+              onSwiper={(sw) => (dessertSwiperRef.current = sw)}
               slidesPerView={1}
               slidesPerGroup={1}
               spaceBetween={4}
               breakpoints={{
-                320: { slidesPerView: 1.2, slidesPerGroup: 2 },
-                640: { slidesPerView: 2.2, slidesPerGroup: 2 },
+                320: { slidesPerView: 1, slidesPerGroup: 2 },
+                640: { slidesPerView: 2, slidesPerGroup: 2 },
                 1024: { slidesPerView: 4, slidesPerGroup: 4 },
               }}
             >
@@ -517,9 +578,24 @@ function App() {
               ))}
             </Swiper>
           </div>
+          <div className="mobile-nav">
+            <button
+              className="mob-arrow mob-arrow-prev"
+              aria-label="Previous"
+              onClick={() => dessertSwiperRef.current?.slidePrev()}
+            >
+              &#8592;
+            </button>
+            <button
+              className="mob-arrow mob-arrow-next"
+              aria-label="Next"
+              onClick={() => dessertSwiperRef.current?.slideNext()}
+            >
+              &#8594;
+            </button>
+          </div>
         </div>
       </section>
-
       {/* ══ CTA BANNER ══════════════════════════════════════════ */}
       <div className="cta-banner fade-section">
         <div className="cta-banner-bg-left" />
@@ -537,7 +613,6 @@ function App() {
           </div>
         </div>
       </div>
-
       {/* ══ TESTIMONIALS ════════════════════════════════════════ */}
       <section className="testimonials-section">
         <div className="container">
@@ -549,16 +624,15 @@ function App() {
           <div className="fade-section customer-review">
             <Swiper
               modules={[Navigation, Pagination]}
-              onSwiper={(sw) => wireSwiperNav(sw, prevTestRef, nextTestRef)}
+              onSwiper={(sw) => (reviewSwiperRef.current = sw)}
               slidesPerView={1}
               slidesPerGroup={1}
               className="review-swiper"
               pagination={{ clickable: true }}
               breakpoints={{
-                320: { slidesPerView: 1.1, slidesPerGroup: 2 },
-                768: { slidesPerView: 2.1, slidesPerGroup: 2 },
+                320: { slidesPerView: 1, slidesPerGroup: 2 },
+                768: { slidesPerView: 2, slidesPerGroup: 2 },
                 1152: { slidesPerView: 3, slidesPerGroup: 3 },
-                1920: { slidesPerView: 3, slidesPerGroup: 3 },
               }}
             >
               {testimonials.map((t) => (
@@ -586,9 +660,24 @@ function App() {
               ))}
             </Swiper>
           </div>
+          <div className="mobile-nav">
+            <button
+              onClick={() => reviewSwiperRef.current?.slidePrev()}
+              className="mob-arrow mob-arrow-prev"
+              aria-label="Previous"
+            >
+              &#8592;
+            </button>
+            <button
+              onClick={() => reviewSwiperRef.current?.slideNext()}
+              className="mob-arrow mob-arrow-next"
+              aria-label="Next"
+            >
+              &#8594;
+            </button>
+          </div>
         </div>
       </section>
-
       {/* ══ NEWSLETTER ══════════════════════════════════════════ */}
       <section className="newsletter-section cta-banner fade-section">
         <div className="cta-footer-bg-left" />
@@ -618,7 +707,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* ══ FOOTER ══════════════════════════════════════════════ */}
       <footer className="footer">
         <div className="container">
