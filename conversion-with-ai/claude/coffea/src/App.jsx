@@ -498,7 +498,6 @@ function App() {
             <Swiper
               modules={[Navigation]}
               onSwiper={(sw) => (coffeeSwiperRef.current = sw)}
-              coffeeSwiperRef
               slidesPerView={1}
               slidesPerGroup={1}
               className="coffee-swiper"
