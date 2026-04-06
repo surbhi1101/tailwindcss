@@ -302,7 +302,7 @@
 
   .newsletter-form {
     @apply flex flex-col lg:flex-row items-center gap-4 mx-auto;
-    max-width: 420px;
+    /* max-width: 420px; */
   }
 
   .newsletter-input-wrap {
@@ -329,6 +329,10 @@
   }
   .newsletter-btn:hover {
     @apply bg-[#c8963e];
+  }
+
+  .explore-btn {
+    @apply w-fit;
   }
 
   /* ── Footer ── */

@@ -1,0 +1,57 @@
+use find-dine skill to create whole page & make sure the output must be same as given image
+1. Navbar
+   Logo left — "DinoFind"
+   Nav → Home, Listings, User Dashboard, Themes
+   Right → Register/Sign In + red CTA "Add Listing"
+   Sticky, white bg, subtle shadow
+
+2. Hero Section
+   Full-width dark overlay restaurant image
+   Heading → "Explore Nearby Restaurants"
+   Subheading → tagline below
+   Search bar → keyword + location + distance + red Search btn
+   Category icon pills below search
+
+3. Hot & Trending Categories
+   Section heading + underline accent
+   6 category icon cards (circle icons)
+   Fashion, Real Estate, Health, Business, Cafe, Restaurant
+   Label + listing count below each icon
+
+4. Popular Listings
+   Section → "Popular Listings in Chicago"
+   Swiper slider — 4 cards per row (lg)
+   Card → image + badge (category) + heart icon
+   Title, description, rating stars, phone, address
+   Dot pagination below
+   the pagination for active slide will be #C71F37 
+
+5. Explore by City
+   6-grid city cards (2 rows × 3)
+   Dark overlay with city name + listing count
+   Green "10 listing" badge top-right
+   Hover zoom effect on image
+ 
+6. Reviews Section
+   Heading → "Our Great Reviews"
+   Swiper → 4 cards per row (lg)
+   Quote text, 5-star rating, avatar + name + role
+   Light gray card bg, dot pagination
+
+7. Latest Updates / Blog
+   3-column blog grid
+   Article image + title + excerpt
+   Date, views count, red "Continue Reading" link
+
+8. Upcoming Events
+   3-column event cards
+   Event image + date badge (top-left)
+   Title + date/time info below
+
+9. Newsletter + Footer
+   Red full-width newsletter bar
+   Email input + Subscribe button
+   Footer → dark bg 4-column grid
+   Logo + tagline + social icons
+   Quick links: Company, Get Started, Resources, Social
+   Copyright bar at bottom

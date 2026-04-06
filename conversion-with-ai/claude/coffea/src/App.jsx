@@ -19,7 +19,9 @@ import dessert1 from "./assets/images/dessert1.png";
 import dessert2 from "./assets/images/dessert2.png";
 import dessert3 from "./assets/images/dessert3.png";
 import dessert4 from "./assets/images/dessert4.png";
+
 import customer from "./assets/images/customer.png";
+
 import mail from "./assets/images/mail.png";
 /* ─── SVG Icons ─────────────────────────────────────────── */
 const IconSearch = () => (
@@ -529,7 +531,7 @@ function App() {
               <br />
               Coffee Beans
             </h2>
-            <a href="#menu" className="newsletter-btn">
+            <a href="#menu" className="newsletter-btn explore-btn">
               Explore Our Products &nbsp;&#187;&#187;
             </a>
           </div>
