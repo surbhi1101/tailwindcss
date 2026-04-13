@@ -1,0 +1,67 @@
+@layer base {
+  :root {
+    --color-primary-red: #ff3333;
+    --color-dark-red: #cc0000;
+    --color-dark-red-left: #7f1919;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-dark-bg: #111111;
+    --color-darker-bg: #0a0a0a;
+    --color-gray-bg: #444444;
+    --color-light-gray: #e0e0e0;
+    --color-card-bg: #303133;
+    --color-footer-bg: #000000;
+    --color-text-dark: #444444;
+    --color-text-light: #e0e0e0;
+    --font-bahnschrift: "Bahnschrift", "Arial Narrow", sans-serif;
+    --font-arial: "Arial", sans-serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border m-0 p-0;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    font-family: var(--font-arial);
+    @apply text-base leading-normal;
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-bahnschrift);
+    @apply uppercase font-bold leading-none tracking-tight;
+  }
+
+  a {
+    @apply no-underline;
+    color: inherit;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  button {
+    @apply cursor-pointer border-none outline-none bg-transparent;
+    font-family: var(--font-arial);
+  }
+
+  input,
+  textarea,
+  select {
+    font-family: var(--font-arial);
+    @apply outline-none;
+  }
+}

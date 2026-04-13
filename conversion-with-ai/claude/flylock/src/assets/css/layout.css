@@ -1,0 +1,226 @@
+@layer components {
+  /* ─── Announcement Bar ─── */
+  .announcement-bar {
+    @apply w-full relative py-[10px] overflow-hidden;
+    background-color: var(--color-primary-red);
+  }
+
+  /* ─── Navbar ─── */
+  .navbar-wrapper {
+    @apply w-full;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-container {
+    @apply flex items-center justify-between w-full py-[10px] px-[30px] lg:px-[55px];
+  }
+
+  .navbar-center {
+    @apply hidden lg:flex items-center gap-10;
+  }
+
+  .navbar-right {
+    @apply hidden lg:flex items-center gap-[35px];
+  }
+
+  .navbar-mobile-right {
+    @apply flex lg:hidden items-center gap-4;
+  }
+
+  /* ─── Mobile Menu ─── */
+  .mobile-menu {
+    @apply lg:hidden w-full flex flex-col px-5 py-4 bg-[#E0E0E0];
+  }
+
+  /* ─── Hero Section ─── */
+  .hero-section {
+    @apply relative w-full overflow-x-clip;
+  }
+
+  .hero-content-wrap {
+    @apply relative z-10 flex flex-col items-center justify-center text-center px-5 gap-[28px] lg:px-[55px];
+    min-height: 100vh;
+  }
+
+  .hero-heading-wrap {
+    @apply flex flex-col items-center gap-5;
+  }
+
+  /* ─── Services Section ─── */
+  .services-section {
+    @apply w-full py-[70px] lg:py-[100px] lg:py-12;
+  }
+
+  .services-container {
+    @apply w-full gap-[55px] flex flex-col;
+    /* @apply w-full px-5 lg:px-[55px]; */
+  }
+
+  .services-heading-area {
+    @apply flex flex-col lg:items-center lg:text-center px-[30px] gap-[28px];
+  }
+
+  /* ─── About Section ─── */
+  .about-section {
+    @apply w-full;
+    background-color: var(--color-darker-bg);
+  }
+
+  .about-content {
+    @apply relative z-10 flex flex-col items-center text-center text-white gap-[28px]
+     relative px-[30px] py-[60px] lg:px-[55px] lg:pt-[240px]  lg:pb-[100px];
+  }
+
+  .about-heading-sub {
+    @apply flex flex-col items-center gap-[15px];
+  }
+
+  /* ─── EAC Section (Image + Text) ─── */
+  .eac-section {
+    @apply w-full;
+    background-color: var(--color-light-gray);
+    @apply px-[30px] pt-[100px] pb-[70px] lg:py-[100px] lg:px-[100px];
+  }
+
+  .eac-grid {
+    @apply flex flex-col items-start gap-[50px] lg:flex-row lg:items-center lg:gap-[100px];
+  }
+
+  .eac-image-col {
+    @apply w-full lg:w-1/2 flex-shrink-0;
+  }
+
+  .eac-text-col {
+    @apply w-full lg:w-1/2 flex flex-col relative gap-[28px];
+  }
+
+  .eac-heading-sub {
+    @apply flex flex-col gap-[15px];
+  }
+
+  /* ─── Advantage Section ─── */
+  .advantage-section {
+    background-color: var(--color-light-gray);
+    @apply w-full p-[20px] lg:py-[30px] lg:px-[30px];
+  }
+
+  .advantage-inner {
+    @apply relative px-[30px] py-[70px] lg:px-[80px] lg:py-[100px] flex flex-col gap-[55px] bg-white z-2;
+  }
+  .overlay2 {
+    position: absolute;
+    inset: 0; /* top:0 left:0 right:0 bottom:0 */
+    z-index: 0;
+    pointer-events: none; /* so clicks pass through */
+  }
+
+  .overlay2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or contain based on design */
+    opacity: 3%; /* adjust as per design */
+  }
+  .advantage-heading {
+    @apply text-center;
+  }
+
+  .advantage-cards {
+    @apply flex gap-[55px];
+  }
+
+  .advantage-card-last {
+    @apply col-span-2 lg:col-span-1;
+  }
+
+  /* ─── Locations Section ─── */
+  .locations-section {
+    @apply w-full py-[60px] px-[30px] lg:pt-[140px] lg:pb-[100px] lg:px-[80px];
+    background-color: var(--color-black);
+  }
+
+  .locations-grid {
+    @apply flex flex-col items-start gap-10 lg:gap-[100px] lg:flex-row lg:items-center;
+  }
+
+  .locations-left {
+    @apply w-full flex flex-col gap-[28px];
+  }
+
+  .locations-right {
+    @apply w-full;
+  }
+
+  /* ─── Testimonials Section ─── */
+  .testimonials-section {
+    @apply w-full bg-white pt-[60px] pb-10 px-[30px] lg:pt-[200px] lg:pb-[60px] lg:px-[100px];
+  }
+
+  .testimonials-inner {
+    @apply flex flex-col gap-[55px] mx-auto w-full;
+  }
+  .testimonials-mainheading {
+    @apply flex justify-center;
+  }
+  /* ─── Contact Section ─── */
+  .contact-section {
+    @apply w-full px-10 py-5 lg:p-[80px];
+    background-color: #303133;
+  }
+
+  .contact-grid {
+    @apply flex flex-col lg:flex-row gap-[55px] lg:gap-[100px];
+  }
+
+  .contact-image-col {
+    @apply w-full lg:w-[45%] flex-shrink-0;
+    min-height: 300px;
+    @apply lg:min-h-0;
+  }
+
+  .contact-form-col {
+    @apply w-full lg:w-[55%] flex flex-col gap-[28px];
+    /* px-10 py-5 lg:px-[55px] */
+  }
+
+  .contact-form-heading-wrap {
+    @apply flex flex-col gap-2;
+  }
+
+  /* ─── Footer ─── */
+  .footer-section {
+    @apply w-full py-[70px] lg:px-[80px];
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-footer-bg);
+  }
+
+  .footer-grid {
+    @apply relative z-[1] flex flex-col gap-10 px-[30px]  lg:flex-row lg:gap-[80px];
+  }
+
+  .footer-left {
+    @apply w-full lg:w-[30%] flex flex-col gap-[10px];
+  }
+
+  .footer-center {
+    @apply w-full lg:w-[35%] flex flex-col gap-5;
+  }
+
+  .footer-right {
+    @apply w-full lg:w-[25%] flex flex-col gap-5;
+  }
+
+  .footer-links-sub-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-5;
+  }
+
+  .footer-bottom-bar {
+    @apply relative z-[1] gap-[55px] w-full flex flex-col lg:flex-row items-center text-center lg:justify-between 
+    md:text-left py-5 px-5 md:px-[80px];
+    background-color: var(--color-primary-red);
+  }
+}

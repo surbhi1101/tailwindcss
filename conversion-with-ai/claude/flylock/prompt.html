@@ -1,0 +1,434 @@
+Build a complete, pixel-perfect, fully responsive FlyLock Security Solutions website 
+using the flylock skill rules strictly.
+
+resuable buttton:
+
+Button "SCHEDULE SERVICE":
+- leftbg: #7F1919,rightbg:#FF3333 text: white, padding-inline: 20px, padding-block: 10px
+- Hover: bg → white, text → #CC0000, border: 2px solid #CC0000
+
+## GLOBAL DESIGN TOKENS
+
+Colors:
+- Primary Red: ##FF3333
+- Black: #000000
+- White: #FFFFFF
+- Light Gray BG: #444444
+- Dark Section BG: #111111
+- Text Dark: ##444444
+- Text Light: #E0E0E0
+- Footer BG: #000000
+- Footer Bottom Bar: #FF3333
+
+Typography:
+- Headings: "Bahnschrift", sans-serif — UPPERCASE, bold, tight tracking
+- Body: "Arial", sans-serif
+- Red accent words in headings use color: ##FF3333
+
+---
+
+## SECTION 1 — TOP ANNOUNCEMENT BAR
+- it will be moving continously from left to right font-family Arial
+- Full-width bar, bg: ##FF3333, text white
+- Text: "Own a Security Franchise with FlyLock! Exclusive Territories Available –" + bold link "Claim Yours!"
+- Centered, font-size ~16px, padding-block: 10px
+
+---
+
+## SECTION 2 — NAVBAR
+
+Layout:
+- Sticky on scroll, white bg, bottom shadow 
+- Left: FlyLock logo 
+- Center: nav links — SERVICES | LOCATIONS | CAREERS | FRANCHISING | BLOG 
+- Right: phone number "📞 833-FLY-LOCK" + red CTA button "SCHEDULE SERVICE" + search icon
+
+the cta button will have bg like half left #7F1919 & other will be right #FF3333 
+when hover it will behave like the left colour moving to right 
+
+Spacing:
+- padding-block: 10px
+- padding-inline: 55px (lg+), 20px (sm/md)
+- Nav link gap: 40px
+- Font: uppercase, 16px, bold, color: #1A1A1A 
+- font family Arial
+
+Spacing:
+- Right: phone number "📞 833-FLY-LOCK" + red CTA button "SCHEDULE SERVICE" + search icon
+gap-35px
+
+
+
+Mobile:
+- Hamburger icon (right), logo (left), hidden nav links
+- Hamburger toggles a full-width dropdown menu
+
+---
+
+## SECTION 3 — HERO
+these will be the first page 
+
+Layout:
+- Full-screen height (100vh)
+- Dark background with overlay (use: https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920)
+- Overlay: rgba(0,0,0,0.65)
+- Content centered (horizontal + vertical)
+
+Content: gap-28px
+gap between heading & subheading will be 20px
+- Heading (h1): "DOOR SECURITY & ACCESS CONTROL SOLUTIONS" — 
+white, font-size: 64px (lg+), 40px (md), 28px (sm),
+uppercase, bold font family Bahnschrift
+- Sub-heading: "Helping Make the World Safer, One Door at a Time!" — 
+white, font-size: 20px, font-weight: 400 font family Bahnschrift 
+- CTA Button: "REQUEST A QUOTE" — bg: #CC0000, text: white, 
+padding-inline: 20px, padding-block: 10px, uppercase, bold
+than These will be 3 slider & each have different thing to display the navgation wil be shown in
+that image down
+Animation: fade-section → fade-in on load
+
+---
+
+## SECTION 4 — COMPREHENSIVE SECURITY SERVICES
+
+Layout:
+
+- padding-block: 100px (lg+), 48px (sm/md)
+
+Heading area (centered):
+- justify-center flex gap-28px 
+- Fingerprint icon (red) + "COMPREHENSIVE" (red) + "SECURITY SERVICES" (black) — 
+inline, uppercase, font-size: 48px (lg+), 28px (sm)
+
+- Sub-label bold: "Not sure where to start with your business security?"
+- Body text paragraph × 2 — centered, font-size: 16px, color: #444444
+
+Service Cards Slider (Swiper.js, horizontal scroll):
+- sm/md: 1 card visible | lg+: 4+ cards visible (slidesPerGroup matches)
+- Each card:
+- Full background image (technician working photo from unsplash)
+gap between title & button will be 20px
+- Title at center : uppercase, white, bold,24px
+- Red "LEARN MORE" same as resuable button
+Services list:
+1. Doors & Frames — https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600
+2. Door Hardware — https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600
+3. Intercoms — https://images.unsplash.com/photo-1521791055366-0d553381a57d?w=600
+4. Locks & Keys — https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600
+5. Access Control — https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600
+
+Animation: fade-section on scroll
+
+with mt-55px for pagination of the swiper there will a line below swiper which will move when the swiper change
+the color of that line will be #E0E0E0 & to show where the swiper or active swiper the color 
+will be #FF3333 give graident fill
+
+---
+
+## SECTION 5 — ABOUT (Dark Grid Section)
+
+Layout:
+- bg: #0A0A0A, color: white
+- padding-block: 100px (lg+), 60px (sm/md)
+- padding-inline: 60px (lg+), 20px (sm/md)
+- Content centered, text-align: center
+- Corner bracket decorators: top-left, top-right, bottom-left, bottom-right (thin white/red lines, 40px × 40px, 2px
+border)
+
+Content:
+gap-[28px]
+gap between heading & subtitle will be 15px
+- Label: "ABOUT" (white) + "FLYLOCK SECURITY SOLUTIONS" (red) — 
+uppercase, bold, font-size: 48px (lg+), 28px (sm)
+- Subtitle: "Expertise in Door Security" — white, font-size: 32px, font-normal font-family Bahnschrift
+- Body paragraph × 3 — white, font-size: 15px, line-height:[100%], centered font Arial 
+- CTA Button: same as resuable button
+
+Animation: fade-section on scroll
+
+---
+
+## SECTION 6 — ELECTRONIC ACCESS CONTROL (Image + Text Split)
+
+Layout:
+- bg: #E0E0E0
+- Two-column grid: left = image, right = text gap-100px in lg
+- lg+: 50/50 | sm/md: stacked (image on top)
+- padding-block: 100px (lg+), 48px (sm/md)
+- padding-inline: 100px (lg+), 20px (sm/md)
+- Corner bracket decorators on right panel (same style as section 5 but dark)
+
+Left (Image):
+- Large square image of technician working on wiring
+- Use: https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800
+- object-fit: cover, border-radius: 0
+
+Right (Text): gap-28px
+gap between heading & subtitle will be 15px font family Bahnschrift
+- Fingerprint icon (red, 32px) + Heading:
+"THE" (black) + "ELECTRONIC ACCESS CONTROL SYSTEMS" (red) + "SPECIALISTS" (black)
+— uppercase, bold, font-size: 48px (lg+), 28px (sm)
+- Subtitle: "How Can We Help You?" — black, 32px font-light
+- Body paragraph × 2 — #444444, 18px, line-height: [100%]
+- CTA Button: same as resuable button 
+
+Column gap: 100px (lg+), 50px (sm/md)
+
+Animation: fade-section on scroll
+
+---
+
+## SECTION 7 — THE FLYLOCK ADVANTAGE
+
+Layout:
+- White bg with subtle dot pattern background (radial-gradient)
+- padding: 30px
+- Corner bracket decorators (black lines, same style)
+
+gap between heading & card will be 55px
+Heading (centered):
+- "[" + "THE" (black) + "FLYLOCK ADVANTAGE" (red) + "]"
+- uppercase, bold, font-size: 42px (lg+), 28px (sm)
+
+Feature Cards Row (5 items):
+- lg+: all 5 in a row | sm/md: 2 columns then 1 gap-55px
+- Each card: centered, no border, transparent bg 
+- Red circular outlined icon (SVG/emoji placeholder): ~60px
+- Title: uppercase, bold, 16px, #1A1A1A
+- Description: 13px, #555, text-center
+
+Cards data: gap-28px
+1. 24/7 icon — AVAILABILITY — "24/7 Commercial Service"
+2. Location pin — LOCAL PRESENCE — "Local Offices & Security Technicians"
+3. Compass — NATIONAL REACH — "Serving North America, Coast to Coast"
+4. People group — ABILITY TO SCALE — "Rapid Team Assembly for Large Projects"
+5. Verified shield — EXPERIENCE — "Decades of Combined Expertise"
+gap between title & desc will be 20px
+AVAILABILITY & all title will be 
+font-family: Bahnschrift;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+#000000
+adjust these as per the responsive view
+
+desc:
+font-family: Bahnschrift;
+font-weight: 300;
+font-style: Light;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+#444444
+
+Animation: fade-section on scroll
+
+---
+
+## SECTION 8 — FIND LOCATIONS (Dark Map Section)
+
+Layout:
+- bg: #00000000, color: white
+- Two-column: left = text content, right = US map image
+- lg+: 40/60 split | sm/md: stacked
+- padding-top: 140px (lg+), 60px (sm/md)
+- padding-bottom: 100px (lg+), 60px (sm/md)
+- padding-inline: 80px (lg+), 20px (sm/md)
+
+Left: gap-28px
+- Fingerprint Small label "FIND" white uppercase bold 16px
+- Large heading:
+"COMMERCIAL" (red) + "SECURITY & ACCESS CONTROL EXPERTS" (white) + 
+"NEAR YOU" (mix: NEAR white, YOU red)
+— uppercase, bold, font-size: 48px (lg+), 30px (sm) Bahnschrift
+- Body text: "Proudly serving businesses in over 40 states through 90+ 
+locally owned and operated locations across the
+U.S." — white, 16px #E0E0E0
+- CTA Button:same as resuable button
+
+Right:
+- SVG or image of US map with glowing red location dots
+- Use: a dark styled SVG US map, or img placeholder with dark bg
+- Map glow effect on dots: box-shadow red
+
+Animation: fade-section on scroll
+
+---
+
+## SECTION 9 — TESTIMONIALS / REVIEWS
+
+Layout:
+- White bg
+in lg:
+- gap- 55px
+- padding-top: 200px
+- padding-bottom: 60px
+- padding-inline: 100px (lg+), 20px (sm/md)
+
+Heading (centered):
+- "[" + "REAL FEEDBACK" (red) + "FROM" (black) + "REAL CLIENTS" (red) + "]"
+- bracket decorators same style, font-size: 48px (lg+),bold, 28px (sm),Bahnschrift
+
+Review Filter Tabs (below heading):
+- Tabs: All Reviews 5.0 | Google 5.0 | Facebook 5.0
+- Active tab: red underline, bold
+- Google/Facebook icons before label
+- Divider line below
+
+gap-28px
+Overall Rating Block: gap-10px justify-between the button will come on right side 
+- "OVERALL RATING" label bold uppercase,text-[32px] #000000
+- 5 yellow stars row
+- "5.0 out of 5" large text
+- "Write a Review" red button (right aligned)
+
+Review Cards (Swiper.js): gap-28px
+- sm/md: 1 visible | lg+: 3 visible | slidesPerGroup matches
+- Each card: #E0E0E0 bg, padding: 28px gap-20px
+- Top: reviewer name
+font-family: Arial;
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+#303133
+ in lg, 5 red stars,
+  Google/Facebook icon
+- Body: review text, 16px, #303133, max 4 lines with ellipsis
+- Bottom: "Read More" red text link + date right-aligned
+
+Animation: fade-section on scroll
+
+---
+
+## SECTION 10 — CONTACT / QUOTE FORM (Dark)
+
+Layout:
+- bg: ##303133 with bg image
+- Two-column: left = image, right = form
+- lg+: 45/55 | sm/md: stacked
+- padding: 80px in lg 
+
+Left:
+- Large image of FlyLock technician working on glass door
+- Use: https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800
+- height: 100%, object-fit: cover
+
+Right (Form): gap-55px
+- Form heading: "REQUEST A QUOTE" — white, uppercase, bold, 48px
+-sub heading: Our client services team is standing by to assist with security doors, hardware, access control systems, security
+cameras, locksmith services and more!
+font-family: Arial;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+#E0E0E0
+Form fields (all dark bg #000000, white text, 1px border #FFFFFF, padding-inline: 20px,padding-block:10px, border-radius: 2px):
+Row 1: First Name | Last Name
+Row 2: Email Address | Company Name
+Row 3: Zip Code | Phone Number
+Row 4: Radio buttons — "Commercial - Business" (red dot active) | "Residential - Home"
+Row 5: Textarea "How can we help?" — height: 140px
+Row 6: Checkbox — "I agree to the privacy policy" (link: red)
+Row 7: Submit Button "SUBMIT REQUEST" — bg: #CC0000, white, full-width... no wait: auto width, padding-inline: 36px,
+padding-block: 14px, hover inverted, uppercase bold
+
+Field gap: 20px, label font-size: 16px white 
+
+Animation: fade-section on scroll
+
+---
+
+## SECTION 11 — FOOTER
+
+Layout:
+- bg: #000000, color: white
+- Three-column grid: left = brand, center = Markets We Serve (2 sub-cols), right = Resources (2 sub-cols)
+- padding-block: 70px
+- padding-inline: 80px (lg+), 20px (sm/md)
+- Column gap: 80px
+
+Left: gap-10px
+- Heading: "TALK TO A" (white) + "SECURITY PROFESSIONAL" (red) + ", TODAY!" (white)
+— uppercase bold 32px 
+- Body paragraph: brand description, white, 16px
+
+gap-70px
+Center: "MARKETS WE SERVE" — white uppercase bold 24px, underline #999999
+- Two-column sub-grid of red links: gap-20px
+Educational Institutions | Property Management
+Government Buildings | Restaurant Venues
+Healthcare Facilities | Retail Stores
+Multifamily Housing | Small & Medium Businesses
+- Link color: #CC0000, font-size: 14px, hover underline
+
+Right: "RESOURCES" — white uppercase bold 16px, underline red
+- Two-column sub-grid of red links:
+About FlyLock | Careers
+Blog | FlyLock History
+Contact | Residential
+Locations | Commercial
+- Link color: #FF3333, font-size: 16px, hover underline
+
+---
+
+## FOOTER BOTTOM BAR
+
+- bg: #FF3333
+- Flex: space-between gap-20px
+- Left: legal links — "Accessibility Statement | Privacy Policy | Terms & Conditions | All FlyLock Services" — white,
+16px
+- Center: "© 2025 FlyLock | ❤️ // TECHYSCOUTS" — white, 12px
+- Right: Social icons — Instagram, Facebook, YouTube, LinkedIn — white, 20px, hover: opacity 0.7
+- padding-block: 20px, padding-inline: 80px (lg+), 20px (sm/md)
+
+---
+
+## SWIPER CONFIG RULES
+
+- Menu slider: slidesPerView: 1 (sm/md), 4 (lg+), slidesPerGroup matches, loop: true, pagination dots
+- Testimonials slider: slidesPerView: 1 (sm/md), 3 (lg+), slidesPerGroup matches, loop: true, prev/next arrows
+
+---
+
+## ANIMATION SYSTEM
+
+.fade-section { @apply opacity-0 translate-y-[40px] transition-all duration-700; }
+.fade-in { @apply opacity-100 translate-y-0; }
+Use IntersectionObserver in App.jsx to add .fade-in to .fade-section elements on scroll.
+
+---
+
+## FILE DISTRIBUTION
+
+**base.css** — @layer base: CSS variables, root tokens, html/body/*, font imports
+**components.css** — @layer components: navbar, hero, cards, buttons, form fields, sliders, testimonial cards, footer
+brand/links
+**layout.css** — @layer components: section wrappers, grid layouts, container widths, column splits, padding/margin
+spacing
+**utilities.css** — @layer utilities: fade-section, fade-in, overlay helpers, dot-pattern bg, bracket decorator,
+text-truncate
+
+---
+
+## REMINDER
+
+- Zero inline Tailwind in JSX
+- All sections inside single App function
+- One h1 tag only (Hero)
+- Mobile-first, all breakpoints covered
+- Button hover: always inverts bg ↔ text color
+- Placeholder images from unsplash.com URLs provided above
+- No new files or folders

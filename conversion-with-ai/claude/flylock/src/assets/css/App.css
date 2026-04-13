@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@import "./base.css";
+@import "./utilities.css";
+@import "./layout.css";
+@import "./components.css";
+
+/* Tailwind custom breakpoints */
+@theme {
+  --breakpoint-sm: 320px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1152px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 1920px;
+}
