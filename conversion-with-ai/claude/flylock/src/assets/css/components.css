@@ -276,12 +276,12 @@
   .about-content,
   .eac-grid,
   .contact-grid,
-  .footer-grid {
+  .footer-section {
     position: relative;
     z-index: 10;
   }
   .overlay-img {
-    @apply opacity-30 h-full;
+    @apply opacity-30 h-full w-full;
     z-index: 0;
     pointer-events: none;
   }
@@ -292,7 +292,7 @@
     @apply w-full h-full object-cover opacity-[0.28];
   }
   .about-section-bg {
-    @apply absolute h-full pointer-events-none;
+    @apply absolute h-full w-full pointer-events-none;
   }
 
   .about-circuit-left {

@@ -744,11 +744,11 @@ export default function App() {
       {/* SECTION 5: ABOUT (Dark)*/}
 
       <section className="about-section fade-section">
-        <img src={line1} alt="line1" className="line1" />
         <div className="about-section-bg">
           <img src={headerimg5} alt="headerimg" />
           <img src={overlay1} alt="overlay1" className="overlay-img" />
         </div>
+        <img src={line1} alt="line1" className="line1" />
 
         <div className="about-content">
           <div className="about-heading-sub">
