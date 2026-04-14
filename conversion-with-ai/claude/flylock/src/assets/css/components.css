@@ -697,7 +697,8 @@
 
   .form-checkbox-label a {
     color: var(--color-primary-red);
-    @apply underline;
+    @apply font-bold text-[16px];
+    font-family: var(--font-arial);
   }
 
   /* ═══════════════════════════════

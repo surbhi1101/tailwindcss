@@ -86,9 +86,7 @@
   }
 
   .eac-grid {
-    @apply flex flex-col items-start gap-[50px] lg:flex-row lg:items-center lg:gap-[100px];
-
-    @apply px-[30px] pt-[100px] pb-[70px] lg:py-[100px] lg:px-[100px];
+    @apply flex flex-col items-start gap-[55px] lg:flex-row lg:items-center lg:gap-[100px]  px-[30px] pt-[100px] pb-[70px] lg:py-[100px] lg:px-[100px];
   }
 
   .eac-image-col {
@@ -139,12 +137,12 @@
 
   /* ─── Locations Section ─── */
   .locations-section {
-    @apply w-full py-[60px] px-[30px] lg:pt-[140px] lg:pb-[100px] lg:px-[80px];
+    @apply w-full py-[70px] px-[30px] lg:pt-[140px] lg:pb-[100px] lg:px-[80px];
     background-color: var(--color-black);
   }
 
   .locations-grid {
-    @apply flex flex-col items-start gap-10 lg:gap-[100px] lg:flex-row lg:items-center;
+    @apply flex flex-col items-start gap-[55px] lg:gap-[100px] lg:flex-row lg:items-center;
   }
 
   .locations-left {

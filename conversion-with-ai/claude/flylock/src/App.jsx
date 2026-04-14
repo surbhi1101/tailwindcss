@@ -863,29 +863,34 @@ export default function App() {
           <div className="overlay2">
             <img src={overlay2} alt="overlay2" />
           </div>
-          <div className="advantage-heading">
-            <h2 className="advantage-heading-text bracket-parent">
+          <div className="about-heading-sub">
+            <h2 className="about-label bracket-parent">
               <img
-                src={blackbracket4}
-                alt="blackbracket4"
+                src={blackbracket1}
+                alt="blackbracket1"
                 className="bracket tl"
-              />
-              <img
-                src={blackbracket3}
-                alt="blackbracket3"
-                className="bracket tr"
               />
               <img
                 src={blackbracket2}
                 alt="blackbracket2"
+                className="bracket tr"
+              />
+              <img
+                src={blackbracket3}
+                alt="blackbracket3"
                 className="bracket br"
               />
               <img
-                src={blackbracket1}
-                alt="blackbracket1"
+                src={blackbracket4}
+                alt="blackbracket4"
                 className="bracket bl"
               />
-              THE <span className="red">FLYLOCK ADVANTAGE</span>
+              <div className="about-title">
+                <div className="sub-title">
+                  The <span className="red">FLYLOCK</span>
+                </div>
+                <span className="red">Advantage </span>
+              </div>
             </h2>
           </div>
           <Swiper
@@ -982,28 +987,29 @@ export default function App() {
           <div className="testimonials-mainheading">
             <h2 className="testimonials-heading bracket-parent">
               <img
-                src={blackbracket4}
-                alt="blackbracket4"
+                src={blackbracket1}
+                alt="blackbracket1"
                 className="bracket tl"
-              />
-              <img
-                src={blackbracket3}
-                alt="blackbracket3"
-                className="bracket tr"
               />
               <img
                 src={blackbracket2}
                 alt="blackbracket2"
+                className="bracket tr"
+              />
+              <img
+                src={blackbracket3}
+                alt="blackbracket3"
                 className="bracket br"
               />
               <img
-                src={blackbracket1}
-                alt="blackbracket1"
+                src={blackbracket4}
+                alt="blackbracket4"
                 className="bracket bl"
               />
               <span className="red">REAL FEEDBACK</span>
-              <span className="text-black">FROM </span>
-              <span className="red">REAL CLIENTS</span>
+              <span className="text-black">
+                FROM <span className="red">REAL CLIENTS</span>
+              </span>
             </h2>
           </div>
           <div className="testimonials-filter">
@@ -1119,7 +1125,7 @@ export default function App() {
       </section>
 
       {/*  SECTION 10: CONTACT / QUOTE FORM*/}
-
+      <img src={footerimg2} alt="footerimg2" />
       <section className="contact-section fade-section">
         <div className="overlay2">
           <img src={overlay3} alt="overlay3" />
@@ -1140,7 +1146,7 @@ export default function App() {
               <div className="contact-fingerprint-wrap">
                 <img src={fingureprint} alt="fingureprint" />
                 <h2>
-                  REQUEST A
+                  REQUEST A{" "}
                   <span style={{ color: "var(--color-primary-red)" }}>
                     QUOTE
                   </span>
