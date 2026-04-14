@@ -76,18 +76,19 @@
   }
 
   .about-heading-sub {
-    @apply flex flex-col items-center gap-[15px];
+    @apply flex flex-col items-center gap-[15px] mt-[27px] lg:mt-0;
   }
 
   /* ─── EAC Section (Image + Text) ─── */
   .eac-section {
     @apply w-full;
     background-color: var(--color-light-gray);
-    @apply px-[30px] pt-[100px] pb-[70px] lg:py-[100px] lg:px-[100px];
   }
 
   .eac-grid {
     @apply flex flex-col items-start gap-[50px] lg:flex-row lg:items-center lg:gap-[100px];
+
+    @apply px-[30px] pt-[100px] pb-[70px] lg:py-[100px] lg:px-[100px];
   }
 
   .eac-image-col {
@@ -121,8 +122,8 @@
   .overlay2 img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* or contain based on design */
-    opacity: 3%; /* adjust as per design */
+    object-fit: cover;
+    opacity: 10%;
   }
   .advantage-heading {
     @apply text-center;

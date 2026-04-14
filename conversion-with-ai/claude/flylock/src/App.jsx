@@ -416,6 +416,9 @@ export default function App() {
                     ))}
                   </div>
                   <div className="mega-content">
+                    <div className="overlay2">
+                      <img src={overlay1} alt="overlay2" />
+                    </div>
                     <div className="mega-content-inner">
                       <h3 className="mega-content-heading">
                         {activeService.label.toUpperCase()}
@@ -792,7 +795,7 @@ export default function App() {
         </div>
         <img src={line2} alt="line2" className="line2" />
       </section>
-      {/* <img src={footerimg1} alt="footerimg1" className="footerimg" /> */}
+      <img src={footerimg1} alt="footerimg1" className="footerimg" />
       {/*  SECTION 6: EAC SPECIALISTS */}
       <section className="eac-section fade-section">
         <div className="about-section-bg">
