@@ -321,7 +321,7 @@
   }
 
   .line3 {
-    @apply absolute right-0 w-[102px] lg:w-[205px] -mt-[80px];
+    @apply absolute right-0 w-[102px] lg:w-[205px];
   }
   .line4 {
     @apply w-[100px] absolute right-0 items-center;
