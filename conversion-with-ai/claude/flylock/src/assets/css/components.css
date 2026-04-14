@@ -30,9 +30,7 @@
   }
 
   .btn-main--submit {
-    font-size: 14px;
-    padding-inline: 36px;
-    padding-block: 14px;
+    @apply text-[14px] px-[36px] py-[14px];
   }
 
   .btn-main--self-start {
@@ -283,11 +281,13 @@
     z-index: 10;
   }
   .overlay-img {
-    @apply absolute inset-0 w-full h-full;
-    /* z-index: 0; */
+    @apply opacity-30 h-full;
+    z-index: 0;
     pointer-events: none;
   }
-
+  .mobile-search {
+    @apply flex lg:hidden;
+  }
   .overlay-img img {
     @apply w-full h-full object-cover opacity-[0.28];
   }
@@ -1143,7 +1143,7 @@
    TOGGLE BUTTON
 ═══════════════════════════════ */
   .navbar-search-toggle {
-    @apply flex items-center justify-center cursor-pointer bg-transparent border-none p-1 transition-opacity;
+    @apply items-center justify-center cursor-pointer bg-transparent border-none p-1 transition-opacity;
   }
 
   .navbar-search-toggle:hover {

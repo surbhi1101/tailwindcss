@@ -29,6 +29,7 @@ import advantage5 from "./assets/images/advantage5.png";
 import overlay1 from "./assets/images/overlay1.png";
 import footeroverlay from "./assets/images/footeroverlay.png";
 import overlay2 from "./assets/images/overlay2.jpg";
+import overlay3 from "./assets/images/overlay3.png";
 import map from "./assets/images/map.png";
 import headerimg5 from "./assets/images/headerimg5.png";
 import footerimg1 from "./assets/images/footerimg1.png";
@@ -447,7 +448,7 @@ export default function App() {
           </div>
 
           <button
-            className={`navbar-search-toggle lg:hidden${searchOpen ? " is-active" : ""}`}
+            className={`navbar-search-toggle mobile-search ${searchOpen ? " is-active" : ""}`}
             onClick={() => setSearchOpen(!searchOpen)}
             aria-label="Toggle search"
           >
@@ -795,9 +796,7 @@ export default function App() {
       {/*  SECTION 6: EAC SPECIALISTS */}
       <section className="eac-section fade-section">
         <div className="about-section-bg">
-          <div className="overlay-img">
-            <img src={overlay1} alt="overlay1" />
-          </div>
+          <img src={overlay1} alt="overlay1" className="overlay-img" />
         </div>
         <img src={line3} alt="line3" className="line3" />
         <div className="eac-grid">
@@ -973,6 +972,7 @@ export default function App() {
         </div>
       </section>
 
+      <img src={footerimg1} alt="footerimg" className="footerimg1" />
       {/* SECTION 9: TESTIMONIALS*/}
       <section className="testimonials-section fade-section">
         <div className="testimonials-inner">
@@ -1118,10 +1118,8 @@ export default function App() {
       {/*  SECTION 10: CONTACT / QUOTE FORM*/}
 
       <section className="contact-section fade-section">
-        <div className="about-section-bg">
-          <div className="overlay-img">
-            <img src={overlay2} alt="footer-overlay" />
-          </div>
+        <div className="overlay2">
+          <img src={overlay3} alt="overlay3" />
         </div>
         <div className="contact-grid">
           {/* Left - Image */}
@@ -1229,9 +1227,7 @@ export default function App() {
       {/* SECTION 11: FOOTER*/}
       <footer className="footer-section">
         <div className="about-section-bg">
-          <div className="overlay-img">
-            <img src={footeroverlay} alt="footer-overlay" />
-          </div>
+          <img src={overlay1} alt="overlay1" className="overlay-img" />
         </div>
 
         <div className="footer-grid">
