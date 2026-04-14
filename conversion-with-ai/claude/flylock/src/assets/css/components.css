@@ -70,10 +70,9 @@
   }
 
   .mobile-nav-link {
-    @apply uppercase font-bold text-[16px] py-3 border-b cursor-pointer transition-colors duration-200;
+    @apply uppercase font-bold text-[16px] py-3 cursor-pointer transition-colors duration-200;
     font-family: var(--font-arial);
     color: #1a1a1a;
-    border-color: #f0f0f0;
   }
 
   .mobile-nav-link:hover {
@@ -558,7 +557,7 @@
   }
 
   .stars-row {
-    @apply flex items-center gap-1 text-[20px];
+    @apply flex items-center gap-1 text-[20px] -mt-1;
   }
 
   .stars-row-sm {
@@ -1012,7 +1011,7 @@
   }
 
   .mobile-menu-bottom {
-    @apply flex flex-col items-center gap-4 pt-5 pb-3 border-t border-[#e0e0e0] mt-2;
+    @apply flex flex-col items-center gap-4 pt-5 pb-3 px-5 py-4  mt-2;
   }
 
   .mobile-menu-phone {
@@ -1022,7 +1021,7 @@
   }
 
   .mobile-schedule-btn {
-    @apply w-full justify-center;
+    @apply w-fit justify-center;
   }
   .navbar-search-icon-btn {
     @apply flex items-center justify-center h-[32px] w-[32px] text-[#1a1a1a] p-1  cursor-pointer transition-colors duration-200;

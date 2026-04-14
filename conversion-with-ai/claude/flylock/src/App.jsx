@@ -516,74 +516,75 @@ export default function App() {
 
         {mobileOpen && (
           <div className="mobile-menu">
-            <div className="mobile-menu-item">
-              <div
-                className="mobile-nav-link mobile-nav-services-toggle"
-                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-              >
-                <span
-                  className={mobileServicesOpen ? "mobile-nav-link-red" : ""}
+            <div className="mobile-submenu">
+              <div className="mobile-menu-item">
+                <div
+                  className="mobile-nav-link mobile-nav-services-toggle"
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                 >
-                  SERVICES
-                </span>
-                <span
-                  className={`mobile-chevron${mobileServicesOpen ? " open" : ""}`}
-                >
-                  {mobileServicesOpen ? "∧" : "∨"}
-                </span>
-              </div>
-              {mobileServicesOpen && (
-                <div className="mobile-services-list">
-                  {NAV_SERVICES.map((svc) => (
-                    <div key={svc.label} className="mobile-service-group">
-                      <div
-                        className="mobile-service-heading"
-                        onClick={() =>
-                          setMobileServiceExpanded(
-                            mobileServiceExpanded === svc.label
-                              ? null
-                              : svc.label,
-                          )
-                        }
-                      >
-                        <span
-                          className={
-                            mobileServiceExpanded === svc.label
-                              ? "mobile-nav-link-red"
-                              : ""
+                  <span
+                    className={mobileServicesOpen ? "mobile-nav-link-red" : ""}
+                  >
+                    SERVICES
+                  </span>
+                  <span
+                    className={`mobile-chevron${mobileServicesOpen ? " open" : ""}`}
+                  >
+                    {mobileServicesOpen ? "∧" : "∨"}
+                  </span>
+                </div>
+                {mobileServicesOpen && (
+                  <div className="mobile-services-list">
+                    {NAV_SERVICES.map((svc) => (
+                      <div key={svc.label} className="mobile-service-group">
+                        <div
+                          className="mobile-service-heading"
+                          onClick={() =>
+                            setMobileServiceExpanded(
+                              mobileServiceExpanded === svc.label
+                                ? null
+                                : svc.label,
+                            )
                           }
                         >
-                          {svc.label.toUpperCase()}
-                        </span>
-                        <span className="mobile-chevron">
-                          {mobileServiceExpanded === svc.label ? "∧" : "∨"}
-                        </span>
-                      </div>
-                      {mobileServiceExpanded === svc.label && (
-                        <div className="mobile-service-items">
-                          {svc.items.map((item) => (
-                            <a
-                              key={item}
-                              href="#"
-                              className="mobile-service-item"
-                            >
-                              {item}
-                            </a>
-                          ))}
+                          <span
+                            className={
+                              mobileServiceExpanded === svc.label
+                                ? "mobile-nav-link-red"
+                                : ""
+                            }
+                          >
+                            {svc.label.toUpperCase()}
+                          </span>
+                          <span className="mobile-chevron">
+                            {mobileServiceExpanded === svc.label ? "∧" : "∨"}
+                          </span>
                         </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
+                        {mobileServiceExpanded === svc.label && (
+                          <div className="mobile-service-items">
+                            {svc.items.map((item) => (
+                              <a
+                                key={item}
+                                href="#"
+                                className="mobile-service-item"
+                              >
+                                {item}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {["LOCATIONS", "CAREERS", "FRANCHISING", "BLOG"].map((link) => (
+                <a key={link} href="#" className="mobile-nav-link">
+                  {link}
+                </a>
+              ))}
             </div>
-
-            {["LOCATIONS", "CAREERS", "FRANCHISING", "BLOG"].map((link) => (
-              <a key={link} href="#" className="mobile-nav-link">
-                {link}
-              </a>
-            ))}
-
             <div className="mobile-menu-bottom">
               <div className="mobile-menu-phone">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="#1A1A1A">
