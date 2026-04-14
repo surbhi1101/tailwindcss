@@ -8,7 +8,7 @@
   }
 
   .announcement-text a {
-    @apply font-bold underline text-white;
+    @apply font-bold underline text-white text-[16px];
   }
   .btn-main {
     @apply inline-flex w-fit items-center justify-center px-5 py-[10px] text-[16px] uppercase font-bold text-white cursor-pointer;
@@ -23,10 +23,6 @@
 
   .btn-main:hover {
     background-position: left center;
-  }
-
-  .btn-main--sm {
-    font-size: 14px;
   }
 
   .btn-main--submit {
@@ -49,9 +45,8 @@
   ═══════════════════════════════ */
 
   .nav-link {
-    @apply uppercase font-bold text-[16px] cursor-pointer transition-colors duration-200;
+    @apply uppercase font-bold text-[#000000] text-[16px] cursor-pointer transition-colors duration-200;
     font-family: var(--font-arial);
-    color: #1a1a1a;
   }
 
   .nav-link:hover {
@@ -59,9 +54,8 @@
   }
 
   .nav-phone {
-    @apply flex items-center gap-2 font-bold text-[15px];
+    @apply flex items-center gap-[10px] font-bold text-[16px] text-[#000000];
     font-family: var(--font-arial);
-    color: #1a1a1a;
   }
 
   .hamburger-btn {
@@ -294,7 +288,9 @@
   .about-section-bg {
     @apply absolute h-full w-full pointer-events-none;
   }
-
+  .eac-section .about-section-bg {
+    @apply w-fit;
+  }
   .about-circuit-left {
     @apply absolute left-0 bottom-[20%] z-0 opacity-60 w-[200px];
   }
@@ -921,7 +917,7 @@
   }
 
   .mega-sidebar-item {
-    @apply flex items-center justify-between cursor-pointer px-5 py-[16px] text-[#999999] uppercase font-bold text-[24px] transition-colors duration-200 border-b border-[#fff];
+    @apply flex items-center gap-[15px] justify-between cursor-pointer px-5 py-[16px] text-[#999999] uppercase font-bold text-[24px] transition-colors duration-200 border-b border-[#fff];
     font-family: var(--font-arial);
   }
 
@@ -931,7 +927,7 @@
   }
 
   .mega-chevron {
-    @apply text-[20px] font-light;
+    @apply text-[24px] h-5 w-5 font-bold;
   }
 
   /* Right content area */
@@ -1143,7 +1139,7 @@
    TOGGLE BUTTON
 ═══════════════════════════════ */
   .navbar-search-toggle {
-    @apply items-center justify-center cursor-pointer bg-transparent border-none p-1 transition-opacity;
+    @apply items-center justify-center cursor-pointer bg-transparent border-none transition-opacity;
   }
 
   .navbar-search-toggle:hover {

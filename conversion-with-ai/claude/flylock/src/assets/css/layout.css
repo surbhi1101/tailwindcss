@@ -1,7 +1,7 @@
 @layer components {
   /* ─── Announcement Bar ─── */
   .announcement-bar {
-    @apply w-full relative py-[10px] overflow-hidden;
+    @apply w-full relative py-[10px] overflow-hidden px-[55px];
     background-color: var(--color-primary-red);
   }
 
@@ -16,7 +16,7 @@
   }
 
   .navbar-container {
-    @apply flex items-center justify-between w-full py-[10px] px-[30px] lg:px-[55px];
+    @apply flex items-center justify-between w-full py-[10px] px-[30px] lg:px-[55px] lg:gap-[70px];
   }
 
   .navbar-center {
