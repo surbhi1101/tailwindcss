@@ -1168,17 +1168,9 @@
   }
 
   .hero-slide-content--right {
-    @apply items-center text-center justify-center;
-    @apply lg:items-start lg:text-left lg:justify-start;
+    @apply items-center text-center justify-center px-[30px] pt-[30px] pb-[150px] lg:items-start lg:text-left lg:justify-start lg:right-[100px] left-auto max-w-[700px];
     left: 0;
     right: 0;
-  }
-  @media (min-width: 1152px) {
-    .hero-slide-content--right {
-      right: 100px;
-      left: auto;
-      max-width: 700px;
-    }
   }
   .hero-slide-subtitle {
     @apply text-white leading-snug text-[24px] md:text-[16px] lg:text-[32px];
