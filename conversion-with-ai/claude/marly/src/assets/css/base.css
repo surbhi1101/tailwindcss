@@ -1,0 +1,45 @@
+@layer base {
+  :root {
+    --font-baskerville: "Baskerville", serif;
+    --font-century: "Century Gothic", sans-serif;
+  }
+  *,
+  *::before,
+  *::after {
+    @apply box-border m-0 p-0;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-baskerville);
+  }
+
+  body {
+    font-family: var(--font-century);
+    @apply uppercase overflow-x-hidden;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  button {
+    @apply cursor-pointer border-0 bg-transparent;
+  }
+
+  img {
+    @apply max-w-full block;
+  }
+
+  input {
+    @apply outline-none border-0 bg-transparent;
+  }
+}

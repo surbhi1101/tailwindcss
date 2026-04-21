@@ -37,7 +37,7 @@
   }
 
   .mobile-submenu {
-    @apply flex flex-col px-5 py-4 bg-[#E0E0E0];
+    @apply flex flex-col px-5  bg-[#E0E0E0];
   }
 
   /* ─── Hero Section ─── */
@@ -168,7 +168,7 @@
   }
   /* ─── Contact Section ─── */
   .contact-section {
-    @apply w-full px-10 py-5 lg:p-[80px];
+    @apply w-full px-[30px] py-[55px] lg:p-[80px];
     background: linear-gradient(
       to bottom,
       #000000 0%,
@@ -197,26 +197,26 @@
 
   /* ─── Footer ─── */
   .footer-section {
-    @apply w-full py-[70px] lg:px-[80px];
+    @apply w-full;
     position: relative;
     overflow: hidden;
     background-color: var(--color-footer-bg);
   }
 
   .footer-grid {
-    @apply relative z-[1] flex flex-col gap-10 px-[30px]  lg:flex-row lg:gap-[80px];
+    @apply relative z-[1] flex flex-col gap-[55px] px-[30px] py-[70px] lg:px-[80px]  lg:flex-row lg:gap-[80px];
   }
 
   .footer-left {
-    @apply w-full lg:w-[30%] flex flex-col gap-[10px];
+    @apply w-full flex lg:w-[55%] flex-col gap-[10px];
   }
 
   .footer-center {
-    @apply w-full lg:w-[35%] flex flex-col gap-5;
+    @apply w-full flex flex-col gap-5;
   }
 
   .footer-right {
-    @apply w-full lg:w-[25%] flex flex-col gap-5;
+    @apply w-full  flex flex-col gap-5;
   }
 
   .footer-links-sub-grid {
@@ -224,8 +224,8 @@
   }
 
   .footer-bottom-bar {
-    @apply relative z-[1] gap-[55px] w-full flex flex-col lg:flex-row items-center text-center lg:justify-between 
-    md:text-left py-5 px-5 md:px-[80px];
+    @apply relative z-[1] gap-[30px] lg:gap-[55px] w-full flex flex-col lg:flex-row items-center text-center lg:justify-between 
+    md:text-left p-[30px] md:px-[80px];
     background-color: var(--color-primary-red);
   }
 }

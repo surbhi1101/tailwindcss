@@ -1,0 +1,176 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: hsl(220, 10%, 12%);
+  padding: 40px;
+}
+
+.wrapper ul {
+  padding: 0px !important;
+}
+@media (min-width: 1152px) {
+  .wrapper {
+    display: flex;
+  }
+}
+.flip-card-container {
+  --primary: hsl(var(--hue), 50%, 50%);
+  --dark: hsl(var(--hue), 25%, 10%);
+  --grey: hsl(0, 0%, 50%);
+  --white-1: hsl(0, 0%, 90%);
+  --white-2: hsl(0, 0%, 80%);
+
+  width: 30%;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.6s;
+}
+
+.flip-card-container:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--dark);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+figure,
+.img-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figcaption {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+}
+
+.img-bg {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* FRONT DETAILS */
+ul {
+  z-index: 2;
+  list-style: none;
+  padding-top: 50%;
+  width: 70%;
+  text-align: center;
+  color: white;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* BUTTON */
+button {
+  z-index: 2;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--grey);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* DESIGN LINES */
+.design-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.design {
+  position: absolute;
+  background: var(--grey);
+  opacity: 0.5;
+}
+
+.design--1,
+.design--2,
+.design--3,
+.design--4 {
+  width: 1px;
+  height: 100%;
+}
+
+.design--1 {
+  left: 20%;
+}
+.design--2 {
+  left: 80%;
+}
+.design--3 {
+  left: 25%;
+}
+.design--4 {
+  left: 75%;
+}
+
+.design--5,
+.design--6,
+.design--7,
+.design--8 {
+  width: 100%;
+  height: 1px;
+}
+
+.design--5 {
+  top: 40%;
+}
+.design--6 {
+  top: 60%;
+}
+.design--7 {
+  top: 45%;
+}
+.design--8 {
+  top: 55%;
+}

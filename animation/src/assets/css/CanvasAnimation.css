@@ -1,7 +1,0 @@
-.canvas-wrapper {
-  @apply flex items-center justify-center w-full h-screen bg-[#0e100f];
-}
-
-.canvas-el {
-  @apply w-full h-full;
-}

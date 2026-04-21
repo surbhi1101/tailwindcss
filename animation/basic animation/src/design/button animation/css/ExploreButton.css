@@ -1,0 +1,55 @@
+@layer components {
+  .explore-btn {
+    @apply inline-flex items-center  cursor-pointer;
+    @apply whitespace-nowrap overflow-hidden;
+    @apply !rounded-full;
+    gap: 12px;
+    font-weight: 500;
+    padding-inline: 28px !important;
+    padding-block: 14px !important;
+    line-height: 1;
+    background-color: var(--clr);
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  .explore-btn:hover {
+    background-color: #000;
+  }
+
+  .icon-wrapper {
+    @apply grid place-items-center;
+    @apply rounded-full overflow-hidden;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: #fff;
+    color: var(--clr);
+  }
+
+  .explore-btn:hover .icon-wrapper {
+    color: #000;
+  }
+
+  .icon-svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .icon-copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+
+  /* Hover animation */
+  .explore-btn:hover .icon-svg:first-child {
+    transform: translate(150%, -150%);
+  }
+
+  .explore-btn:hover .icon-copy {
+    transform: translate(0);
+    transition: transform 0.3s ease-in-out 0.1s;
+  }
+}

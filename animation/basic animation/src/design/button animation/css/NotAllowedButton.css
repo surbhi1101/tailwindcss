@@ -1,0 +1,63 @@
+@layer components {
+  .not-allowed-btn {
+    @apply relative flex items-center justify-center;
+    @apply rounded-full text-[20px];
+    @apply border-none overflow-hidden;
+    background-color: #212121;
+    gap: 4px;
+    padding-inline: 20px;
+    padding-block: 16px;
+    font-weight: 500;
+    color: #e8e8e8;
+    cursor: not-allowed;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .not-allowed-btn span {
+    @apply flex items-center relative z-[2];
+  }
+
+  .not-allowed-btn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    translate: 0 105%;
+    background-color: #f53844;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .not-allowed-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: #f53844;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .not-allowed-btn:hover {
+    animation: shake 0.2s linear 1;
+  }
+
+  .not-allowed-btn:hover::before {
+    translate: 0 0;
+  }
+
+  .not-allowed-btn:hover svg {
+    fill: #e8e8e8;
+  }
+
+  @keyframes shake {
+    0% {
+      rotate: 0deg;
+    }
+    33% {
+      rotate: 10deg;
+    }
+    66% {
+      rotate: -10deg;
+    }
+    100% {
+      rotate: 10deg;
+    }
+  }
+}

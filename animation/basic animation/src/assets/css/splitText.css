@@ -1,0 +1,19 @@
+.split-container {
+  @apply flex items-center justify-center w-full h-screen invisible;
+}
+
+.split-tube {
+  @apply relative w-full h-[24vw];
+}
+
+.split-line {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+           whitespace-nowrap text-center leading-none;
+  font-size: 18vw;
+  letter-spacing: -0.6vw;
+}
+
+.char {
+  @apply inline-block;
+  backface-visibility: hidden;
+}

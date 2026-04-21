@@ -1,0 +1,137 @@
+/* body {
+  font-family: tahoma;
+  margin: 0;
+  background: #111;
+} */
+
+/* GRID WRAPPER */
+.team-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 60px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .team-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.our-team {
+  padding-block: 55px;
+  background: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+}
+
+/* IMAGE WRAPPER */
+.picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background: #1369ce;
+  position: absolute;
+  bottom: 135%;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: 0.3s linear;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+/* IMAGE */
+.picture img {
+  width: 100%;
+  border-radius: 50%;
+  transition: 0.9s ease;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #efecf7;
+  transform: scale(0.75);
+}
+.picture img {
+  width: 100%;
+  border-radius: 50%;
+  transition: 0.6s ease;
+  border: 4px solid transparent;
+}
+
+.our-team:hover .picture img {
+  transform: scale(0.85);
+}
+
+.picture img {
+  border: 5px solid #fff;
+}
+
+.picture::after {
+  background: #1369ce;
+  transform: scale(1.1);
+}
+
+/* TEXT */
+.name {
+  margin: 0;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 14px;
+  color: #555;
+}
+
+/* SOCIAL BAR */
+.social {
+  position: absolute;
+  bottom: -100px;
+  margin-block: 0px;
+  left: 0;
+  width: 100%;
+  background: #1369ce;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  transition: 0.5s;
+}
+
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background: white;
+  color: #1369ce;
+}

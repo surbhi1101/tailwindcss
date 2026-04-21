@@ -1,0 +1,42 @@
+.gallery {
+  @apply relative w-full h-screen overflow-hidden bg-[#111];
+}
+
+/* ===== CARD WRAPPER ===== */
+.cards {
+  @apply absolute top-1/2 left-1/2 w-[14rem] h-[18rem] -translate-x-1/2 -translate-y-1/2;
+}
+
+/* ===== CARD ITEM ===== */
+.card-item {
+  @apply absolute top-[0] left-[0] w-[14rem] rounded-[0.8rem];
+  aspect-ratio: 9 / 16;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ===== ACTION BUTTON WRAPPER ===== */
+.gallery-actions {
+  @apply absolute bottom-[25px] left-1/2 -translate-x-1/2 flex items-center gap-[16px];
+}
+
+/* ===== BUTTON BASE ===== */
+.btn-base {
+  @apply px-[24px] py-[8px] rounded-full font-[700] transition-all duration-300;
+}
+
+/* ===== PREV BUTTON ===== */
+.btn-prev {
+  @apply px-[24px] py-[8px] rounded-full font-[700] transition-all duration-300 bg-[#fff] text-[#000];
+}
+
+/* ===== NEXT BUTTON ===== */
+.btn-next {
+  @apply px-[24px] py-[8px] rounded-full font-[700] transition-all duration-300 bg-[#fff] text-[#000];
+}
+/* ===== DRAG PROXY ===== */
+.drag-proxy {
+  @apply absolute invisible;
+}

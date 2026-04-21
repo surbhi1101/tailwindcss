@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Ubuntu|Raleway&display=swap");
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+}
+
+.card-container {
+  width: 250px;
+  height: 450px;
+}
+
+.silhouette {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-size: cover;
+}
+
+.silhouette .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.card-abc {
+  background: white;
+  height: calc(100% - 150px);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 40%;
+  box-shadow: 0 0 12px black;
+  overflow: hidden;
+  position: relative;
+}
+
+.information {
+  background: white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#Bulbasaur {
+  background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png);
+}
+
+#Bulbasaur .cover {
+  background-image: url(https://assets.codepen.io/16327/001-silhouette.png);
+}
+
+#BulbasaurInfo {
+  border-top: 10px solid #9dcb58;
+  border-bottom: 10px solid #9dcb58;
+}
+
+#grass {
+  background: #9dcb58;
+}
+
+#poison {
+  background: #b881c8;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+}

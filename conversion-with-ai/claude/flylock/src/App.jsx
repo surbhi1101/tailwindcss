@@ -27,10 +27,15 @@ import advantage3 from "./assets/images/advantage3.png";
 import advantage4 from "./assets/images/advantage4.png";
 import advantage5 from "./assets/images/advantage5.png";
 import overlay1 from "./assets/images/overlay1.png";
+import techyscouts from "./assets/images/techyscouts.png";
 import footeroverlay from "./assets/images/footeroverlay.png";
 import overlay2 from "./assets/images/overlay2.jpg";
+import headerimg from "./assets/images/headerimg.png";
 import overlay3 from "./assets/images/overlay3.png";
 import map from "./assets/images/map.png";
+import dropdown from "./assets/images/dropdown.png";
+import dropup from "./assets/images/dropup.png";
+import blackdropdown from "./assets/images/blackdropdown.png";
 import headerimg5 from "./assets/images/headerimg5.png";
 import footerimg1 from "./assets/images/footerimg1.png";
 import searchicon from "./assets/images/searchicon.png";
@@ -475,7 +480,7 @@ export default function App() {
               </svg>
               <span>833-FLY-LOCK</span>
             </div>
-            <button className="btn-main btn-main--sm">SCHEDULE SERVICE</button>
+            <button className="btn-main btn-main--sm ">SCHEDULE SERVICE</button>
             <button
               className={`navbar-search-toggle${searchOpen ? " is-active" : ""}`}
               onClick={() => setSearchOpen(!searchOpen)}
@@ -1126,7 +1131,7 @@ export default function App() {
       </section>
 
       {/*  SECTION 10: CONTACT / QUOTE FORM*/}
-      <img src={footerimg2} alt="footerimg2" />
+      <img src={headerimg} alt="headerimg" />
       <section className="contact-section fade-section">
         <div className="overlay2">
           <img src={overlay3} alt="overlay3" />
@@ -1257,101 +1262,67 @@ export default function App() {
             </p>
           </div>
 
-          {/* Center */}
-          <div className="footer-center">
-            <div className="footer-accordion">
-              <button
-                type="button"
-                className="footer-accordion-header"
-                onClick={() => setMarketsOpen(!marketsOpen)}
-                aria-expanded={marketsOpen}
-              >
-                <span className="footer-col-heading">MARKETS WE SERVE</span>
-                <span className="footer-accordion-chevron">
-                  {marketsOpen ? (
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <polyline points="18 15 12 9 6 15" />
-                    </svg>
-                  ) : (
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  )}
-                </span>
-              </button>
-              <div
-                className={`footer-accordion-body${marketsOpen ? " open" : ""}`}
-              >
-                <div className="footer-links-sub-grid">
-                  {FOOTER_MARKETS.flat().map((item, i) => (
-                    <a key={i} href="#" className="footer-link-markets">
-                      {item}
-                    </a>
-                  ))}
+          <div className="footer-details">
+            {/* Center */}
+            <div className="footer-center">
+              <div className="footer-accordion">
+                <button
+                  type="button"
+                  className="footer-accordion-header"
+                  onClick={() => setMarketsOpen(!marketsOpen)}
+                  aria-expanded={marketsOpen}
+                >
+                  <span className="footer-col-heading">MARKETS WE SERVE</span>
+                  <span className="footer-accordion-chevron">
+                    {marketsOpen ? (
+                      <img src={dropup} alt="dropup" />
+                    ) : (
+                      <img src={dropdown} alt="dropdown" />
+                    )}
+                  </span>
+                </button>
+                <div
+                  className={`footer-accordion-body${marketsOpen ? " open" : ""}`}
+                >
+                  <div className="footer-links-sub-grid">
+                    {FOOTER_MARKETS.flat().map((item, i) => (
+                      <a key={i} href="#" className="footer-link-markets">
+                        {item}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right */}
-          <div className="footer-right">
-            <div className="footer-accordion">
-              <button
-                type="button"
-                className="footer-accordion-header"
-                onClick={() => setResourcesOpen(!resourcesOpen)}
-                aria-expanded={resourcesOpen}
-              >
-                <span className="footer-col-heading-sm">RESOURCES</span>
-                <span className="footer-accordion-chevron">
-                  {resourcesOpen ? (
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <polyline points="18 15 12 9 6 15" />
-                    </svg>
-                  ) : (
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  )}
-                </span>
-              </button>
-              <div
-                className={`footer-accordion-body${resourcesOpen ? " open" : ""}`}
-              >
-                <div className="footer-links-sub-grid">
-                  {FOOTER_RESOURCES.flat().map((item, i) => (
-                    <a key={i} href="#" className="footer-link-resources">
-                      {item}
-                    </a>
-                  ))}
+            {/* Right */}
+            <div className="footer-right">
+              <div className="footer-accordion">
+                <button
+                  type="button"
+                  className="footer-accordion-header"
+                  onClick={() => setResourcesOpen(!resourcesOpen)}
+                  aria-expanded={resourcesOpen}
+                >
+                  <span className="footer-col-heading-sm">RESOURCES</span>
+                  <span className="footer-accordion-chevron">
+                    {resourcesOpen ? (
+                      <img src={dropup} alt="dropup" />
+                    ) : (
+                      <img src={dropdown} alt="dropdown" />
+                    )}
+                  </span>
+                </button>
+                <div
+                  className={`footer-accordion-body${resourcesOpen ? " open" : ""}`}
+                >
+                  <div className="footer-links-sub-grid">
+                    {FOOTER_RESOURCES.flat().map((item, i) => (
+                      <a key={i} href="#" className="footer-link-resources">
+                        {item}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -1376,8 +1347,8 @@ export default function App() {
         </div>
         {/* Copyright */}
         <p className="footer-bottom-copy">
-          © 2025 FlyLock | <img src={heart} alt="heart" />
-          //TECHYSCOUTS
+          © 2025 FlyLock <span>|</span>
+          <img src={techyscouts} alt="techyscouts" />
         </p>
         {/* Socials */}
         <div className="footer-social-wrap">

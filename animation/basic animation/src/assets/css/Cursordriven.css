@@ -1,0 +1,20 @@
+.logo-main {
+  @apply flex items-center justify-center;
+}
+
+.logo-outer {
+  @apply w-[200px] h-[200px] flex items-center justify-center rounded-[3rem];
+  background:
+    radial-gradient(
+      89.08% 84.62% at 16.54% 78.46%,
+      #fbfefa 0%,
+      #c9f6b4 39.58%,
+      #abff84 77.6%,
+      #2fee65 100%
+    ),
+    url("https://assets.codepen.io/16327/noise-e82662fe.png");
+}
+
+.logo-svg {
+  @apply w-[200px] h-[200px];
+}

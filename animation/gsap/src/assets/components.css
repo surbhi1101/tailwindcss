@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer components {
+  /* BOX */
+  .main-box {
+    @apply h-screen flex items-center justify-center bg-gray-100;
+  }
+
+  .sub-box {
+    @apply w-40 h-40 bg-blue-500 rounded-xl;
+  }
+
+  /* SECTION */
+  .section {
+    @apply min-h-screen flex flex-col items-center justify-center gap-6 bg-gray-100;
+  }
+
+  .title {
+    @apply text-4xl font-bold text-gray-800 opacity-0;
+  }
+
+  .subtitle {
+    @apply text-lg text-gray-500 opacity-0;
+  }
+
+  .btn {
+    @apply px-6 py-3 bg-blue-500 text-white rounded-lg cursor-pointer opacity-0;
+  }
+
+  .card-container {
+    @apply flex gap-6 mt-10;
+  }
+
+  .card {
+    @apply w-40 h-40 bg-white rounded-xl shadow-md flex items-center justify-center text-xl font-semibold opacity-0;
+  }
+
+  /* FEATURE */
+  .feature-section {
+    @apply py-20 px-6 bg-white text-center;
+  }
+
+  .feature-title {
+    @apply text-3xl font-bold mb-10;
+  }
+
+  .feature-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto;
+  }
+
+  .feature-card {
+    @apply p-6 bg-gray-100 rounded-xl shadow-md transition-transform duration-300;
+  }
+
+  .feature-card:hover {
+    @apply scale-105;
+  }
+
+  /* SPLIT TEXT */
+  .container {
+    @apply flex items-center justify-center w-full h-screen invisible;
+  }
+
+  .tube {
+    @apply relative w-full h-[24vw];
+  }
+
+  .line {
+    @apply absolute top-1/2 left-1/2 
+           -translate-x-1/2 -translate-y-1/2
+           leading-none m-0
+           tracking-[-0.6vw] text-[18vw]
+           whitespace-nowrap text-center;
+  }
+  /* ═══════════════════════════════
+   HORIZONTAL SCROLL (GSAP)
+═══════════════════════════════ */
+
+  .horizontal-section {
+    @apply overflow-hidden h-screen flex items-center;
+  }
+
+  .horizontal-wrapper {
+    @apply w-full;
+  }
+
+  .horizontal-text {
+    @apply flex w-max whitespace-nowrap gap-[4vw] pl-[100vw]
+         font-semibold leading-[1.1]
+         text-[clamp(2rem,10vw,12rem)];
+  }
+
+  /* Each split character */
+  .char {
+    display: inline-block;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+}
+
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}

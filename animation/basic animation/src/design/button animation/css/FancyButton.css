@@ -1,0 +1,73 @@
+@layer components {
+  .btn-53 {
+    @apply relative block overflow-hidden uppercase font-[#000];
+    @apply rounded-full border;
+    @apply cursor-pointer;
+    @apply leading-[1.5];
+    padding-inline: 48px;
+    padding-block: 20px;
+    border-color: #000;
+    background-color: #000;
+    color: white;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  }
+
+  .btn-53:disabled {
+    @apply cursor-default;
+  }
+
+  .btn-53 .original {
+    @apply absolute grid place-content-center;
+    color: #000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  .btn-53:hover .original {
+    transform: translateY(100%);
+  }
+
+  .btn-53 .letters {
+    @apply inline-flex;
+  }
+
+  .btn-53 span {
+    @apply opacity-0;
+    transform: translateY(-15px);
+    transition:
+      transform 0.2s cubic-bezier(0.87, 0, 0.13, 1),
+      opacity 0.2s;
+  }
+
+  .btn-53 span:nth-child(even) {
+    transform: translateY(15px);
+  }
+
+  .btn-53:hover span {
+    @apply opacity-100;
+    transform: translateY(0);
+  }
+
+  /* Delay animation for each letter */
+  .btn-53:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+  .btn-53:hover span:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+  .btn-53:hover span:nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  .btn-53:hover span:nth-child(5) {
+    transition-delay: 0.4s;
+  }
+  .btn-53:hover span:nth-child(6) {
+    transition-delay: 0.5s;
+  }
+}
